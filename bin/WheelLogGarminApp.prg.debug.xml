@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminApp.mc" id="3" lineNum="6" pc="268435456" symbol="initialize"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminApp.mc" id="3" lineNum="7" pc="268435460" symbol="initialize"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminApp.mc" id="4" lineNum="11" pc="268435479" symbol="onStart"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminApp.mc" id="5" lineNum="15" pc="268435484" symbol="onStop"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminApp.mc" id="6" lineNum="19" pc="268435489" symbol="getInitialView"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminApp.mc" id="6" lineNum="20" pc="268435493" symbol="getInitialView"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminMenuDelegate.mc" id="8" lineNum="6" pc="268435561" symbol="initialize"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminMenuDelegate.mc" id="8" lineNum="7" pc="268435565" symbol="initialize"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminMenuDelegate.mc" id="9" lineNum="10" pc="268435584" symbol="onMenuItem"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminMenuDelegate.mc" id="9" lineNum="11" pc="268435588" symbol="onMenuItem"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminMenuDelegate.mc" id="9" lineNum="12" pc="268435599" symbol="onMenuItem"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminMenuDelegate.mc" id="9" lineNum="13" pc="268435623" symbol="onMenuItem"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminMenuDelegate.mc" id="9" lineNum="14" pc="268435634" symbol="onMenuItem"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminView.mc" id="11" lineNum="5" pc="268435659" symbol="initialize"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminView.mc" id="11" lineNum="6" pc="268435663" symbol="initialize"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminView.mc" id="12" lineNum="10" pc="268435682" symbol="onLayout"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminView.mc" id="12" lineNum="11" pc="268435686" symbol="onLayout"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminView.mc" id="13" lineNum="17" pc="268435724" symbol="onShow"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminView.mc" id="14" lineNum="21" pc="268435729" symbol="onUpdate"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminView.mc" id="14" lineNum="23" pc="268435733" symbol="onUpdate"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminView.mc" id="15" lineNum="29" pc="268435754" symbol="onHide"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminDelegate.mc" id="17" lineNum="5" pc="268435759" symbol="initialize"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminDelegate.mc" id="17" lineNum="6" pc="268435763" symbol="initialize"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminDelegate.mc" id="18" lineNum="9" pc="268435782" symbol="onMenu"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminDelegate.mc" id="18" lineNum="10" pc="268435786" symbol="onMenu"/>
+        <entry filename="/Users/egoryakovenko/Documents/GitHub/WheelLog.Garmin/source/WheelLogGarminDelegate.mc" id="18" lineNum="11" pc="268435870" symbol="onMenu"/>
+        <entry filename="Rez" id="24" lineNum="15" pc="268435874" symbol="MainLayout"/>
+        <entry filename="Rez" id="27" lineNum="26" pc="268435887" symbol="initialize"/>
+        <entry filename="Rez" id="27" lineNum="27" pc="268435891" symbol="initialize"/>
+        <entry filename="Rez" id="27" lineNum="28" pc="268435909" symbol="initialize"/>
+        <entry filename="Rez" id="27" lineNum="29" pc="268435965" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="4" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="17" method="true" symbol="MainLayout"/>
+        <entry id="10" object="true" symbol="WheelLogGarminMenuDelegate"/>
+        <entry id="11" object="true" symbol="WheelLogGarminView"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="20" symbol="AppName"/>
+        <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="22" symbol="item_2"/>
+        <entry id="21" symbol="item_1"/>
+        <entry id="14" module="true" symbol="Menus"/>
+        <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="16" object="true" symbol="MainMenu"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry field="true" id="15" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="9" object="true" symbol="WheelLogGarminApp"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="12" object="true" symbol="WheelLogGarminDelegate"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry id="13" module="true" symbol="Layouts"/>
+        <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="19" symbol="menu_label_2"/>
+        <entry field="true" id="18" symbol="menu_label_1"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435484" name="state" stackId="1" startPc="268435479"/>
+        <entry arg="true" endPc="268435489" name="state" stackId="1" startPc="268435484"/>
+        <entry arg="true" endPc="268435659" name="item" stackId="1" startPc="268435584"/>
+        <entry arg="true" endPc="268435724" name="dc" stackId="1" startPc="268435682"/>
+        <entry arg="true" endPc="268435754" name="dc" stackId="1" startPc="268435729"/>
+        <entry arg="true" endPc="268435887" name="dc" stackId="1" startPc="268435874"/>
+    </localVars>
+    <annotations/>
+    <dataEntryOffsetMappings>
+        <dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry offset="166" parentId="globals" symbolId="WheelLogGarminMenuDelegate" type="class"/>
+        <dataEntry offset="221" parentId="globals" symbolId="WheelLogGarminApp" type="class"/>
+        <dataEntry offset="292" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry offset="371" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry offset="410" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry offset="449" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry offset="496" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry offset="527" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry offset="566" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry offset="597" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry offset="652" parentId="globals" symbolId="WheelLogGarminDelegate" type="class"/>
+        <dataEntry offset="707" parentId="globals" symbolId="WheelLogGarminView" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="initialize" parent="WheelLogGarminApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="WheelLogGarminApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="WheelLogGarminApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getInitialView" parent="WheelLogGarminApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="WheelLogGarminMenuDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenuItem" parent="WheelLogGarminMenuDelegate">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="WheelLogGarminView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onLayout" parent="WheelLogGarminView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="WheelLogGarminView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="WheelLogGarminView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="WheelLogGarminView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="WheelLogGarminDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenu" parent="WheelLogGarminDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="MainLayout" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="MainMenu">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
