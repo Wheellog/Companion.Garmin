@@ -10,7 +10,10 @@ on:
 
 jobs:
   build:
-    runs-on: karmanet/monkeyc
+    runs-on: ubuntu-latest
+
+    container:
+      image: karmanet/monkeyc
 
     steps:
       - uses: actions/checkout@v2
