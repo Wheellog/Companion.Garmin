@@ -2,6 +2,8 @@ using Toybox.WatchUi;
 
 class WheelLogGarminView extends WatchUi.View {
 
+    private var mSpeed, mBattery, mTemperature, mBluetooth, mPower;
+
     function initialize() {
         View.initialize();
     }
@@ -15,6 +17,7 @@ class WheelLogGarminView extends WatchUi.View {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
+
     }
 
     // Update the view
@@ -27,6 +30,38 @@ class WheelLogGarminView extends WatchUi.View {
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() {
+
     }
+
+    function onMail(mailIter) {
+        var mail;
+        mail = mailIter.next();
+        Communications.emptyMailbox();
+
+        if (mail != null && mail instanceof Lang.Dictionary) {
+                parseMessage(mail);
+        }
+
+        WatchUi.requestUpdate();
+    }
+
+    function parseMessage(message) {
+		var type = message.get(WheelLogAppConstants.KEY_MSG_TYPE);
+		var data = message.get(WheelLogAppConstants.KEY_MSG_DATA);
+			
+		if (type == null or data == null) {	
+			return;
+		}
+		
+		if (type == WheelLogAppConstants.MESSAGE_TYPE_EUC_DATA) {
+			mSpeed       = data.get(WheelLogAppConstants.KEY_SPEED);
+			mBattery     = data.get(WheelLogAppConstants.KEY_BATTERY);
+			mTemperature = data.get(WheelLogAppConstants.KEY_TEMPERATURE);
+			mBluetooth   = data.get(WheelLogAppConstants.KEY_BT_STATE);
+			mPower       = data.get(WheelLogAppConstants.KEY_POWER).abs();
+		} else {
+
+        }
+	}
 
 }
