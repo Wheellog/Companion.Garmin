@@ -1,7 +1,9 @@
 using Toybox.WatchUi;
 
 class SpeedDialRenderer extends WatchUi.Drawable {
-    hidden var mIdleColor, mNormalColor, mMediumColor, mDangerousColor;
+
+    private var mIdleColor, mNormalColor, mMediumColor, mDangerousColor;
+
     function initialize(params) {
         Drawable.initialize(params);
         // Here we just get parameters from the layout.xml file
@@ -11,6 +13,8 @@ class SpeedDialRenderer extends WatchUi.Drawable {
         mDangerousColor = params.get(:dangerousColor);
     }
     function draw(dc) {
-        dc.drawArc(x, y, r, attr, degreeStart, degreeEnd);
+        dc.setColor(0x3F8CFF, 0x000000);
+        dc.setPenWidth(70);
+        dc.drawArc(System.getDeviceSettings().screenWidth / 2, System.getDeviceSettings().screenHeight / 2, 120, Graphics.ARC_CLOCKWISE, -140, -40);
     }
 }
