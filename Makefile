@@ -33,10 +33,14 @@ deploy: build
 	@cp bin/$(appName).prg $(DEPLOY)
 
 package:
-	monkeyc \
+	@echo "Building release app for Connect IQ Store..."
+	@monkeyc \
 	--jungles ./monkey.jungle \
 	--package-app \
 	--release \
 	--output bin/$(appName).iq \
 	--private-key $(PRIVATE_KEY) \
 	--warn
+
+clean:
+	rm -rf bin
