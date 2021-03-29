@@ -1,5 +1,6 @@
 <strings>
     <string id="AppName">WheelLog</string>
 
+    <string id="MainMenu-Title">Settings</string>
     <string id="MainMenu-ShowVoltageInsteadOfPercentage">Show voltage instead of percentage</string>
 </strings>
