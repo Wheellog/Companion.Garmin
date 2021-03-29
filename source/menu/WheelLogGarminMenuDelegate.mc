@@ -1,5 +1,7 @@
 using Toybox.WatchUi;
 using Toybox.System;
+using Toybox.Application.Properties;
+using Toybox.Application.Storage;
 
 class WheelLogGarminMenuDelegate extends WatchUi.MenuInputDelegate {
 
@@ -8,10 +10,12 @@ class WheelLogGarminMenuDelegate extends WatchUi.MenuInputDelegate {
     }
 
     function onMenuItem(item) {
-        if (item == :item_1) {
-            System.println("item 1");
-        } else if (item == :item_2) {
-            System.println("item 2");
+        switch (item) {
+            case :showVoltageInsteadOfPercentage:
+                var newValue = !Storage.getValue("showVoltageInsteadOfPercentage");
+                Properties.setValue("showVoltageInsteadOfPercentage", newValue);
+                WatchUi.requestUpdate();
+                break;
         }
     }
 

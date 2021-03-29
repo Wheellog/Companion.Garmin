@@ -1,7 +1,8 @@
 using Toybox.WatchUi;
+using Toybox.Application.Properties;
+using Toybox.Application.Storage;
 
 class SpeedDialRenderer extends WatchUi.Drawable {
-
     var mCurrent, mMaxValue;
 
     private var mIdleColor, mNormalColor, mMediumColor, mDangerousColor, mStartDegree, mEndDegree;
@@ -23,20 +24,22 @@ class SpeedDialRenderer extends WatchUi.Drawable {
         mEndDegree = params.get(:endDegree);
     }
     function draw(dc) {
-        dc.setPenWidth(50);
-        renderBackgroundArc(dc);
-        var font = WatchUi.loadResource(Rez.Fonts.Tall);
-        dc.setColor(0x3F8CFF, 0x000000);
-        dc.drawArc(
-            screenCenterX,
-            screenCenterY,
-            screenWidth / 2,
-            Graphics.ARC_CLOCKWISE,
-            -140,
-            -30
-        );
+        if(Properties.getValue("showVoltageInsteadOfPercentage") == true) {
+            dc.setPenWidth(50);
+            renderBackgroundArc(dc);
+            var font = WatchUi.loadResource(Rez.Fonts.Tall);
+            dc.setColor(0x3F8CFF, 0x000000);
+            dc.drawArc(
+                screenCenterX,
+                screenCenterY,
+                screenWidth / 2,
+                Graphics.ARC_CLOCKWISE,
+                -140,
+                -30
+            );
 
-        dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        }
     }
 
     function renderBackgroundArc(dc) {
