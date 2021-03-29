@@ -12,7 +12,7 @@
             <iq:product id="fenix3_hr"/>
             <iq:product id="fenix5"/>
             <iq:product id="fenix5plus"/>
-            <iq:product id="fenix5s"/>
+            <!-- <iq:product id="fenix5s"/> -->
             <iq:product id="fenix5splus"/>
             <iq:product id="fenix5x"/>
             <iq:product id="fenix5xplus"/>
@@ -34,13 +34,13 @@
             <iq:product id="fr920xt"/>
             <iq:product id="fr935"/>
             <iq:product id="fr945"/>
-            <iq:product id="vivoactive3"/>
+            <!-- <iq:product id="vivoactive3"/>
             <iq:product id="vivoactive3d"/>
             <iq:product id="vivoactive3m"/>
             <iq:product id="vivoactive3mlte"/>
             <iq:product id="vivoactive4"/>
             <iq:product id="vivoactive4s"/>
-            <iq:product id="vivoactive_hr"/>
+            <iq:product id="vivoactive_hr"/> -->
         </iq:products>
         <iq:permissions>
             <iq:uses-permission id="Communications"/> 
