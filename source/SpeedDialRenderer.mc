@@ -4,7 +4,7 @@ class SpeedDialRenderer extends WatchUi.Drawable {
 
     var mCurrent, mMaxValue;
 
-    private var mIdleColor, mNormalColor, mMediumColor, mDangerousColor;
+    private var mIdleColor, mNormalColor, mMediumColor, mDangerousColor, mStartDegree, mEndDegree;
 
     private var screenCenterX = System.getDeviceSettings().screenWidth / 2;
     private var screenCenterY = System.getDeviceSettings().screenHeight / 2;
@@ -19,20 +19,29 @@ class SpeedDialRenderer extends WatchUi.Drawable {
         mNormalColor = params.get(:normalColor);
         mMediumColor = params.get(:mediumColor);
         mDangerousColor = params.get(:dangerousColor);
+        mStartDegree = params.get(:startDegree);
+        mEndDegree = params.get(:endDegree);
     }
     function draw(dc) {
         dc.setPenWidth(50);
-        renderBackground(dc);
-        var font = WatchUi.loadResource( Rez.Fonts.Tall );
+        renderBackgroundArc(dc);
+        var font = WatchUi.loadResource(Rez.Fonts.Tall);
         dc.setColor(0x3F8CFF, 0x000000);
-        dc.drawArc(screenCenterX, screenCenterY, screenWidth / 2, Graphics.ARC_CLOCKWISE, -140, -30);
+        dc.drawArc(
+            screenCenterX,
+            screenCenterY,
+            screenWidth / 2,
+            Graphics.ARC_CLOCKWISE,
+            -140,
+            -30
+        );
 
         dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
-    function renderBackground(dc) {
+    function renderBackgroundArc(dc) {
         dc.setColor(0x323232, 0x000000);
-        dc.drawArc(screenCenterX, screenCenterY, screenWidth / 2, Graphics.ARC_CLOCKWISE, -140, -40);
+        dc.drawArc(screenCenterX, screenCenterY, screenWidth / 2, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
     }
 
 
