@@ -1,3 +1,0 @@
-<menu id="MainMenu">
-    <menu-item id="test_data" label="@Strings.menu_label_test_data" />
-</menu>

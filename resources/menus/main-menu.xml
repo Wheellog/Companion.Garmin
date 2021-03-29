@@ -1,0 +1,4 @@
+<menu id="MainMenu">
+    <!-- <menu-item id="test_data" label="@Strings.menu_label_test_data" /> -->
+    <menu-item id="show_voltage_instead_of_percentage" label="@Strings.MainMenu-ShowVoltageInsteadOfPercentage" />
+</menu>
