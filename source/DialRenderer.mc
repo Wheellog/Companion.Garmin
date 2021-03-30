@@ -2,7 +2,7 @@ using Toybox.WatchUi;
 using Toybox.Application.Properties;
 using Toybox.Application.Storage;
 
-class SpeedDialRenderer extends WatchUi.Drawable {
+class DialRenderer extends WatchUi.Drawable {
     var mCurrent, mMaxValue;
 
     private var mIdleColor, mNormalColor, mMediumColor, mDangerousColor, mStartDegree, mEndDegree;
