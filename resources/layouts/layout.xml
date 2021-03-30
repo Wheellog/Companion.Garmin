@@ -1,14 +1,17 @@
 <layout id="MainLayout">
     <drawable id="SpeedDial"
-        class="SpeedDialRenderer">
+        class="DialRenderer">
         <!-- Colors -->
         <param name="idleColor">0x3F8CFF</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
         <param name="normalColor">0x3DE16B</param> <!-- This color is for normal speed, used between 20% and 60%-->
         <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
         <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
-        <!-- Dial size -->
+        <!-- Dial size n' position -->
         <param name="startDegree">-140</param>
         <param name="endDegree">-40</param>
+        <param name="xCenterPosition">:center</param>
+        <param name="yCenterPosition">:center</param>
+
     </drawable>
 
     <drawable id="WheelNameSubtitle" class="BottomSubtitleRenderer">
