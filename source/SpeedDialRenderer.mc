@@ -13,6 +13,8 @@ class SpeedDialRenderer extends WatchUi.Drawable {
     private var screenHeight = System.getDeviceSettings().screenHeight;
     private var screenWidth = System.getDeviceSettings().screenWidth;
 
+    var font = WatchUi.loadResource(Rez.Fonts.Tall);
+
     function initialize(params) {
         Drawable.initialize(params);
         // Here we just get parameters from the layout.xml file
@@ -24,10 +26,9 @@ class SpeedDialRenderer extends WatchUi.Drawable {
         mEndDegree = params.get(:endDegree);
     }
     function draw(dc) {
-        if(Properties.getValue("showVoltageInsteadOfPercentage") == true) {
+        if(Application.getApp().getProperty("showVoltageInsteadOfPercentage") == true) {
             dc.setPenWidth(50);
             renderBackgroundArc(dc);
-            var font = WatchUi.loadResource(Rez.Fonts.Tall);
             dc.setColor(0x3F8CFF, 0x000000);
             dc.drawArc(
                 screenCenterX,
