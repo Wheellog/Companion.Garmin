@@ -2,10 +2,9 @@ include properties.mk
 
 appName = `grep entry manifest.xml | sed 's/.*entry="\([^"]*\).*/\1/'`
 devices = `grep 'iq:product id' manifest.xml | sed 's/.*iq:product id="\([^"]*\).*/\1/'`
-JAVA_OPTIONS = JDK_JAVA_OPTIONS="--add-modules=java.xml.bind"
 
 build:
-	monkeyc \
+	@monkeyc \
 	--jungles ./monkey.jungle \
 	--device $(DEVICE) \
 	--output bin/$(appName).prg \
@@ -30,6 +29,7 @@ run: build
 	monkeydo bin/$(appName).prg $(DEVICE)
 
 deploy: build
+	@rm $(DEPLOY)/$(appName).prg
 	@cp bin/$(appName).prg $(DEPLOY)
 
 package:
