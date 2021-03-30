@@ -44,3 +44,7 @@ package:
 
 clean:
 	rm -rf bin
+
+rerun: build
+	connectiq
+	monkeydo bin/$(appName).prg $(DEVICE)
