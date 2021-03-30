@@ -1,0 +1,26 @@
+<layout id="MainLayout">
+    <label id="TimeDate" text="00:00" x="50%" y="20%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL"></label>
+
+    <drawable id="SpeedDial" class="ArcRenderer">
+        <!-- Colors -->
+        <param name="idleColor">0x3F8CFF</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
+        <param name="normalColor">0x3DE16B</param> <!-- This color is for normal speed, used between 20% and 60%-->
+        <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
+        <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
+        <!-- Dial size n' position -->
+        <param name="startDegree">-140</param>
+        <param name="endDegree">-40</param>
+        <param name="xCenterPosition">:center</param>
+        <param name="yCenterPosition">:center</param>
+    </drawable>
+
+    <drawable id="BatteryArc" class="ArcRenderer">
+        <!-- Colors -->
+        <param name="idleColor">0x3F8CFF</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
+        <param name="normalColor">0x3DE16B</param> <!-- This color is for normal speed, used between 20% and 60%-->
+        <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
+        <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
+    </drawable>
+
+    <label id="WheelNameSubtitle" text="InMotion V11" x="50%" y="80%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" color="0xA4A4A4" />
+</layout>
