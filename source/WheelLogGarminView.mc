@@ -4,6 +4,8 @@ class WheelLogGarminView extends WatchUi.View {
 
     private var mSpeed, mBattery, mTemperature, mBluetooth, mPower;
 
+    private var mDrawables = {};
+
     function initialize() {
         View.initialize();
     }
@@ -11,6 +13,13 @@ class WheelLogGarminView extends WatchUi.View {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.MainLayout(dc));
+        mDrawables[:TimeDate] = View.findDrawableById("TimeDate");
+        var CurrentTime = System.getClockTime(); 
+        mDrawables[:TimeDate].setText(
+            CurrentTime.hour.format("%d") +
+            ":" +
+            CurrentTime.min.format("%02d")
+        );
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -22,6 +31,8 @@ class WheelLogGarminView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc) {
+        View.findDrawableById("TimeDate").setText(System.getClockTime().hour.format("%d") + ":" + System.getClockTime().min.format("%02d"));
+
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
     }
@@ -63,5 +74,4 @@ class WheelLogGarminView extends WatchUi.View {
 
         }
 	}
-
 }
