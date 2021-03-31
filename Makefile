@@ -25,7 +25,7 @@ buildall:
 
 run: build
 	connectiq
-	@sleep 4
+	@sleep 2
 	monkeydo bin/$(appName).prg $(DEVICE)
 
 deploy: build
