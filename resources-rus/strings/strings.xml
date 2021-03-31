@@ -1,3 +1,8 @@
 <strings>
-    
+    <string id="MainMenu_Title">Настройки</string>
+    <string id="MainMenu_ShowVoltageInsteadOfPercentage">Вольты вместо процентов</string>
+    <string id="Enabled">Включено</string>
+    <string id="Disabled">Выключено</string>
+    <string id="Kmh">км/ч</string>
+    <string id="LoadingScreen_WaitingConnectionWithApp">Ожидаем подключения WheelLog'а...</string>
 </strings>
