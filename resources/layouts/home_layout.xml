@@ -15,7 +15,7 @@
         <param name="arcRadius">:max</param>
         <param name="arcSize">50</param>
     </drawable>
-    <label text="@Strings.Kmh" x="50%" y="62%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="@Fonts.SmallSemiBold" color="0x7C7C7C" />
+    <label text="@Strings.Kmh" x="50%" y="62%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_SMALL" color="0x7C7C7C" />
 
     <drawable id="BatteryArc" class="ArcRenderer">
         <!-- Colors -->
