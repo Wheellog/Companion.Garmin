@@ -4,7 +4,7 @@ using Toybox.Application;
 
 class WheelLogGarminView extends WatchUi.View {
 
-    private var progressBar;
+    private var progressBar, isProgressBarShown;
 
     private var mSpeed, mBattery, mTemperature, mBluetooth, mPower;
 
@@ -24,7 +24,8 @@ class WheelLogGarminView extends WatchUi.View {
             null
         );
         WatchUi.pushView(progressBar, new ProgressDelegate(), WatchUi.SLIDE_UP );
-\    }
+        isProgressBarShown = true;
+    }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
@@ -58,6 +59,10 @@ class WheelLogGarminView extends WatchUi.View {
         var mail;
         mail = mailIter.next();
         Communications.emptyMailbox();
+
+        if(isProgressBarShown == true) {
+            progressBar.popView(WatchUi.SLIDE_DOWN);
+        }
 
         if (mail != null && mail instanceof Lang.Dictionary) {
                 parseMessage(mail);
