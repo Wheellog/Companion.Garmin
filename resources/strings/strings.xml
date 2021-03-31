@@ -6,4 +6,5 @@
     <string id="Enabled">Enabled</string>
     <string id="Disabled">Disabled</string>
     <string id="Kmh">km/h</string>
+    <string id="LoadingScreen_WaitingConnectionWithApp">Waiting for WheelLog to connect...</string>
 </strings>
