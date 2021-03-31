@@ -4,6 +4,8 @@ A WheelLog app for Garmin smartwatches
 
 This app is a rebuild from ground-up of an original Garmin app. I made this app to be with better UI, more options, and also settings sync from WheelLog app.
 
+Btw here is the original app repository on [GitHub](https://github.com/marccardinal/WheelLog-Garmin-ConnectIQ).
+
 ## Contributing
 
 To contribute, fork this repo, add changes you want, and create a pull request. I'll review it and merge it if possible :D
