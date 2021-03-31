@@ -1,6 +1,10 @@
 using Toybox.WatchUi;
+using Toybox.Communications;
+using Toybox.Application;
 
 class WheelLogGarminView extends WatchUi.View {
+
+    private var progressBar;
 
     private var mSpeed, mBattery, mTemperature, mBluetooth, mPower;
 
@@ -13,6 +17,19 @@ class WheelLogGarminView extends WatchUi.View {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.MainLayout(dc));
+        Communications.setMailboxListener(method(:onMail));   
+
+        progressBar = new WatchUi.ProgressBar(
+            WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp),
+            null
+        );
+        WatchUi.pushView(progressBar, new ProgressDelegate(), WatchUi.SLIDE_UP );
+\    }
+
+    // Called when this View is brought to the foreground. Restore
+    // the state of this View and prepare it to be shown. This includes
+    // loading resources into memory.
+    function onShow() {
         mDrawables[:TimeDate] = View.findDrawableById("TimeDate");
         var CurrentTime = System.getClockTime(); 
         mDrawables[:TimeDate].setText(
@@ -20,13 +37,6 @@ class WheelLogGarminView extends WatchUi.View {
             ":" +
             CurrentTime.min.format("%02d")
         );
-    }
-
-    // Called when this View is brought to the foreground. Restore
-    // the state of this View and prepare it to be shown. This includes
-    // loading resources into memory.
-    function onShow() {
-
     }
 
     // Update the view
