@@ -1,4 +1,5 @@
 <fonts>
     <font id="Tall" filename="tall.fnt" antialias="true"/>
     <font id="TallLight" filename="titillium-web-light-68-tall.fnt" antialias="true" />
+    <font id="SmallSemiBold" filename="titillium-web-semibold-16.fnt" antialias="true" />
 </fonts>
