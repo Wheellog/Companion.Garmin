@@ -5,4 +5,5 @@
     <string id="MainMenu_ShowVoltageInsteadOfPercentage">Voltage instead of percents</string>
     <string id="Enabled">Enabled</string>
     <string id="Disabled">Disabled</string>
+    <string id="Kmh">km/h</string>
 </strings>
