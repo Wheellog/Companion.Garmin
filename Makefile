@@ -29,7 +29,6 @@ run: build
 	monkeydo bin/$(appName).prg $(DEVICE)
 
 deploy: build
-	@rm $(DEPLOY)/$(appName).prg
 	@cp bin/$(appName).prg $(DEPLOY)
 
 package:
