@@ -1,5 +1,5 @@
 <layout id="MainLayout">
-    <label id="TimeDate" text="00:00" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL"></label>
+    <label id="TimeDate" text="00:00" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="@Fonts.SmallSemiBold"></label>
 
     <drawable id="SpeedDial" class="ArcRenderer">
         <!-- Colors -->
@@ -15,6 +15,7 @@
         <param name="arcRadius">:max</param>
         <param name="arcSize">50</param>
     </drawable>
+    <label text="@Strings.Kmh" x="50%" y="62%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="@Fonts.SmallSemiBold" color="0x7C7C7C" />
 
     <drawable id="BatteryArc" class="ArcRenderer">
         <!-- Colors -->
@@ -25,11 +26,17 @@
         <!-- Arc size n' position -->
         <param name="startDegree">-140</param>
         <param name="endDegree">140</param>
-        <param name="xCenterPosition">100</param>
+        <param name="xCenterPosition">105</param>
         <param name="yCenterPosition">:center</param>
-        <param name="arcRadius">60</param>
+        <param name="arcRadius">65</param>
         <param name="arcSize">15</param>
     </drawable>
 
-    <label id="WheelNameSubtitle" text="InMotion V11" x="50%" y="80%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" color="0xA4A4A4" />
+    <label id="WheelNameSubtitle"
+        text="InMotion V11"
+        x="50%"
+        y="80%"
+        justification="Gfx.TEXT_JUSTIFY_CENTER"
+        font="Graphics.FONT_SMALL"
+        color="0xA4A4A4" />
 </layout>
