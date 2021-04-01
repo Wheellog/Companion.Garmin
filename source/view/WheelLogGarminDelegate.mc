@@ -7,8 +7,13 @@ class WheelLogGarminDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() {
-        WatchUi.pushView(new Rez.Menus.MainMenu(), new WheelLogGarminMenuDelegate(), WatchUi.SLIDE_UP);
+        // WatchUi.pushView(new Rez.Menus.MainMenu(), new WheelLogGarminMenuDelegate(), WatchUi.SLIDE_UP);
         return true;
     }
 
+    function onNextPage() {
+        System.println("down");
+        WatchUi.pushView(new DetailView(), new DetailViewDelegate(), WatchUi.SLIDE_UP);
+        return true;
+    }
 }
