@@ -11,7 +11,7 @@ module WheelLogAppConstants {
 
             CURRENT_SPEED = 0,
             BATTERY_PERCENTAGE = 1,
-            BATTERY_VOLRAGE = 2,
+            BATTERY_VOLTAGE = 2,
             TEMPERATURE = 3,
             BT_STATE = 4,
             USE_MPH = 5,
