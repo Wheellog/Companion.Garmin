@@ -4,6 +4,9 @@ using Toybox.Application;
 
 class DetailView extends WatchUi.View {
 
+    private var currentlyOnScreen = 0;
+    private var maxScreens = 3;
+
     function initialize() {
         View.initialize();
     }
@@ -31,5 +34,21 @@ class DetailView extends WatchUi.View {
     // memory.
     function onHide() {
 
+    }
+
+    function moveUp() {
+        if (currentlyOnScreen == 0) {
+            WatchUi.switchToView(new HomeView(), new HomeViewDelegate(), WatchUi.SLIDE_DOWN);
+        } else {
+            currentlyOnScreen--;
+            WatchUi.requestUpdate();
+        }
+    }
+
+    function moveDown() {
+        if (currentlyOnScreen + 1 != maxScreens) {
+            currentlyOnScreen++;
+            WatchUi.requestUpdate();
+        }
     }
 }
