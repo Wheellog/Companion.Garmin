@@ -1,3 +1,7 @@
 <layout id="DetailsLayout">
-    <label id="d" text="Voltage" />
+    <label text="Top Speed" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
+    <label id="TopSpeedNumber" text="29 km/h" x="50%" y="27%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
+
+    <label text="Avg Riding" x="50%" y="55%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
+    <label id="AvgRidingNumber" text="16 km/h" x="50%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
 </layout>
