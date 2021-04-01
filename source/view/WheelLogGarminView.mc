@@ -29,14 +29,14 @@ class WheelLogGarminView extends WatchUi.View {
 
     // Load your resources here
     function onLayout(dc) {
-        setLayout(Rez.Layouts.MainLayout(dc));
+        setLayout(Rez.Layouts.HomeLayout(dc));
         Communications.setMailboxListener(method(:onMail));   
 
         progressBar = new WatchUi.ProgressBar(
             WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp),
             null
         );
-        WatchUi.pushView(progressBar, new ProgressDelegate(), WatchUi.SLIDE_UP );
+        // WatchUi.pushView(progressBar, new ProgressDelegate(), WatchUi.SLIDE_UP );
         isProgressBarShown = true;
     }
 
@@ -73,6 +73,7 @@ class WheelLogGarminView extends WatchUi.View {
         mail = mailIter.next();
         Communications.emptyMailbox();
 
+        // Here we hide the waiting screen, which waits for connection with WheelLog
         if(isProgressBarShown == true) {
             progressBar.popView(WatchUi.SLIDE_DOWN);
         }
@@ -92,16 +93,23 @@ class WheelLogGarminView extends WatchUi.View {
 			return;
 		}
 		
-		if (type == WheelLogAppConstants.MESSAGE_TYPE_EUC_DATA) {
-			// mSpeed       = data.get(WheelLogAppConstants.MailKeys.SPEED);
-			// mBattery     = data.get(WheelLogAppConstants.KEY_BATTERY);
-			// mTemperature = data.get(WheelLogAppConstants.KEY_TEMPERATURE);
-			// mBluetooth   = data.get(WheelLogAppConstants.KEY_BT_STATE);
-			// mPower       = data.get(WheelLogAppConstants.KEY_POWER).abs();
-            // Here we will parse data from WheelLog and put them into respectable variables
+		if (type == WheelLogAppConstants.MessageType.EUC_DATA) {
+            // Here we will parse data from WheelLog and put it into respectable variables
             
-		} else {
-
-        }
-	}
+            mCurrentSpeed = data.get(WheelLogAppConstants.MailKeys.CURRENT_SPEED);
+            mBatteryPercentage = data.get(WheelLogAppConstants.MailKeys.BATTERY_PERCENTAGE);
+            mBatteryVoltage = data.get(WheelLogAppConstants.MailKeys.BATTERY_VOLTAGE);
+            mTemperature = data.get(WheelLogAppConstants.MailKeys.TEMPERATURE);
+            mBluetooth = data.get(WheelLogAppConstants.MailKeys.BT_STATE);
+            mUseMph = data.get(WheelLogAppConstants.MailKeys.USE_MPH);
+            mMaxDialSpeed = data.get(WheelLogAppConstants.MailKeys.MAX_DIAL_SPEED);
+            mRideTime = data.get(WheelLogAppConstants.MailKeys.RIDE_TIME);
+            mRideDistance = data.get(WheelLogAppConstants.MailKeys.RIDE_DISTANCE);
+            mTopSpeed = data.get(WheelLogAppConstants.MailKeys.TOP_SPEED);
+            mPower = data.get(WheelLogAppConstants.MailKeys.POWER);
+            mFirstAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.FIRST_ALARM_SPEED);
+            mSecondAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.SECOND_ALARM_SPEED);
+            mThirdAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.THIRD_ALARM_SPEED);
+		}
+    }
 }
