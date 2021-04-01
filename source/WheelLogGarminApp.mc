@@ -22,6 +22,6 @@ class WheelLogGarminApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new WheelLogGarminView(), new WheelLogGarminDelegate() ];
+        return [ new WheelLogGarminView(), new WheelLogGarminDelegate(), WatchUi.SLIDE_LEFT ];
     }
 }
