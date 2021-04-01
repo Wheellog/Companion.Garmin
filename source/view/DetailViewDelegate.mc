@@ -2,8 +2,11 @@ using Toybox.WatchUi;
 
 class DetailViewDelegate extends WatchUi.BehaviorDelegate {
 
-    function initialize() {
+    private var view;
+
+    function initialize(_view) {
         BehaviorDelegate.initialize();
+        view = _view;
     }
 
     function onMenu() {
@@ -11,7 +14,14 @@ class DetailViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onPreviousPage() {
-        System.println("up"); // e.g. KEY_MENU = 7
+        System.println("up");
+        view.moveUp();
+        return true;
+    }
+
+    function onNextPage() {
+        System.println("down");
+        view.moveDown();
         return true;
     }
 }
