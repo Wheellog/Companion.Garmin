@@ -2,7 +2,7 @@ using Toybox.WatchUi;
 using Toybox.Communications;
 using Toybox.Application;
 
-class WheelLogGarminView extends WatchUi.View {
+class HomeView extends WatchUi.View {
 
     private var progressBar, isProgressBarShown;
 
@@ -36,7 +36,7 @@ class WheelLogGarminView extends WatchUi.View {
             WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp),
             null
         );
-        // WatchUi.pushView(progressBar, new ProgressDelegate(), WatchUi.SLIDE_UP );
+        // WatchUi.pushView(progressBar, new WaitingForConnectionDelegate(), WatchUi.SLIDE_UP );
         isProgressBarShown = true;
     }
 

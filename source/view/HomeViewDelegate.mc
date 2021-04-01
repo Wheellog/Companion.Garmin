@@ -1,6 +1,6 @@
 using Toybox.WatchUi;
 
-class WheelLogGarminDelegate extends WatchUi.BehaviorDelegate {
+class HomeViewDelegate extends WatchUi.BehaviorDelegate {
 
     function initialize() {
         BehaviorDelegate.initialize();
@@ -13,7 +13,7 @@ class WheelLogGarminDelegate extends WatchUi.BehaviorDelegate {
 
     function onNextPage() {
         System.println("down");
-        WatchUi.pushView(new DetailView(), new DetailViewDelegate(), WatchUi.SLIDE_UP);
+        WatchUi.switchToView(new DetailView(), new DetailViewDelegate(new DetailView()), WatchUi.SLIDE_UP);
         return true;
     }
 }
