@@ -1,7 +1,9 @@
 module WheelLogAppConstants {
-    enum {
-        MESSAGE_TYPE_EUC_DATA = 0,
-        MESSAGE_TYPE_PLAY_HORN = 1
+    module MessageType {
+        enum {
+            EUC_DATA = 0,
+            PLAY_HORN = 1
+        }
     }
 
     module MailKeys {
