@@ -6,7 +6,20 @@ class WheelLogGarminView extends WatchUi.View {
 
     private var progressBar, isProgressBarShown;
 
-    private var mSpeed, mBattery, mTemperature, mBluetooth, mPower;
+    private var mCurrentSpeed,
+        mBatteryPercentage,
+        mBatteryVoltage,
+        mTemperature,
+        mBluetooth,
+        mUseMph,
+        mMaxDialSpeed,
+        mRideTime,
+        mRideDistance,
+        mTopSpeed,
+        mPower,
+        mFirstAlarmSpeed,
+        mSecondAlarmSpeed,
+        mThirdAlarmSpeed;
 
     private var mDrawables = {};
 
@@ -72,19 +85,21 @@ class WheelLogGarminView extends WatchUi.View {
     }
 
     function parseMessage(message) {
-		var type = message.get(WheelLogAppConstants.KEY_MSG_TYPE);
-		var data = message.get(WheelLogAppConstants.KEY_MSG_DATA);
+		var type = message.get(WheelLogAppConstants.MailKeys.MSG_TYPE);
+		var data = message.get(WheelLogAppConstants.MailKeys.MSG_DATA);
 			
 		if (type == null or data == null) {	
 			return;
 		}
 		
 		if (type == WheelLogAppConstants.MESSAGE_TYPE_EUC_DATA) {
-			mSpeed       = data.get(WheelLogAppConstants.KEY_SPEED);
-			mBattery     = data.get(WheelLogAppConstants.KEY_BATTERY);
-			mTemperature = data.get(WheelLogAppConstants.KEY_TEMPERATURE);
-			mBluetooth   = data.get(WheelLogAppConstants.KEY_BT_STATE);
-			mPower       = data.get(WheelLogAppConstants.KEY_POWER).abs();
+			// mSpeed       = data.get(WheelLogAppConstants.MailKeys.SPEED);
+			// mBattery     = data.get(WheelLogAppConstants.KEY_BATTERY);
+			// mTemperature = data.get(WheelLogAppConstants.KEY_TEMPERATURE);
+			// mBluetooth   = data.get(WheelLogAppConstants.KEY_BT_STATE);
+			// mPower       = data.get(WheelLogAppConstants.KEY_POWER).abs();
+            // Here we will parse data from WheelLog and put them into respectable variables
+            
 		} else {
 
         }
