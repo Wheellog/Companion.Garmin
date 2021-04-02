@@ -36,7 +36,7 @@ class HomeView extends WatchUi.View {
             WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp),
             null
         );
-        // WatchUi.pushView(progressBar, new WaitingForConnectionDelegate(), WatchUi.SLIDE_UP );
+        // WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP );
         isProgressBarShown = true;
     }
 
