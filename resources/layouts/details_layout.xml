@@ -1,7 +1,7 @@
 <layout id="DetailsLayout">
-    <label text="Top Speed" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
-    <label id="TopSpeedNumber" text="29 km/h" x="50%" y="27%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
+    <label id="FirstSectionLabel" text="First label" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
+    <label id="FirstSectionData" text="0" x="50%" y="27%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
 
-    <label text="Avg Riding" x="50%" y="55%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
-    <label id="AvgRidingNumber" text="16 km/h" x="50%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
+    <label id="SecondSectionLabel" text="Second label" x="50%" y="55%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
+    <label id="SecondSectionData" text="0" x="50%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
 </layout>
