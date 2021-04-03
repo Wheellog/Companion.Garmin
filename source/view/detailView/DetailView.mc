@@ -27,7 +27,7 @@ class DetailView extends WatchUi.View {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.DetailsLayout(dc));
-        Communications.setMailboxListener(method(:onMail));
+        Communications.setMailboxListener(method(:mailHandler));
 
         // Here we cache every resource we will use in this view
         cDrawables[:FirstSectionLabel] = View.findDrawableById("FirstSectionLabel");
@@ -50,53 +50,21 @@ class DetailView extends WatchUi.View {
         
     }
 
-    function onMail(mailIter) {
-        var mail;
-        mail = mailIter.next();
-        Communications.emptyMailbox();
-
-        if (mail != null && mail instanceof Lang.Dictionary) {
-                parseMessage(mail);
-        }
-
-        WatchUi.requestUpdate();
-    }
-
-    function parseMessage(message) {
-		var type = message.get(WheelLogAppConstants.MailKeys.MSG_TYPE);
-		var data = message.get(WheelLogAppConstants.MailKeys.MSG_DATA);
-			
-		if (type == null or data == null) {	
-			return;
-		}
-		
-		if (type == WheelLogAppConstants.MessageType.EUC_DATA) {
-            // Here we will parse data from WheelLog and put it into respectable variables
-            
-            mBatteryPercentage = data.get(WheelLogAppConstants.MailKeys.BATTERY_PERCENTAGE);
-            mBatteryVoltage = data.get(WheelLogAppConstants.MailKeys.BATTERY_VOLTAGE);
-            mTemperature = data.get(WheelLogAppConstants.MailKeys.TEMPERATURE);
-            mRideTime = data.get(WheelLogAppConstants.MailKeys.RIDE_TIME);
-            mRideDistance = data.get(WheelLogAppConstants.MailKeys.RIDE_DISTANCE);
-            mTopSpeed = data.get(WheelLogAppConstants.MailKeys.TOP_SPEED);
-            mPower = data.get(WheelLogAppConstants.MailKeys.POWER);
-            mFirstAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.FIRST_ALARM_SPEED);
-            mSecondAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.SECOND_ALARM_SPEED);
-            mThirdAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.THIRD_ALARM_SPEED);
-		}
-    }
-
     // Update the view
     function onUpdate(dc) {
-        if (currentlyOnScreen == 0) {
-=            cDrawables[:FirstSectionLabel].setText(cStrings[:AverageSpeed]);
-            cDrawables[:SecondSectionLabel].setText(cStrings[:TopSpeed]);
-        } else if (currentlyOnScreen == 1) {
-            cDrawables[:FirstSectionLabel].setText(cStrings[:Voltage]);
-            cDrawables[:SecondSectionLabel].setText(cStrings[:BatteryPercentage]);
-        } else if (currentlyOnScreen == 2) {
-            cDrawables[:FirstSectionLabel].setText(cStrings[:RideTime]);
-            cDrawables[:SecondSectionLabel].setText(cStrings[:Distance]);
+        switch (currentlyOnScreen) {
+            case 0:
+                cDrawables[:FirstSectionLabel].setText(cStrings[:AverageSpeed]);
+                cDrawables[:SecondSectionLabel].setText(cStrings[:TopSpeed]);
+                break;
+            case 1:
+                cDrawables[:FirstSectionLabel].setText(cStrings[:Voltage]);
+                cDrawables[:SecondSectionLabel].setText(cStrings[:BatteryPercentage]);
+                break;
+            case 2:
+                cDrawables[:FirstSectionLabel].setText(cStrings[:RideTime]);
+                cDrawables[:SecondSectionLabel].setText(cStrings[:Distance]);
+                break;
         }
 
         // Call the parent onUpdate function to redraw the layout
