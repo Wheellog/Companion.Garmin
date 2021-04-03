@@ -14,13 +14,11 @@ class DetailViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onPreviousPage() {
-        System.println("up");
         view.moveUp();
         return true;
     }
 
     function onNextPage() {
-        System.println("down");
         view.moveDown();
         return true;
     }

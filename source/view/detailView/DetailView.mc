@@ -2,20 +2,16 @@ using Toybox.WatchUi;
 using Toybox.Communications;
 using Toybox.Application;
 
+var currentlyOnScreen = 0;
+var maxScreens = 2; // Start to count from 0
+
 class DetailView extends WatchUi.View {
+    private var cDrawables = {};
+    private var cStrings = {};
 
-    private var currentlyOnScreen = 0;
-    private var maxScreens = 3;
-
-    private var cachedDrawables = {};
-
-    private var mCurrentSpeed,
-        mBatteryPercentage,
+    private var mBatteryPercentage,
         mBatteryVoltage,
         mTemperature,
-        mBluetooth,
-        mUseMph,
-        mMaxDialSpeed,
         mRideTime,
         mRideDistance,
         mTopSpeed,
@@ -31,19 +27,27 @@ class DetailView extends WatchUi.View {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.DetailsLayout(dc));
-        Communications.setMailboxListener(method(:onMail));   
+        Communications.setMailboxListener(method(:onMail));
+
+        // Here we cache every resource we will use in this view
+        cDrawables[:FirstSectionLabel] = View.findDrawableById("FirstSectionLabel");
+        cDrawables[:FirstSectionData] = View.findDrawableById("FirstSectionData");
+        cDrawables[:SecondSectionLabel] = View.findDrawableById("SecondSectionLabel");
+        cDrawables[:SecondSectionData] = View.findDrawableById("SecondSectionData");
+
+        cStrings[:AverageSpeed] = Rez.Strings.DetailView_AverageSpeed;
+        cStrings[:TopSpeed] = Rez.Strings.DetailView_TopSpeed;
+        cStrings[:Voltage] = Rez.Strings.DetailView_Voltage;
+        cStrings[:BatteryPercentage] = Rez.Strings.DetailView_BatteryPercentage;
+        cStrings[:RideTime] = Rez.Strings.DetailView_RideTime;
+        cStrings[:Distance] = Rez.Strings.DetailView_Distance;
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
-        cachedDrawables[:FirstSectionLabel] = View.findDrawableById("FirstSectionLabel");
-        cachedDrawables[:FirstSectionData] = View.findDrawableById("FirstSectionLabel");
-
-        cachedDrawables[:SecondSectionLabel] = View.findDrawableById("SecondSectionLabel");
-        cachedDrawables[:SecondSectionData] = View.findDrawableById("SecondSectionData");
-
+        
     }
 
     function onMail(mailIter) {
@@ -69,13 +73,9 @@ class DetailView extends WatchUi.View {
 		if (type == WheelLogAppConstants.MessageType.EUC_DATA) {
             // Here we will parse data from WheelLog and put it into respectable variables
             
-            mCurrentSpeed = data.get(WheelLogAppConstants.MailKeys.CURRENT_SPEED);
             mBatteryPercentage = data.get(WheelLogAppConstants.MailKeys.BATTERY_PERCENTAGE);
             mBatteryVoltage = data.get(WheelLogAppConstants.MailKeys.BATTERY_VOLTAGE);
             mTemperature = data.get(WheelLogAppConstants.MailKeys.TEMPERATURE);
-            mBluetooth = data.get(WheelLogAppConstants.MailKeys.BT_STATE);
-            mUseMph = data.get(WheelLogAppConstants.MailKeys.USE_MPH);
-            mMaxDialSpeed = data.get(WheelLogAppConstants.MailKeys.MAX_DIAL_SPEED);
             mRideTime = data.get(WheelLogAppConstants.MailKeys.RIDE_TIME);
             mRideDistance = data.get(WheelLogAppConstants.MailKeys.RIDE_DISTANCE);
             mTopSpeed = data.get(WheelLogAppConstants.MailKeys.TOP_SPEED);
@@ -88,6 +88,17 @@ class DetailView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc) {
+        if (currentlyOnScreen == 0) {
+=            cDrawables[:FirstSectionLabel].setText(cStrings[:AverageSpeed]);
+            cDrawables[:SecondSectionLabel].setText(cStrings[:TopSpeed]);
+        } else if (currentlyOnScreen == 1) {
+            cDrawables[:FirstSectionLabel].setText(cStrings[:Voltage]);
+            cDrawables[:SecondSectionLabel].setText(cStrings[:BatteryPercentage]);
+        } else if (currentlyOnScreen == 2) {
+            cDrawables[:FirstSectionLabel].setText(cStrings[:RideTime]);
+            cDrawables[:SecondSectionLabel].setText(cStrings[:Distance]);
+        }
+
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
     }
@@ -104,14 +115,14 @@ class DetailView extends WatchUi.View {
             WatchUi.switchToView(new HomeView(), new HomeViewDelegate(), WatchUi.SLIDE_DOWN);
         } else {
             currentlyOnScreen--;
-            WatchUi.requestUpdate();
         }
+        WatchUi.requestUpdate();
     }
 
     function moveDown() {
-        if (currentlyOnScreen + 1 != maxScreens) {
+        if (currentlyOnScreen != maxScreens) {
             currentlyOnScreen++;
-            WatchUi.requestUpdate();
         }
+        WatchUi.requestUpdate();
     }
 }
