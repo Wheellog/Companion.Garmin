@@ -10,6 +10,9 @@ Btw here is the original app repository on [GitHub](https://github.com/marccardi
 
 To contribute, fork this repo, add changes you want, and create a pull request. I'll review it and merge it if possible :D
 
+## Screenshots
+![screenshot 1](screenshots/screenshot 1.jpg)
+
 ## Development/building
 
 To build the app, go to properties.mk and set path to the developer key. After that, you can just run `make build` to build the app. To run it in a simulator, run `make run`. There is also a command called `make rerun`, which is not waiting for a simulator to start, but only runs the app in a simulator. You can also build for every device using `make buildall`, and you will have a binary for every device in `bin` folder. For publishing to the Connect IQ Store, use `make package`. And lastly, to clean, use `make clean`.
