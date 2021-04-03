@@ -9,17 +9,6 @@ class DetailView extends WatchUi.View {
     private var cDrawables = {};
     private var cStrings = {};
 
-    private var mBatteryPercentage,
-        mBatteryVoltage,
-        mTemperature,
-        mRideTime,
-        mRideDistance,
-        mTopSpeed,
-        mPower,
-        mFirstAlarmSpeed,
-        mSecondAlarmSpeed,
-        mThirdAlarmSpeed;
-
     function initialize() {
         View.initialize();
     }
@@ -27,7 +16,6 @@ class DetailView extends WatchUi.View {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.DetailsLayout(dc));
-        Communications.setMailboxListener(method(:mailHandler));
 
         // Here we cache every resource we will use in this view
         cDrawables[:FirstSectionLabel] = View.findDrawableById("FirstSectionLabel");
