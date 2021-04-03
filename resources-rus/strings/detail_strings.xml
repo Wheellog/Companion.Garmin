@@ -1,0 +1,8 @@
+<strings>
+    <string id="DetailView_AverageSpeed">Сред. Скорость</string>
+    <string id="DetailView_TopSpeed">Макс. Скорость</string>
+    <string id="DetailView_Voltage">Напряжение</string>
+    <string id="DetailView_BatteryPercentage">Заряд батареи</string>
+    <string id="DetailView_RideTime">Время в пути</string>
+    <string id="DetailView_Distance">Расстояние</string>
+</strings>
