@@ -16,4 +16,4 @@ To build the app, go to properties.mk and set path to the developer key. After t
 
 ## Translations
 
-I will later add a possibility to contribute to translations, so for now you need to directly fork a repo and edit strings.xml file for your desired language.
+You can contribute to translations here: https://poeditor.com/join/project?hash=WUAV6h3bxB
