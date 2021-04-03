@@ -30,7 +30,6 @@ class HomeView extends WatchUi.View {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.HomeLayout(dc));
-        Communications.setMailboxListener(method(:onMail));   
 
         progressBar = new WatchUi.ProgressBar(
             WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp),
