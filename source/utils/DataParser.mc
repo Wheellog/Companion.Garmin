@@ -1,5 +1,5 @@
 function parseDataFromWheelLog(message) {
-    var type = message.get(WheelLogAppConstants.MailKeys.MSG_TYPE);
+var type = message.get(WheelLogAppConstants.MailKeys.MSG_TYPE);
     var data = message.get(WheelLogAppConstants.MailKeys.MSG_DATA);
         
     if (type == null or data == null) {	
@@ -9,15 +9,19 @@ function parseDataFromWheelLog(message) {
     if (type == WheelLogAppConstants.MessageType.EUC_DATA) {
         // Here we will parse data from WheelLog and put it into respectable variables
         
-        mBatteryPercentage = data.get(WheelLogAppConstants.MailKeys.BATTERY_PERCENTAGE);
-        mBatteryVoltage = data.get(WheelLogAppConstants.MailKeys.BATTERY_VOLTAGE);
-        mTemperature = data.get(WheelLogAppConstants.MailKeys.TEMPERATURE);
-        mRideTime = data.get(WheelLogAppConstants.MailKeys.RIDE_TIME);
-        mRideDistance = data.get(WheelLogAppConstants.MailKeys.RIDE_DISTANCE);
-        mTopSpeed = data.get(WheelLogAppConstants.MailKeys.TOP_SPEED);
-        mPower = data.get(WheelLogAppConstants.MailKeys.POWER);
-        mFirstAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.FIRST_ALARM_SPEED);
-        mSecondAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.SECOND_ALARM_SPEED);
-        mThirdAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.THIRD_ALARM_SPEED);
+        WheelData.CurrentSpeed = data.get(WheelLogAppConstants.MailKeys.CURRENT_SPEED);
+        WheelData.BatteryPercentage = data.get(WheelLogAppConstants.MailKeys.BATTERY_PERCENTAGE);
+        WheelData.BatteryVoltage = data.get(WheelLogAppConstants.MailKeys.BATTERY_VOLTAGE);
+        WheelData.Temperature = data.get(WheelLogAppConstants.MailKeys.TEMPERATURE);
+        WheelData.Bluetooth = data.get(WheelLogAppConstants.MailKeys.BT_STATE);
+        WheelData.UseMph = data.get(WheelLogAppConstants.MailKeys.USE_MPH);
+        WheelData.MaxDialSpeed = data.get(WheelLogAppConstants.MailKeys.MAX_DIAL_SPEED);
+        WheelData.RideTime = data.get(WheelLogAppConstants.MailKeys.RIDE_TIME);
+        WheelData.RideDistance = data.get(WheelLogAppConstants.MailKeys.RIDE_DISTANCE);
+        WheelData.TopSpeed = data.get(WheelLogAppConstants.MailKeys.TOP_SPEED);
+        WheelData.Power = data.get(WheelLogAppConstants.MailKeys.POWER);
+        WheelData.FirstAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.FIRST_ALARM_SPEED);
+        WheelData.SecondAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.SECOND_ALARM_SPEED);
+        WheelData.ThirdAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.THIRD_ALARM_SPEED);
     }
 }
