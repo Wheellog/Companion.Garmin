@@ -11,7 +11,7 @@ Btw here is the original app repository on [GitHub](https://github.com/marccardi
 To contribute, fork this repo, add changes you want, and create a pull request. I'll review it and merge it if possible :D
 
 ## Screenshots
-![screenshot 1](screenshots/screenshot 1.jpg)
+![screenshot 1](https://raw.githubusercontent.com/GGorAA/WheelLog.Garmin/master/screenshots/screenshot%201.jpg)
 
 ## Development/building
 
