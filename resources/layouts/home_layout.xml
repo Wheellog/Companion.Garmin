@@ -30,7 +30,7 @@
         <!-- Arc size n' position -->
         <param name="startDegree">220</param>
         <param name="endDegree">140</param>
-        <param name="xCenterPosition">105</param>
+        <param name="xCenterPosition">:center</param>
         <param name="yCenterPosition">:center</param>
         <param name="arcRadius">65</param>
         <param name="arcSize">15</param>
