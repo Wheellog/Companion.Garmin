@@ -8,8 +8,8 @@
         <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
         <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
         <!-- Dial size n' position -->
-        <param name="startDegree">-140</param>
-        <param name="endDegree">320</param>
+        <param name="startDegree">225</param>
+        <param name="endDegree">-45</param>
         <param name="xCenterPosition">:center</param>
         <param name="yCenterPosition">:center</param>
         <param name="arcRadius">:max</param>
