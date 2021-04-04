@@ -15,6 +15,7 @@ class ArcRenderer extends WatchUi.Drawable {
         mYCenterPosition,
         mArcRadius,
         mArcSize,
+        mArcDirection,
         mDataDrawingDirection,
         mDataSource,
         mDataSourceMaxValue;
@@ -81,15 +82,6 @@ class ArcRenderer extends WatchUi.Drawable {
 
             // Calculating position of the foreground arc
             if (mStartDegree < 0 && mEndDegree >= 0) {
-                // System.print("mDataSource / mDataSourceMaxValue: ");
-                // System.println(mDataSource.toFloat() / mDataSourceMaxValue.toFloat());
-                
-                // System.print("mStartDegree.abs() + mEndDegree.abs(): ");
-                // System.println(mStartDegree.abs() + mEndDegree.abs());
-
-                // System.print("first * second: ");
-                // System.println((mDataSource.toFloat() / mDataSourceMaxValue.toFloat()) * (mStartDegree.abs() + mEndDegree.abs()));
-
                 var endDegree = (mDataSource.toFloat() / mDataSourceMaxValue.toFloat()) * ((180 - mStartDegree.abs()) + (180 - mEndDegree.abs())) + mStartDegree;
                 System.print("endDegree: ");
                 System.println(endDegree);
@@ -98,6 +90,12 @@ class ArcRenderer extends WatchUi.Drawable {
 
             } else if (mEndDegree < 0 && mStartDegree < 0) {
 
+            } else {
+                var endDegree = (mDataSource.toFloat() / mDataSourceMaxValue.toFloat()) * (mStartDegree - mEndDegree) + mEndDegree;
+                var result = mStartDegree - endDegree
+                System.print("endDegree: ");
+                System.println(endDegree);
+                dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, endDegree);
             }
         }
         
