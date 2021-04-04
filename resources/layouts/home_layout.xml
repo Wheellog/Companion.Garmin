@@ -16,7 +16,7 @@
         <param name="arcSize">50</param>
         <param name="dataDrawingDirection">:start</param>
         <param name="dataSource">WheelData.CurrentSpeed</param>
-        <param name="dataSourceMaxValue">WheelData.MaxValues.CurrentSpeed</param>
+        <param name="dataSourceMaxValue">WheelData.CurrentSpeedMaxValue</param>
     </drawable>
 
     <label id="BatteryNumber" text="56%" x="38%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_SMALL" color="0xA4A4A4" />
@@ -36,7 +36,7 @@
         <param name="arcSize">15</param>
         <param name="dataDrawingDirection">:start</param>
         <param name="dataSource">WheelData.BatteryPercentage</param>
-        <param name="dataSourceMaxValue">WheelData.MaxValues.BatteryPercentage</param>
+        <param name="dataSourceMaxValue">100</param>
     </drawable>
 
     <drawable id="TemperatureArc" class="ArcRenderer">
@@ -54,7 +54,7 @@
         <param name="arcSize">15</param>
         <param name="dataDrawingDirection">:end</param>
         <param name="dataSource">WheelData.Temperature</param>
-        <param name="dataSourceMaxValue">WheelData.MaxValues.Temperature</param>
+        <param name="dataSourceMaxValue">40</param>
     </drawable>
 
     <label id="WheelNameSubtitle"
