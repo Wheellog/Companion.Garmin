@@ -13,20 +13,6 @@ module WheelData {
         FirstAlarmSpeed,
         SecondAlarmSpeed,
         ThirdAlarmSpeed;
-    module MaxValues {
-        var CurrentSpeed = 40,
-            BatteryPercentage = 100,
-            BatteryVoltage,
-            Temperature = 40,
-            Bluetooth,
-            UseMph,
-            MaxDialSpeed,
-            RideTime,
-            RideDistance,
-            TopSpeed,
-            Power,
-            FirstAlarmSpeed,
-            SecondAlarmSpeed,
-            ThirdAlarmSpeed;
-    }
+
+    var CurrentSpeedMaxValue = 40; // Default max value
 }
