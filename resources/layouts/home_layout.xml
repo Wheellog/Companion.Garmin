@@ -14,6 +14,8 @@
         <param name="yCenterPosition">:center</param>
         <param name="arcRadius">:max</param>
         <param name="arcSize">50</param>
+        <param name="invertDrawingSide">false</param>
+        <!-- Data -->
         <param name="dataDrawingDirection">:start</param>
         <param name="dataSource">WheelData.CurrentSpeed</param>
         <param name="dataSourceMaxValue">WheelData.CurrentSpeedMaxValue</param>
@@ -33,6 +35,8 @@
         <param name="yCenterPosition">:center</param>
         <param name="arcRadius">65</param>
         <param name="arcSize">15</param>
+        <param name="invertDrawingSide">true</param>
+        <!-- Data -->
         <param name="dataDrawingDirection">:start</param>
         <param name="dataSource">WheelData.BatteryPercentage</param>
         <param name="dataSourceMaxValue">100</param>
@@ -52,6 +56,8 @@
         <param name="yCenterPosition">:center</param>
         <param name="arcRadius">65</param>
         <param name="arcSize">15</param>
+        <param name="invertDrawingSide">false</param>
+        <!-- Data -->
         <param name="dataDrawingDirection">:end</param>
         <param name="dataSource">WheelData.Temperature</param>
         <param name="dataSourceMaxValue">40</param>
