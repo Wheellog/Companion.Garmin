@@ -20,7 +20,6 @@
     </drawable>
 
     <label id="BatteryNumber" text="56%" x="38%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_SMALL" color="0xA4A4A4" />
-    <label id="TemperatureNumber" text="16 C" x="62%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_SMALL" color="0xA4A4A4" />
     <drawable id="BatteryArc" class="ArcRenderer">
         <!-- Colors -->
         <param name="idleColor">0x05A5E5</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
@@ -39,6 +38,7 @@
         <param name="dataSourceMaxValue">100</param>
     </drawable>
 
+    <label id="TemperatureNumber" text="16 C" x="62%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_SMALL" color="0xA4A4A4" />
     <drawable id="TemperatureArc" class="ArcRenderer">
         <!-- Colors -->
         <param name="idleColor">0x05A5E5</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
