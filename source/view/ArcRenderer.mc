@@ -72,35 +72,33 @@ class ArcRenderer extends WatchUi.Drawable {
             mEndDegree
         );
 
-        var degreeSum = mStartDegree.abs() + mEndDegree.abs();
-        System.print("degreeSum: ");
-        System.println(degreeSum);
-        var absoluteResult = degreeSum * (mDataSource.toFloat() / mDataSourceMaxValue.toFloat());
-        System.print("absoluteResult: ");
-        System.println(absoluteResult);
-
-        var subtractor;
-        if (mStartDegree < 0) {
-            subtractor = mStartDegree;
-        } else if (mEndDegree < 0) {
-            subtractor = mEndDegree;
-        } else {
-            subtractor = degreeSum * -1;
-        }
-
-        System.print("subtractor: ");
-        System.println(subtractor);
-
-        var result = absoluteResult + subtractor;
-        System.print("result: ");
-        System.println(result);
-
         // Rendering foreground arc
-        dc.setColor(0x3F8CFF, 0x000000);
-        if (mDataDrawingDirection == :start) {
-            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, result);
+        if(mDataSource >= mDataSourceMaxValue) {
+            dc.setColor(0x3F8CFF, 0x000000);
+            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
         } else {
-            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, result, mEndDegree);
+            dc.setColor(0x3F8CFF, 0x000000);
+
+            // Calculating position of the foreground arc
+            if (mStartDegree < 0 && mEndDegree >= 0) {
+                // System.print("mDataSource / mDataSourceMaxValue: ");
+                // System.println(mDataSource.toFloat() / mDataSourceMaxValue.toFloat());
+                
+                // System.print("mStartDegree.abs() + mEndDegree.abs(): ");
+                // System.println(mStartDegree.abs() + mEndDegree.abs());
+
+                // System.print("first * second: ");
+                // System.println((mDataSource.toFloat() / mDataSourceMaxValue.toFloat()) * (mStartDegree.abs() + mEndDegree.abs()));
+
+                var endDegree = (mDataSource.toFloat() / mDataSourceMaxValue.toFloat()) * ((180 - mStartDegree.abs()) + (180 - mEndDegree.abs())) + mStartDegree;
+                System.print("endDegree: ");
+                System.println(endDegree);
+                dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, endDegree);
+            } else if (mEndDegree < 0 && mStartDegree >= 0) {
+
+            } else if (mEndDegree < 0 && mStartDegree < 0) {
+
+            }
         }
         
         dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
