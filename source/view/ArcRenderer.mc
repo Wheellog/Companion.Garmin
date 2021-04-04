@@ -60,46 +60,51 @@ class ArcRenderer extends WatchUi.Drawable {
     }
     function draw(dc) {
         dc.setPenWidth(mArcSize);
-        renderBackgroundArc(dc);
-        dc.setColor(0x3F8CFF, 0x000000);
-        renderForegroundArc(dc);
-        
-        getForegroundFill(5);
 
-        dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-    }
-
-    function renderForegroundArc(dc) {
-        dc.setColor(0x3F8CFF, 0x000000);
+        // Drawing the background
+        dc.setColor(0x323232, 0x000000);
         dc.drawArc(
             mXCenterPosition,
             mYCenterPosition,
             mArcRadius,
             Graphics.ARC_CLOCKWISE,
             mStartDegree,
-            getForegroundFill(mDataSource)
+            mEndDegree
         );
-    }
 
-    function renderBackgroundArc(dc) {
-        dc.setColor(0x323232, 0x000000);
-        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
-    }
+        var degreeSum = mStartDegree.abs() + mEndDegree.abs();
+        System.print("degreeSum: ");
+        System.println(degreeSum);
+        var absoluteResult = degreeSum * (mDataSource.toFloat() / mDataSourceMaxValue.toFloat());
+        System.print("absoluteResult: ");
+        System.println(absoluteResult);
 
-    function getForegroundFill(data) {
-        var degreeRange = mStartDegree.abs() + mEndDegree.abs();
-        System.println(degreeRange);
-        var percentage = data.toFloat() / mDataSourceMaxValue.toFloat();
-        System.println(percentage);
-        if (mEndDegree < 0) {
-            System.println((degreeRange * percentage) - mEndDegree);
-            return (degreeRange * percentage) - mEndDegree;
-        } else if (mStartDegree < 0) {
-            System.println((degreeRange * percentage) - mStartDegree);
-            return (degreeRange * percentage) - mStartDegree;
+        var subtractor;
+        if (mStartDegree < 0) {
+            subtractor = mStartDegree;
+        } else if (mEndDegree < 0) {
+            subtractor = mEndDegree;
+        } else {
+            subtractor = degreeSum * -1;
         }
-    }
 
+        System.print("subtractor: ");
+        System.println(subtractor);
+
+        var result = absoluteResult + subtractor;
+        System.print("result: ");
+        System.println(result);
+
+        // Rendering foreground arc
+        dc.setColor(0x3F8CFF, 0x000000);
+        if (mDataDrawingDirection == :start) {
+            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, result);
+        } else {
+            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, result, mEndDegree);
+        }
+        
+        dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
 
     function setValues(current, max) {
         mCurrent = current;
