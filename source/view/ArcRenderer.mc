@@ -55,6 +55,7 @@ class ArcRenderer extends WatchUi.Drawable {
             mArcRadius = params.get(:arcRadius);
         }
         mArcSize = params.get(:arcSize);
+        mArcDirection = params[:arcDirection];
         mDataDrawingDirection = params.get(:dataDrawingDirection);
         mDataSource = params.get(:dataSource);
         mDataSourceMaxValue = params.get(:dataSourceMaxValue);
