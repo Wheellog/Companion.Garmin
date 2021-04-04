@@ -21,7 +21,7 @@
         <param name="dataSourceMaxValue">WheelData.CurrentSpeedMaxValue</param>
     </drawable>
 
-    <label id="BatteryNumber" text="56%" x="38%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_SMALL" color="0xA4A4A4" />
+    <label id="BatteryNumber" text="85%" x="38%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_SMALL" color="0xA4A4A4" />
     <drawable id="BatteryArc" class="ArcRenderer">
         <!-- Colors -->
         <param name="idleColor">0x05A5E5</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
@@ -29,13 +29,13 @@
         <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
         <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
         <!-- Arc size n' position -->
-        <param name="startDegree">-140</param>
+        <param name="startDegree">220</param>
         <param name="endDegree">140</param>
         <param name="xCenterPosition">105</param>
         <param name="yCenterPosition">:center</param>
         <param name="arcRadius">65</param>
         <param name="arcSize">15</param>
-        <param name="invertDrawingSide">true</param>
+        <param name="arcDirection">Gfx.ARC_COUNTER_CLOCKWISE</param>
         <!-- Data -->
         <param name="dataDrawingDirection">:start</param>
         <param name="dataSource">WheelData.BatteryPercentage</param>
