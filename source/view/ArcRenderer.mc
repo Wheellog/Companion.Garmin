@@ -16,6 +16,7 @@ class ArcRenderer extends WatchUi.Drawable {
         mArcRadius,
         mArcSize,
         mArcDirection,
+        mArcType,
         mDataDrawingDirection,
         mDataSource,
         mDataSourceMaxValue;
@@ -56,6 +57,7 @@ class ArcRenderer extends WatchUi.Drawable {
         }
         mArcSize = params.get(:arcSize);
         mArcDirection = params[:arcDirection];
+        mArcType = params[:arcType];
         mDataDrawingDirection = params.get(:dataDrawingDirection);
         mDataSource = params.get(:dataSource);
         mDataSourceMaxValue = params.get(:dataSourceMaxValue);
@@ -86,23 +88,41 @@ class ArcRenderer extends WatchUi.Drawable {
             // because I just don't care about readability here, bc if it works - don't
             // touch it, and i have a spent a lot of nerves while trying to code this 
             // crap
-            
-            if (mStartDegree > 0 && mEndDegree < 0) {
-                var degreeSum = mStartDegree.abs() + mEndDegree.abs();
-                var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
-                var preResult = degreeSum * percentage;
-                var result = mStartDegree - preResult;
-                dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
-            } else if (mStartDegree > 0 && mEndDegree > 0) {
-                var degreeSum;
-                if (mStartDegree > mEndDegree) {
-                    degreeSum = mStartDegree - mEndDegree;
+
+            switch (mArcType) {
+                case :speedArc: {
+                    var degreeSum = mStartDegree.abs() + mEndDegree.abs();
+                    var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+                    var preResult = degreeSum * percentage;
+                    var result = mStartDegree - preResult;
+                    dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+                    break;
                 }
-                var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
-                var preResult = degreeSum * percentage;
-                var result = mStartDegree - preResult;
-                dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+                case :batteryArc: {
+                    
+                }
+                case :temperatureArc: {
+
+                }
             }
+            // if (mStartDegree > 0 && mEndDegree < 0) {
+            //     var degreeSum = mStartDegree.abs() + mEndDegree.abs();
+            //     var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+            //     var preResult = degreeSum * percentage;
+            //     var result = mStartDegree + preResult;
+            //     dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+            // } else if (mStartDegree > 0 && mEndDegree > 0) {
+            //     var degreeSum;
+            //     if (mStartDegree > mEndDegree) {
+            //         degreeSum = mStartDegree - mEndDegree;
+            //     } else {
+            //         degreeSum = mEndDegree - mStartDegree;
+            //     }
+            //     var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+            //     var preResult = degreeSum * percentage;
+            //     var result = preResult + mEndDegree;
+            //     dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+            // }
         }
         
         dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
