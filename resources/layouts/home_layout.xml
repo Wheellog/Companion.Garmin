@@ -15,6 +15,7 @@
         <param name="arcRadius">:max</param>
         <param name="arcSize">50</param>
         <param name="arcDirection">Gfx.ARC_CLOCKWISE</param>
+        <param name="arcType">:speedArc</param>
         <!-- Data -->
         <param name="dataSource">WheelData.CurrentSpeed</param>
         <param name="dataSourceMaxValue">WheelData.CurrentSpeedMaxValue</param>
@@ -35,6 +36,7 @@
         <param name="arcRadius">65</param>
         <param name="arcSize">15</param>
         <param name="arcDirection">Gfx.ARC_CLOCKWISE</param>
+        <param name="arcType">:batteryArc</param>
         <!-- Data -->
         <param name="dataSource">WheelData.BatteryPercentage</param>
         <param name="dataSourceMaxValue">100</param>
@@ -55,6 +57,7 @@
         <param name="arcRadius">65</param>
         <param name="arcSize">15</param>
         <param name="arcDirection">Gfx.ARC_COUNTER_CLOCKWISE</param>
+        <param name="arcType">:temperatureArc</param>
         <!-- Data -->
         <param name="dataSource">WheelData.Temperature</param>
         <param name="dataSourceMaxValue">40</param>
