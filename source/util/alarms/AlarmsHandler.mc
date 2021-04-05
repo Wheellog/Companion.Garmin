@@ -1,9 +1,20 @@
 using Toybox.Attention;
+using Toybox.Timer;
 
 module Alarms {
-    function alarmHandler() {
-
+    var alarmUpdateTimer = new Timer.Timer();
+    function startAlarmRoutine(updateTime) {
+        alarmUpdateTimer.start(method(:alarmHandler), updateTime, true);
     }
+
+    function stopAlarmRoutine() {
+        alarmUpdateTimer.stop();
+    }
+
+    function alarmHandler() {
+        
+    }
+
     module VibrationPatters {
         var firstAlarm = [
             new Attention.VibeProfile(30, 700), // On for 700 milliseconds
