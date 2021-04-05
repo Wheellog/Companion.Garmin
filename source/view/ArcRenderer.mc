@@ -82,7 +82,16 @@ class ArcRenderer extends WatchUi.Drawable {
             dc.setColor(0x3F8CFF, 0x000000);
 
             // Calculating position of the foreground arc
+            var degreeSum = mStartDegree.abs() + mEndDegree.abs();
+            System.println(degreeSum);
+            var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+            System.println(percentage);
+            var preResult = degreeSum * percentage;
+            System.println(preResult);
+            var result = mStartDegree - preResult;
+            System.println(result);
             
+            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
         }
         
         dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
