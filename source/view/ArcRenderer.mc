@@ -81,17 +81,28 @@ class ArcRenderer extends WatchUi.Drawable {
         } else {
             dc.setColor(0x3F8CFF, 0x000000);
 
-            // Calculating position of the foreground arc
-            var degreeSum = mStartDegree.abs() + mEndDegree.abs();
-            System.println(degreeSum);
-            var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
-            System.println(percentage);
-            var preResult = degreeSum * percentage;
-            System.println(preResult);
-            var result = mStartDegree - preResult;
-            System.println(result);
+            // Calculating position of the foreground 
+            // About this part... Oh boy, don't even try to understand what is here,
+            // because I just don't care about readability here, bc if it works - don't
+            // touch it, and i have a spent a lot of nerves while trying to code this 
+            // crap
             
-            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+            if (mStartDegree > 0 && mEndDegree < 0) {
+                var degreeSum = mStartDegree.abs() + mEndDegree.abs();
+                var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+                var preResult = degreeSum * percentage;
+                var result = mStartDegree - preResult;
+                dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+            } else if (mStartDegree > 0 && mEndDegree > 0) {
+                var degreeSum;
+                if (mStartDegree > mEndDegree) {
+                    degreeSum = mStartDegree - mEndDegree;
+                }
+                var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+                var preResult = degreeSum * percentage;
+                var result = mStartDegree - preResult;
+                dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+            }
         }
         
         dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
