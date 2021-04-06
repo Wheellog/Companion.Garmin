@@ -1,3 +1,5 @@
+using Toybox.Communications;
+
 function mailHandler(mailIter) {
     var mail;
     mail = mailIter.next();
