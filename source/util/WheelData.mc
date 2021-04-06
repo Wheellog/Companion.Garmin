@@ -10,9 +10,8 @@ module WheelData {
         RideDistance,
         TopSpeed,
         Power,
-        FirstAlarmSpeed,
-        SecondAlarmSpeed,
-        ThirdAlarmSpeed;
+        Pwm,
+        AlarmType;
 
     var CurrentSpeedMaxValue = 40; // Default max value
 }
