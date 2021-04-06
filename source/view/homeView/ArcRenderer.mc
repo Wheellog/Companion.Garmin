@@ -63,10 +63,9 @@ class ArcRenderer extends WatchUi.Drawable {
         mDataSourceMaxValue = params.get(:dataSourceMaxValue);
     }
     function draw(dc) {
-        dc.setPenWidth(mArcSize);
-
-        // Drawing the background
+        // Rendering background arc
         dc.setColor(0x323232, 0x000000);
+        dc.setPenWidth(mArcSize);
         dc.drawArc(
             mXCenterPosition,
             mYCenterPosition,
@@ -78,10 +77,10 @@ class ArcRenderer extends WatchUi.Drawable {
 
         // Rendering foreground arc
         if(mDataSource >= mDataSourceMaxValue) {
-            dc.setColor(0x3F8CFF, 0x000000);
+            dc.setColor(mIdleColor, 0x000000);
             dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
         } else {
-            dc.setColor(0x3F8CFF, 0x000000);
+            dc.setColor(mIdleColor, 0x000000);
 
             // Calculating position of the foreground 
             // About this part... Oh boy, don't even try to understand what is here,
@@ -110,8 +109,6 @@ class ArcRenderer extends WatchUi.Drawable {
                 }
             }
         }
-        
-        dc.drawText(screenCenterX, screenCenterY, font, "22", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function setValues(current, max) {
