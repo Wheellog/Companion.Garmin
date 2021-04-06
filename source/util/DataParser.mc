@@ -20,8 +20,5 @@ var type = message.get(WheelLogAppConstants.MailKeys.MSG_TYPE);
         WheelData.RideDistance = data.get(WheelLogAppConstants.MailKeys.RIDE_DISTANCE);
         WheelData.TopSpeed = data.get(WheelLogAppConstants.MailKeys.TOP_SPEED);
         WheelData.Power = data.get(WheelLogAppConstants.MailKeys.POWER);
-        WheelData.FirstAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.FIRST_ALARM_SPEED);
-        WheelData.SecondAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.SECOND_ALARM_SPEED);
-        WheelData.ThirdAlarmSpeed = data.get(WheelLogAppConstants.MailKeys.THIRD_ALARM_SPEED);
     }
 }
