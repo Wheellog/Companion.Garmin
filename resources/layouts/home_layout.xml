@@ -3,7 +3,7 @@
 
     <drawable id="SpeedDial" class="ArcRenderer">
         <!-- Colors -->
-        <param name="idleColor">0x05A5E5</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
+        <param name="idleColor">0x0085F8</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
         <param name="normalColor">0x3DE16B</param> <!-- This color is for normal speed, used between 20% and 60%-->
         <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
         <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
@@ -20,11 +20,12 @@
         <param name="dataSource">WheelData.CurrentSpeed</param>
         <param name="dataSourceMaxValue">WheelData.CurrentSpeedMaxValue</param>
     </drawable>
+    <label id="SpeedNumber" text="22" x="50%" y="50%" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER" font="@Fonts.Tall" color="0x0085F8" />
 
     <label id="BatteryNumber" text="85%" x="38%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_SMALL" color="0xA4A4A4" />
     <drawable id="BatteryArc" class="ArcRenderer">
         <!-- Colors -->
-        <param name="idleColor">0x05A5E5</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
+        <param name="idleColor">0x0085F8</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
         <param name="normalColor">0x3DE16B</param> <!-- This color is for normal speed, used between 20% and 60%-->
         <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
         <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
@@ -33,7 +34,7 @@
         <param name="endDegree">140</param>
         <param name="xCenterPosition">:center</param>
         <param name="yCenterPosition">:center</param>
-        <param name="arcRadius">65</param>
+        <param name="arcRadius">70</param>
         <param name="arcSize">15</param>
         <param name="arcDirection">Gfx.ARC_CLOCKWISE</param>
         <param name="arcType">:batteryArc</param>
@@ -54,7 +55,7 @@
         <param name="endDegree">-40</param>
         <param name="xCenterPosition">:center</param>
         <param name="yCenterPosition">:center</param>
-        <param name="arcRadius">65</param>
+        <param name="arcRadius">70</param>
         <param name="arcSize">15</param>
         <param name="arcDirection">Gfx.ARC_COUNTER_CLOCKWISE</param>
         <param name="arcType">:temperatureArc</param>
