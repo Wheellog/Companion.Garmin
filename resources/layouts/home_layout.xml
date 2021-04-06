@@ -64,7 +64,7 @@
         <param name="dataSourceMaxValue">40</param>
     </drawable>
 
-    <label id="WheelNameSubtitle"
+    <label id="BottomSubtitle"
         text="InMotion V11"
         x="50%"
         y="80%"
