@@ -12,8 +12,10 @@ module Alarms {
     }
 
     function alarmHandler() {
-        
-    }
+        if (isAlarmTriggered) {
+
+        }
+    }7
 
     module VibrationPatters {
         var firstAlarm = [
@@ -34,5 +36,18 @@ module Alarms {
             new Attention.VibeProfile(50, 300),
             new Attention.VibeProfile(0, 300)
         ];
+    }
+
+    module Data {
+        module AlarmType {
+            enum {
+                FIRST,
+                SECOND,
+                THIRD
+            }
+        }
+        var isAlarmTriggered;
+
+        var alarmType;
     }
 }
