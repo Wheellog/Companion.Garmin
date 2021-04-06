@@ -15,7 +15,7 @@ module Alarms {
         if (isAlarmTriggered) {
 
         }
-    }7
+    }
 
     module VibrationPatters {
         var firstAlarm = [
