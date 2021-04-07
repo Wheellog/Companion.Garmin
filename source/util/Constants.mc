@@ -9,7 +9,7 @@ module WheelLogAppConstants {
     module MailKeys {
         enum {
             MSG_TYPE = -2,
-            MSG_DATA,
+            MSG_DATA = -1,
 
             CURRENT_SPEED,
             BATTERY_PERCENTAGE,
@@ -22,10 +22,8 @@ module WheelLogAppConstants {
             RIDE_DISTANCE,
             TOP_SPEED,
             POWER,
-            FIRST_ALARM_SPEED,
-            SECOND_ALARM_SPEED,
-            THIRD_ALARM_SPEED,
-            WHEEEL_HAME,
+
+            BOTTOM_SUBTITLE,
         }
     }
 }

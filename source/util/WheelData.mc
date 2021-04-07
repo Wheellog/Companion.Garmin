@@ -13,5 +13,5 @@ module WheelData {
         Pwm,
         AlarmType;
 
-    var CurrentSpeedMaxValue = 40; // Default max value
+    var CurrentSpeedMaxValue = 40;
 }
