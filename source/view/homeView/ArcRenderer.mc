@@ -115,9 +115,4 @@ class ArcRenderer extends WatchUi.Drawable {
             }
         }
     }
-
-    function setValues(current, max) {
-        mCurrent = current;
-        mMaxValue = max;
-    }
 }
