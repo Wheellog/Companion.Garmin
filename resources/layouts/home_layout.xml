@@ -65,7 +65,7 @@
     </drawable>
 
     <label id="BottomSubtitle"
-        text="InMotion V11"
+        text="No data"
         x="50%"
         y="80%"
         justification="Gfx.TEXT_JUSTIFY_CENTER"
