@@ -105,7 +105,12 @@ class ArcRenderer extends WatchUi.Drawable {
                     break;
                 }
                 case :temperatureArc: {
-
+                    var degreeRange = mStartDegree.abs() + mEndDegree.abs();
+                    var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+                    var preResult = degreeRange * percentage;
+                    var result = preResult + mEndDegree;
+                    dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mEndDegree, result);
+                    break;
                 }
             }
         }
