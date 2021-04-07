@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: nkarmanet/monkeyc
+    container: karmanet/monkeyc
     steps:
       - uses: actions/checkout@v2
 
