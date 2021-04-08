@@ -42,11 +42,12 @@ module AppData {
                     BATTERY_VOLTAGE = 2,
                     TEMPERATURE = 3,
                     BT_STATE = 4,
-                    RIDE_TIME = 5,
-                    RIDE_DISTANCE = 6,
-                    TOP_SPEED = 7,
-                    POWER = 8,
-                    BOTTOM_SUBTITLE = 9,
+                    POWER = 5,
+                    BOTTOM_SUBTITLE = 6,
+                    AVG_SPEED = 7,
+                    TOP_SPEED = 8,
+                    RIDE_DISTANCE = 9;
+                    RIDE_TIME = 10;
                 }
             }
             module Settings {
