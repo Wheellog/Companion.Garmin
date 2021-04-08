@@ -29,16 +29,12 @@ module AppData {
                 }
             }
             enum {
-                EUC_DATA = 0,
-                PLAY_HORN = 1
+                MSG_TYPE = -2,
+                MSG_DATA = -1,
             }
         }
 
         module MailKeys {
-            enum {
-                MSG_TYPE = -2,
-                MSG_DATA = -1,
-            }
             module WheeLData {
                 enum {
                     CURRENT_SPEED = 0,
