@@ -6,7 +6,7 @@ function parseDataFromWheelLog(message) {
         return;
     }
     
-    if (type == WheelLogAppConstants.MessageType.EUC_DATA) {
+    if (type == AppData.Constants.MessageType.Incoming.EUC_DATA) {
         // Here we will parse data from WheelLog and put it into respectable variables
 
         var keyStore = AppData.Constants.MailKeys.WheeLData;
