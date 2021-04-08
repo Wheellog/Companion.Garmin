@@ -11,7 +11,8 @@ module AppData {
         TopSpeed,
         Power,
         Pwm,
-        AlarmType;
+        AlarmType,
+        BottomSutitleText;
 
     var CurrentSpeedMaxValue = 40;
 }
