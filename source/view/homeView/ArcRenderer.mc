@@ -1,6 +1,7 @@
 using Toybox.WatchUi;
 using Toybox.Application.Properties;
 using Toybox.Application.Storage;
+using Toybox.System;
 
 class ArcRenderer extends WatchUi.Drawable {
     var mCurrent, mMaxValue;
