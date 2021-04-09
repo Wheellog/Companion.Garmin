@@ -8,6 +8,7 @@ module AppData {
         MaxDialSpeed,
         RideTime,
         RideDistance,
+        AverageSpeed,
         TopSpeed,
         Power,
         Pwm,
