@@ -48,7 +48,10 @@ module WheelData {
                     AVG_SPEED = 7,
                     TOP_SPEED = 8,
                     RIDE_DISTANCE = 9,
-                    RIDE_TIME = 10
+                    RIDE_TIME = 10,
+                    PWM = 11,
+                    ALARM_TYPE = 12,
+                    BOTTOM_SUBTITLE_TEXT = 13
                 }
             }
             module Settings {
