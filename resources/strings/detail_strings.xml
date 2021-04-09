@@ -1,7 +1,7 @@
 <strings>
     <string id="DetailView_AverageSpeed">Average Speed</string>
     <string id="DetailView_TopSpeed">Top Speed</string>
-    <string id="DoetailView_Voltage">Voltage</string>
+    <string id="DetailView_Voltage">Voltage</string>
     <string id="DetailView_BatteryPercentage">Battery Percentage</string>
     <string id="DetailView_RideTime">Ride Time</string>
     <string id="DetailView_Distance">Distance</string>
