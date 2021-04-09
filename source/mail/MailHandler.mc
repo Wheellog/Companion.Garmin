@@ -5,7 +5,7 @@ function mailHandler(mailIter) {
     mail = mailIter.next();
     Communications.emptyMailbox();
 
-    if (mail != null && mail instanceof Lang.Dictionary) {
+    if (mail != null and mail instanceof Lang.Dictionary) {
             parseDataFromWheelLog(mail);
     }
 
