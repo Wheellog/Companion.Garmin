@@ -29,6 +29,10 @@ class DetailView extends WatchUi.View {
         cStrings[:BatteryPercentage] = Rez.Strings.DetailView_BatteryPercentage;
         cStrings[:RideTime] = Rez.Strings.DetailView_RideTime;
         cStrings[:Distance] = Rez.Strings.DetailView_Distance;
+        cStrings[:SpeedData] = Rez.Strings.DetailView_SpeedData;
+        cStrings[:BatteryVoltageData] = Rez.Strings.DetailView_BatteryVoltageData;
+        cStrings[:BatteryPercentageData] = Rez.Strings.DetailView_BatteryPercentageData;
+        cStrings[:RideDistanceData] = Rez.Strings.DetailView_RideDistanceData;
     }
 
     // Called when this View is brought to the foreground. Restore
