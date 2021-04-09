@@ -36,7 +36,7 @@ module WheelData {
         }
 
         module MailKeys {
-            module WheelData {
+            module Data {
                 enum {
                     CURRENT_SPEED = 0,
                     BATTERY_PERCENTAGE = 1,
