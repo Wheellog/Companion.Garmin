@@ -63,7 +63,7 @@ class DetailView extends WatchUi.View {
                 cDrawables[:SecondSectionLabel].setText(cStrings[:Distance]);
 
                 cDrawables[:FirstSectionData].setText(WheelData.RideTime);
-                cDrawables[:SecondSectionData].setText(WheelData.RideDistance);
+                cDrawables[:SecondSectionData].setText(Lang.format("$1$ km", [WheelData.RideDistance]));
                 break;
         }
 
