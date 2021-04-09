@@ -36,7 +36,7 @@ module WheelData {
         }
 
         module MailKeys {
-            module WheeLData {
+            module WheelData {
                 enum {
                     CURRENT_SPEED = 0,
                     BATTERY_PERCENTAGE = 1,
@@ -48,7 +48,7 @@ module WheelData {
                     AVG_SPEED = 7,
                     TOP_SPEED = 8,
                     RIDE_DISTANCE = 9,
-                    RIDE_TIME = 10;
+                    RIDE_TIME = 10
                 }
             }
             module Settings {
