@@ -1,4 +1,4 @@
-module AppData {
+module WheelData {
     var CurrentSpeed = 22,
         BatteryPercentage = 85,
         BatteryVoltage,
