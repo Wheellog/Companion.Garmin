@@ -6,8 +6,8 @@ var currentlyOnScreen = 0;
 var maxScreens = 2; // Start to count from 0
 
 class DetailView extends WatchUi.View {
-    private var cDrawables = {};
-    private var cStrings = {};
+    private var cDrawables = {}; // cached drawables
+    private var cStrings = {}; // and also cached strings
 
     function initialize() {
         View.initialize();
@@ -42,16 +42,28 @@ class DetailView extends WatchUi.View {
     function onUpdate(dc) {
         switch (currentlyOnScreen) {
             case 0:
+                // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:AverageSpeed]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:TopSpeed]);
+                // And values
+                cDrawables[:FirstSectionData].setText(Lang.format("$1$ km/h", [WheelData.AverageSpeed]));
+                cDrawables[:SecondSectionData].setText(Lang.format("$1$ km/h", [WheelData.TopSpeed]));
                 break;
             case 1:
+                // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:Voltage]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:BatteryPercentage]);
+
+                cDrawables[:FirstSectionData].setText(Lang.format("$1$ V", [WheelData.BatteryVoltage]));
+                cDrawables[:SecondSectionData].setText(Lang.format("$1$ %", [WheelData.BatteryPercentage]));
                 break;
             case 2:
+                // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:RideTime]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:Distance]);
+
+                cDrawables[:FirstSectionData].setText(WheelData.RideTime);
+                cDrawables[:SecondSectionData].setText(WheelData.RideDistance);
                 break;
         }
 
