@@ -47,7 +47,7 @@ module WheelData {
                     BOTTOM_SUBTITLE = 6,
                     AVG_SPEED = 7,
                     TOP_SPEED = 8,
-                    RIDE_DISTANCE = 9;
+                    RIDE_DISTANCE = 9,
                     RIDE_TIME = 10;
                 }
             }
