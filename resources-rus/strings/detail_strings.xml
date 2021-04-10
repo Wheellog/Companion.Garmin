@@ -5,4 +5,9 @@
     <string id="DetailView_BatteryPercentage">Заряд батареи</string>
     <string id="DetailView_RideTime">Время в пути</string>
     <string id="DetailView_Distance">Расстояние</string>
+
+    <string id="DetailView_SpeedData">$1$ км/ч</string>
+    <string id="DetailView_BatteryVoltageData">$1$ V</string>
+    <string id="DetailView_BatteryPercentageData">$1$ %</string>
+    <string id="DetailView_RideDistanceData">$1$ км</string>
 </strings>
