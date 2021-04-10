@@ -6,7 +6,7 @@ class HomeView extends WatchUi.View {
 
     private var progressBar, isProgressBarShown;
 
-    private var mDrawables = {};
+    private var cDrawables = {};
 
     function initialize() {
         View.initialize();
@@ -20,6 +20,11 @@ class HomeView extends WatchUi.View {
             WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp),
             null
         );
+        cDrawables[:TimeDate] = View.findDrawableById("TimeDate");
+        cDrawables[:BatteryNumber] = View.findDrawableById("BatteryNumber");
+        cDrawables[:TemperatureNumber] = View.findDrawableById("TemperatureNumber");
+        cDrawables[:BottomSubtitle] = View.findDrawableById("BottomSubtitle");
+
         // WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP );
         isProgressBarShown = true;
     }
@@ -28,9 +33,8 @@ class HomeView extends WatchUi.View {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
-        mDrawables[:TimeDate] = View.findDrawableById("TimeDate");
         var CurrentTime = System.getClockTime(); 
-        mDrawables[:TimeDate].setText(
+        cDrawables[:TimeDate].setText(
             CurrentTime.hour.format("%d") +
             ":" +
             CurrentTime.min.format("%02d")
@@ -39,7 +43,14 @@ class HomeView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc) {
-        View.findDrawableById("TimeDate").setText(System.getClockTime().hour.format("%d") + ":" + System.getClockTime().min.format("%02d"));
+        cDrawables[:TimeDate].setText( // Update time
+            System.getClockTime().hour.format("%d") +
+            ":" +
+            System.getClockTime().min.format("%02d")
+        );
+        cDrawables[:BatteryNumber].setText(WheelData.BatteryPercentage);
+        cDrawables[:TemperatureNumber].setText(WheelData.Temperature);
+        cDrawables[:BottomSubtitle].setText(WheelData.BottomSubtitleText);
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
