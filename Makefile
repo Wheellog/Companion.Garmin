@@ -49,7 +49,7 @@ rerun: build
 	monkeydo bin/$(appName).prg $(DEVICE)
 
 ci-build:
-	@./monkeyc \
+	@./ci/sdk/monkeyc \
 	--jungles ./monkey.jungle \
 	--device $(DEVICE) \
 	--output bin/$(appName).prg \

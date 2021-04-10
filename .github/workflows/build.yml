@@ -11,12 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: ggoraa/monkeyc:3.2.5
     steps:
       - uses: actions/checkout@v2
-
-      - name: ls
-        run: ls
 
       - name: Build app
         run: make ci-build
