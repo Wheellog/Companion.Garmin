@@ -19,4 +19,4 @@ jobs:
         run: export PATH="sdk:$PATH"
 
       - name: Build app
-        run: make build
+        run: make ci-build
