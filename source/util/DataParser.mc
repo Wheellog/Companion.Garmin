@@ -9,7 +9,7 @@ function parseDataFromWheelLog(message) {
     }
     
     switch (type) {
-        case constantsStore.MessageType.Incoming.EUC_DATA: {
+        case constantsStore.MessageType.EUC_DATA: {
             // Here we will parse data from WheelLog and put it into respectable variables
             var keyStore = constantsStore.MailKeys.Data;
             
@@ -26,12 +26,6 @@ function parseDataFromWheelLog(message) {
             WheelData.Pwm = data[keyStore.PWM];
             WheelData.AlarmType = data[keyStore.ALARM_TYPE];
             WheelData.BottomSubtitleText = data[keyStore.BOTTOM_SUBTITLE];
-        }
-        case constantsStore.MessageType.Incoming.SETTINGS: {
-            var keyStore = constantsStore.MailKeys.Settings;
-
-            WheelData.UseMph = data[keyStore.USE_MPH];
-            WheelData.MaxDialSpeed = data[keyStore.MAX_DIAL_SPEED];
         }
     }
 }

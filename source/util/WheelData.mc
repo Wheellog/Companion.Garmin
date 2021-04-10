@@ -20,12 +20,12 @@ module WheelData {
     module Constants {
         module MessageType {
             enum {
-                PLAY_HORN = 1
+                PLAY_HORN = 1,
                 EUC_DATA = 0
             }
             enum {
                 MSG_TYPE = -2,
-                MSG_DATA = -1,
+                MSG_DATA = -1
             }
         }
 
