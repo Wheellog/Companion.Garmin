@@ -14,5 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Get the developer key
+        run: touch dev_key.der && echo ${{ secrets.DEV_KEY }} >> dev_key.der
+
       - name: Build app
         run: make ci-build
