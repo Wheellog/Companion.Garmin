@@ -7,4 +7,4 @@ WORKDIR /sdk
 
 RUN apt-get update && apt-get install make
 
-COPY sdk sdk
+COPY sdk .
