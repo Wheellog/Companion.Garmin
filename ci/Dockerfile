@@ -5,6 +5,6 @@ FROM ubuntu:groovy
 
 WORKDIR /sdk
 
-RUN sudo apt-get install build-essential
+RUN apt-get update && apt-get install make
 
 COPY sdk .
