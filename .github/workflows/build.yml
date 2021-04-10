@@ -15,5 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: export Monkey C to PATH
+        run: export PATH="sdk:$PATH"
+
       - name: Build app
         run: make build

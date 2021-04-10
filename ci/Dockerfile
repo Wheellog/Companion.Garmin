@@ -8,5 +8,3 @@ WORKDIR /sdk
 RUN apt-get update && apt-get install make
 
 COPY sdk sdk
-
-RUN export PATH="sdk:$PATH"
