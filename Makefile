@@ -53,5 +53,5 @@ ci-build:
 	--jungles ./monkey.jungle \
 	--device $(DEVICE) \
 	--output bin/$(appName).prg \
-	--private-key dev_key.der \
+	--private-key dev_key.pem \
 	--warn
