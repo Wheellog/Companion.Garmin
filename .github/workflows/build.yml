@@ -1,22 +1,22 @@
-# name: App Build CI
+name: App Build CI
 
-# on:
-#   push:
-#     branches: [ master ]
-#   pull_request:
-#     branches: [ master ]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
-#   workflow_dispatch:
+  workflow_dispatch:
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     container: karmanet/monkeyc
-#     steps:
-#       - uses: actions/checkout@v2
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ggoraa/monkeyc:3.2.5
+    steps:
+      - uses: actions/checkout@v2
 
-#       - name: Export monkeyc to PATH
-#         run: export PATH="$HOME"
+      - name: Export monkeyc to PATH
+        run: export PATH="$HOME"
 
-#       - name: Build app
-#         run: make build
+      - name: Build app
+        run: make build

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+  <key>NSPrincipalClass</key>
+  <string>wxNSApplication</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.garmin.connectiq.simulator</string>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>English</string>
+  <key>CFBundleLocalizations</key>
+  <array>
+    <string>en</string>
+  </array>
+  <key>CFBundleExecutable</key>
+  <string>simulator</string>
+  <key>CFBundleIconFile</key>
+  <string>connectiq.icns</string>
+  <key>CFBundleName</key>
+  <string>Connect IQ Device Simulator</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleSignature</key>
+  <string>CNIQ</string>
+  <key>CFBundleVersion</key>
+  <string>3.2.5</string>
+  <key>CFBundleShortVersionString</key>
+  <string>3.2.5</string>
+  <key>CFBundleGetInfoString</key>
+  <string>Connect IQ version 3.2.5</string>
+  <key>CFBundleLongVersionString</key>
+  <string>3.2.5</string>
+  <key>NSHumanReadableCopyright</key>
+  <string>Copyright 2014-2018 Garmin International</string>
+  <key>LSRequiresCarbon</key>
+  <true />
+  <key>CSResourcesFileMapped</key>
+  <true />
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true />
+  </dict>
+</dict>
+</plist>

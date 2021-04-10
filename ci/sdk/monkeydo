@@ -1,0 +1,42 @@
+#!/bin/bash
+# Check for proper arguments. If the arguments aren't valid print the usage.
+if [ -z "$2" ] || [ "$2" == "-t" ] || [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+
+    echo "Pushes and runs a Connect IQ executable on the Connect IQ simulator. The simulator must be running for this command to succeed."
+    echo
+    echo "Usage: monkeydo executable device_id [-t | -t test_name]"
+    echo "    executable - A Connect IQ executable to run."
+    echo "    device_id  - The device to simulate."
+    echo "    test_name  - When providing the test flag you may specify a specific test name."
+
+else
+
+    # Set the required variables
+    MB_HOME="$( cd "$( dirname "$0" )" && pwd )"
+    PRG_PATH="$1"
+    FILE=`echo $(basename "$PRG_PATH" | tr '[:lower:]' '[:upper:]')`
+    DEVICE_ID="$2"
+
+    # Create variables for the optional arguments
+    TEST_NAME=""
+    TEST_FLAG=""
+
+    # Set the optional arguments
+    if [ ! -z "$3" ]; then
+        # Get the test arguments
+        if [ "$3" == "-t"  ]; then
+            TEST_FLAG="-t"
+            if [ ! -z "$4" ]; then
+                shift
+                shift
+                shift
+                TEST_NAME="$@"
+            fi
+        else
+            echo "ILLEGAL ARGUMENT: $3"
+        fi
+    fi
+
+    # Push the executable to the simulator
+    java -classpath "$MB_HOME"/monkeybrains.jar com.garmin.monkeybrains.monkeydodeux.MonkeyDoDeux -f "$PRG_PATH" -d $DEVICE_ID -s "$MB_HOME"/shell $TEST_FLAG $TEST_NAME
+fi
