@@ -7,6 +7,6 @@ WORKDIR /sdk
 
 RUN apt-get update && apt-get install make
 
-RUN export PATH="sdk:$PATH"
-
 COPY sdk sdk
+
+RUN export PATH="sdk:$PATH"
