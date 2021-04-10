@@ -1,6 +1,0 @@
-<strings>
-    <string id="AppName">${appName}</string>
-
-    <string id="configureSyncMessage">Configure\nSync</string>
-    <string id="configurePlaybackMessage">Configure\nPlayback</string>
-</strings>
