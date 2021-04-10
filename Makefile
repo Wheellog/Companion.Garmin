@@ -47,3 +47,11 @@ clean:
 rerun: build
 	connectiq
 	monkeydo bin/$(appName).prg $(DEVICE)
+
+ci-build:
+	@./sdk/monkeyc \
+	--jungles ./monkey.jungle \
+	--device $(DEVICE) \
+	--output bin/$(appName).prg \
+	--private-key $(PRIVATE_KEY) \
+	--warn
