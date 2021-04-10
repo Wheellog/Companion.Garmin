@@ -25,7 +25,7 @@ function parseDataFromWheelLog(message) {
             WheelData.Power = data[keyStore.POWER];
             WheelData.Pwm = data[keyStore.PWM];
             WheelData.AlarmType = data[keyStore.ALARM_TYPE];
-            WheelData.BottomSutitleText = data[keyStore.BOTTOM_SUBTITLE_TEXT];
+            WheelData.BottomSubtitleText = data[keyStore.BOTTOM_SUBTITLE];
         }
         case constantsStore.MessageType.Incoming.SETTINGS: {
             var keyStore = constantsStore.MailKeys.Settings;

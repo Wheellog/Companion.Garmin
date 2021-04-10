@@ -14,21 +14,14 @@ module WheelData {
         Pwm,
         MaxPwm,
         AlarmType,
-        BottomSutitleText;
+        BottomSubtitleText;
 
     var CurrentSpeedMaxValue = 40;
     module Constants {
         module MessageType {
-            module Outcoming {
-                enum {
-                    PLAY_HORN = 1
-                }
-            }
-            module Incoming {
-                enum {
-                    EUC_DATA = 0,
-                    SETTINGS = 2
-                }
+            enum {
+                PLAY_HORN = 1
+                EUC_DATA = 0
             }
             enum {
                 MSG_TYPE = -2,
@@ -53,7 +46,6 @@ module WheelData {
                     PWM = 11,
                     MAX_PWM = 12,
                     ALARM_TYPE = 13,
-                    BOTTOM_SUBTITLE_TEXT = 14
                 }
             }
             module Settings {
