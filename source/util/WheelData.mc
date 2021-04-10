@@ -12,6 +12,7 @@ module WheelData {
         TopSpeed,
         Power,
         Pwm,
+        MaxPwm,
         AlarmType,
         BottomSutitleText;
 
@@ -50,8 +51,9 @@ module WheelData {
                     RIDE_DISTANCE = 9,
                     RIDE_TIME = 10,
                     PWM = 11,
-                    ALARM_TYPE = 12,
-                    BOTTOM_SUBTITLE_TEXT = 13
+                    MAX_PWM = 12,
+                    ALARM_TYPE = 13,
+                    BOTTOM_SUBTITLE_TEXT = 14
                 }
             }
             module Settings {
