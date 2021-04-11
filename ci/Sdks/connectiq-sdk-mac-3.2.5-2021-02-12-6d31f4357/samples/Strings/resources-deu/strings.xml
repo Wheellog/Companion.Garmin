@@ -1,6 +1,0 @@
-<resources>
-    <string id="language">German</string>
-    <string id="greeting">Guten Tag</string>
-    <string id="food">Eier</string>
-    <string id="drink">Milch</string>
-</resources>
