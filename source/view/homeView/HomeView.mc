@@ -48,8 +48,8 @@ class HomeView extends WatchUi.View {
             ":" +
             System.getClockTime().min.format("%02d")
         );
-        cDrawables[:BatteryNumber].setText(WheelData.BatteryPercentage);
-        cDrawables[:TemperatureNumber].setText(WheelData.Temperature);
+        cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.BatteryPercentage]));
+        cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.Temperature]));
         cDrawables[:BottomSubtitle].setText(WheelData.BottomSubtitleText);
 
         // Call the parent onUpdate function to redraw the layout

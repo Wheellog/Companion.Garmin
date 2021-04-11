@@ -1,11 +1,13 @@
 using Toybox.Communications;
+using Toybox.Lang;
+using Toybox.WatchUi;
 
 function mailHandler(mailIter) {
     var mail;
     mail = mailIter.next();
     Communications.emptyMailbox();
 
-    if (mail != null and mail instanceof Lang.Dictionary) {
+    if (mail != null && mail instanceof Lang.Dictionary) {
             parseDataFromWheelLog(mail);
     }
 

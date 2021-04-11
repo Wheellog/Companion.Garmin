@@ -14,7 +14,7 @@ module WheelData {
         Pwm,
         MaxPwm,
         AlarmType,
-        BottomSubtitleText;
+        BottomSubtitleText = "";
 
     var CurrentSpeedMaxValue = 40;
     module Constants {
@@ -46,12 +46,8 @@ module WheelData {
                     PWM = 11,
                     MAX_PWM = 12,
                     ALARM_TYPE = 13,
-                }
-            }
-            module Settings {
-                enum {
-                    MAX_DIAL_SPEED = 0, // For anyone wondering what tf is dis. This key is for max speed that can be shown on the speed dial before it exeeds it's boundaries. I hope i explained it good
-                    USE_MPH = 1
+                    MAX_DIAL_SPEED = 14, // For anyone wondering what tf is dis. This key is for max speed that can be shown on the speed dial before it exeeds it's boundaries. I hope i explained it good
+                    USE_MPH = 15
                 }
             }
         }
