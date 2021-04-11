@@ -1,0 +1,2064 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toybox.Application.AppBase </title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      pathId = "Toybox.Application.AppBase";
+      relpath = '../../';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+ </head>
+
+ <body>
+<div class="nav_wrap">
+  <iframe id="nav" src="../../class_list.html"></iframe>
+  <div id="resizer"></div>
+</div>
+
+<div id="main" tabindex="-1">
+<iframe id="search_frame" src="../../class_list.html"></iframe>
+
+
+  <div id="content"><h1>Class: Toybox.Application.AppBase</h1>
+
+  <!-- Inherits -->
+  <div class="box_info">
+    <dl>
+  <dt>Inherits:</dt>
+  <dd>
+    <span class="inheritName">Toybox.Lang.Object</span>
+    <ul class="fullTree">
+      <li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a>
+  </div>
+</li>
+<li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/Application/AppBase.html">Toybox.Application.AppBase</a>
+  </div>
+</li>
+    </ul>
+    <a href="#" class="inheritanceTree">show all</a>
+  </dd>
+</dl>
+  </div>
+
+<h2>Overview</h2>
+<!-- Overview -->
+
+<!-- Description -->
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+AppBase is the base class for an app.
+</p><p>
+All apps inherit from this class and use it's methods to manage the
+life cycle of an app.
+</p>
+
+<ul>
+<li>
+<p>
+Your app overrides the class to provide entry points with the following methods:
+</p>
+
+</li>
+<ul>
+<li>
+<p>
+<a href="../../Toybox/Application/AppBase.html#onStart-instance_function">onStart()</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Application/AppBase.html#getInitialView-instance_function">getInitialView()</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Application/AppBase.html#getGoalView-instance_function">getGoalView()</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Application/AppBase.html#getServiceDelegate-instance_function">getServiceDelegate()</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Application/AppBase.html#onSettingsChanged-instance_function">onSettingsChanged()</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Application/AppBase.html#onStop-instance_function">onStop()</a>
+</p><p>
+</p>
+
+</li>
+</ul>
+<li>
+<p>
+These functions are called in the following order:
+</p>
+
+</li>
+<ol>
+<li>
+<p>
+<a href="../../Toybox/Application/AppBase.html#onStart-instance_function">onStart()</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Application/AppBase.html#getInitialView-instance_function">getInitialView()</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Application/AppBase.html#onStop-instance_function">onStop()</a>
+</p>
+
+</li>
+</ol>
+</ul>
+<p>
+Every AppBase object has access to an object store to persist
+data.
+</p>
+
+
+    </div>
+  </div>
+
+
+
+
+<div class="tags">
+<!-- Example -->
+<div class="examples">
+<p class="tag_title">Example:</p>
+<p class="example_title"><div class='inline'>
+<p>Shows basic app life cycle</p>
+</div></p>
+<pre class="example code">
+<code>using Toybox.Application;
+class AppLifeCycle extends Application.AppBase {
+    // initialize the AppBase class
+    function initialize() {
+        AppBase.initialize();
+    }
+    // onStart() is called on application start up
+    function onStart(state) {
+    }
+    // onStop() is called when your application is exiting
+    function onStop(state) {
+    }
+    // Return the initial view of your application here
+    function getInitialView() {
+        return [new AppLifeCycleView()];
+    }
+}</code>
+</pre>
+</div>
+
+<!-- Since -->
+<p class="tag_title">Since:</p>
+<div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+
+
+</div>
+
+  <h2>Direct Known Subclasses</h2>
+  <p class="sub_classes">
+    <span class='type'><a href="../../Toybox/Application/AudioContentProviderApp.html">Toybox.Application.AudioContentProviderApp</a></span>
+  </p>
+
+
+
+
+
+
+<h2>
+   Instance Method Summary
+   <small><a href="#" class="summary_toggle">collapse</a></small>
+</h2>
+<ul class="summary">
+<li class="public">
+
+      <span class="summary_signature">
+      <a href="#allowTrialMessage-instance_function" title="allowTrialMessage (Instance Function)"><strong>allowTrialMessage</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Check if application trial messages are allowed.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public deprecated">
+
+      <span class="summary_signature">
+      <a href="#clearProperties-instance_function" title="clearProperties (Instance Function)"><strong>clearProperties</strong></a>()
+      </span>
+
+  <span class="deprecated note title">deprecated</span>
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Clear the object store for the application.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public deprecated">
+
+      <span class="summary_signature">
+      <a href="#deleteProperty-instance_function" title="deleteProperty (Instance Function)"><strong>deleteProperty</strong></a>(key)
+      </span>
+
+  <span class="deprecated note title">deprecated</span>
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Delete the given key from the object store.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getGlanceView-instance_function" title="getGlanceView (Instance Function)"><strong>getGlanceView</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Return user defined glance view for content preview purpose.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getGoalView-instance_function" title="getGoalView (Instance Function)"><strong>getGoalView</strong></a>(goalType)  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Override to provide a <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> for a goal that has triggered within a watch face.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getInitialView-instance_function" title="getInitialView (Instance Function)"><strong>getInitialView</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Override to provide the initial <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> and <a href="../../Toybox/WatchUi/InputDelegate.html">WatchUi.InputDelegate</a> of the application.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getProperty-instance_function" title="getProperty (Instance Function)"><strong>getProperty</strong></a>(key)  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get the data associated with a given key from the object store.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getServiceDelegate-instance_function" title="getServiceDelegate (Instance Function)"><strong>getServiceDelegate</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get a <a href="../../Toybox/System/ServiceDelegate.html">ServiceDelegate</a> to run background tasks for this app.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getSettingsView-instance_function" title="getSettingsView (Instance Function)"><strong>getSettingsView</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Override to provide the settings <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> and <a href="../../Toybox/WatchUi/InputDelegate.html">WatchUi.InputDelegate</a> of the application.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getSyncDelegate-instance_function" title="getSyncDelegate (Instance Function)"><strong>getSyncDelegate</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Communications/SyncDelegate.html">Toybox.Communications.SyncDelegate</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get a <a href="../../Toybox/Communications/SyncDelegate.html">SyncDelegate</a> object that communicates sync status to the system for syncing content to the device.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getTrialDaysRemaining-instance_function" title="getTrialDaysRemaining (Instance Function)"><strong>getTrialDaysRemaining</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Override to return the number of days remaining in the trial If a developer wishes to implement time-based app trials, they will need to override this function to return the number of days remaining in the trial.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#isTrial-instance_function" title="isTrial (Instance Function)"><strong>isTrial</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Check if the application is in trial mode.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public deprecated">
+
+      <span class="summary_signature">
+      <a href="#loadProperties-instance_function" title="loadProperties (Instance Function)"><strong>loadProperties</strong></a>()
+      </span>
+
+  <span class="deprecated note title">deprecated</span>
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Load the properties for the application.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onAppInstall-instance_function" title="onAppInstall (Instance Function)"><strong>onAppInstall</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+The callback method that is triggered in the background when the app is installed.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onAppUpdate-instance_function" title="onAppUpdate (Instance Function)"><strong>onAppUpdate</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+The callback method that is triggered in the background when the app is updated Requires the Background permission to be enabled and your application class to carry the :background annotation.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onBackgroundData-instance_function" title="onBackgroundData (Instance Function)"><strong>onBackgroundData</strong></a>(data)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Handle data passed from a ServiceDelegate to the application.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onSettingsChanged-instance_function" title="onSettingsChanged (Instance Function)"><strong>onSettingsChanged</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Called when the application settings have been changed by Garmin Connect Mobile (GCM) while while the app is running.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onStart-instance_function" title="onStart (Instance Function)"><strong>onStart</strong></a>(state)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Method called at startup to allow handling of app initialization.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onStop-instance_function" title="onStop (Instance Function)"><strong>onStop</strong></a>(state)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Override to handle application cleanup upon termination.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onStorageChanged-instance_function" title="onStorageChanged (Instance Function)"><strong>onStorageChanged</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Called when Application storage is changed by the other running instance, of the app i.e Background Process while the CIQ app is running or vice-versa.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public deprecated">
+
+      <span class="summary_signature">
+      <a href="#saveProperties-instance_function" title="saveProperties (Instance Function)"><strong>saveProperties</strong></a>()
+      </span>
+
+  <span class="deprecated note title">deprecated</span>
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Save the properties for the application.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#setProperty-instance_function" title="setProperty (Instance Function)"><strong>setProperty</strong></a>(key, value)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Store the given data in the object.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#validateProperty-instance_function" title="validateProperty (Instance Function)"><strong>validateProperty</strong></a>(key, value)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Validate a property being stored.
+</p>
+
+
+    </div>
+  </span>
+</li>
+</ul>
+
+
+ <div id="instance_method_details" class="method_details_list">
+  <h2>Instance Method Details</h2>
+<div class="method_details">
+  <h3 class="signature" id="allowTrialMessage-instance_function">
+    <strong>allowTrialMessage()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Check if application trial messages are allowed.
+</p><p>
+Returns <code>true</code> if the application should allow the product
+to push unlock instruction pages for locked apps.
+Returns <code>true</code> by default.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+Returns <code>true</code> if trial messages should be shown, otherwise <code>false</code>.
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.3.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="clearProperties-instance_function">
+    <strong>clearProperties()</strong>
+  </h3>
+  <div class="note deprecated">
+  <strong>This has been deprecated</strong>
+  <div class="inline">
+    <p>
+This method will be removed in Connect IQ 4.0.0
+</p>
+
+
+  </div>
+</div>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Clear the object store for the application.
+</p>
+
+
+    </div>
+  </div>
+
+<div class="note">
+  <div class="inline">
+    <span class="noteTitle">Note:</span><p>
+Background processes cannot clear properties.
+</p>
+
+
+  </div>
+</div>
+  <div class="tags">
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Bravo</li><li>D2™ Bravo Titanium</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1000 / Explore</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 130</li><li>Edge® 130 Plus</li><li>Edge® 520</li><li>Edge® 520 Plus</li><li>Edge® 530</li><li>Edge® 820 / Explore</li><li>Edge® 830</li><li>Edge® Explore</li><li>epix™</li><li>First Avenger</li><li>Forerunner® 230</li><li>Forerunner® 235</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 45</li><li>Forerunner® 630</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 920XT</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 3 / tactix® Bravo / quatix® 3</li><li>fēnix® 3 HR</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>Garmin Swim™ 2</li><li>GPSMAP® 66s / 66sr / 66st</li><li>GPSMAP® 86s / 86sc / 86i / 86sci</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Oregon® 7 Series</li><li>Rey™</li><li>Rino® 7 Series</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive®</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Application/Storage.html">Toybox.Application.Storage</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Application/ObjectStoreAccessException.html">Toybox.Application.ObjectStoreAccessException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Thrown if called from a <a href="../../Toybox/Background.html">Background</a> process
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="deleteProperty-instance_function">
+    <strong>deleteProperty(key)</strong>
+  </h3>
+  <div class="note deprecated">
+  <strong>This has been deprecated</strong>
+  <div class="inline">
+    <p>
+This method will be removed in Connect IQ 4.0.0
+</p>
+
+
+  </div>
+</div>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Delete the given key from the object store.
+</p>
+
+
+    </div>
+  </div>
+
+<div class="note">
+  <div class="inline">
+    <span class="noteTitle">Note:</span><p>
+Background processes cannot delete properties.
+</p>
+
+
+  </div>
+</div>
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>key</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The key to delete
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Bravo</li><li>D2™ Bravo Titanium</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1000 / Explore</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 130</li><li>Edge® 130 Plus</li><li>Edge® 520</li><li>Edge® 520 Plus</li><li>Edge® 530</li><li>Edge® 820 / Explore</li><li>Edge® 830</li><li>Edge® Explore</li><li>epix™</li><li>First Avenger</li><li>Forerunner® 230</li><li>Forerunner® 235</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 45</li><li>Forerunner® 630</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 920XT</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 3 / tactix® Bravo / quatix® 3</li><li>fēnix® 3 HR</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>Garmin Swim™ 2</li><li>GPSMAP® 66s / 66sr / 66st</li><li>GPSMAP® 86s / 86sc / 86i / 86sci</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Oregon® 7 Series</li><li>Rey™</li><li>Rino® 7 Series</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive®</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Application/Storage.html">Toybox.Application.Storage</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Application/ObjectStoreAccessException.html">Toybox.Application.ObjectStoreAccessException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Thrown if called from a <a href="../../Toybox/Background.html">Background</a> process
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getGlanceView-instance_function">
+    <strong>getGlanceView()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Return user defined glance view for content preview purpose.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Descent™ Mk2 / Descent™ Mk2i</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 745</li><li>Forerunner® 945</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li>
+  </ul>
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+An Array containing a <a href="../../Toybox/WatchUi/GlanceView.html">WatchUi.GlanceView</a> and an optional <a href="../../Toybox/WatchUi/GlanceViewDelegate.html">WatchUi.GlanceViewDelegate</a> can be <code>null</code>, in which case app name will be used as preview content.
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getGoalView-instance_function">
+    <strong>getGoalView(goalType)</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Override to provide a <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> for a goal that
+has triggered within a watch face.
+</p><p>
+</p>
+
+<ul>
+<li>
+<p>
+If a goal is reached when a watch face is running, this function will be triggered.
+</p>
+
+</li>
+<li>
+<p>
+The type of goal that was met will be provided, and the AppBase should return a View that displays a goal reached message and/or animations for that goal.
+</p>
+
+</li>
+<li>
+<p>
+If a View is returned from this function, the main watch face view will be shutdown, and then new View will pushed.
+</p>
+
+</li>
+<li>
+<p>
+If this method is not overridden in the AppBase, or if it returns <code>null</code>, the native goal screens will be shown.
+</p>
+
+</li>
+</ul>
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>goalType</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The goal type that has triggered. The goalType will be from the GOAL_TYPE_* enumeration.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+An Array containing a <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.3.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getInitialView-instance_function">
+    <strong>getInitialView()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Override to provide the initial <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> and
+<a href="../../Toybox/WatchUi/InputDelegate.html">WatchUi.InputDelegate</a> of the
+application.
+</p><p>
+</p>
+
+<ul>
+<li>
+<p>
+Providing a <a href="../../Toybox/WatchUi/InputDelegate.html">WatchUi.InputDelegate</a> is optional for widgets and watch-apps.
+</p>
+
+</li>
+<li>
+<p>
+For watch faces and data fields, an Array containing just a <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> should be returned as <code>input</code> is not available for these app types.
+</p>
+
+</li>
+</ul>
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+An Array containing a <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> and an optional <a href="../../Toybox/WatchUi/InputDelegate.html">WatchUi.InputDelegate</a>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getProperty-instance_function">
+    <strong>getProperty(key)</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get the data associated with a given key from the object store.
+</p><p>
+Properties must first be set with
+<a href="../../Toybox/Application/AppBase.html#setProperty-instance_function">setProperty()</a> before they are
+can be obtained with <code>getProperty</code>.
+</p>
+
+
+    </div>
+  </div>
+
+<div class="note">
+  <div class="inline">
+    <span class="noteTitle">Note:</span><p>
+Symbols can change from build to build and are not to be used for for Keys or Values.
+</p>
+
+
+  </div>
+</div>
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>key</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The key of the value to retrieve from the object store (cannot be a Symbol)
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Bravo</li><li>D2™ Bravo Titanium</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1000 / Explore</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 130</li><li>Edge® 130 Plus</li><li>Edge® 520</li><li>Edge® 520 Plus</li><li>Edge® 530</li><li>Edge® 820 / Explore</li><li>Edge® 830</li><li>Edge® Explore</li><li>epix™</li><li>First Avenger</li><li>Forerunner® 230</li><li>Forerunner® 235</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 45</li><li>Forerunner® 630</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 920XT</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 3 / tactix® Bravo / quatix® 3</li><li>fēnix® 3 HR</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>Garmin Swim™ 2</li><li>GPSMAP® 66s / 66sr / 66st</li><li>GPSMAP® 86s / 86sc / 86i / 86sci</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Oregon® 7 Series</li><li>Rey™</li><li>Rino® 7 Series</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive®</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+The content associated with the key, or <code>null</code> if the key is not in the object store
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Application/AppBase.html#setProperty-instance_function">setProperty()</a>
+  </div>
+  </li><li>
+  <div class='inline'>
+    <a href="../../Toybox/Background.html">Toybox.Background</a>
+  </div>
+  </li><li>
+  <div class='inline'>
+    <a href="../../Toybox/Application/Properties.html">Toybox.Application.Properties</a>
+  </div>
+  </li><li>
+  <div class='inline'>
+    <a href="../../Toybox/Application/Storage.html">Toybox.Application.Storage</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getServiceDelegate-instance_function">
+    <strong>getServiceDelegate()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get a <a href="../../Toybox/System/ServiceDelegate.html">ServiceDelegate</a> to run
+background tasks for this app.
+</p><p>
+When a ServiceDelegate is retrieved, the following will occur:
+</p>
+
+<ul>
+<li>
+<p>
+The method triggered within the ServiceDelegate will be run
+</p>
+
+</li>
+<li>
+<p>
+The background task will exit using <a href="../../Toybox/Background.html#exit-instance_function">Background.exit()</a> or <a href="../../Toybox/System.html#exit-instance_function">System.exit()</a>
+</p>
+
+</li>
+<li>
+<p>
+The background task will be automatically terminated after 30 seconds if it is not exited by these methods
+</p>
+
+</li>
+</ul>
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+An Array containing a <a href="../../Toybox/System/ServiceDelegate.html">System.ServiceDelegate</a>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Background.html">Toybox.Background</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.3.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getSettingsView-instance_function">
+    <strong>getSettingsView()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Override to provide the settings <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> and
+<a href="../../Toybox/WatchUi/InputDelegate.html">WatchUi.InputDelegate</a> of the
+application.
+</p><p>
+</p>
+
+<ul>
+<li>
+<p>
+This function is only applicable to Watchfaces and Datafields.
+</p>
+
+</li>
+</ul>
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+An Array containing a <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> and an optional <a href="../../Toybox/WatchUi/InputDelegate.html">WatchUi.InputDelegate</a>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.2.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getSyncDelegate-instance_function">
+    <strong>getSyncDelegate()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Communications/SyncDelegate.html">Toybox.Communications.SyncDelegate</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get a <a href="../../Toybox/Communications/SyncDelegate.html">SyncDelegate</a> object
+that communicates sync status to the system for syncing content
+to the device.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 530</li><li>Edge® 830</li><li>First Avenger</li><li>Forerunner® 245 Music</li><li>Forerunner® 645 Music</li><li>Forerunner® 745</li><li>Forerunner® 945</li><li>fēnix® 5 Plus</li><li>fēnix® 5S Plus</li><li>fēnix® 5X Plus</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Rey™</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq. Music Edition</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li>
+  </ul>
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Communications/SyncDelegate.html">Toybox.Communications.SyncDelegate</a></span>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getTrialDaysRemaining-instance_function">
+    <strong>getTrialDaysRemaining()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Override to return the number of days remaining in the trial
+</p><p>
+If a developer wishes to implement time-based app trials, they
+will need to override this function to return the number of days
+remaining in the trial. This function will be called on app startup
+to determine if a trial is active and push a notice to the user of
+how many days remain in the trial. Note that if
+<a href="../../Toybox/Application/AppBase.html#allowTrialMessage-instance_function">allowTrialMessage()</a>
+is overridden to return <code>false</code>, no notifications will be displayed.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+A Number object indicating the number of days remaining in the trial, or <code>null</code> if no timed trial is active.
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.3.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="isTrial-instance_function">
+    <strong>isTrial()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Check if the application is in trial mode.
+</p><p>
+This will always return <code>true</code> for development
+build apps. If the app has been signed by the store
+it will return the current unlock state of the app.
+This method should not be overridden or your trial mode functionality
+could cease to function correctly.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+Return <code>true</code> if the app is "locked" and considered to be in trial mode, otherwise <code>false</code> if the app has been unlocked.
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.3.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="loadProperties-instance_function">
+    <strong>loadProperties()</strong>
+  </h3>
+  <div class="note deprecated">
+  <strong>This has been deprecated</strong>
+  <div class="inline">
+    <p>
+This method will be removed in Connect IQ 3.0.0
+</p>
+
+
+  </div>
+</div>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Load the properties for the application
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Bravo</li><li>D2™ Bravo Titanium</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1000 / Explore</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 130</li><li>Edge® 130 Plus</li><li>Edge® 520</li><li>Edge® 520 Plus</li><li>Edge® 530</li><li>Edge® 820 / Explore</li><li>Edge® 830</li><li>Edge® Explore</li><li>epix™</li><li>First Avenger</li><li>Forerunner® 230</li><li>Forerunner® 235</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 45</li><li>Forerunner® 630</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 920XT</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 3 / tactix® Bravo / quatix® 3</li><li>fēnix® 3 HR</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>Garmin Swim™ 2</li><li>GPSMAP® 66s / 66sr / 66st</li><li>GPSMAP® 86s / 86sc / 86i / 86sci</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Oregon® 7 Series</li><li>Rey™</li><li>Rino® 7 Series</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive®</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onAppInstall-instance_function">
+    <strong>onAppInstall()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+The callback method that is triggered in the background when the app is installed.
+Requires the Background permission to be enabled and your application class to
+carry the :background annotation.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onAppUpdate-instance_function">
+    <strong>onAppUpdate()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+The callback method that is triggered in the background when the app is updated
+Requires the Background permission to be enabled and your application class to
+carry the :background annotation.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onBackgroundData-instance_function">
+    <strong>onBackgroundData(data)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Handle data passed from a ServiceDelegate to the application.
+</p><p>
+When the <a href="../../Toybox/Background.html">Background</a> process terminates, a data
+payload may be available. If the main application is active when this
+occurs, the data will be passed directly to the application's
+<code>onBackgroundData()</code> method. If the main application is not active,
+the data will be saved until the next time the application is launched
+and will be passed to the application after the
+<a href="../../Toybox/Application/AppBase.html#onStart-instance_function">onStart()</a> method completes.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>data</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The data passed from the background process.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Background.html">Toybox.Background</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.3.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onSettingsChanged-instance_function">
+    <strong>onSettingsChanged()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Called when the application settings have been changed by Garmin
+Connect Mobile (GCM) while while the app is running. Override this
+method to change app behavior when settings change. This is
+typically used to call for an update to the
+<a href="../../Toybox/WatchUi.html#requestUpdate-instance_function">WatchUi.requestUpdate()</a>
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>function onSettingsChanged() { // triggered by settings change in GCM
+    _mainView.handleSettingUpdate();
+    WatchUi.requestUpdate();   // update the view to reflect changes
+}</code>
+</pre>
+</div>
+
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi.html#requestUpdate-instance_function">WatchUi.requestUpdate()  details</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.2.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onStart-instance_function">
+    <strong>onStart(state)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Method called at startup to allow handling of app initialization.
+</p><p>
+Before the initial <a href="../../Toybox/WatchUi/View.html">WatchUi.View</a> is retrieved,
+onStart() is called. Application level settings can be initialized or
+retrieved from the object store before the initial View is created.
+This method must be overridden to handle your own app initialization.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>state</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Dictionary.html">Toybox.Lang.Dictionary</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Required. If an <a href="../../Toybox/System/Intent.html">Intent</a> is not used to launch the application, then an empty "state" Dictionary is used. If an Intent is used to start the application the Dictionary contains the arguments from the Intent.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<p class="example_title"><div class='inline'>
+<p>onStart() used with Intent</p>
+</div></p>
+<pre class="example code">
+<code>function onStart(state) {
+    if (state != null) {
+        infoString = "Args:" + state.toString();
+    }
+}</code>
+</pre>
+</div>
+
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/System/Intent.html">Toybox.System.Intent</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onStop-instance_function">
+    <strong>onStop(state)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Override to handle application cleanup upon termination.
+</p><p>
+If the application needs to save data to the object store it should
+be done in this function. Once the function is complete, the
+application will terminate.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>state</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Dictionary.html">Toybox.Lang.Dictionary</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Required. If an <a href="../../Toybox/System/Intent.html">Intent</a> is not used to launch an application on stop of the current application an empty "state" Dictionary is used. If an Intent is used to start another application, then the Dictionary contains the arguments from the Intent.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/System/Intent.html">Toybox.System.Intent</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onStorageChanged-instance_function">
+    <strong>onStorageChanged()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Called when Application storage is changed by the other running instance,
+of the app  i.e  Background Process while the CIQ app is running or vice-versa.
+Override this function to receive a callback when the storage is updated. Use this
+function to reload storage data from the application storage.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.2.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="saveProperties-instance_function">
+    <strong>saveProperties()</strong>
+  </h3>
+  <div class="note deprecated">
+  <strong>This has been deprecated</strong>
+  <div class="inline">
+    <p>
+This method will be removed in Connect IQ 3.0.0
+</p>
+
+
+  </div>
+</div>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Save the properties for the application
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Bravo</li><li>D2™ Bravo Titanium</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1000 / Explore</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 130</li><li>Edge® 130 Plus</li><li>Edge® 520</li><li>Edge® 520 Plus</li><li>Edge® 530</li><li>Edge® 820 / Explore</li><li>Edge® 830</li><li>Edge® Explore</li><li>epix™</li><li>First Avenger</li><li>Forerunner® 230</li><li>Forerunner® 235</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 45</li><li>Forerunner® 630</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 920XT</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 3 / tactix® Bravo / quatix® 3</li><li>fēnix® 3 HR</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>Garmin Swim™ 2</li><li>GPSMAP® 66s / 66sr / 66st</li><li>GPSMAP® 86s / 86sc / 86i / 86sci</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Oregon® 7 Series</li><li>Rey™</li><li>Rino® 7 Series</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive®</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="setProperty-instance_function">
+    <strong>setProperty(key, value)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Store the given data in the object.
+</p><p>
+Keys can be of the following types:
+</p>
+
+<ul>
+<li>
+<p>
+<a href="../../Toybox/Lang/String.html">String</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Number.html">Number</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Float.html">Float</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Boolean.html">Boolean</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Char.html">Char</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Long.html">Long</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Double.html">Double</a>
+</p>
+
+</li>
+</ul>
+<p>
+Values can be of the following types:
+</p>
+
+<ul>
+<li>
+<p>
+<a href="../../Toybox/Lang/String.html">String</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Number.html">Number</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Float.html">Float</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Boolean.html">Boolean</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Char.html">Char</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Long.html">Long</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Double.html">Double</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Array.html">Array</a>
+</p>
+
+</li>
+<li>
+<p>
+<a href="../../Toybox/Lang/Dictionary.html">Dictionary</a>
+</p>
+
+</li>
+</ul>
+<p>
+Array and Dictionary values may contain <code>null</code> values or any of the above
+listed types. There is a limit on the size of the Properties of 32 KB.
+If this limit is reached, the properties will not be saved or reloaded.
+</p>
+
+
+    </div>
+  </div>
+
+<div class="note">
+  <div class="inline">
+    <span class="noteTitle">Note:</span><p>
+Background processes cannot save properties.
+</p>
+
+
+  </div>
+</div><div class="note">
+  <div class="inline">
+    <span class="noteTitle">Note:</span><p>
+Symbols can change from build to build and are not to be used for for Keys or Values.
+</p>
+
+
+  </div>
+</div>
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>key</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The key used to store and retrieve the value from the object store (cannot be a Symbol)
+</p>
+
+
+        </div>
+    </li><li>
+        <span class='name'>value</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The value to put into the object store
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Application;
+var app = Application.getApp();
+
+app.setProperty("number", 2);               // set value for "number" key
+app.setProperty("float", 3.14);             // set value for "float" key
+app.setProperty("string", "Hello World!");  // set value for "string" key
+app.setProperty("boolean", true);           // set value for "boolean" key
+
+var int = app.getProperty("number");          // get value for "number" key
+var float = app.getProperty("float");         // get value for "float" key
+var string = app.getProperty("string");       // get value for "string" key
+var boolean = app.getProperty("boolean");     // get value for "boolean" key</code>
+</pre>
+</div>
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Bravo</li><li>D2™ Bravo Titanium</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1000 / Explore</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 130</li><li>Edge® 130 Plus</li><li>Edge® 520</li><li>Edge® 520 Plus</li><li>Edge® 530</li><li>Edge® 820 / Explore</li><li>Edge® 830</li><li>Edge® Explore</li><li>epix™</li><li>First Avenger</li><li>Forerunner® 230</li><li>Forerunner® 235</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 45</li><li>Forerunner® 630</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 920XT</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 3 / tactix® Bravo / quatix® 3</li><li>fēnix® 3 HR</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>Garmin Swim™ 2</li><li>GPSMAP® 66s / 66sr / 66st</li><li>GPSMAP® 86s / 86sc / 86i / 86sci</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Oregon® 7 Series</li><li>Rey™</li><li>Rino® 7 Series</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive®</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Application/AppBase.html#getProperty-instance_function">getProperty()</a>
+  </div>
+  </li><li>
+  <div class='inline'>
+    <a href="../../Toybox/Background.html">Toybox.Background</a>
+  </div>
+  </li><li>
+  <div class='inline'>
+    <a href="https://developer.garmin.com/connect-iq/core-topics/persisting-data/">Core Topics - Persisting Data</a>
+  </div>
+  </li><li>
+  <div class='inline'>
+    <a href="../../Toybox/Application/Properties.html">Toybox.Application.Properties</a>
+  </div>
+  </li><li>
+  <div class='inline'>
+    <a href="../../Toybox/Application/Storage.html">Toybox.Application.Storage</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Application/ObjectStoreAccessException.html">Toybox.Application.ObjectStoreAccessException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Thrown if called from a <a href="../../Toybox/Background.html">Background</a> process (data should be passed back to the main application from background processes with <a href="../../Toybox/Background.html#exit-instance_function">Background.exit()</a>)
+</p>
+
+
+        </div>
+    </li><li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/UnexpectedTypeException.html">Toybox.Lang.UnexpectedTypeException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Thrown if called with a key or value of a disallowed type
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="validateProperty-instance_function">
+    <strong>validateProperty(key, value)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Validate a property being stored.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+<hr/>
+
+<p class="signature">
+Generated Feb 12, 2021 8:48:42 AM
+</p>
+
+</body>

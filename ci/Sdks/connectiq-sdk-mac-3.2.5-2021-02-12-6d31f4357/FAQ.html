@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>How Do I Do With Connect IQ</title>
+	<meta name="author" content="Garmin International"/>
+	<meta name="date" content="July 10, 2020"/>
+	<link type="text/css" rel="stylesheet" href="resources/programmers-guide/style.css"/>
+	<meta name="copyright" content="How Do I Do With Connect IQ version 3.2, Copyright 2020 Garmin, International."/>
+</head>
+<body>
+
+<link href="resources/programmers-guide/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+<script src="resources/programmers-guide/jquery-1.11.3.min.js"></script>
+<script>
+    $(document).ready( function() {
+        $( 'pre' ).addClass( 'prettyprint' );
+    } );
+</script>
+<script src="resources/programmers-guide/google-code-prettify/run_prettify.js"></script>
+<div id="connect_iq_logo">
+<figure>
+<img src="resources/programmers-guide/connect_iq_logo.png" style="max-width:471px;" title="Powered by Garmin" />
+</figure>
+</div>
+<div id="title">How Do I Do With Connect IQ?</div>
+<div id="tagline">Connect IQ FAQ</div>
+<div class="clear"></div>
+
+<h1 id="tableofcontents">Table of Contents</h1>
+<div id="toc">
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#howdoimakemywatchfaceupdateeverysecondconnectiq2.3">How do I Make My Watch Face Update Every Second? (Connect IQ 2.3)</a></li>
+<li><a href="#howdoicommunicatewithrestservices">How do I communicate with REST services?</a>
+
+<ul>
+<li><a href="#thebluetoothsmartconnection">The Bluetooth Smart Connection</a></li>
+<li><a href="#lessismore">Less Is More</a></li>
+</ul></li>
+<li><a href="#howdoimakeawatchfaceforamoledproductsconnectiq3.1">How do I Make a Watch Face for AMOLED Products? (Connect IQ 3.1)</a>
+ - <a href="#whatqualifiesasburn-in">What Qualifies as Burn-In</a>
+
+<ul>
+<li><a href="#bestpracticesforamoledscreens">Best Practices for AMOLED Screens</a>
+
+<ul>
+<li><a href="#howtocreatealways-onwatchfaces">How to Create Always-On Watch Faces</a>
+
+<ul>
+<li><a href="#howtotestyouralways-onwatchface">How to Test Your Always-On WatchFace</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#howdoicreateaconnectiqbackgroundservice">How do I create a Connect IQ Background Service?</a>
+
+<ul>
+<li><a href="#thebackgroundannotation">The Background Annotation</a></li>
+<li><a href="#servicedelegate">Service Delegate</a></li>
+<li><a href="#temporalevents">Temporal Events</a></li>
+<li><a href="#interprocesscommunication">Interprocess Communication</a></li>
+<li><a href="#otherpoints">Other Points</a></li>
+</ul></li>
+<li><a href="#howdoioptimizebitmapsinmyapp">How do I optimize bitmaps in my app?</a>
+
+<ul>
+<li><a href="#bitdepth">Bit Depth</a></li>
+<li><a href="#palettes">Palettes</a></li>
+<li><a href="#16colorpalette">16 Color Palette</a></li>
+<li><a href="#rgb222">RGB222</a></li>
+<li><a href="#rgb565">RGB565</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#dithering">Dithering</a></li>
+<li><a href="#palette">Palette</a></li>
+</ul></li>
+<li><a href="#howdoioverridethegoalanimationconnectiq1.3">How do I Override The Goal Animation? (Connect IQ 1.3)</a></li>
+<li><a href="#howdoiusecustomfonts">How do I use custom fonts?</a>
+
+<ul>
+<li><a href="#fontreflection">Font Reflection</a>
+ - <a href="#approacha">Approach A</a>
+ - <a href="#approachb">Approach B</a></li>
+<li><a href="#fontswithtwocolors">Fonts With Two Colors</a></li>
+<li><a href="#fontwithadiagonalorientation">Font With a Diagonal Orientation</a></li>
+<li><a href="#dynamiccolorfilling">Dynamic Color Filling</a></li>
+</ul></li>
+<li><a href="#howdoiuseamapview">How do I use a MapView?</a>
+
+<ul>
+<li><a href="#integratingmapviews">Integrating Map Views</a></li>
+<li><a href="#settingthescene">Setting The Scene</a></li>
+<li><a href="#overlayingcontent">Overlaying Content</a></li>
+<li><a href="#previewandbrowse">Preview and Browse</a></li>
+<li><a href="#tyingittogether">Tying it Together</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+<li><a href="#howdoiusetheconnectiqmobilesdk">How do I use the Connect IQ Mobile SDK</a>
+
+<ul>
+<li><a href="#getthelatestconnectiqmobilesdk">Get the Latest Connect IQ Mobile SDK</a></li>
+<li><a href="#checkingforgarminconnectmobile">Checking for Garmin Connect Mobile</a></li>
+<li><a href="#connectfirst">Connect First</a></li>
+<li><a href="#checkingiftheconnectiqappisinstalled">Checking If the Connect IQ App Is Installed</a></li>
+<li><a href="#seeitinaction:theconnectiqdiscgolfapp">See it in Action: The Connect IQ Disc Golf App</a></li>
+</ul></li>
+<li><a href="#howdoicreateanaudiocontentprovider">How do I create an Audio Content Provider?</a>
+
+<ul>
+<li><a href="#syncingcontenttothedevice">Syncing Content to the Device</a></li>
+<li><a href="#playback">Playback</a>
+
+<ul>
+<li><a href="#playbackconfiguration">Playback Configuration</a></li>
+<li><a href="#playback-1">Playback</a></li>
+</ul></li>
+<li><a href="#hintsandtips">Hints and Tips</a></li>
+<li><a href="#conclusion-1">Conclusion</a></li>
+</ul></li>
+<li><a href="#howdoiintegrateconnectiqandtravisci">How do I integrate Connect IQ and Travis CI?</a>
+
+<ul>
+<li><a href="#gettingstarted">Getting Started</a></li>
+<li><a href="#buildingviathecommandline">Building via the Command Line</a></li>
+<li><a href="#preparetheprojectrepositoryfortravisci">Prepare the Project/Repository for TravisCI</a></li>
+<li><a href="#addingbadgestothereadme">Adding Badges to the README</a></li>
+<li><a href="#includingacompanionapp">Including a Companion App</a></li>
+<li><a href="#mb_runnersubmodule"><em>mb_runner</em> Submodule</a></li>
+<li><a href="#conclusion-2">Conclusion</a></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="overview">Overview</h1>
+
+<p>Welcome to the Connect IQ FAQ. This section provides has articles on frequently asked questions, pro-tips written by Connect IQ experts, and deep dives into topics.</p>
+
+<h1 id="howdoimakemywatchfaceupdateeverysecondconnectiq2.3">How do I Make My Watch Face Update Every Second? (Connect IQ 2.3)</h1>
+
+<p>Some devices support updating the watchface every second. These devices will run normal updates via the <code>onUpdate()</code> method at the top of each minute like other devices, but will also call the <code>onPartialUpdate()</code> method each second. The <code>onPartialUpdate()</code> method has very strict limits set on execution time, and must complete within these limits. If the execution limit is exceeded, the <code>onPowerBudgetExceeded()</code> method will be invoked in the WatchFaceDelegate, and partial updates will stop executing for the remainder of the app life-cycle.</p>
+
+<p>Minimizing the number of pixels updated on the display during <code>onPartialUpdate</code> is important because refreshing the display is an expensive part of the update process. For this reason, the Connect IQ API provides a couple of useful tools: <code>Dc.setClip()</code>and <code>BufferedBitmap</code>.</p>
+
+<p>The <code>Dc.setClip()</code> method is used to restrict the rendering window when drawing during an <code>onPartialUpdate()</code> callback. All pixels in the active clipping area are considered modified every time any pixel in the clip is modified.</p>
+
+<p>For more complex graphics, resources can be rendered off-screen in one or more <code>BufferedBitmap</code> objects and copied as a single object to redraw background pixels during <code>onPartialUpdate()</code>. Rendering in a <code>BufferedBitmap</code> should be completed during <code>onUpdate()</code> since it is not subject to the execution time limits as <code>onPartialUpdate()</code>.</p>
+
+<p>The Analog watch face, included in the SDK samples, is an example of a watchface that uses every second watchface updates.</p>
+
+<pre><code class="java">module WatchUi
+{
+    class WatchFace extends Toybox.WatchUi.View
+    {
+        //! onPartialUpdate() is called each second as long as the device
+        //! power budget is not exceeded.
+        //! It is important to update as small of a portion of the display as possible
+        //! in this method to avoid exceeding the allowed power budget. To do this, the
+        //! application must set the clipping region for the Graphics.Dc object using
+        //! the setClip method. Calls to Toybox.System.println() and Toybox.System.print()
+        //! will not execute on devices when this function is being invoked, but can be
+        //! used in the device simulator.
+        //! @param [Graphics.Dc] dc The drawing context
+        //! @since 2.3.0
+        function onPartialUpdate(dc);
+    }
+}
+</code></pre>
+
+<h1 id="howdoicommunicatewithrestservices">How do I communicate with REST services?</h1>
+
+<p>The Connect IQ Communication API is the API that brings the wearable web to Garmin devices. However, there are some subtleties to how to expose a web service to a Garmin device.</p>
+
+<h2 id="thebluetoothsmartconnection">The Bluetooth Smart Connection</h2>
+
+<p>Because all of the communication takes place over a Bluetooth Smart (you may know this as Bluetooth LE or BLE) connection the device is bandwidth limited. Data transfers through the Connect IQ SDK will have a transfer speed less than 1 Kb/s, generally between 400 and 800 bytes/s. A single tweet being pulled from Twitter&#8217;s API can be upwards of 2.5 Kb. We&#8217;ll do some magic under the hood to minimize the amount of data that&#8217;s transferred from the phone to the watch but you can quickly see how pulling a user&#8217;s last few Tweets could be somewhat time consuming.</p>
+
+<h2 id="lessismore">Less Is More</h2>
+
+<p>This classic proverb couldn&#8217;t be more true when considering JSON responses or messages between a Connect IQ app and a companion mobile app. If you are writing a web service to return tweets which your Connect IQ app will be calling consider what information you really need to have at the Connect IQ level. You can probably get away with only having the text of a Tweet and the username of the person who Tweeted said Tweet. Now you&#8217;re looking at only having to transfer about 250 bytes per Tweet.</p>
+
+<p>Referencing the example result on <a href="https://dev.twitter.com/rest/reference/get/search/tweets">this</a> Twitter API page, a resulting Tweet&#8217;s JSON would be:</p>
+
+<pre><code class="javascript">{
+  &quot;coordinates&quot;: null,
+  &quot;favorited&quot;: false,
+  &quot;truncated&quot;: false,
+  &quot;created_at&quot;: &quot;Mon Sep 24 03:35:21 +0000 2012&quot;,
+  &quot;id_str&quot;: &quot;250075927172759552&quot;,
+  &quot;entities&quot;: {
+    &quot;urls&quot;: [
+
+    ],
+    &quot;hashtags&quot;: [
+      {
+        &quot;text&quot;: &quot;freebandnames&quot;,
+        &quot;indices&quot;: [
+          20,
+          34
+        ]
+      }
+    ],
+    &quot;user_mentions&quot;: [
+
+    ]
+  },
+  &quot;in_reply_to_user_id_str&quot;: null,
+  &quot;contributors&quot;: null,
+  &quot;text&quot;: &quot;Aggressive Ponytail #freebandnames&quot;,
+  &quot;metadata&quot;: {
+    &quot;iso_language_code&quot;: &quot;en&quot;,
+    &quot;result_type&quot;: &quot;recent&quot;
+  },
+  &quot;retweet_count&quot;: 0,
+  &quot;in_reply_to_status_id_str&quot;: null,
+  &quot;id&quot;: 250075927172759552,
+  &quot;geo&quot;: null,
+  &quot;retweeted&quot;: false,
+  &quot;in_reply_to_user_id&quot;: null,
+  &quot;place&quot;: null,
+  &quot;user&quot;: {
+    &quot;profile_sidebar_fill_color&quot;: &quot;DDEEF6&quot;,
+    &quot;profile_sidebar_border_color&quot;: &quot;C0DEED&quot;,
+    &quot;profile_background_tile&quot;: false,
+    &quot;name&quot;: &quot;Sean Cummings&quot;,
+    &quot;profile_image_url&quot;: &quot;http://a0.twimg.com/profile_images/2359746665/1v6zfgqo8g0d3mk7ii5s_normal.jpeg&quot;,
+    &quot;created_at&quot;: &quot;Mon Apr 26 06:01:55 +0000 2010&quot;,
+    &quot;location&quot;: &quot;LA, CA&quot;,
+    &quot;follow_request_sent&quot;: null,
+    &quot;profile_link_color&quot;: &quot;0084B4&quot;,
+    &quot;is_translator&quot;: false,
+    &quot;id_str&quot;: &quot;137238150&quot;,
+    &quot;entities&quot;: {
+      &quot;url&quot;: {
+        &quot;urls&quot;: [
+          {
+            &quot;expanded_url&quot;: null,
+            &quot;url&quot;: &quot;&quot;,
+            &quot;indices&quot;: [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      &quot;description&quot;: {
+        &quot;urls&quot;: [
+        ]
+      }
+    },
+    &quot;default_profile&quot;: true,
+    &quot;contributors_enabled&quot;: false,
+    &quot;favourites_count&quot;: 0,
+    &quot;url&quot;: null,
+    &quot;profile_image_url_https&quot;: &quot;https://si0.twimg.com/profile_images/2359746665/1v6zfgqo8g0d3mk7ii5s_normal.jpeg&quot;,
+    &quot;utc_offset&quot;: -28800,
+    &quot;id&quot;: 137238150,
+    &quot;profile_use_background_image&quot;: true,
+    &quot;listed_count&quot;: 2,
+    &quot;profile_text_color&quot;: &quot;333333&quot;,
+    &quot;lang&quot;: &quot;en&quot;,
+    &quot;followers_count&quot;: 70,
+    &quot;protected&quot;: false,
+    &quot;notifications&quot;: null,
+    &quot;profile_background_image_url_https&quot;: &quot;https://si0.twimg.com/images/themes/theme1/bg.png&quot;,
+    &quot;profile_background_color&quot;: &quot;C0DEED&quot;,
+    &quot;verified&quot;: false,
+    &quot;geo_enabled&quot;: true,
+    &quot;time_zone&quot;: &quot;Pacific Time (US &amp; Canada)&quot;,
+    &quot;description&quot;: &quot;Born 330 Live 310&quot;,
+    &quot;default_profile_image&quot;: false,
+    &quot;profile_background_image_url&quot;: &quot;http://a0.twimg.com/images/themes/theme1/bg.png&quot;,
+    &quot;statuses_count&quot;: 579,
+    &quot;friends_count&quot;: 110,
+    &quot;following&quot;: null,
+    &quot;show_all_inline_media&quot;: false,
+    &quot;screen_name&quot;: &quot;sean_cummings&quot;
+  },
+  &quot;in_reply_to_screen_name&quot;: null,
+  &quot;source&quot;: &quot;Twitter for Mac&quot;,
+  &quot;in_reply_to_status_id&quot;: null
+}
+
+</code></pre>
+
+<p>Using your web service to parse and minimize the data down to the aforementioned fields would result in a much smaller JSON object:</p>
+
+<pre><code class="javascript">{
+  &quot;text&quot;: &quot;Aggressive Ponytail #freebandnames&quot;,
+  &quot;username&quot;: &quot;sean_cummings&quot;
+}
+</code></pre>
+
+<p>Limiting the data to just what you need to display, and use will result in a much faster communications transaction. Of course, writing and hosting your own web service can be a bit much for a simple, glanceable widget.</p>
+
+<h1 id="howdoimakeawatchfaceforamoledproductsconnectiq3.1">How do I Make a Watch Face for AMOLED Products? (Connect IQ 3.1)</h1>
+
+<p>The Venu is the first Garmin watch with an AMOLED screen, AMOLED displays provide vibrant
+ colors with a high pixel density, but over time the organic materials used to create the
+ display will decay. In order to mitigate the decay and prolong the screen life in general,
+ a protective mechanism is deployed to watches that have AMOLED screen, such as Venu.</p>
+
+<h3 id="whatqualifiesasburn-in">What Qualifies as Burn-In</h3>
+
+<p>Pixels in an AMOLED display only draw power when illuminated,
+ so a pixel is considered on when rendering any color other than black, and is considered
+ off when and only when rendering black pixel.</p>
+
+<p>Burn-in protection is only activated when Connect IQ watch face is in foreground and after system enters sleep mode.
+ Under such conditions, if more than 10% of the screen pixels are on or any pixel is on for longer than 3 minutes,
+ the system will shut off the screen.</p>
+
+<p>Most of the existing Connect IQ watch faces will trip the burn-in protector, however there is still hope to have
+ an always-on watch face on AMOLED screens.</p>
+
+<h2 id="bestpracticesforamoledscreens">Best Practices for AMOLED Screens</h2>
+
+<p>Now on AMOLED Garmin products, your apps can have breathtaking presentations of information and gorgeous imagery,
+ while still retaining days of battery life. However, now that we have given you all these gorgeous colors, could you,
+ like, not use them? Please?</p>
+
+<p>Here is the challenge with AMOLED – every pixel draws power. If you want your apps to fall within the regular amount of battery life,
+ you want to have as much black on screen as possible, especially in screens that are showing activity information.
+ You&#8217;ll notice that with most of the native applications, black is the new black. It&#8217;s okay to work a periodic splash screen
+ or gradient into your apps – make the app look great! – but for screens that are supposed to show constantly updating data,
+ the blacker the better. Also, if you have header and footer gradients, try to have the darker parts at the outer edges.</p>
+
+<p>Just remember this handy guide when doing app layouts for AMOLED screens:</p>
+<figure>
+<img src="resources/programmers-guide/amoled_layout.png" style="max-width:300px;" />
+</figure>
+
+<h3 id="howtocreatealways-onwatchfaces">How to Create Always-On Watch Faces</h3>
+
+<p>Always On watch faces behave differently from MIP to AMOLED. With MIP screens, you can use <code>View.onPartialUpdate</code>
+ to update a portion of the screen every second. With AMOLED screen, this is no longer allowed. Instead,
+ when <code>WatchUi.onEnterSleep</code> is called, you are allowed to render a watch face that must obey the rules of
+ the AMOLED burn-in protector:</p>
+
+<ul>
+<li>No more than 10% screen pixels can be on</li>
+<li>No pixel can be on longer than 3 mins</li>
+</ul>
+
+<p>Ways you can prevent burn in are by drawing the time with a thin font, shifting the time every minute as not to repeatedly
+ leave the same pixels on, and not having static tick marks that leave the same pixels on.</p>
+
+<p>Note: App can detect whether a product has screen protection enforced by checking the value of <code>DeviceSettings.requiresBurnInProtection</code>.</p>
+
+<h4 id="howtotestyouralways-onwatchface">How to Test Your Always-On WatchFace</h4>
+
+<p>Waiting for your watch face to run for 3 minutes or longer can be very painful. Luckily, Connect IQ 3.1 Simulator
+ ships with a new feature to simulate a 24-hour run within minutes. Simply go to &#8216;File-&gt;View Screen Heat Map&#8217; to open the
+ &#8216;Screen Burn-in Simulation&#8217; dialog, then click the &#8216;Start&#8217; button and let the time fly.</p>
+<figure>
+<img src="resources/programmers-guide/burn-in-sim.png" style="max-width:300px;" />
+</figure>
+
+<p>Note: The menu option is only enabled when simulating a <code>WatchFace</code> on a device that supports screen protection, such as Venu.</p>
+
+<h1 id="howdoicreateaconnectiqbackgroundservice">How do I create a Connect IQ Background Service?</h1>
+
+<p><em>This post was written by Jim Miller, a Connect IQ developer in Phoenix, AZ.</em></p>
+
+<p>One of the new features in Connect IQ 2.3.x is <em>background services</em>, or the ability for a Connect IQ application to have a service that runs even if the main application isn&#8217;t running. Background services have different abilities than the main process; a watch face or data field that can&#8217;t do communications itself, but the background process can! The most common example of this right now is a watch face that displays weather information from the internet. When something happens in the background, that process can optionally prompt the user if they want to start the main application, or the background can just collect data for the next time the main application runs.</p>
+
+<p>I&#8217;ll be talking about background services that take advantage of temporal events. In simple terms, it&#8217;s a process that&#8217;s time driven: it runs every &#8220;x&#8221; minutes, or can be set to run at a certain time. Temporal events can fire at most every 5 minutes, and will run at most 30 seconds each time it runs. The focus here will be on background processes that don&#8217;t try to start the main app when something happens, but just collect data for the main process.</p>
+
+<p>I&#8217;ve created a very basic watch face with a background service on the <a href="https://forums.garmin.com/forum/developers/connect-iq/159353-">developer forum</a> and <a href="https://developer.garmin.com/connect-iq/bgwf.zip">included a .zip</a> of the project in the first post so you can see the code and try it out yourself. The watch face itself displays the time, and the last data seen from the background service (plus a counter, etc). And all the background does is return a string with an &#8220;hh:mm&#8221; timestamp. While it isn&#8217;t useful, it does show the basics of backgrounding with a temporal event. In this case, there&#8217;s really isn&#8217;t much in the <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/WatchUi/View.html">View</a> class, but the things to look at are in App class and the file with the background process - the <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/System/ServiceDelegate.html">ServiceDelegate</a>.</p>
+
+<p>When doing an app with backgrounding, there are a few things that come into play. In the sample project, you&#8217;ll see how these pieces all fit together.</p>
+
+<h2 id="thebackgroundannotation">The Background Annotation</h2>
+
+<p>To save memory, each time the background service runs only the necessary code is loaded. Background services have a 32 KB heap, so things can get tight! The (:background) annotation is used to indicate what classes, modules, and variables need to be available when the background service runs. The main <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Application/AppBase.html">App</a> class is loaded by default, but you want to use the annotation on things like the <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/System/ServiceDelegate.html">ServiceDelegate</a> and any things it may use or reference.</p>
+
+<pre><code class="typescript">(:background)
+class BgbgServiceDelegate extends Toybox.System.ServiceDelegate {
+</code></pre>
+
+<p>Using it doesn&#8217;t mean that it&#8217;s only in the background service; classes, modules, and variables will be available in both the main process and background process.</p>
+
+<h2 id="servicedelegate">Service Delegate</h2>
+
+<p>A background service can be triggered by different kinds of system events: step goal achievement, sleep/wake times, and temporal events, which are discussed below. The <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/System/ServiceDelegate.html">ServiceDelegate</a> allows you to define what your app should execute when these events occur. The <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Application/AppBase.html#getServiceDelegate-instance_function">AppBase.getServiceDelegate()</a> is how the service delegate in your code is found. Use the methods in the <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Background.html">Toybox.Background</a> module to register your service to fire on given triggers.</p>
+
+<h2 id="temporalevents">Temporal Events</h2>
+
+<p><a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Background.html#registerForTemporalEvent-instance_function">Background.registerForTemporalEvents()</a> is used to set how often the background temporal event runs. In the sample code, I do it as part of <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Application/AppBase.html#getInitialView-instance_function">AppBase.getInitialView()</a> after doing a check to make sure the app is running on a device that supports backgrounding.</p>
+
+<pre><code class="typescript">        //register for temporal events if they are supported
+        if(Toybox.System has :ServiceDelegate) {
+            canDoBG=true;
+            Background.registerForTemporalEvent(new Time.Duration(5 * 60));
+        } else {
+            Sys.println(&quot;****background not available on this device****&quot;);
+        }
+</code></pre>
+
+<p><a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Background.html#deleteTemporalEvent-instance_function">Background.deleteTemporalEvent()</a> can turn off the background process if desired. With a combination of those calls, you can get a bit of control over when a temporal event runs. For example, you can do things like not starting the temporal event until there is a connection to a phone, deleting the temporal event when your app no longer needs it, etc. Note: Normally when you have started a temporal event process, it will run even when the parent app isn&#8217;t running. With watch faces only the temporal event for the currently selected watch face will run.</p>
+
+<p>With some temporal events, you may want to pass an error status back to the main process instead of data. A good example of this would be a background service that does communications. In many cases, you will be passing back the data you received (I often just pass back the dictionary from the callback), but in the case of an error, I just pass back a Number representing the error. Then in <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Application/AppBase.html#onBackgroundData-instance_function">AppBase.onBackgroundData()</a>, I use instanceof Number to check if I got data or an error, and handle the error or data as needed. Here&#8217;s a simple example of that:</p>
+
+<pre><code class="typescript">function onBackgroundData(data) {
+    if(data instanceof Number) {
+        //indicates there was an error, and &quot;data&quot; is the error code
+    } else {
+        //got good &quot;data&quot;
+    }
+}
+</code></pre>
+
+<h2 id="interprocesscommunication">Interprocess Communication</h2>
+
+<p>You pass data from your background service to the main process using <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Background.html#exit-instance_function">Background.exit()</a> in your <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/System/ServiceDelegate.html">ServiceDelegate</a></p>
+
+<pre><code class="typescript">    function onTemporalEvent() {
+        var now=Sys.getClockTime();
+        var ts=now.hour+&quot;:&quot;+now.min.format(&quot;d&quot;);
+        Sys.println(&quot;bg exit: &quot;+ts);
+        //just return the timestamp
+        Background.exit(ts);
+    }
+</code></pre>
+
+<p><a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Application/AppBase.html#onBackgroundData-instance_function">AppBase.onBackgroundData()</a> is how the main process gets the latest data from what the service returned by <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Background.html#exit-instance_function">Background.exit()</a>. In the main process, when it first starts, I&#8217;ll see if data is in the object store, and if so, then you display that as a &#8220;last known value&#8221;. If you don&#8217;t do something like this with a watch face, each time you leave the watch face and come back, there wouldn&#8217;t be any data until the background runs again.</p>
+
+<pre><code class="typescript">    function onBackgroundData(data) {
+        $.counter++;
+        var now=Sys.getClockTime();
+        var ts=now.hour+&quot;:&quot;+now.min.format(&quot;d&quot;);
+        Sys.println(&quot;onBackgroundData=&quot;+data+&quot; &quot;+counter+&quot; at &quot;+ts);
+        bgdata=data;
+        App.getApp().setProperty(OSDATA,bgdata);
+        Ui.requestUpdate();
+}
+</code></pre>
+
+<p>You can&#8217;t use <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Application/AppBase.html#setProperty-instance_function">AppBase.setProperty()</a> in the background process to pass data in the object store or settings; if you try, an exception is thrown. You also can&#8217;t pass information between the main process and the background with global variables. The word &#8220;process&#8221; is important here: global variables are per process, so the same global is only global for that process. A variable defined globally exists in both the main process and background process, but each maintains its own copy and they&#8217;re never synced.. That been said, the only way to pass data from the main app to the background service is as a property. Your <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/System/ServiceDelegate.html">ServiceDelegate</a> can retrieve it with <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Application/AppBase.html#getProperty-instance_function">AppBase.getProperty()</a>. It can be something in the object store or from settings. Make sure to handle the case where the background may not have the data it needs here, as there are things that may not yet have valid values.</p>
+
+<p>The background can run more than once before the main process sees it in <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Application/AppBase.html#onBackgroundData-instance_function">AppBase.onBackgroundData()</a>. The main process only sees the last one, not all of them, but in the background process you can use <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Background.html#getBackgroundData-instance_function">Background.getBackgroundData()</a> to get what&#8217;s currently queued for the main process, but not yet delivered. You can combine that with what the background process has that&#8217;s new, and return it all.</p>
+
+<h2 id="otherpoints">Other Points</h2>
+
+<ul>
+<li><strong>Watch Faces</strong> - Watch faces are a bit different than other app times when it comes to if/when a background service runs, and this is by design. The background service for a watch face will only be run if that watch face is the &#8220;active&#8221; watch face (the one currently selected to be used). Think of the case where you have two watch faces installed, that both get weather data from the same source, with a limit on requests per day. There&#8217;s no reason for the background service for the non-active watch face to run, as it would just use up the quota of requests per day.</li>
+<li><strong>Size of response to makeWebRequest() calls</strong> - If you are doing <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Communications.html#makeWebRequest-instance_function">Communications.makeWebRequest()</a> calls in your background process, one thing to keep in mind is the size of the response you get back. The background process has limited memory. When a response is received, there must be enough memory to contain both the response and to build the dictionary passed back to your callback.</li>
+<li><strong>Notes about the Simulator:</strong> - You can test backgrounding in the simulator. In the case of temporal events, they will occur as scheduled, but under the &#8220;Simulation&#8221; menu, you can trigger the background process to run.</li>
+</ul>
+
+<p>There is a known issue with the simulator with background apps: the simulator will run the background services of apps you&#8217;ve tested in it, even if it isn&#8217;t the &#8220;active&#8221; app being tested. So if you are testing &#8220;app a&#8221; and then switch to &#8220;app b&#8221;, the background for &#8220;app a&#8221; will run as well as the background for &#8220;app b&#8221;. Even if your current target doesn&#8217;t have a background service the simulator may attempt to start it. The Connect IQ team is aware of the issue and will address it in a upcoming release</p>
+
+<p>As you can see, background services are a powerful new addition to the Connect IQ toy box. They allow your app to periodically poll the internet for information, including watch faces and data fields. What can you use them for?</p>
+
+<p><strong>About The Author</strong> <em>Jim Miller is a Connect IQ developer in Arizona. &#8220;In early 2015, I had a forerunner 15, and liked the GPS and step tracking. Then the original vívoactive was announced, and I pre-ordered it, and downloaded the CIQ 1.0.0 SDK the same week!&#8221; You can see his</em> <a href="https://apps.garmin.com/en-US/developer/b73df9e6-4021-4059-b2e8-f9cfa04947c3/apps"><em>apps on the app store</em></a> <em>and find him on</em> <a href="https://www.instagram.com/jim.m.58/"><em>Instagram</em></a><em>, his</em> <a href="https://www.facebook.com/connectiqaz"><em>Connect IQ Facebook Page</em></a><em>, or on the</em> <a href="https://forums.garmin.com/member/313012-jim_m_58"><em>Connect IQ forums</em></a><em>.</em></p>
+
+<h1 id="howdoioptimizebitmapsinmyapp">How do I optimize bitmaps in my app?</h1>
+<figure>
+<img src="resources/faq/cake_undithered.jpg" style="max-width:300px;" title="Not a Lie" />
+<img src="resources/faq/cake_dithered.png" style="max-width:300px;" title="Lie" />
+</figure>
+
+<p>In our world of HTML, megapixels, and gigabytes it can be easy to forget the resource usage of bitmap images. Connect IQ&#8217;s constrained embedded environment requires developers to consider the cost of bitmaps when making pages. Thankfully, the Connect IQ SDK provides a number of tools to control your image costs while make a great looking app.</p>
+
+<h2 id="bitdepth">Bit Depth</h2>
+
+<p>The bit depth of the image refers to how many bits are being used to represent each pixel. For every bit you add per pixel, you double the number of colors you can represent as well as double the memory used for the entire image. This affects how many colors you can represent in the image, and the amount of memory the image will use when it is loaded from resources. In this table, we show the number of colors and the memory size of a 100 x 100 image. The higher the bit depth, the more colors you can use at the cost of more memory used.</p>
+
+<table>
+<colgroup>
+<col/>
+<col/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th><strong>Bit Depth</strong></th>
+	<th><strong>Colors</strong></th>
+	<th><strong>Image Size (KB)</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>1</td>
+	<td>2</td>
+	<td>1.22</td>
+</tr>
+<tr>
+	<td>2</td>
+	<td>4</td>
+	<td>2.44</td>
+</tr>
+<tr>
+	<td>4</td>
+	<td>16</td>
+	<td>4.88</td>
+</tr>
+<tr>
+	<td>8</td>
+	<td>256</td>
+	<td>9.77</td>
+</tr>
+<tr>
+	<td>16</td>
+	<td>65536</td>
+	<td>19.53</td>
+</tr>
+</tbody>
+</table>
+
+<p>Connect IQ supports images of bit depth of 1 BPP, 2 BPP, 4 BPP, 8 BPP, and 16 BPP.</p>
+
+<h2 id="palettes">Palettes</h2>
+
+<p>Different Connect IQ devices have different display bit depths. Some products are able to display thousands of colors, while others are constrained to 16 colors. In general devices fall under three categories:</p>
+
+<ul>
+<li>16 Color Palette: The product is only able to display 16 colors</li>
+<li>RGB222: The product is able to display 64 colors. In this scenario, 2 bits are available for red, green, and blue.</li>
+<li>RGB565: The product is able to display 65535 colors. In this scenario, 5 bits are available for red and blue, and 6 bits are available for green.</li>
+</ul>
+
+<p>The <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Graphics/Dc.html#setColor-instance_function"><code>Dc.setColor API</code></a> takes an RGB888 color as an input. It will always map the input color to the closest color available on the device.</p>
+
+<table>
+<colgroup>
+<col/>
+<col/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th><strong>Product</strong></th>
+	<th><strong>Colors</strong></th>
+	<th><strong>Bit Depth</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>Fenix 3</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>Fenix 3 HR</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>Quatix 3</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>D2 Bravo</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>D2 Bravo Titanium</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>Forerunner 230</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>Forerunner 235</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>Forerunner 630</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>Forerunner 735xt</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>Forerunner 920xt</td>
+	<td>16 (Palette)</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>EPIX</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Fenix 5</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Fenix 5 Plus</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Fenix 6 Series</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Forerunner 245</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Forerunner 645</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Forerunner 945</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Vivoactive</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Vivoactive HR</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Vivoactive 3</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Vivoactive 3 Music</td>
+	<td>64 (RGB222)</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>Venu</td>
+	<td>65535 (RGB565)</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>EDGE 520</td>
+	<td>65535 (RGB565)</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>EDGE 820</td>
+	<td>65535 (RGB565)</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>EDGE 820 Explore</td>
+	<td>65535 (RGB565)</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>EDGE 1000</td>
+	<td>65535 (RGB565)</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>EDGE 1000 Explore</td>
+	<td>65535 (RGB565)</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>Oregon 7 Series</td>
+	<td>65535 (RGB565)</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>Rino 7 Series</td>
+	<td>65535 (RGB565)</td>
+	<td>16</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="16colorpalette">16 Color Palette</h2>
+
+<p>While the goal is to always provide the best display possible, sometimes a device are constrained by the display technology used or by the amount of memory used by the underlying screen buffer. The choice to only support a 16 color palette is often made to sacrifice color depth at the expense of other product features.</p>
+
+<p>For devices that use a 16 color palette, the colors are programmed into the device. The <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Graphics.html">Graphics color constants</a> map directly to the 16 available colors</p>
+<figure>
+<img src="resources/faq/16_color_palette.png" style="max-width:300px;" title="16 color palette" />
+</figure>
+
+<h2 id="rgb222">RGB222</h2>
+
+<p>Some devices have 64 available colors. These colors are chosen using 2 bits for red, 2 bits for green, and 2 bits for blue. The graphics system will internally represent bitmaps as 8 bits per pixel.</p>
+
+<h2 id="rgb565">RGB565</h2>
+
+<p>Some devices have 65535 available colors. These colors are chosen using 5 bits for red, 6 bits for green, and 5 bits for blue. The graphics system will internally represent bitmaps as 16 bits per pixel.</p>
+
+<h2 id="resources">Resources</h2>
+
+<p>Connect IQ has a number of options to help developers specify how they want their images imported.</p>
+
+<pre><code class="xml">&lt;!-- Use the dithering option to enable or disable auto dithering of the image --&gt;
+    &lt;bitmap id=&quot;Logo&quot; x=&quot;center&quot; y=&quot;12&quot; filename=&quot;Logo.png&quot; dithering=&quot;none&quot;&gt;
+        &lt;!-- The palette option allows you to reduce the bit depth of an image. Connect IQ will pick a bit depth
+               based on the number of colors specified in the palette. If your image does not have transparency,
+               use the disableTransparency option to remove the extra color used to represent transparent --&gt;
+        &lt;palette disableTransparency=&quot;true&quot;&gt;
+            &lt;!-- Logo is black on white text, so using four colors to get shading while reducing the color depth to 2 bpp --&gt;
+            &lt;color&gt;FFFFFF&lt;/color&gt;
+            &lt;color&gt;AAAAAA&lt;/color&gt;
+            &lt;color&gt;555555&lt;/color&gt;
+            &lt;color&gt;000000&lt;/color&gt;
+        &lt;palette&gt;
+    &lt;/bitmap&gt;
+</code></pre>
+
+<p>There&#8217;s a lot of options in that block, so let&#8217;s go through them one by one.</p>
+
+<h2 id="dithering">Dithering</h2>
+
+<p>Connect IQ by default uses <a href="https://en.wikipedia.org/wiki/Floyd–Steinberg_dithering">Floyd-Steinberg dithering</a> when importing images. The dithering algorithm helps correct for the error when mapping a high color image to a low color space representation. This is preferable when importing a photograph, but when importing a graphic it can introduce random pixels that are not wanted. To directly map colors, set the dithering attribute to &#8220;none&#8221;.</p>
+
+<pre><code class="xml">&lt;bitmap id=&quot;Logo&quot; x=&quot;center&quot; y=&quot;12&quot; filename=&quot;Logo.png&quot; dithering=&quot;none&quot;&gt;
+</code></pre>
+
+<h2 id="palette">Palette</h2>
+
+<p>When importing images, Connect IQ will always default to the best available bit depth for the device. This means on 16 color devices the images will be imported as dithered 4 bit images, while on RGB222 devices the images will import as dithered 8 bit 64 color images. We want to make sure the Doge looks as recognizable as possible.</p>
+<figure>
+<img src="resources/faq/doge.png" style="max-width:300px;" title="Such wow" />
+</figure>
+
+<p>This also means that, by default, images for a Vivoactive will take twice as much memory as images for the Fenix 3. That&#8217;s fine if you have a one image watch face, but in the tight constraints of a data field it could be the difference between working and running out of memory.</p>
+
+<p>If you have a low color image, reducing the bit depth can save precious runtime memory. By setting the import palette, you can communicate the total number of colors the image should use.</p>
+
+<pre><code class="xml">        &lt;palette disableTransparency=&quot;true&quot;&gt;
+            &lt;!-- Logo is black on white text, so using four colors to get shading while reducing the color depth to 2 bpp --&gt;
+            &lt;color&gt;FFFFFF&lt;/color&gt;
+            &lt;color&gt;AAAAAA&lt;/color&gt;
+            &lt;color&gt;555555&lt;/color&gt;
+            &lt;color&gt;000000&lt;/color&gt;
+        &lt;palette&gt;
+</code></pre>
+
+<p>This block says the image should only use four colors - white, light gray, dark gray, and black. The palette is bound to the colors available on a device. If you specify colors not available on a device, they will be mapped to the closest available colors.</p>
+
+<p>On 16 color and RGB222 devices the resource compiler automatically uses an extra color - the transparent color - to represent transparent areas. Disabling transparency tells the resource compiler that the image doesn&#8217;t have any transparent areas, saving one color in the converted image and potentially reducing bit depth. With the four colors set and transparency resource compiler creates a 4 bit image; with no transparency it will create a 2 bit image for a 50% memory savings.</p>
+
+<p>In general, use low bit depth images to save memory when possible. If you have a logo that can be represented with a small number of colors, use the palette and disable dithering to make a sharper image with a lower bit depth. Remember: great looking 16 color images will work across all wearables. 64 color images add some shading options, but you&#8217;ll need to weigh the balance of image quality and memory savings. Edge bike computers have better color representation, but using high bit depth images can quickly eat your runtime memory as well.</p>
+
+<h1 id="howdoioverridethegoalanimationconnectiq1.3">How do I Override The Goal Animation? (Connect IQ 1.3)</h1>
+
+<p>The screen displayed when activity tracking goals are reached can be overridden by the active watchface. This is done by implementing the <code>getGoalView()</code> function in the application&#8217;s <code>AppBase</code> class.</p>
+
+<pre><code class="java">class AppBase {
+    function getGoalView(goalType);
+}
+</code></pre>
+
+<p>The &#8216;getGoalView()&#8217; function is passed one of the supported goal view types: &#8216;GOAL_TYPE_STEPS&#8217;, &#8216;GOAL_TYPE_FLOORS_CLIMBED&#8217;, or &#8216;GOAL_TYPE_ACTIVE_MINUTES&#8217;. Not all types are supported on every product. The application can return a view to be displayed from this function, or null to allow the system to display the default goal display. Goal Views can start animations, similar to the main WatchFace view when onExitSleep() is triggered. Goal Views are displayed for approximately 10 seconds. When they expire, the system will call &#8216;getInitialView()&#8217; to switch back to the main WatchFace view.</p>
+
+<h1 id="howdoiusecustomfonts">How do I use custom fonts?</h1>
+
+<p><em>This guest post was written by</em> <a href="https://www.instagram.com/hermoter"><em>Hermo Terblanche</em></a><em>, a Connect IQ developer in South Africa.</em></p>
+
+<p>Have you ever seen an app in the Connect IQ app store that made you wonder, &#8220;That is so cool! How did the developer do that?&#8221; In order to draw attention to your app you need to stand out from the rest, by for example applying some really cool font tricks. I am going to let you in on some of my secrets from <a href="https://apps.garmin.com/en-US/developer/400ba0d2-9316-44ca-8c14-60b68ddda4a5/apps">my own Connect IQ creations</a>. Hopefully this will inspire you to create your very own jaw-dropping apps for Garmin Connect IQ devices.</p>
+
+<p>Let&#8217;s jump straight into the magic! You&#8217;ll need the following tools:</p>
+
+<ul>
+<li><a href="http://www.angelcode.com/products/bmfont/"><strong>BMFont</strong></a> - For exporting fonts to the required format for Connect IQ. You can read more about this <a href="https://developer.garmin.com/connect-iq/core-topics/resources/#fonts">in the Programmer&#8217;s Guide</a> as well as the <a href="https://developer.garmin.com/connect-iq/user-experience-guidelines/">UX Guide</a></li>
+<li><strong>Graphics editor / Tool</strong> - For editing font png files. I prefer to use <a href="https://www.adobe.com/products/photoshop.html">Photoshop</a> to achieve the desired effects, but they can also be achieved using <a href="https://www.gimp.org/">GIMP</a></li>
+</ul>
+
+<h2 id="fontreflection">Font Reflection</h2>
+
+<p>This technique is really simple and could easily be achieved in one of two ways:</p>
+
+<h4 id="approacha">Approach A</h4>
+
+<p>For the watch face <a href="https://apps.garmin.com/en-US/apps/cc0afcb8-1023-4d6d-b9cc-936027fe1cba">Summer Sunset</a>, I used a <a href="https://www.dafont.com/sunset.font">free font called Sunset</a> that I downloaded and exported to a PNG using BMFont.</p>
+<figure>
+<img src="resources/faq/summer_sunet_1.png" style="max-width:275px;" title="Summer Sunset" />
+</figure>
+
+<p>This font combines each number and its corresponding reflection into a single glyph. This means that when you draw a number, it draws both the number and reflection as a single character.</p>
+<figure>
+<img src="resources/faq/reflecto_font.jpg" style="max-width:135px;" title="Summer Sunset" />
+</figure>
+
+<p>The benefit of this approach is efficiency: you only need a single font which requires fewer resources and results in a smaller compiled PRG file. Also, your code also runs cheaper as you only need a single statement to draw the number which is more battery friendly. Finally, you don&#8217;t have to separately manage the positioning of drawing a number&#8217;s reflection, making this the simplest approach. The downside is that you cannot have separate colors for the number and its reflection because the glyph is treated as one atomic character, and only one color can be applied to the glyph as a whole.</p>
+
+<p>To see the skyline behind the time, you first draw the skyline, then you specify a transparent background color for the font and finally draw the time on top of the skyline:</p>
+
+<pre><code>//draw skyline here
+..
+//load custom font
+var font = Ui.loadResource( Rez.Fonts.Sunset );
+
+//set the time's color and draw it
+dc.setColor(Gfx.COLOR_DK_GREEN, Gfx.COLOR_TRANSPARENT);
+dc.drawText(timeX,timeY, font, timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+</code></pre>
+
+<p>This approach is the most straightforward and does not need any further image processing of the font once it has been exported using the BMFont tool.</p>
+
+<h4 id="approachb">Approach B</h4>
+
+<p>The <a href="https://apps.garmin.com/en-US/apps/f322ca66-125e-48cb-ab83-75da876e7e7c">Reflection</a> watch face is a bit more advanced and involves some image processing, but it offers the benefit of specifying a different color for the time and the reflection.</p>
+<figure>
+<img src="resources/faq/reflections.png" style="max-width:275px;" title="Reflections of... the way fonts used to be..." />
+</figure>
+
+<p>This approach uses two separate fonts. For this I also downloaded a free font and exported it to a PNG using BMFont. I then duplicated the <code>*.PNG</code> and <code>*.FNT</code> files and renamed them to something meaningful so I could easily distinguish between the files of the two different fonts. Using some Photoshop skills I transformed each glyph in the duplicated PNG file to look like a reflected character. It is important to keep in mind with this approach is that it works best with a monospaced font; having constant glyph sizes in both fonts makes it easier to align the normal and reflected time when drawing. Without going into too much detail about the exact image processing steps, here is a basic outline of what to do:</p>
+
+<ul>
+<li>For each glyph (one at a time):</li>
+<li>Use the selection tool to select a glyph</li>
+<li>Use the transform menu and flip the selection vertically</li>
+<li>Using the transform menu, either skew or distort the selection to get the desired angle of the character. Keep in mind that you cannot skew too much because you want the reflection of the time to still fit within the screen. In the screenshot above you will notice that the bottom of the reflected &#8220;1&#8221; touches the screen boundary. A more skewed effect will cause the reflected &#8220;1&#8221; to be clipped. You have to experiment a few times to get it right. This step is the most challenging, but also the most rewarding one!</li>
+<li>You have to move the transformed selection to align it alongside other transformed glyphs. This makes it easier to specify the character coordinates in the *.FNT file.</li>
+<li>Save the png for the reflection font once all glyphs have been transformed.</li>
+<li>In Photoshop, use the selection tool to find the new x, y coordinates for each transformed glyph, and change the corresponding values in the duplicated *.FNT file.</li>
+<li>Make sure to point the file property in the duplicated *.FNT file to the duplicated *.PNG (reflected font).</li>
+<li>In code load your two fonts, and after you&#8217;ve drawn the normal time, you draw the same time using the reflection font. For the reflected time, you need to align the characters with the bottom of the normal time&#8217;s characters.</li>
+</ul>
+
+<p>Below is an illustration of some of the glyphs from the normal font and their corresponding reflected glyphs in the reflection font.</p>
+<figure>
+<img src="resources/faq/normal_and_reflected.jpg" style="max-width:275px;" title="Normal and Reflected" />
+</figure>
+
+<pre><code>//load custom font for the normal time
+var normalFont = Ui.loadResource( Rez.Fonts.Normal );
+//load custom font for the reflected time
+var reflectedFont = Ui.loadResource( Rez.Fonts.Reflected );
+
+//set the normal time's color and draw it
+dc.setColor(Gfx.COLOR_DK_GREEN, Gfx.COLOR_TRANSPARENT);
+dc.drawText(timeX,timeY, normalFont, timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+
+//set the reflected time's color and draw it
+dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
+dc.drawText(offsetX,offsetY, reflectedFont, timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+</code></pre>
+
+<h2 id="fontswithtwocolors">Fonts With Two Colors</h2>
+
+<p>Connect IQ supports only one color in custom fonts. This is because the font&#8217;s PNG is a grayscale image and therefore has only one channel. You cannot create a font to display multiple colors. Below is an illustration of the concept that is not possible within a single font:</p>
+<figure>
+<img src="resources/faq/wouldnt_this_be_nice.jpg" style="max-width:135px;" title="Wouldn't this be nice?" />
+</figure>
+
+<p>But fear not! With some clever tricks it is possible to create the effect of a font that displays multiple colors. The watch face <a href="https://apps.garmin.com/en-US/apps/db057529-8981-4c44-ab86-e9ec418ee6e4">Watch Me</a> displays its time using two colors: white border and blue fill.</p>
+<figure>
+<img src="resources/faq/two_color_face.png" style="max-width:285px;" title="The Font Has Two Faces" />
+</figure>
+
+<p>The magic behind this trick involves a combination of two fonts with different masks. Below is an illustration of some of the glyphs from the two different font masks. The top image is the font for the border, while the bottom font is for the inner fill. An easy way to remember which is which, is to remember that white is the area that will be drawn onto the screen in a color of your or the user&#8217;s choice.</p>
+<figure>
+<img src="resources/faq/mask_glyphs.jpg" style="max-width:181px;" title="The Mask of  Zorro Font" />
+</figure>
+
+<p>The top mask is the original font that was exported using the BMFont tool. For the bottom mask I created a duplicate of the top mask, and then basically inverted the colors to ensure it will only draw the inner area in a specific color.</p>
+
+<pre><code>//load custom font for the border
+var borderFont = Ui.loadResource( Rez.Fonts.Border );
+//load custom font for the inner fill
+var innerFillFont = Ui.loadResource( Rez.Fonts.InnerFill );
+
+//set the time's border color and draw it
+dc.setColor(Gfx.COLOR_DK_GREEN, Gfx.COLOR_TRANSPARENT);
+dc.drawText(timeX,timeY, borderFont, timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+
+//set the time's inner fill color and draw it
+dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
+dc.drawText(timeX,timeY, innerFillFont, timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+</code></pre>
+
+<h2 id="fontwithadiagonalorientation">Font With a Diagonal Orientation</h2>
+
+<p>The idea to write text with an orientation other than horizontal is not something I innovated; I first saw it in another watch face in the store. Being a curious developer I had to try it out myself. The result of this experiment can be seen in my watch face <a href="https://apps.garmin.com/en-US/apps/0f612045-4163-4d4f-b1f2-64777bb5a377">South Africa</a>. The time is displayed diagonal in either an ascending or descending orientation based on a user&#8217;s preference. Each orientation is created with its own separate font.</p>
+<figure>
+<img src="resources/faq/south_africa_1.png" style="max-width:293px;" title="South Africa" />
+<img src="resources/faq/south_africa_2.jpg" style="max-width:181px;" title="South Africa" />
+</figure>
+
+<p>You need to apply a rotation factor to each glyph in your font PNG. Rotating the glyphs will result in glyphs that are slightly bigger than the original. Below is an illustration to get an idea of what the PNG for each font looks like after all glyphs have been rotated:</p>
+<figure>
+<img src="resources/faq/rotated_glyphs.jpg" style="max-width:162px;" title="Rotate your glyphs every 10K miles" />
+</figure>
+
+<p>When drawing text diagonally, you can no longer draw the string as a single entity; otherwise you&#8217;ll just end up with a horizontal line of text with tilted characters, similar to what you now see in the above illustration. The real trick is to draw each character individually, but for each character adjust the y and x coordinates appropriately. For descending orientation, you need to increase the y coordinates, and for ascending you need to decrease it. The x coordinate will always increase in both scenarios. The glyphs have to overlap each other in order to create the diagonal effect. This is where a transparent background color does the trick!</p>
+<figure>
+<img src="resources/faq/overlapping_rotated_glyphs.jpg" style="max-width:162px;" title="Rotate your glyphs every 10K miles" />
+</figure>
+
+<p>The angle of rotation that you would like for your font is all up to you and you can experiment with different degrees of rotation in your graphics editor. In order to know where to draw the next character, you could maintain an array of coordinates. It is a lot easier to manage and draw diagonal text using a monospaced font because any character can be drawn at the same coordinate without causing gaps of varying size between adjacent characters.</p>
+
+<pre><code class="typescript">//predefined coordinates based on diagonal angle and orientation
+var ascCoords = [[21,143],[42,129],[62,119],[73,108],[93,95]];
+var descCoords = [[21,34],[42,48],[62,58],[73,69],[93,82]];
+
+//set background color transparent to prevent clipping of characters
+dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+
+//string to be drawn
+var time = clock.hour.format(&quot;d&quot;) + &quot;:&quot; + clock.min.format(&quot;d&quot;);
+
+var coords, font;
+
+//determine the font and coordinates to use based on orientation
+if(Orientation == &quot;Descending&quot;){
+        coords = descCoords;
+        font = Ui.loadResource(Rez.Fonts.fontDesc);
+}
+else{
+        coords = ascCoords;
+        font = Ui.loadResource(Rez.Fonts.fontAsc);
+}
+
+//draw each character individually
+for( var i = 0; i &lt; time.length(); i++ ) {
+        var char = time.substring(i,i+1);
+        dc.drawText(coords[0], coords[1], font, char, Gfx.TEXT_JUSTIFY_LEFT);
+}
+</code></pre>
+
+<h2 id="dynamiccolorfilling">Dynamic Color Filling</h2>
+
+<p>In my signature watch face <a href="https://apps.garmin.com/en-US/apps/03030574-3c6e-484a-9bd8-ce2ca0249651"><em>NoFrills</em></a>, I use an easy trick to create a special effect that makes the time fill up with water. It effectively serves as a progress gauge for activity tracking, while at the same time conserves real estate on the screen. Talk about a dual-purpose clock!</p>
+<figure>
+<img src="resources/faq/no_frills.jpg" style="max-width:300px;" title="Rotate your glyphs every 10K miles" />
+</figure>
+
+<p>You only need a single font for this trick, and best of all: there is no image processing required. Only the power of Connect IQ is enough to achieve this! Again, a monospace font provides the best results and is simpler to work with.</p>
+
+<ol>
+<li>Determine the size and coordinates of the area (rectangle) that the text you would like to draw, will occupy on the screen.</li>
+<li>Draw a filled rectangle of this size at the predetermined coordinates. The color of this rectangle should be the color that you would normally have used for the text.</li>
+<li>Draw any special effects on top of the filled rectangle, but before you draw the text. In NoFrills&#8217; case, I draw the filled rectangle that represents the water level.</li>
+<li>Set the foreground color of your text to transparent and the background color to something else, like the background color of the screen. This effectively creates a mask that clips everything you have drawn in the previous steps.</li>
+<li>Now draw your text on top of it all, compile and run it and finally stare in awe at your amazing production!</li>
+</ol>
+
+<pre><code class="typescript">//load custom font
+var font = Ui.loadResource( Rez.Fonts.MyFont );
+
+//draw filled rectangle to represent text's color
+dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_WHITE);
+dc.fillRectangle(rectX, rectY, width, height);
+
+//draw filled rectangle to represent water level
+dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_BLUE);
+dc.fillRectangle(effectX, effectY, width, effectHeight);
+
+//create and draw the clipping mask
+dc.setColor(Gfx.COLOR_TRANSPARENT, Gfx.COLOR_BLACK);
+dc.drawText(timeX, timeY, font, timeString, Gfx.TEXT_JUSTIFY_CENTER);
+</code></pre>
+
+<p><em>You can find Hermo on</em> <a href="https://twitter.com/hermoter">Twitter</a><em>,</em> <a href="https://www.facebook.com/connectiqsa/">Facebook</a><em>,</em> <a href="https://www.instagram.com/hermoter">Instagram</a><em>, and the</em> <a href="https://forums.garmin.com/showthread.php?352180-Watchface-NoFrills">Connect IQ Developer Forum</a><em>. See Hermo&#8217;s Connect IQ apps</em> <a href="https://apps.garmin.com/en-US/developer/400ba0d2-9316-44ca-8c14-60b68ddda4a5/apps">in the Connect IQ Store</a><em>.</em></p>
+
+<h1 id="howdoiuseamapview">How do I use a MapView?</h1>
+
+<p>Garmin built itself as a company by making location aware products, and has grown to make products that serve automotive, aviation, marine, fitness, and outdoor markets. A cornerstone to location awareness is digital cartography. Garmin products are often used outside of cell coverage, and our users depend on us to know where you are even when disconnected from the cloud. For over a decade Garmin has been digitizing the world and putting maps on devices of all shapes and sizes.</p>
+
+<p>With the addition of <code>MapView</code> objects, Connect IQ now allows your apps to take advantage of the digital cartography included on Garmin devices. You can use <code>MapView</code> objects to provide location context to the user, provide a preview of a course or route, or let the user browse their surroundings.</p>
+
+<h2 id="integratingmapviews">Integrating Map Views</h2>
+
+<p>Let&#8217;s talk through a common use case on Garmin devices. Assume the use case where you have a cloud database of routes that the user can choose to download to the device. You want to give the user a preview of the route on the map and give a clear call to action to the user to download. You also want to allow the user to touch the map to browse the route.</p>
+<figure>
+<img src="resources/faq/map_view_1.png" style="max-width:624px;" title="Map View" />
+</figure>
+
+<h2 id="settingthescene">Setting The Scene</h2>
+
+<p>The first thing you need to do is tell the map where on the Earth you want to focus the user&#8217;s attention. The method <code>setMapVisibleArea</code> allows you to set a bounding box of <code>Location</code> objects that define what part of the world should render on screen.</p>
+
+<h2 id="overlayingcontent">Overlaying Content</h2>
+
+<p><code>MapView</code> objects allow for two kinds of overlays: <em>markers</em> and <em>polylines</em>. A <code>MapMarker</code> instance represents a single location on the map. You can use either the default Garmin pin, or you can provide your own <code>BitmapResource</code> object. If you use a custom marker, you need to set the pixel that will be drawn at the exact location (the hotspot). If you pass an array of <code>MapMarker</code> objects to the <code>MapView</code> instance, it will add all of them to the map. Calling <code>setMapMarker</code> will clear whatever markers are currently set.</p>
+
+<p>A <code>MapPolyline</code> instance represents a series of coordinates, like a course. You can set the width and color of the polyline. You can set the polyline for a <code>MapView</code>using <code>setPolyline</code>. A <code>MapView</code> instance can only have one <code>MapPolyline</code> instance set at any given time.</p>
+
+<h2 id="previewandbrowse">Preview and Browse</h2>
+
+<p>Going back to our example, remember that we want to allow the user to have a preview of the route with a call to action, but let them browse the content if they want a closer look. The <code>MapView</code> class handles both use cases in a single View using the <em>map mode</em>.</p>
+
+<p>In <code>MAP_MODE_PREVIEW</code> the map view centers on an area. You can add a layout above the map with buttons and selectables to provide context and actions. You can use <code>setScreenVisibleArea</code> to communicate to the <code>MapView</code> instance what portion of the map is not obscured by your user interface.</p>
+<figure>
+<img src="resources/faq/map_view_2.png" style="max-width:624px;" title="Map View" />
+</figure>
+
+<p>Switching the map mode to <code>MAP_MODE_BROWSE</code> changes the map view to a browse interface. The browse interface will be same browse interface used natively by the device.</p>
+
+<h2 id="tyingittogether">Tying it Together</h2>
+
+<p>We want to show the user a preview of the course we want to download before they download it, but how can we show it before we download the full course? One way to bring a polyline to your app is with a <a href="https://developers.google.com/maps/documentation/utilities/polylinealgorithm">Google Polyline Algorithm Format</a>. This allows you to send a polyline to your Connect IQ app as a string that can be decoded back into a polyline. The function below will decode a polyline string into an array of <code>Location</code> objects. To conserve memory, it will begin skipping over coordinates as the polyline grows in size, essentially downscaling the line as it grows in length.</p>
+
+<pre><code class="typescript">    // Constant used to downscale detail as
+    // line grows in length to conserve memory
+    const MAX_POLYLINE_OBJECT_COUNT = 233;
+
+    // Returns the decoded polyline string
+    // in an array of longitudes and latitudes
+    function decodePolyline(polyline) {
+        polyline = polyline.toCharArray();
+        var len = polyline.size();
+        var indexJump = Math.ceil(len / MAX_POLYLINE_OBJECT_COUNT);
+        var poly = [];
+        var index = 0;
+        var lat = 0;
+        var lng = 0;
+        var skipIndex = 0;
+
+        while (index &lt; len) {
+
+            var byte = 0;
+            var shift = 0;
+            var result = 0;
+
+            do {
+                byte = polyline[index].toNumber() - 63;
+                result = result | ((byte &amp; 31) &lt;&lt; shift);
+                shift += 5;
+                index++;
+            } while (byte &gt;= 32 &amp;&amp; index &lt; len);
+
+            var dlat = ((result &amp; 1) ? ~(result &gt;&gt; 1) : (result &gt;&gt; 1));
+
+            shift = 0;
+            result = 0;
+
+            do {
+                byte = polyline[index].toNumber() - 63;
+                result = result | ((byte &amp; 31) &lt;&lt; shift);
+                shift += 5;
+                index++;
+            } while (byte &gt;= 32 &amp;&amp; index &lt; len);
+
+            var dlng = ((result &amp; 1) ? ~(result &gt;&gt; 1) : (result &gt;&gt; 1));
+
+            lat += dlat;
+            lng += dlng;
+
+            if (indexJump == 0 || skipIndex % indexJump == 0) {
+                var p = new Position.Location({:latitude=&gt;lat/1e5, :longitude=&gt;lng/1e5, :format=&gt;:degrees});
+                poly.add(p);
+            }
+
+            skipIndex++;
+        }
+        return poly;
+    }
+</code></pre>
+
+<p>In our UI we want to allow the user to switch between our user interface with the call to action and allowing them to browse. Rather than pushing and popping the map view with different modes, we can use a single view and switch modes in the delegate.</p>
+
+<pre><code class="typescript">class MapSampleMapDelegate extends Ui.BehaviorDelegate {
+
+    var mView;
+
+    function initialize(view) {
+        BehaviorDelegate.initialize();
+        mView = view;
+    }
+
+    function onBack() {
+        // if current mode is preview mode them pop the view
+        if(mView.getMapMode() == Ui.MAP_MODE_PREVIEW) {
+            Ui.popView(Ui.SLIDE_UP);
+        } else {
+            // if browse mode change the mode to preview
+            mView.setMapMode(Ui.MAP_MODE_PREVIEW);
+        }
+        return true;
+    }
+
+    function onSelect() {
+        // on enter button press chenage the map view to browse mode
+        mView.setMapMode(Ui.MAP_MODE_BROWSE);
+        return true;
+    }
+}
+</code></pre>
+
+<p>Now in a single view we can provide a UI with a call to action and preview of the course and allow the user to browse the content as well.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Hopefully you can see from this that the <code>MapView</code> class is a powerful addition to the Toybox. By combining Garmin digital cartography with your content, you can bring a whole new level of location awareness to your apps.</p>
+
+<h1 id="howdoiusetheconnectiqmobilesdk">How do I use the Connect IQ Mobile SDK</h1>
+
+<p>The first step to writing a partner powered Connect IQ app is getting your partner app and Connect IQ app connected. The Partner SDK provides the tools for you to do this how you feel it best fits into the flow of the app. We&#8217;re going to take a look at a couple different approaches using the <a href="https://developer.garmin.com/index.php/blog/post/disc-iq-the-connect-iq-disc-golf-app">Disc Golf sample featured in this previous blog post</a>.</p>
+
+<h2 id="getthelatestconnectiqmobilesdk">Get the Latest Connect IQ Mobile SDK</h2>
+
+<p>Make sure you have the latest <a href="https://developer.garmin.com/connect-iq/sdk/">Partner SDK from the developer site</a>. Staying up to date keeps you in sync with the latest APIs and functionality.</p>
+
+<p><strong><em>Note\</em></strong><em>: iOS developers should get the latest SDK from the developer site. An important update was made to the iOS mobile SDK to support upcoming devices.</em></p>
+
+<h2 id="checkingforgarminconnectmobile">Checking for Garmin Connect Mobile</h2>
+
+<p>The Partner SDKs are designed to work in unison with Garmin Connect Mobile. This means the user of your partner app will need to have Garmin Connect Mobile installed. The Partner SDKs provide an API to check the status of Connect Mobile as well as an API to open the Garmin Connect Mobile store page (with an optional simple dialog).</p>
+<figure>
+<img src="resources/faq/Included_versus_custom_install_dialogs.png" style="max-width:635px;" title="Included versus Custom dialog" />
+</figure>
+
+<h2 id="connectfirst">Connect First</h2>
+
+<p>You may be using your Connect IQ app to augment the functionality of your partner app/existing mobile app. If this is the case you also probably don&#8217;t want to force a user to select a device before using the rest of your mobile app. We&#8217;ll handle this case by providing a menu option to select a device; this is also a good option to include even if you require a device connection so the user has the ability to change which device is connected within the app. When a user selects that menu option we&#8217;ll launch a new page which lists the connected devices, save the device the users selects and then close the page.</p>
+<figure>
+<img src="resources/faq/Select_Device_Flow.png" style="max-width:635px;" title="Select Device Flow" />
+</figure>
+
+<p>In iOS, the <code>showConnectIQDeviceSelection</code> call will launch GCM for the device list and will re-launch your app with a list of paired CIQ devices. It is important to configure your app to be re-launched by GCM for this to work.</p>
+
+<h2 id="checkingiftheconnectiqappisinstalled">Checking If the Connect IQ App Is Installed</h2>
+
+<p>Finally you&#8217;ll need to make sure your Connect IQ app is installed on the device the user selected regardless of the flow you use to connect. The Partner SDKs provide APIs to check the status of an app. If the app isn&#8217;t installed you&#8217;ll want to prompt the user to install your Connect IQ app before proceeding. You&#8217;ll want to prompt the user to install your Connect IQ app before proceeding. The Partner SDKs provide APIs to open the Connect IQ store – within Connect Mobile – to your app&#8217;s store page. Use the <code>showConnectIQStoreForApp:</code> API in iOS or <code>openStore</code> API in Android.</p>
+
+<p>Now that you have established the connection with the device, you can now use the <a href="https://developer.garmin.com/connect-iq/api-docs/Toybox/Communications.html#transmit-instance_function">Communications.transmit</a> API to send a message directly from a Connect IQ app to a wearable and the sendMessage to put a message in the Connect IQ app mailbox from your mobile app. Note that if the Connect IQ app is not running, the message will persist until the app is opened by the user. This allows a phone app to update information for the watch app even if the watch app is not currently running.</p>
+
+<h2 id="seeitinaction:theconnectiqdiscgolfapp">See it in Action: The Connect IQ Disc Golf App</h2>
+
+<p>If you want to see all of this in action, you can check out the Connect IQ Disc Golf sample. You can download the <a href="https://apps.garmin.com/en-US/apps/8a22bbaa-2612-4084-b062-1b6d4adfa181">Connect IQ app from the Connect IQ Store</a> and the <a href="https://play.google.com/store/apps/details?id=com.garmin.android.apps.samples.discgolf">Android partner app from the Play Store</a>. The source code for both applications <a href="https://github.com/garmin/connectiq-apps">is available on GitHub</a>.</p>
+
+<h1 id="howdoicreateanaudiocontentprovider">How do I create an Audio Content Provider?</h1>
+
+<p>In 2018 Garmin has launched <a href="https://buy.garmin.com/en-US/US/c10002-p1.html?FILTER_FEATURE_MUSICSTORAGE=true&amp;sorter=featuredProducts-desc">multiple music capable wearable products</a> that allow users to leave their phone at home while they live their active lifestyle. Users can copy their music library directly to the device, or they can install a Connect IQ audio content provider app that acts as a bridge between the wearable and a Content Delivery Network (CDN).</p>
+
+<p>Connect IQ 3 <em>audio content providers</em> enable third-party music services to deliver protected content. They can download content from a CDN via Wi-Fi directly to the watch, and act as a plug-in to the native media player. The content is encrypted before it reaches disk and decrypted during playback</p>
+
+<p>This post explains all the roles an audio content provider fills as well as the basics of implementation.</p>
+
+<h2 id="syncingcontenttothedevice">Syncing Content to the Device</h2>
+
+<p>The Garmin music wearables interact with third party services by syncing content to the device for later playback. Users can launch the music app in a <em>sync configuration</em> state that lets them select what content they want to sync down to the device.</p>
+<figure>
+<img src="resources/faq/sync_config.png" style="max-width:592px;" title="Sync Configuration" />
+</figure>
+
+<p>The sync configuration user interface is defined by the audio content provider app. If you want your interface to be consistent with the device look and feel, the WatchUi.Menu2 class will do much of your implementation for you. If you want to tailor your look and feel to your brand, the <code>WatchUi.CustomMenu</code> provides much more flexibility.</p>
+
+<p>Audio content provider apps can download content from a content delivery network via restful services directly to the watch. To get a song onto the watch the following should occur:</p>
+
+<ol>
+<li><p>The Connect IQ app uses a web API to request an audio file download</p></li>
+<li><p>The back-end service will serve up the audio file from the CDN</p></li>
+<li><p>The Connect IQ app will store the downloaded audio file on the watch&#8217;s file system. As the data is written to the filesystem the content is encrypted; no un-encrypted content ever gets written to the filesystem.</p></li>
+</ol>
+<figure>
+<img src="resources/faq/downloading_music_content.png" style="max-width:592px;" title="Downloading Music Content" />
+</figure>
+
+<p>Content downloaded by audio content provider apps are protected in several ways:</p>
+
+<ol>
+<li><p>Music apps and audio files stored in hidden folders on device</p></li>
+<li><p>Apps and audio files are encrypted using AES&#8211;128.</p></li>
+<li><p>App can destroy all downloaded and reset encryption key in a single call</p></li>
+</ol>
+
+<p>Each application gets access to a storage sandbox. The storage files are encrypted and cannot be accessed by any other apps on the system.</p>
+
+<p>The system will initiate a sync after the configuration step. The user will be prompted to start a sync, and if they agree the device will activate Wi-Fi, and upon connection the system will request the app create a <code>SyncDelegate</code>. The delegate is used to notify the app that a sync has started, has been stopped, and to determine if a sync is needed. In the <code>onStart</code> method of the <code>SyncDelegate</code>, the app needs to download the songs chosen in the sync configuration step. The app notifies the system of the sync progress, so the UI can be updated.</p>
+<figure>
+<img src="resources/faq/sync_flow.png" style="max-width:638px;" title="Sync Flow" />
+</figure>
+
+<h2 id="playback">Playback</h2>
+
+<p>Once the content is downloaded, the Connect IQ app can serve up the audio files to the native media player for playback. They can either use the media controls to control playback, or the user can select what content they want to listen to by entering the playback configuration mode of the app.</p>
+<figure>
+<img src="resources/faq/playback_tree.png" style="max-width:638px;" title="Playback Decision Tree" />
+</figure>
+
+<h3 id="playbackconfiguration">Playback Configuration</h3>
+
+<p>When the user enters playback configuration, the app should allow them to change their audio content (playlists, books, or podcasts) within the app. The interface for playback configuration is defined by the audio content provider.</p>
+<figure>
+<img src="resources/faq/playback_configuration.png" style="max-width:638px;" title="Playback Configuration" />
+</figure>
+
+<p>This flow allows a user to control what songs to playback. The app can allow the user to choose from playlists or individual songs. The app can choose to start playback from this flow using <code>Media.startPlayback()</code>, or let the user select play from the media player.</p>
+
+<h3 id="playback">Playback</h3>
+
+<p>Playback is driven by the media player, but the app can decide what media player controls to display and what content to play. This is enabled by defining a <code>Media.ContentDelegate</code> class.</p>
+
+<p>The content delegate is responsible for providing a <code>Media.ContentIterator</code> that provides the media player an iterator of <code>Media.ContentRef</code> instances that represent the downloaded songs. The content iterator also provides a <code>Media.PlaybackProfile</code> that allows customization of the media player interface. The skip buttons can be disabled on a per-song basis, and <code>Media.ContentRef</code> metadata will display in the player.</p>
+
+<p>As audio is played, the media player sends playback information to the <code>ContentDelegate</code> that can be used for reporting purposes. The Connect IQ app can store the reporting information for each play of a song and send it back to the provider via web calls, or during sync.</p>
+
+<h2 id="hintsandtips">Hints and Tips</h2>
+
+<p>The <code>Toybox.Media</code> module provide tools for downloading and interfacing with audio content, but for keeping reporting information you should take advantage of the <code>Toybox.Application.Storage</code> module. The Connect IQ storage system provides a simple key/value system for persisting content, but values are limited to 8KB.</p>
+
+<p>If you&#8217;re storing lots of playback information, it is important to design an approach with these limits in mind. It&#8217;s best to use a flat structure, as nested tables will quickly grow past your 8 KB limit.</p>
+<figure>
+<img src="resources/faq/music_storage.png" style="max-width:638px;" title="Music Storage" />
+</figure>
+
+<p>Store playlist ids (<code>Px</code>) in a top-level array using a known key (&#8220;playlists&#8221;). Give each playlist and song id (<code>Sx</code>) their own dictionary entry in Storage. In playlists store the song id references, and in song ids store the <code>ContentRef</code> id and an array of plays. This allows each song to use most of the storage for song playback storage.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>With Connect IQ audio content provide apps you can:</p>
+
+<ul>
+<li>Deliver your protected content securely to Garmin music-enabled wearables via your existing content delivery web services</li>
+<li>Provide your users the ability to listen to their favorite content from your service while leaving their phone behind</li>
+<li>Provide an experience that integrates seamlessly with the native watch user interface</li>
+<li>Maintain accurate royalty calculations by caching playback information in encrypted app storage to send to your reporting services via the web during sync</li>
+</ul>
+
+<h1 id="howdoiintegrateconnectiqandtravisci">How do I integrate Connect IQ and Travis CI?</h1>
+
+<p><em>This pro-tip was written by</em> <a href="http://www.achimonline.de/"><em>Achim Seufert</em></a><em>.</em></p>
+
+<p>You probably have already seen them all over <a href="https://github.com/">GitHub</a>; these fancy little badges indicating among other things that a project&#8217;s build-process is passing or failing. Check <a href="https://github.com/twbs/bootstrap">Bootstrap</a>&#8217;s main-page for example:</p>
+<figure>
+<img src="resources/faq/bootstrap.jpg" style="max-width:624px;" title="Bootstrap" />
+</figure>
+
+<p>They&#8217;re pretty much becoming a standard for projects using build-tools like <a href="https://maven.apache.org/">Maven</a>, <a href="https://gradle.org/">Gradle</a>, <a href="https://www.npmjs.com/">npm</a>, etc. The badges actually aren&#8217;t a feature of GitHub itself, but originate from services like <a href="https://travis-ci.org/">TravisCI</a>, <a href="https://www.appveyor.com/">AppVeyor</a>, or <a href="https://david-dm.org/">David</a>. The <em>README</em> files of GitHub projects, usually plain Markdown-files being rendered to HTML, simply point to automatically generated images provided by these services.</p>
+
+<p>In this tutorial I&#8217;ll show you how to use TravisCI to build and track status of your Connect IQ project.</p>
+
+<h2 id="gettingstarted">Getting Started</h2>
+
+<p>TravisCI is a free-of-charge continuous-integration-service for open-source projects that seamlessly integrates with your GitHub repository. Whenever you push some changes to your repository, TravisCI will fire up a fresh VM which can run a set of tasks which usually include compiling your code, executing unit-tests, packaging, and so on. Furthermore there&#8217;s a wide variety of options that let you define <a href="https://docs.travis-ci.com/user/notifications">notifications</a> being sent from TravisCI in case one of these tasks will fail or behave in an unexpected way. Our goal should be to have TravisCI build and package a Connect IQ-app and visualize the outcome of these tasks with either passing or failing.</p>
+
+<h2 id="buildingviathecommandline">Building via the Command Line</h2>
+
+<p>At this point I&#8217;m assuming that you already have created a GitHub repository containing your Connect IQ project. The most important task is getting our app built and packaged via command line instead of using the <a href="https://developer.garmin.com/connect-iq/connect-iq-basics/getting-started/">Eclipse Plugin</a>. This can be achieved by invoking the Monkey C compiler through the <em>monkeybrains.jar</em> library which can be found in the bin-folder of your Connect IQ SDK. We also have to keep in mind that this should run on a UNIX-based console, since TravisCI starts a Linux-VM for us. As a side note it&#8217;s good to know that TravisCI is stateless, meaning you don&#8217;t have to worry about cleaning up your environment after a build; you&#8217;ll get a fresh VM every time a build gets triggered.</p>
+
+<p>Our compile/package command should look something like this:</p>
+
+<pre><code class="bash">java -jar &quot;${MB_HOME}/bin/monkeybrains.jar&quot; ${PARAMS} ${SOURCES}
+</code></pre>
+
+<p>We basically just use Java and execute the JAR&#8217;s main-class, passing in some params and sources. In order to make things a bit more generic and convenient, I&#8217;ve created a shell-script (<a href="https://github.com/4ch1m/mb_runner/blob/master/mb_runner.sh"><em>mb_runner.sh</em></a>) which wraps the calls to the <em>monkeybrains.jar</em>. Place it in your project root alongside the <em>manifest.xml</em>. The params are built automatically; source and resources will also automatically be found and passed over. Finally, the script can also be used to package the app. Compiling and packaging an app requires a &#8220;Developer Key&#8221; (see the <a href="https://developer.garmin.com/connect-iq/connect-iq-basics/getting-started/">Getting Started</a> in the Programmer&#8217;s Guide).</p>
+
+<p>The three things the script needs in order to run are:</p>
+
+<ol>
+<li>The <code>MB_HOME</code> environment variable to be set and pointing to your Connect IQ SDK</li>
+<li>The <code>MB_PRIVATE_KEY</code> environment variable to be set and pointing to your private key</li>
+<li>A file called <em>mb_runner.cfg</em>, also residing in your project-root, which contains a few details specific to your app. Check out the <a href="https://github.com/4ch1m/mb_runner/blob/master/mb_runner.cfg.sample"><em>mb_runner.cfg.sample</em></a> and adjust the settings to fit your needs.</li>
+</ol>
+
+<p>If you want to see more details about <em>mb_runner</em> read the <a href="https://github.com/4ch1m/mb_runner/blob/master/README.md"><em>README.md</em></a>. Running the following will build and package your app:</p>
+
+<pre><code class="bash">./mb_runner.sh package
+</code></pre>
+
+<h2 id="preparetheprojectrepositoryfortravisci">Prepare the Project/Repository for TravisCI</h2>
+
+<p>There are three more things to do:</p>
+
+<ol>
+<li>Create the <em>.travis.yml</em> config file in your repository-root</li>
+<li>In your repository root you&#8217;ll need to create a simple shell-script <em>travis.sh</em> in which we&#8217;ll be preparing/invoking the <em>mb_runner</em> script</li>
+<li>Link your repo with TravisCI</li>
+</ol>
+
+<p>The <code>.travis.yml</code> file should look like this:</p>
+
+<pre><code class="yml">language: java
+
+jdk: oraclejdk8
+
+before_script:
+    - sudo apt-get install -qq dos2unix
+script:
+    - ./travis.sh
+</code></pre>
+
+<p>Here we simply tell TravisCI to use a default Java environment (with Oracle&#8217;s JDK8 installed), install the required <code>dos2unix</code> package, and run the <code>travis.sh</code> shell script shown below. This will prepare our freshly created VM-environment so we can run our actual MonkeyC-compile-job:</p>
+
+<pre><code class="bash">#!/bin/bash
+# travis.sh script to
+
+SDK_URL=&quot;https://developer.garmin.com/connect-iq/sdks/connectiq-sdk-win-2.2.4.zip&quot;
+SDK_FILE=&quot;sdk.zip&quot;
+SDK_DIR=&quot;sdk&quot;
+
+PEM_FILE=&quot;/tmp/developer_key.pem&quot;
+DER_FILE=&quot;/tmp/developer_key.der&quot;
+
+###
+
+wget -O &quot;${SDK_FILE}&quot; &quot;${SDK_URL}&quot;
+unzip &quot;${SDK_FILE}&quot; &quot;bin/*&quot; -d &quot;${SDK_DIR}&quot;
+
+openssl genrsa -out &quot;${PEM_FILE}&quot; 4096
+openssl pkcs8 -topk8 -inform PEM -outform DER -in &quot;${PEM_FILE}&quot; -out &quot;${DER_FILE}&quot; -nocrypt
+
+export MB_HOME=&quot;${SDK_DIR}&quot;
+export MB_PRIVATE_KEY=&quot;${DER_FILE}&quot;
+
+./mb_runner.sh package
+</code></pre>
+
+<p>As you can see, we&#8217;re downloading/extracting the Connect IQ SDK, generating a new private key for compilation/packaging, and setting the environment variables accordingly before running the <code>mb_runner</code> script.</p>
+
+<p>After committing/pushing the three new files (<code>mb_runner.sh</code>, <code>mb_runner.cfg</code>, <code>.travis.yml</code>) to your repo you can finally link it to TravisCI as a final step. Just head over to the <a href="https://travis-ci.org/">TravisCI</a> homepage and log in using your GitHub credentials. Navigate to your account-settings and simply select the repository you want to activate.</p>
+
+<p>And that&#8217;s it! From now on every new commit/push to your repository will trigger TravisCI and compile/package your app. If any build errors occur when committing a change you&#8217;ll get notified about it.</p>
+
+<h2 id="addingbadgestothereadme">Adding Badges to the README</h2>
+
+<p>As a reward for our hard work we now can decorate our repository&#8217;s main page by adding the status-banner. Replace <code>[username]</code>, <code>[reponame]</code>, <code>[branchname]</code> with values that fit to your project:</p>
+
+<pre><code>![Build Status](https://travis-ci.org/[username]/[reponame].svg?branch=[branchname])](https://travis-ci.org/[username]/[reponame])
+</code></pre>
+
+<p>Of course you can put up an extra banner for each branch (master, development, etc.) you have.</p>
+
+<h2 id="includingacompanionapp">Including a Companion App</h2>
+
+<p>If you happen to have an Android or iOS companion app along with your Connect IQ app, you could easily combine the build-process of both apps. If you&#8217;re having an Android app for example, then you&#8217;ll want to have it built by TravisCI as well. Since you&#8217;re already booting up a fresh Java-environment for this, you can just run your Connect IQ app build immediately afterwards. TravisCI will then return a combined result of both jobs meaning, if one fails then it will be an overall failure.</p>
+
+<p>For such a case, the <code>.travis.yml</code> file could look something like this:</p>
+
+<pre><code>language: android
+
+jdk: oraclejdk8
+
+android:
+  components:
+    - tools
+    - platform-tools
+    - tools
+    - build-tools-25.0.2
+    - android-25
+  licenses:
+    - android-sdk-license-.+
+    - '.+'
+
+before_install:
+    - mkdir &quot;$ANDROID_HOME/licenses&quot; || true
+    - echo -e &quot;\n8933bad161af4178b1185d1a37fbf41ea5269c55&quot; &gt; &quot;$ANDROID_HOME/licenses/android-sdk-license&quot;
+    - echo -e &quot;\n84831b9409646a918e30573bab4c9c91346d8abd&quot; &gt; &quot;$ANDROID_HOME/licenses/android-sdk-preview-license&quot;
+
+# the following part will be used to perform a compile-/package-run for the ConnectIQ-app;
+# afterwards we change into the &quot;android&quot;-subfolder and continue with the standard Android Gradle-build
+before_script:
+    - sudo apt-get install -qq dos2unix
+script:
+    - cd ciq &amp;&amp; ./travis.sh
+- cd ../android &amp;&amp; ./gradlew build
+</code></pre>
+
+<h2 id="mb_runnersubmodule"><em>mb_runner</em> Submodule</h2>
+
+<p>Instead of manually adding the mb_runner script to you project root, you also can include it as a Git submodule by running the following in your project root:</p>
+
+<pre><code>git submodule add https://github.com/4ch1m/mb_runner.git
+</code></pre>
+
+<p>This will create a <em>mb_runner</em> subdirectory, containing the <em>mb_runner.sh</em> file. You will still have to add/create a <em>mb_runner.cfg</em> file in your project&#8217;s root and adjust it to your needs.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Continuous integration has become a necessity of modern software project. Having TravisCI watch over your sources - ensuring that everything is still in a &#8220;buildable&#8221; state - makes commiting/pushing your code to the repo less frightening. Using the above techniques you can bring continuous integration to your Connect IQ GitHub projects.</p>
+
+<p><em>Achim Seufert is a developer in Würzburg, Germany. Check out his</em> <a href="https://github.com/4ch1m"><em>GitHub</em></a> <em>and</em> <a href="http://www.achimonline.de/"><em>website</em></a><em>.</em></p>
+
+</body>
+</html>

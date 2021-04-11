@@ -1,0 +1,1087 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toybox.BluetoothLowEnergy </title>
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      pathId = "Toybox.BluetoothLowEnergy";
+      relpath = '../';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+ </head>
+
+ <body>
+<div class="nav_wrap">
+  <iframe id="nav" src="../class_list.html"></iframe>
+  <div id="resizer"></div>
+</div>
+
+<div id="main" tabindex="-1">
+<iframe id="search_frame" src="../class_list.html"></iframe>
+
+
+  <div id="content"><h1>Module: Toybox.BluetoothLowEnergy</h1>
+
+
+<h2>Overview</h2>
+<!-- Overview -->
+
+<!-- Description -->
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+The BluetoothLowEnergy module provides access to Generic BLE communication
+functionality in the central role. Including the ability to scan for
+peripheral devices, pair with sensors, and performing GATTC operations
+on a peripheral
+</p><p>
+This module also provides several sets of constants:
+</p>
+
+
+    </div>
+  </div>
+
+
+
+
+<div class="tags">
+
+
+  <!-- App Types -->
+  <p class="tag_title">App Types:</p>
+  <ul class="app_types">
+      <li>
+    <div class="inline">
+      <p>Watch App</p>
+    </div>
+  </li><li>
+    <div class="inline">
+      <p>Audio Content Provider</p>
+    </div>
+  </li><li>
+    <div class="inline">
+      <p>Background</p>
+    </div>
+  </li><li>
+    <div class="inline">
+      <p>Data Field</p>
+    </div>
+  </li><li>
+    <div class="inline">
+      <p>Widget</p>
+    </div>
+  </li>
+  </ul>
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Captain Marvel</li><li>D2™ Air</li><li>Darth Vader™</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1030</li><li>Edge® 1030 Plus</li><li>Edge® 530</li><li>Edge® 830</li><li>Edge® Explore</li><li>First Avenger</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 645 Music</li><li>Forerunner® 745</li><li>Forerunner® 945</li><li>fēnix® 5 Plus</li><li>fēnix® 5S Plus</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Rey™</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq. Music Edition</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li>
+  </ul>
+
+  <!-- Permissions -->
+  <p class="tag_title">Requires Permission:</p>
+  <ul class="required_permissions">
+      <li>
+    <div class="inline">
+      <p>BluetoothLowEnergy</p>
+    </div>
+  </li>
+  </ul>
+
+</div>
+
+
+
+<!-- Child Classes -->
+<h2>Classes Under Namespace</h2>
+<p class="children">
+<strong class="classes">Classes:</strong> <span class='type'><a href="../Toybox/BluetoothLowEnergy/BleDelegate.html">BleDelegate</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/Characteristic.html">Characteristic</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/Descriptor.html">Descriptor</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/Device.html">Device</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/DevicePairException.html">DevicePairException</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/InvalidRequestException.html">InvalidRequestException</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/Iterator.html">Iterator</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/ProfileRegistrationException.html">ProfileRegistrationException</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/ScanResult.html">ScanResult</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/Service.html">Service</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Uuid</a></span>, <span class='type'><a href="../Toybox/BluetoothLowEnergy/UuidFormatException.html">UuidFormatException</a></span>
+</p>
+
+
+<!-- Constants -->
+<h2>Constant Summary</h2>
+<dl class="constants">
+<h3>Enumerators</h3>
+<table class='enumTable'>
+  <tr>
+    <th class='enumTableHeader'>Name</th>
+    <th class='enumTableHeader'>Value</th>
+    <th class='enumTableHeader'>Since</th>
+    <th class='enumTableHeader'>Description</th>
+  </tr>
+  <tr class='enumTableOdd'>
+    <td class='enumTableCell'>STATUS_SUCCESS</td>
+      <td class='enumTableCell'>0</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Operation Successful
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>STATUS_NOT_ENOUGH_RESOURCES</td>
+      <td class='enumTableCell'>1</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Operation failed due to lack of resources
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>STATUS_READ_FAIL</td>
+      <td class='enumTableCell'>12</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Read Request Failed
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>STATUS_WRITE_FAIL</td>
+      <td class='enumTableCell'>14</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Write Request Failed
+</p>
+
+</td>
+    </td>
+</tr>
+</table><h3>Enumerators</h3>
+<table class='enumTable'>
+  <tr>
+    <th class='enumTableHeader'>Name</th>
+    <th class='enumTableHeader'>Value</th>
+    <th class='enumTableHeader'>Since</th>
+    <th class='enumTableHeader'>Description</th>
+  </tr>
+  <tr class='enumTableOdd'>
+    <td class='enumTableCell'>SCAN_STATE_OFF</td>
+      <td class='enumTableCell'>0</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+BLE scanning disabled
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>SCAN_STATE_SCANNING</td>
+      <td class='enumTableCell'>1</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+BLE scanning active
+</p>
+
+</td>
+    </td>
+</tr>
+</table><h3>Enumerators</h3>
+<table class='enumTable'>
+  <tr>
+    <th class='enumTableHeader'>Name</th>
+    <th class='enumTableHeader'>Value</th>
+    <th class='enumTableHeader'>Since</th>
+    <th class='enumTableHeader'>Description</th>
+  </tr>
+  <tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONNECTION_STATE_DISCONNECTED</td>
+      <td class='enumTableCell'>0</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Device is Disconnected
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONNECTION_STATE_CONNECTED</td>
+      <td class='enumTableCell'>1</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Device is Connected
+</p>
+
+</td>
+    </td>
+</tr>
+</table><h3>Enumerators</h3>
+<table class='enumTable'>
+  <tr>
+    <th class='enumTableHeader'>Name</th>
+    <th class='enumTableHeader'>Value</th>
+    <th class='enumTableHeader'>Since</th>
+    <th class='enumTableHeader'>Description</th>
+  </tr>
+  <tr class='enumTableOdd'>
+    <td class='enumTableCell'>WRITE_TYPE_WITH_RESPONSE</td>
+      <td class='enumTableCell'>0</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Write with response
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>WRITE_TYPE_DEFAULT</td>
+      <td class='enumTableCell'>1</td>
+      <td class='enumTableCell'><p>
+3.1.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Write without response (Default write type)
+</p>
+
+</td>
+    </td>
+</tr>
+</table>
+</dl>
+
+
+<h2>
+   Instance Method Summary
+   <small><a href="#" class="summary_toggle">collapse</a></small>
+</h2>
+<ul class="summary">
+<li class="public">
+
+      <span class="summary_signature">
+      <a href="#cccdUuid-instance_function" title="cccdUuid (Instance Function)"><strong>cccdUuid</strong></a>()  &#x21d2; <span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Retrieves the CCCD Uuid.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getAvailableConnectionCount-instance_function" title="getAvailableConnectionCount (Instance Function)"><strong>getAvailableConnectionCount</strong></a>()  &#x21d2; <span class='type'><a href="../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Accessor for determining the number of available connections.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getPairedDevices-instance_function" title="getPairedDevices (Instance Function)"><strong>getPairedDevices</strong></a>()  &#x21d2; <span class='type'><a href="../Toybox/BluetoothLowEnergy/Iterator.html">Toybox.BluetoothLowEnergy.Iterator</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Retrieve an Iterator of all currently paired devices accessible to the Application.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#longToUuid-instance_function" title="longToUuid (Instance Function)"><strong>longToUuid</strong></a>(mostSigBits, leastSigBits)  &#x21d2; <span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Converts long representation of a UUID to a Uuid object.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#pairDevice-instance_function" title="pairDevice (Instance Function)"><strong>pairDevice</strong></a>(scanResult)  &#x21d2; <span class='type'><a href="../Toybox/BluetoothLowEnergy/Device.html">Toybox.BluetoothLowEnergy.Device</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Pairs a peripheral device seen in scanning with the system.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#registerProfile-instance_function" title="registerProfile (Instance Function)"><strong>registerProfile</strong></a>(profile)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Registers a Bluetooth Profile Definition Call this function to define all of the Profiles that will be used in the application.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#setDelegate-instance_function" title="setDelegate (Instance Function)"><strong>setDelegate</strong></a>(delegate)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Sets the Delegate Handler for Bluetooth Asynchronous Callbacks An application can only have 1 registered delegate.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#setScanState-instance_function" title="setScanState (Instance Function)"><strong>setScanState</strong></a>(scanState)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Starts the BLE Scanning Operations Once scanning is started onScanResults() will be called on the registered BleDelegate as Advertising data is received.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#stringToUuid-instance_function" title="stringToUuid (Instance Function)"><strong>stringToUuid</strong></a>(str)  &#x21d2; <span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Converts the String Representation of a UUID into a Uuid Object.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#unpairDevice-instance_function" title="unpairDevice (Instance Function)"><strong>unpairDevice</strong></a>(device)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Unpairs a peripheral device from the system If the device is connected the BLE Subsystem will disconnect from the device and will not attempt to reconnect.
+</p>
+
+
+    </div>
+  </span>
+</li>
+</ul>
+
+
+ <div id="instance_method_details" class="method_details_list">
+  <h2>Instance Method Details</h2>
+<div class="method_details">
+  <h3 class="signature" id="cccdUuid-instance_function">
+    <strong>cccdUuid()</strong> &#x21d2; <span class='type'><span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Retrieves the CCCD Uuid
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+Uuid Object for the Client Characteristic Configuration Descriptor
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getAvailableConnectionCount-instance_function">
+    <strong>getAvailableConnectionCount()</strong> &#x21d2; <span class='type'><span class='type'><a href="../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Accessor for determining the number of available connections
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+The number of available connections
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getPairedDevices-instance_function">
+    <strong>getPairedDevices()</strong> &#x21d2; <span class='type'><span class='type'><a href="../Toybox/BluetoothLowEnergy/Iterator.html">Toybox.BluetoothLowEnergy.Iterator</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Retrieve an Iterator of all currently paired devices accessible to the
+Application
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../Toybox/BluetoothLowEnergy/Iterator.html">Toybox.BluetoothLowEnergy.Iterator</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+All paired devices available to the App
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="longToUuid-instance_function">
+    <strong>longToUuid(mostSigBits, leastSigBits)</strong> &#x21d2; <span class='type'><span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Converts long representation of a UUID to a Uuid object
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>mostSigBits</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/Long.html">Toybox.Lang.Long</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Most Significant 64-bits of the UUID
+</p>
+
+
+        </div>
+    </li><li>
+        <span class='name'>leastSigBits</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/Long.html">Toybox.Lang.Long</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Least Significant 64-bits of the UUID
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+Uuid Object
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="pairDevice-instance_function">
+    <strong>pairDevice(scanResult)</strong> &#x21d2; <span class='type'><span class='type'><a href="../Toybox/BluetoothLowEnergy/Device.html">Toybox.BluetoothLowEnergy.Device</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Pairs a peripheral device seen in scanning with the system.
+</p><p>
+The BLE Subsystem will begin to search for the device specified by
+the scanResult parameter. Once the device is found and connected,
+onConnectedStateChanged()
+will be called on the registered BleDelegate with the associated
+device object
+</p><p>
+This pairing does not persist across application instances.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>scanResult</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/BluetoothLowEnergy/ScanResult.html">Toybox.BluetoothLowEnergy.ScanResult</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+A scan result for the device that should be paired. Cannot be <code>null</code>.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../Toybox/BluetoothLowEnergy/Device.html">Toybox.BluetoothLowEnergy.Device</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+the device that was added to the paired list or <code>null</code> if the device could not be paired.
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../Toybox/BluetoothLowEnergy/DevicePairException.html">Toybox.BluetoothLowEnergy.DevicePairException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Raised if requested device is already paired, if the maximum number of paired devices has already been reached, or if pairing failed for unkown reason
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="registerProfile-instance_function">
+    <strong>registerProfile(profile)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Registers a Bluetooth Profile Definition
+</p><p>
+Call this function to define all of the Profiles that will be used in
+the application. Only registered characteristics and descriptors will be
+available when performing GATT operations
+</p><p>
+When the operation is completed BleDelegate.onProfileRegister() will be
+called on the registered delegate with the UUID and a Status
+</p><p>
+Registration can fail if too many profiles are registered, the current
+limit is 3.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>profile</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/Dictionary.html">Toybox.Lang.Dictionary</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Profile Definition. Defines the expected Profile UUID, Profile Characteristics and Characteristic Descriptors. Cannot be <code>null</code>.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.BluetoothLowEnergy;
+
+   function registerProfiles() {
+       var profile = {                                                  // Set the Profile
+           :uuid =&gt; Ble.stringToUuid("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"),
+           :characteristics =&gt; [ {                                      // Define the characteristics
+                   :uuid =&gt; Ble.stringToUuid("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"),     // UUID of the first characteristic
+                   :descriptors =&gt; [                                    // Descriptors of the characteristic
+                       Ble.stringToUuid("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"),
+                       Ble.stringToUuid("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx") ] }, {
+                   :uuid =&gt; Ble.stringToUuid("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx") }]   // UUID of the second characteristic
+       };
+
+       // Make the registerProfile call
+       BluetoothLowEnergy.registerProfile( profile );
+  }
+</code>
+</pre>
+</div>
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../Toybox/BluetoothLowEnergy/ProfileRegistrationException.html">Toybox.BluetoothLowEnergy.ProfileRegistrationException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+If registration could not be completed
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="setDelegate-instance_function">
+    <strong>setDelegate(delegate)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Sets the Delegate Handler for Bluetooth Asynchronous Callbacks
+</p><p>
+An application can only have 1 registered delegate. Subsequent calls to
+this function will override the current delegate
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>delegate</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/BluetoothLowEnergy/BleDelegate.html">Toybox.BluetoothLowEnergy.BleDelegate</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+An implementation of the BleDelegate Class to register as the handler for callbacks, or <code>null</code> to deregister the current handler.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.BluetoothLowEnergy as Ble;
+class Handler extends Ble.BleDelegate {
+    function initialize() {
+        BleDelegate.initialize();
+    }
+}
+
+var handler = new Handler();
+Ble.setDelegate(handler);</code>
+</pre>
+</div>
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="setScanState-instance_function">
+    <strong>setScanState(scanState)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Starts the BLE Scanning Operations
+</p><p>
+Once scanning is started onScanResults() will be called
+on the registered BleDelegate as Advertising data is received.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="stringToUuid-instance_function">
+    <strong>stringToUuid(str)</strong> &#x21d2; <span class='type'><span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Converts the String Representation of a UUID into a Uuid Object
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>str</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/String.html">Toybox.Lang.String</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+String Representation of the Uuid formatted as "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+Uuid Object
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../Toybox/BluetoothLowEnergy/Uuid.html">Toybox.BluetoothLowEnergy.Uuid</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../Toybox/BluetoothLowEnergy/UuidFormatException.html">Toybox.BluetoothLowEnergy.UuidFormatException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+If string is not in valid format
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="unpairDevice-instance_function">
+    <strong>unpairDevice(device)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Unpairs a peripheral device from the system
+</p><p>
+If the device is connected the BLE Subsystem will disconnect from the
+device and will not attempt to reconnect. If the device is not connected
+the system will stop searching for the device.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>device</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/BluetoothLowEnergy/Device.html">Toybox.BluetoothLowEnergy.Device</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+the device to remove from the paired device store. Cannot be <code>null</code>
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+<hr/>
+
+<p class="signature">
+Generated Feb 12, 2021 8:48:42 AM
+</p>
+
+</body>

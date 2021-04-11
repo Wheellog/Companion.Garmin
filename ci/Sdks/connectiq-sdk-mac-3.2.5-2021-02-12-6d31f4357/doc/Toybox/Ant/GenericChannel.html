@@ -1,0 +1,1066 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toybox.Ant.GenericChannel </title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      pathId = "Toybox.Ant.GenericChannel";
+      relpath = '../../';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+ </head>
+
+ <body>
+<div class="nav_wrap">
+  <iframe id="nav" src="../../class_list.html"></iframe>
+  <div id="resizer"></div>
+</div>
+
+<div id="main" tabindex="-1">
+<iframe id="search_frame" src="../../class_list.html"></iframe>
+
+
+  <div id="content"><h1>Class: Toybox.Ant.GenericChannel</h1>
+
+  <!-- Inherits -->
+  <div class="box_info">
+    <dl>
+  <dt>Inherits:</dt>
+  <dd>
+    <span class="inheritName">Toybox.Lang.Object</span>
+    <ul class="fullTree">
+      <li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a>
+  </div>
+</li>
+<li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/Ant/GenericChannel.html">Toybox.Ant.GenericChannel</a>
+  </div>
+</li>
+    </ul>
+    <a href="#" class="inheritanceTree">show all</a>
+  </dd>
+</dl>
+  </div>
+
+<h2>Overview</h2>
+<!-- Overview -->
+
+<!-- Description -->
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+A class for controlling an ANT wireless channel.
+</p><p>
+The GenericChannel provides the methods necessary for initialization,
+life cycle, and encryption of ANT channels.
+</p>
+
+
+    </div>
+  </div>
+
+
+
+
+<div class="tags">
+
+<!-- Since -->
+<p class="tag_title">Since:</p>
+<div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<h2>
+   Instance Method Summary
+   <small><a href="#" class="summary_toggle">collapse</a></small>
+</h2>
+<ul class="summary">
+<li class="public">
+
+      <span class="summary_signature">
+      <a href="#close-instance_function" title="close (Instance Function)"><strong>close</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Close a generic ANT Channel.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#disableEncryption-instance_function" title="disableEncryption (Instance Function)"><strong>disableEncryption</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Disable encryption on this channel.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#enableEncryption-instance_function" title="enableEncryption (Instance Function)"><strong>enableEncryption</strong></a>(configuration)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Set the encryption configuration and enable encryption on this channel.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getDeviceConfig-instance_function" title="getDeviceConfig (Instance Function)"><strong>getDeviceConfig</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Ant/DeviceConfig.html">Toybox.Ant.DeviceConfig</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get the current ANT channel configuration.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#initialize-instance_function" title="initialize (Instance Function)"><strong>initialize</strong></a>(listener, channelAssignment)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Constructor.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#open-instance_function" title="open (Instance Function)"><strong>open</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Open a generic ANT Channel.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#release-instance_function" title="release (Instance Function)"><strong>release</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Release the generic ANT Channel back to the system.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#sendAcknowledge-instance_function" title="sendAcknowledge (Instance Function)"><strong>sendAcknowledge</strong></a>(data)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Send an acknowledge message.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#sendBroadcast-instance_function" title="sendBroadcast (Instance Function)"><strong>sendBroadcast</strong></a>(data)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Send a broadcast message.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#sendBurst-instance_function" title="sendBurst (Instance Function)"><strong>sendBurst</strong></a>(burstData)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Send an <a href="../../Toybox/Lang/Array.html">Array</a> of <a href="../../Toybox/Ant/Message.html">Messages</a> as a burst across the ANT channel.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#setBurstListener-instance_function" title="setBurstListener (Instance Function)"><strong>setBurstListener</strong></a>(listener)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Set the <a href="../../Toybox/Ant/BurstListener.html">BurstListener</a> for burst events.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#setDeviceConfig-instance_function" title="setDeviceConfig (Instance Function)"><strong>setDeviceConfig</strong></a>(configuration)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Set the current ANT channel configuration.
+</p>
+
+
+    </div>
+  </span>
+</li>
+</ul>
+
+
+ <div id="instance_method_details" class="method_details_list">
+  <h2>Instance Method Details</h2>
+<div class="method_details">
+  <h3 class="signature" id="close-instance_function">
+    <strong>close()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Close a generic ANT Channel.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+GenericChannel.close();</code>
+</pre>
+</div>
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="disableEncryption-instance_function">
+    <strong>disableEncryption()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Disable encryption on this channel.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+GenericChannel.disableEncryption();</code>
+</pre>
+</div>
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>First Avenger</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Rey™</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.3.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="enableEncryption-instance_function">
+    <strong>enableEncryption(configuration)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Set the encryption configuration and enable encryption on this channel.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>configuration</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Ant/CryptoConfig.html">Toybox.Ant.CryptoConfig</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The CryptoConfig object to set for the current channel
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+// Assuming a valid CryptoConfig object is available
+var configuration = Ant.CryptoConfig;
+GenericChannel.enableEncryption(cryptoConfig);</code>
+</pre>
+</div>
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>First Avenger</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Rey™</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Ant/CryptoConfig.html">Toybox.Ant.CryptoConfig</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.3.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Ant/EncryptionInvalidSettingsException.html">Toybox.Ant.EncryptionInvalidSettingsException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Raised if invalid encryption settings are used
+</p>
+
+
+        </div>
+    </li><li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Ant/UnableToAcquireEncryptedChannelException.html">Toybox.Ant.UnableToAcquireEncryptedChannelException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Raised if an ecrypted channel cannot be acquired because all channels are in use
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getDeviceConfig-instance_function">
+    <strong>getDeviceConfig()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Ant/DeviceConfig.html">Toybox.Ant.DeviceConfig</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get the current ANT channel configuration.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+var devConfig = GenericChannel.getDeviceConfig();
+// devConfig can now be parsed for configuration info
+// from the DeviceConfig object</code>
+</pre>
+</div>
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Ant/DeviceConfig.html">Toybox.Ant.DeviceConfig</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+The DeviceConfig object with current channel device configuration.
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Ant/DeviceConfig.html">Toybox.Ant.DeviceConfig</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="initialize-instance_function">
+    <strong>initialize(listener, channelAssignment)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Constructor
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>listener</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Method.html">Toybox.Lang.Method</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The Method object to call with channel messages
+</p>
+
+
+        </div>
+    </li><li>
+        <span class='name'>channelAssignment</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Ant/ChannelAssignment.html">Toybox.Ant.ChannelAssignment</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The ChannelAssignment object for the channel
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+// Assumes a listenerCallback method
+// and ChannelAssignment object supplied
+// as parameters upon initialization
+GenericChannel.initialize(method(:listenerCallback), channelAssign);</code>
+</pre>
+</div>
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Ant/UnableToAcquireChannelException.html">Toybox.Ant.UnableToAcquireChannelException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Raised if the the system does not have a channel available.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="open-instance_function">
+    <strong>open()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Open a generic ANT Channel.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+GenericChannel.open();</code>
+</pre>
+</div>
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+If channel is successfully opened return <code>true</code>, otherwise <code>false</code>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="release-instance_function">
+    <strong>release()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Release the generic ANT Channel back to the system.
+</p><p>
+If the channel is open it will be automatically closed.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+GenericChannel.release();</code>
+</pre>
+</div>
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="sendAcknowledge-instance_function">
+    <strong>sendAcknowledge(data)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Send an acknowledge message.
+</p><p>
+You can expect to receive either
+MSG_CODE_EVENT_TRANSFER_TX_COMPLETED or
+MSG_CODE_EVENT_TRANSFER_TX_FAILED if
+the message succeeded/failed going to the recipient.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>data</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+An 8 byte data packet as an Array of 8 numbers
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+// create a data Array to format Message
+var data = new[8];
+for (var i = 0; i &lt; 8; i++)
+{
+    data[i] = i + 1;    // Set the values of each member
+}
+var message = new Ant.Message();
+message.setPayload(data);   // Assumes valid data
+GenericChannel.sendAcknowledge(message);</code>
+</pre>
+</div>
+
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Ant/Message.html">Toybox.Ant.Message</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="sendBroadcast-instance_function">
+    <strong>sendBroadcast(data)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Send a broadcast message.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>data</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+An 8 byte data packet as an Array of 8 numbers
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+// create a data Array to format Message
+var data = new[8];
+for (var i = 0; i &lt; 8; i++)
+{
+    data[i] = i + 1;    // Set the values of each member
+}
+var message = new Ant.Message();
+message.setPayload(data);   // Assumes valid data
+GenericChannel.sendBroadcast(message);</code>
+</pre>
+</div>
+
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Ant/Message.html">Toybox.Ant.Message</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="sendBurst-instance_function">
+    <strong>sendBurst(burstData)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Send an <a href="../../Toybox/Lang/Array.html">Array</a> of
+<a href="../../Toybox/Ant/Message.html">Messages</a> as a burst across the ANT channel.
+</p><p>
+Success or Fail is received by the <a href="../../Toybox/Ant/BurstListener.html">BurstListener</a>.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>burstData</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Ant/BurstPayload.html">Toybox.Ant.BurstPayload</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The data to burst across the channel
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+var burstData = new Ant.BurstPayload(); // Create new payload
+
+// Message must contain a valid payload
+burstData.add(message);                 // Add Message object to payload
+GenericChannel.sendBurst(burstData);    // Send Message</code>
+</pre>
+</div>
+
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Ant/BurstPayload.html">Toybox.Ant.BurstPayload</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.2.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/SymbolNotAllowedException.html">Toybox.Lang.SymbolNotAllowedException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Raised if function is called from a data field
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="setBurstListener-instance_function">
+    <strong>setBurstListener(listener)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Set the <a href="../../Toybox/Ant/BurstListener.html">BurstListener</a> for burst events.
+</p><p>
+Failed bursts or those larger than the specified threshold will be
+discarded.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>listener</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Ant/BurstListener.html">Toybox.Ant.BurstListener</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+An extension of the BurstListener class
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+// Assumes a valid BurstListener object as a parameter
+GenericChannel.setBurstListener(listener);</code>
+</pre>
+</div>
+
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Ant/BurstListener.html">Toybox.Ant.BurstListener</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.2.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/SymbolNotAllowedException.html">Toybox.Lang.SymbolNotAllowedException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Raised if function is called from a data field
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="setDeviceConfig-instance_function">
+    <strong>setDeviceConfig(configuration)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Set the current ANT channel configuration.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>configuration</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Ant/DeviceConfig.html">Toybox.Ant.DeviceConfig</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The DeviceConfig object to set for the current ANT channel
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Ant;
+// Assuming a valid DeviceConfig object is available
+var configuration = Ant.DeviceConfig;
+GenericChannel.setDeviceConfig(configuration);</code>
+</pre>
+</div>
+
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/Ant/DeviceConfig.html">Toybox.Ant.DeviceConfig</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+<hr/>
+
+<p class="signature">
+Generated Feb 12, 2021 8:48:42 AM
+</p>
+
+</body>

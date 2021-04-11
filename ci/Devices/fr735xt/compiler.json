@@ -1,0 +1,235 @@
+{
+    "alphaBlendingSupport": false,
+    "appTypes": [
+        {
+            "memoryLimit": 65536,
+            "type": "watchFace"
+        },
+        {
+            "memoryLimit": 131072,
+            "type": "watchApp"
+        },
+        {
+            "memoryLimit": 65536,
+            "type": "widget"
+        },
+        {
+            "memoryLimit": 32768,
+            "type": "datafield"
+        },
+        {
+            "memoryLimit": 32768,
+            "type": "background"
+        }
+    ],
+    "bitsPerPixel": 4,
+    "deviceFamily": "semiround-215x180",
+    "deviceGroup": "Watches/Wearables",
+    "deviceId": "fr735xt",
+    "displayName": "Forerunner® 735xt",
+    "displayType": "mip",
+    "faceIt": {
+        "analogHandles": [
+            "style1",
+            "style2",
+            "style3",
+            "style4",
+            "style5"
+        ],
+        "digitalFonts": [
+            "leagueGothic",
+            "bowlbyOne",
+            "qumpellkaNO12",
+            "sourceSansPro"
+        ],
+        "fontColors": [
+            "00000000",
+            "FFAA00",
+            "FF5500",
+            "FF0000",
+            "AA0000",
+            "00FF00",
+            "00AA00",
+            "00AAFF",
+            "AA00FF",
+            "FF00FF"
+        ],
+        "templates": [
+            "semiRoundAnalogTemplate1",
+            "semiRoundDigitalTemplate1",
+            "semiRoundAnalogTemplate2",
+            "semiRoundDigitalTemplate2",
+            "semiRoundAnalogTemplate3",
+            "semiRoundDigitalTemplate3",
+            "semiRoundAnalogTemplate4",
+            "semiRoundDigitalTemplate4"
+        ]
+    },
+    "hardwarePartNumber": "010-01614-00",
+    "imageUrl": "https://static.garmincdn.com/en/products/010-01614-00/v/cf-sm.jpg",
+    "launcherIcon": {
+        "height": 40,
+        "width": 40
+    },
+    "orientation": 0,
+    "palette": {
+        "colors": [
+            "FFFFFF",
+            "AAAAAA",
+            "555555",
+            "000000",
+            "FF0000",
+            "AA0000",
+            "FF5500",
+            "FF00FF",
+            "FFAA00",
+            "AA00FF",
+            "00FF00",
+            "00AA00",
+            "00AAFF",
+            "0000FF"
+        ],
+        "isResourcePalette": true
+    },
+    "partNumbers": [
+        {
+            "connectIQVersion": "2.4.1",
+            "firmwareVersion": 910,
+            "languages": [
+                {
+                    "code": "hrv",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "ces",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "dan",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "dut",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "eng",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "fin",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "fre",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "deu",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "gre",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "heb",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "hun",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "ita",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "nob",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "pol",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "por",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "rus",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "slo",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "slv",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "spa",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "swe",
+                    "fontSet": "ww"
+                }
+            ],
+            "number": "006-B2158-00"
+        },
+        {
+            "connectIQVersion": "2.4.5",
+            "firmwareVersion": 930,
+            "languages": [
+                {
+                    "code": "eng",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "zhs",
+                    "fontSet": "apac_chn"
+                },
+                {
+                    "code": "zht",
+                    "fontSet": "apac_twn"
+                },
+                {
+                    "code": "ind",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "kor",
+                    "fontSet": "apac_kor"
+                },
+                {
+                    "code": "tha",
+                    "fontSet": "apac_tha"
+                }
+            ],
+            "number": "006-B2533-00"
+        },
+        {
+            "connectIQVersion": "2.4.5",
+            "firmwareVersion": 930,
+            "languages": [
+                {
+                    "code": "eng",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "jpn",
+                    "fontSet": "apac_jpn"
+                }
+            ],
+            "number": "006-B2534-00"
+        }
+    ],
+    "resolution": {
+        "height": 180,
+        "width": 215
+    },
+    "screenRotationSupport": false,
+    "worldWidePartNumber": "006-B2158-00"
+}

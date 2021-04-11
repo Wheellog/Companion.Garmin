@@ -1,0 +1,1235 @@
+{
+    "display": {
+        "behaviors": [],
+        "isTouch": false,
+        "landscapeOrientation": 0,
+        "location": {
+            "height": 240,
+            "width": 240,
+            "x": 124,
+            "y": 164
+        },
+        "shape": "round"
+    },
+    "fonts": [
+        {
+            "fontSet": "ww",
+            "fonts": [
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDREGULAR_26PX",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDBOLD_26PX",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDBOLD_29PX",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDBOLD_34PX",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDBOLD_37PX",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "numberThaiHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDREGULAR_26PX",
+                    "name": "systemXtiny"
+                },
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDBOLD_26PX",
+                    "name": "systemTiny"
+                },
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDBOLD_29PX",
+                    "name": "systemSmall"
+                },
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDBOLD_34PX",
+                    "name": "systemMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_ROBOTOCONDENSEDBOLD_37PX",
+                    "name": "systemLarge"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "systemNumberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "systemNumberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "systemNumberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "systemNumberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_chn",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_26",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_26B",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_29B",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_34B",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_41B",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "numberThaiHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_26",
+                    "name": "systemXtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_26B",
+                    "name": "systemTiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_29B",
+                    "name": "systemSmall"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_34B",
+                    "name": "systemMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_CHN_41B",
+                    "name": "systemLarge"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "systemNumberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "systemNumberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "systemNumberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "systemNumberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_twn",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_26",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_26B",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_29B",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_34B",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_41B",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "numberThaiHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_26",
+                    "name": "systemXtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_26B",
+                    "name": "systemTiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_29B",
+                    "name": "systemSmall"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_34B",
+                    "name": "systemMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_SC_BOLD_TWN_41B",
+                    "name": "systemLarge"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "systemNumberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "systemNumberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "systemNumberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "systemNumberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_jpn",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_26",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_26B",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_29B",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_34B",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_41B",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "numberThaiHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_26",
+                    "name": "systemXtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_26B",
+                    "name": "systemTiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_29B",
+                    "name": "systemSmall"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_34B",
+                    "name": "systemMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_41B",
+                    "name": "systemLarge"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "systemNumberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "systemNumberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "systemNumberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "systemNumberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_kor",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_26",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_26B",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_29B",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_34B",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_41B",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "numberThaiHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_26",
+                    "name": "systemXtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_26B",
+                    "name": "systemTiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_29B",
+                    "name": "systemSmall"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_34B",
+                    "name": "systemMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_BOLD_41B",
+                    "name": "systemLarge"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "systemNumberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "systemNumberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "systemNumberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "systemNumberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_tha",
+            "fonts": [
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "small"
+                },
+                {
+                    "filename": "bitstreamVeraSans 21",
+                    "name": "medium"
+                },
+                {
+                    "filename": "bitstreamVeraSans 27",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "numberThaiHot"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "systemXtiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "systemTiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "systemSmall"
+                },
+                {
+                    "filename": "bitstreamVeraSans 21",
+                    "name": "systemMedium"
+                },
+                {
+                    "filename": "bitstreamVeraSans 27",
+                    "name": "systemLarge"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_26PX",
+                    "name": "systemNumberMild"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_36PX",
+                    "name": "systemNumberMedium"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_52PX",
+                    "name": "systemNumberHot"
+                },
+                {
+                    "filename": "FNT_FENIX5_CHRONOSSEMIBOLDCONDENSED_58PX",
+                    "name": "systemNumberThaiHot"
+                }
+            ]
+        }
+    ],
+    "image": "d2charlie.png",
+    "keys": [
+        {
+            "behavior": "onSelect",
+            "id": "enter",
+            "location": {
+                "height": 63,
+                "width": 43,
+                "x": 407,
+                "y": 161
+            }
+        },
+        {
+            "behavior": "previousPage",
+            "id": "up",
+            "location": {
+                "height": 70,
+                "width": 27,
+                "x": 33,
+                "y": 249
+            }
+        },
+        {
+            "behavior": "onMenu",
+            "id": "menu",
+            "isHold": true,
+            "location": {
+                "height": 70,
+                "width": 27,
+                "x": 33,
+                "y": 249
+            }
+        },
+        {
+            "behavior": "nextPage",
+            "id": "down",
+            "location": {
+                "height": 62,
+                "width": 43,
+                "x": 46,
+                "y": 336
+            }
+        },
+        {
+            "id": "clock",
+            "isHold": true,
+            "location": {
+                "height": 62,
+                "width": 43,
+                "x": 46,
+                "y": 336
+            }
+        },
+        {
+            "behavior": "onBack",
+            "id": "esc",
+            "location": {
+                "height": 67,
+                "width": 44,
+                "x": 399,
+                "y": 333
+            }
+        }
+    ],
+    "layouts": [
+        {
+            "datafields": {
+                "datafields": [
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberThaiHot",
+                                    "justification": "center",
+                                    "width": 192,
+                                    "x": 119,
+                                    "y": 157
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 119,
+                                    "y": 73
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 240,
+                                    "width": 240,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "top",
+                                    "right",
+                                    "bottom"
+                                ]
+                            }
+                        ],
+                        "name": "1 Field"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberThaiHot",
+                                    "justification": "center",
+                                    "width": 154,
+                                    "x": 120,
+                                    "y": 115
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 119,
+                                    "y": 47
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 119,
+                                    "width": 240,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "top",
+                                    "right"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberThaiHot",
+                                    "justification": "center",
+                                    "width": 154,
+                                    "x": 120,
+                                    "y": 89
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 119,
+                                    "y": 22
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 119,
+                                    "width": 240,
+                                    "x": 0,
+                                    "y": 121
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "right",
+                                    "bottom"
+                                ]
+                            }
+                        ],
+                        "name": "2 Fields"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 132,
+                                    "x": 120,
+                                    "y": 74
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 119,
+                                    "y": 29
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 77,
+                                    "width": 240,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "top",
+                                    "right"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "center",
+                                    "width": 165,
+                                    "x": 120,
+                                    "y": 79
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 119,
+                                    "y": 22
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 82,
+                                    "width": 240,
+                                    "x": 0,
+                                    "y": 79
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "right"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 132,
+                                    "x": 120,
+                                    "y": 65
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 119,
+                                    "y": 21
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 77,
+                                    "width": 240,
+                                    "x": 0,
+                                    "y": 163
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "right",
+                                    "bottom"
+                                ]
+                            }
+                        ],
+                        "name": "3 Fields A"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberThaiHot",
+                                    "justification": "center",
+                                    "width": 154,
+                                    "x": 120,
+                                    "y": 114
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 119,
+                                    "y": 46
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 119,
+                                    "width": 240,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "top",
+                                    "right"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMild",
+                                    "justification": "center",
+                                    "width": 96,
+                                    "x": 66,
+                                    "y": 62
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 63,
+                                    "y": 23
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 119,
+                                    "width": 119,
+                                    "x": 0,
+                                    "y": 121
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "bottom"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMild",
+                                    "justification": "center",
+                                    "width": 96,
+                                    "x": 54,
+                                    "y": 62
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 54,
+                                    "y": 23
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 119,
+                                    "width": 119,
+                                    "x": 121,
+                                    "y": 121
+                                },
+                                "obscurity": [
+                                    "right",
+                                    "bottom"
+                                ]
+                            }
+                        ],
+                        "name": "3 Fields B"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 132,
+                                    "x": 120,
+                                    "y": 74
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 119,
+                                    "y": 29
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 77,
+                                    "width": 240,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "top",
+                                    "right"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 115,
+                                    "x": 60,
+                                    "y": 69
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 58,
+                                    "y": 25
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 82,
+                                    "width": 119,
+                                    "x": 0,
+                                    "y": 79
+                                },
+                                "obscurity": [
+                                    "left"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 115,
+                                    "x": 60,
+                                    "y": 69
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 58,
+                                    "y": 25
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 82,
+                                    "width": 119,
+                                    "x": 121,
+                                    "y": 79
+                                },
+                                "obscurity": [
+                                    "right"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 132,
+                                    "x": 120,
+                                    "y": 65
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 119,
+                                    "y": 21
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 77,
+                                    "width": 240,
+                                    "x": 0,
+                                    "y": 163
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "right",
+                                    "bottom"
+                                ]
+                            }
+                        ],
+                        "name": "4 Fields A"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberMild",
+                                    "justification": "center",
+                                    "width": 96,
+                                    "x": 66,
+                                    "y": 111
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 67,
+                                    "y": 72
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 119,
+                                    "width": 119,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "top"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMild",
+                                    "justification": "center",
+                                    "width": 96,
+                                    "x": 54,
+                                    "y": 111
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 51,
+                                    "y": 72
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 119,
+                                    "width": 119,
+                                    "x": 121,
+                                    "y": 0
+                                },
+                                "obscurity": [
+                                    "top",
+                                    "right"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMild",
+                                    "justification": "center",
+                                    "width": 96,
+                                    "x": 66,
+                                    "y": 62
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 63,
+                                    "y": 23
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 119,
+                                    "width": 119,
+                                    "x": 0,
+                                    "y": 121
+                                },
+                                "obscurity": [
+                                    "left",
+                                    "bottom"
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMild",
+                                    "justification": "center",
+                                    "width": 96,
+                                    "x": 54,
+                                    "y": 62
+                                },
+                                "label": {
+                                    "font": "tiny",
+                                    "justification": "center",
+                                    "x": 54,
+                                    "y": 23
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 119,
+                                    "width": 119,
+                                    "x": 121,
+                                    "y": 121
+                                },
+                                "obscurity": [
+                                    "right",
+                                    "bottom"
+                                ]
+                            }
+                        ],
+                        "name": "4 Fields B"
+                    }
+                ]
+            },
+            "menu2": {
+                "customTitle": {
+                    "height": 52,
+                    "width": 126,
+                    "x": 57,
+                    "y": 18
+                },
+                "doneButtons": {
+                    "bottom": true,
+                    "top": true
+                },
+                "items": {
+                    "checks": [
+                        {
+                            "alignment": "left",
+                            "disabledIconFile": "menu2_check_off_vegas.png",
+                            "enabledIconFile": "menu2_check_on_vegas.png",
+                            "x": 11,
+                            "y": 32
+                        },
+                        {
+                            "alignment": "right",
+                            "disabledIconFile": "menu2_check_off_vegas.png",
+                            "enabledIconFile": "menu2_check_on_vegas.png",
+                            "x": 199,
+                            "y": 32
+                        }
+                    ],
+                    "icons": {
+                        "check": "left",
+                        "icon": "left",
+                        "leftLocation": {
+                            "height": 82,
+                            "width": 41,
+                            "x": 3,
+                            "y": 7
+                        },
+                        "rightLocation": {
+                            "height": 82,
+                            "width": 41,
+                            "x": 196,
+                            "y": 7
+                        },
+                        "toggle": "right"
+                    },
+                    "item": {
+                        "height": 96,
+                        "labelFont": "large",
+                        "subLabelFont": "small",
+                        "width": 240
+                    },
+                    "region": {
+                        "height": 96,
+                        "width": 240,
+                        "x": 0,
+                        "y": 72
+                    },
+                    "stringWidths": {
+                        "basic": 224,
+                        "check": 152,
+                        "icon": 152,
+                        "toggle": 200
+                    },
+                    "subItem": {
+                        "height": 51,
+                        "labelFont": "tiny",
+                        "labelWidth": 178,
+                        "yOffset": 2
+                    },
+                    "toggles": [
+                        {
+                            "alignment": "left",
+                            "disabledIconFile": "menu2_toggle_off_left_240x240.png",
+                            "enabledIconFile": "menu2_toggle_on_left_240x240.png",
+                            "x": 3,
+                            "y": 7
+                        },
+                        {
+                            "alignment": "right",
+                            "disabledIconFile": "menu2_toggle_off_right_240x240.png",
+                            "enabledIconFile": "menu2_toggle_on_right_240x240.png",
+                            "x": 220,
+                            "y": 7
+                        }
+                    ]
+                },
+                "mode": "threeItem",
+                "nextArrowPoints": [
+                    {
+                        "x": 119,
+                        "y": 228
+                    },
+                    {
+                        "x": 120,
+                        "y": 228
+                    },
+                    {
+                        "x": 127,
+                        "y": 221
+                    },
+                    {
+                        "x": 112,
+                        "y": 221
+                    }
+                ],
+                "previousArrowPoints": [
+                    {
+                        "x": 119,
+                        "y": 11
+                    },
+                    {
+                        "x": 120,
+                        "y": 11
+                    },
+                    {
+                        "x": 127,
+                        "y": 18
+                    },
+                    {
+                        "x": 112,
+                        "y": 18
+                    }
+                ],
+                "title": {
+                    "height": 72,
+                    "width": 240,
+                    "x": 0,
+                    "y": 0
+                },
+                "titleString": {
+                    "font": "tiny",
+                    "width": 120,
+                    "x": 119,
+                    "y": 42
+                }
+            },
+            "orientation": "portrait",
+            "picker": {
+                "entries": [
+                    {
+                        "height": 132,
+                        "width": 65,
+                        "x": 11,
+                        "y": 80
+                    },
+                    {
+                        "height": 132,
+                        "width": 65,
+                        "x": 87,
+                        "y": 80
+                    },
+                    {
+                        "height": 132,
+                        "width": 65,
+                        "x": 164,
+                        "y": 80
+                    }
+                ],
+                "nextArrow": {
+                    "height": 22,
+                    "width": 34,
+                    "x": 103,
+                    "y": 74
+                },
+                "previousArrow": {
+                    "height": 22,
+                    "width": 34,
+                    "x": 103,
+                    "y": 190
+                },
+                "title": {
+                    "height": 66,
+                    "width": 240,
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        }
+    ],
+    "sensorHistory": [
+        {
+            "interval": 120,
+            "size": 180,
+            "type": "heartrate"
+        },
+        {
+            "interval": 120,
+            "size": 180,
+            "type": "elevation"
+        },
+        {
+            "interval": 120,
+            "size": 180,
+            "type": "temperature"
+        },
+        {
+            "interval": 120,
+            "size": 180,
+            "type": "pressure"
+        }
+    ],
+    "watchdogCount": 120000
+}

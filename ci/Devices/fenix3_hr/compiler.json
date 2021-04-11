@@ -1,0 +1,217 @@
+{
+    "alphaBlendingSupport": false,
+    "appTypes": [
+        {
+            "memoryLimit": 65536,
+            "type": "watchFace"
+        },
+        {
+            "fitSessionMemory": 7168,
+            "memoryLimit": 65536,
+            "type": "watchApp"
+        },
+        {
+            "memoryLimit": 65536,
+            "type": "widget"
+        },
+        {
+            "memoryLimit": 16384,
+            "type": "datafield"
+        }
+    ],
+    "bitsPerPixel": 4,
+    "deviceFamily": "round-218x218",
+    "deviceGroup": "Watches/Wearables",
+    "deviceId": "fenix3_hr",
+    "displayName": "fēnix® 3 HR",
+    "displayType": "mip",
+    "faceIt": {
+        "analogHandles": [
+            "style1",
+            "style2",
+            "style3",
+            "style4",
+            "style5"
+        ],
+        "digitalFonts": [
+            "sourceSansPro",
+            "leagueGothic",
+            "notoSansCJKTC",
+            "qumpellkaNO12"
+        ],
+        "fontColors": [
+            "00000000",
+            "FFAA00",
+            "FF5500",
+            "FF0000",
+            "AA0000",
+            "00FF00",
+            "00AA00",
+            "00AAFF",
+            "5500AA",
+            "FF00FF"
+        ],
+        "templates": [
+            "roundAnalogTemplate1",
+            "roundDigitalTemplate1",
+            "roundAnalogTemplate2",
+            "roundDigitalTemplate2",
+            "roundAnalogTemplate3",
+            "roundDigitalTemplate3",
+            "roundAnalogTemplate4",
+            "roundDigitalTemplate4"
+        ]
+    },
+    "hardwarePartNumber": "010-01338-70",
+    "imageUrl": "https://static.garmincdn.com/en/products/010-01338-70/g/cf-sm.jpg",
+    "launcherIcon": {
+        "height": 40,
+        "width": 40
+    },
+    "orientation": 0,
+    "palette": {
+        "colors": [
+            "FFFFFF",
+            "AAAAAA",
+            "555555",
+            "000000",
+            "FF0000",
+            "AA0000",
+            "FF5500",
+            "FF00FF",
+            "FFAA00",
+            "5500AA",
+            "00FF00",
+            "00AA00",
+            "00AAFF",
+            "0000FF"
+        ],
+        "isResourcePalette": true
+    },
+    "partNumbers": [
+        {
+            "connectIQVersion": "1.4.4",
+            "firmwareVersion": 470,
+            "languages": [
+                {
+                    "code": "hrv",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "ces",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "dan",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "dut",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "eng",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "fin",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "fre",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "deu",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "gre",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "hun",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "ita",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "nob",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "pol",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "por",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "rus",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "slo",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "slv",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "spa",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "swe",
+                    "fontSet": "ww"
+                }
+            ],
+            "number": "006-B2413-00"
+        },
+        {
+            "connectIQVersion": "1.3.1",
+            "firmwareVersion": 360,
+            "languages": [
+                {
+                    "code": "eng",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "ind",
+                    "fontSet": "ww"
+                },
+                {
+                    "code": "zhs",
+                    "fontSet": "apac_chn"
+                },
+                {
+                    "code": "zht",
+                    "fontSet": "apac_twn"
+                },
+                {
+                    "code": "jpn",
+                    "fontSet": "apac_jpn"
+                },
+                {
+                    "code": "kor",
+                    "fontSet": "apac_kor"
+                },
+                {
+                    "code": "tha",
+                    "fontSet": "apac_tha"
+                }
+            ],
+            "number": "006-B2473-00"
+        }
+    ],
+    "resolution": {
+        "height": 218,
+        "width": 218
+    },
+    "screenRotationSupport": false,
+    "worldWidePartNumber": "006-B2413-00"
+}

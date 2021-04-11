@@ -1,0 +1,504 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toybox.WatchUi.CustomMenuItem </title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      pathId = "Toybox.WatchUi.CustomMenuItem";
+      relpath = '../../';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+ </head>
+
+ <body>
+<div class="nav_wrap">
+  <iframe id="nav" src="../../class_list.html"></iframe>
+  <div id="resizer"></div>
+</div>
+
+<div id="main" tabindex="-1">
+<iframe id="search_frame" src="../../class_list.html"></iframe>
+
+
+  <div id="content"><h1>Class: Toybox.WatchUi.CustomMenuItem</h1>
+
+  <!-- Inherits -->
+  <div class="box_info">
+    <dl>
+  <dt>Inherits:</dt>
+  <dd>
+    <span class="inheritName">Toybox.WatchUi.MenuItem</span>
+    <ul class="fullTree">
+      <li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a>
+  </div>
+</li>
+<li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi/MenuItem.html">Toybox.WatchUi.MenuItem</a>
+  </div>
+</li>
+<li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi/CustomMenuItem.html">Toybox.WatchUi.CustomMenuItem</a>
+  </div>
+</li>
+    </ul>
+    <a href="#" class="inheritanceTree">show all</a>
+  </dd>
+</dl>
+  </div>
+
+<h2>Overview</h2>
+<!-- Overview -->
+
+<!-- Description -->
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+A representation of a custom item in a CustomMenu.
+</p><p>
+A CustomMenuItem is a element of a
+<a href="../../Toybox/WatchUi/CustomMenu.html">CustomMenu</a> View that represents one of
+the items in the menu. When selected, the onSelect() delegate callback
+will be invoked. The selected state of the item may change when it is
+being selected. This state can be evaluated using the isSelected() method
+and can be used to control the look of a selected item.
+</p><p>
+A CustomMenuItem can be added to a CustomMenu using the
+<a href="../../Toybox/WatchUi/CustomMenu.html#addItem-instance_function">addItem()</a> method.
+</p>
+
+
+    </div>
+  </div>
+
+
+  <!-- See -->
+  <h2>See Also:</h2>
+  <ul class="see">
+  <li>
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi/CustomMenu.html">Toybox.WatchUi.CustomMenu</a>
+  </div>
+  </li><li>
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi/MenuItem.html">Toybox.WatchUi.MenuItem</a>
+  </div>
+  </li>
+  </ul>
+
+
+<div class="tags">
+
+<!-- Since -->
+<p class="tag_title">Since:</p>
+<div class="since"><p>
+3.0.0
+</p>
+
+</div>
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 520 Plus</li><li>Edge® 530</li><li>Edge® 820 / Explore</li><li>Edge® 830</li><li>Edge® Explore</li><li>First Avenger</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 745</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>GPSMAP® 66s / 66sr / 66st</li><li>GPSMAP® 86s / 86sc / 86i / 86sci</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Oregon® 7 Series</li><li>Rey™</li><li>Rino® 7 Series</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li>
+  </ul>
+
+
+</div>
+
+
+
+
+
+
+
+<h2>
+   Instance Method Summary
+   <small><a href="#" class="summary_toggle">collapse</a></small>
+</h2>
+<ul class="summary">
+<li class="public">
+
+      <span class="summary_signature">
+      <a href="#draw-instance_function" title="draw (Instance Function)"><strong>draw</strong></a>(dc)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Draw method for a CustomMenuItem.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#initialize-instance_function" title="initialize (Instance Function)"><strong>initialize</strong></a>(identifier, options)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Constructor.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#isFocused-instance_function" title="isFocused (Instance Function)"><strong>isFocused</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get the CustomMenuItem focus state.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#isSelected-instance_function" title="isSelected (Instance Function)"><strong>isSelected</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get the CustomMenuItem selected state.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#setDrawable-instance_function" title="setDrawable (Instance Function)"><strong>setDrawable</strong></a>(drawable)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Set a CustomMenuItem Drawable.
+</p>
+
+
+    </div>
+  </span>
+</li>
+</ul>
+
+
+ <div id="instance_method_details" class="method_details_list">
+  <h2>Instance Method Details</h2>
+<div class="method_details">
+  <h3 class="signature" id="draw-instance_function">
+    <strong>draw(dc)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Draw method for a CustomMenuItem.
+</p><p>
+This is called when a menu item is rendering.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>dc</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Graphics/Dc.html">Toybox.Graphics.Dc</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The item's drawing context
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="initialize-instance_function">
+    <strong>initialize(identifier, options)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Constructor
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>identifier</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The identifier for this item which is typically a <a href="../../Toybox/Lang/String.html">String</a>
+</p>
+
+
+        </div>
+    </li><li>
+        <span class='name'>options</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Dictionary.html">Toybox.Lang.Dictionary</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+A Dictionary of options
+</p>
+
+
+        </div>
+        <ul>
+        <li>
+        <span class='name'>:drawable</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/WatchUi/Drawable.html">Toybox.WatchUi.Drawable</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+A Drawable that draws the item. (required)
+</p>
+
+
+        </div>
+    </li>
+        </ul>
+    </li>
+    </ul>
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.0.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/UnexpectedTypeException.html">Toybox.Lang.UnexpectedTypeException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Thrown if the <code>:drawable</code> option is not a <a href="../../Toybox/WatchUi/Drawable.html">Drawable</a> or is <code>null</code>.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="isFocused-instance_function">
+    <strong>isFocused()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get the CustomMenuItem focus state.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+The current focus state of the CustomMenuItem
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="isSelected-instance_function">
+    <strong>isSelected()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get the CustomMenuItem selected state.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+The current selected state of the CustomMenuItem
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="setDrawable-instance_function">
+    <strong>setDrawable(drawable)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Set a CustomMenuItem Drawable.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>drawable</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/WatchUi/Drawable.html">Toybox.WatchUi.Drawable</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+A Drawable to render on top of the menu items, or <code>null</code>.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.0.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/UnexpectedTypeException.html">Toybox.Lang.UnexpectedTypeException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Thrown if <code>drawable</code> is not a <a href="../../Toybox/WatchUi/Drawable.html">Drawable</a> or is <code>null</code>.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div>
+</div>
+</div>
+
+<hr/>
+
+<p class="signature">
+Generated Feb 12, 2021 8:48:44 AM
+</p>
+
+</body>

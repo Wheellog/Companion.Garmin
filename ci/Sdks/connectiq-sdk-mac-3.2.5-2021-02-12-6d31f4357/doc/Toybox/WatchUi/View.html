@@ -1,0 +1,1228 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toybox.WatchUi.View </title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      pathId = "Toybox.WatchUi.View";
+      relpath = '../../';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+ </head>
+
+ <body>
+<div class="nav_wrap">
+  <iframe id="nav" src="../../class_list.html"></iframe>
+  <div id="resizer"></div>
+</div>
+
+<div id="main" tabindex="-1">
+<iframe id="search_frame" src="../../class_list.html"></iframe>
+
+
+  <div id="content"><h1>Class: Toybox.WatchUi.View</h1>
+
+  <!-- Inherits -->
+  <div class="box_info">
+    <dl>
+  <dt>Inherits:</dt>
+  <dd>
+    <span class="inheritName">Toybox.Lang.Object</span>
+    <ul class="fullTree">
+      <li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a>
+  </div>
+</li>
+<li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi/View.html">Toybox.WatchUi.View</a>
+  </div>
+</li>
+    </ul>
+    <a href="#" class="inheritanceTree">show all</a>
+  </dd>
+</dl>
+  </div>
+
+<h2>Overview</h2>
+<!-- Overview -->
+
+<!-- Description -->
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+A View is an object that represents a page within an app.
+</p><p>
+An app may have multiple View objects representing things like menus and
+other app states. Each View contains a Layout, which in turn contain
+<a href="../../Toybox/WatchUi/Drawable.html">Drawable</a> objects, such as
+<a href="../../Toybox/WatchUi/Bitmap.html">Bitmaps</a> and <a href="../../Toybox/WatchUi/Text.html">Text</a>.
+View objects also handle the life cycle of each app, which varies depending
+on the app type:
+</p>
+
+<dl><dt>Widgets and Watch Apps</dt><dd>
+<p>
+<a href="../../Toybox/WatchUi/View.html#onLayout-instance_function">onLayout()</a> →
+<a href="../../Toybox/WatchUi/View.html#onShow-instance_function">onShow()</a> →
+<a href="../../Toybox/WatchUi/View.html#onUpdate-instance_function">onUpdate()</a> →
+<a href="../../Toybox/WatchUi/View.html#onHide-instance_function">onHide()</a>
+</p>
+
+</dl></dd>
+<dl><dt>Watch Faces</dt><dd>
+<p>
+<a href="../../Toybox/WatchUi/View.html#onLayout-instance_function">onLayout()</a> →
+<a href="../../Toybox/WatchUi/View.html#onShow-instance_function">onShow()</a> →
+<a href="../../Toybox/WatchUi/View.html#onUpdate-instance_function">onUpdate()</a>
+</p>
+
+</dl></dd>
+<dl><dt>Data Fields</dt><dd>
+<p>
+<a href="../../Toybox/WatchUi/View.html#onLayout-instance_function">onLayout()</a> →
+<a href="../../Toybox/WatchUi/View.html#onShow-instance_function">onShow()</a> →
+<a href="../../Toybox/WatchUi/View.html#onUpdate-instance_function">onUpdate()</a>
+</p><p>
+If the size of the data field has changed since the last onUpdate(),
+onLayout() will be called prior to onUpdate(). However, onLayout(),
+onShow(), and  onUpdate() are not called for
+<a href="../../Toybox/WatchUi/SimpleDataField.html">SimpleDataField</a> objects.
+</p>
+
+</dl></dd>
+
+    </div>
+  </div>
+
+
+  <!-- See -->
+  <h2>See Also:</h2>
+  <ul class="see">
+  <li>
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi/Drawable.html">Toybox.WatchUi.Drawable</a>
+  </div>
+  </li>
+  </ul>
+
+
+<div class="tags">
+<!-- Example -->
+<div class="examples">
+<p class="tag_title">Example:</p>
+<p class="example_title"><div class='inline'>
+<p>A basic widget View class definition</p>
+</div></p>
+<pre class="example code">
+<code>using Toybox.WatchUi;
+
+class MyWidgetView extends WatchUi.View {
+    function initialize() {
+        View.initialize();
+    }
+
+    // Resources are loaded here
+    function onLayout(dc) {
+        setLayout(Rez.Layouts.MainLayout(dc));
+    }
+
+    // onShow() is called when this View is brought to the foreground
+    function onShow() {
+    }
+
+    // onUpdate() is called periodically to update the View
+    function onUpdate(dc) {
+        View.onUpdate(dc);
+    }
+
+    // onHide() is called when this View is removed from the screen
+    function onHide() {
+    }
+}</code>
+</pre>
+</div>
+
+<!-- Since -->
+<p class="tag_title">Since:</p>
+<div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+
+
+</div>
+
+  <h2>Direct Known Subclasses</h2>
+  <p class="sub_classes">
+    <span class='type'><a href="../../Toybox/WatchUi/DataField.html">Toybox.WatchUi.DataField</a></span>, <span class='type'><a href="../../Toybox/WatchUi/DataFieldAlert.html">Toybox.WatchUi.DataFieldAlert</a></span>, <span class='type'><a href="../../Toybox/WatchUi/GlanceView.html">Toybox.WatchUi.GlanceView</a></span>, <span class='type'><a href="../../Toybox/WatchUi/MapView.html">Toybox.WatchUi.MapView</a></span>, <span class='type'><a href="../../Toybox/WatchUi/Menu2.html">Toybox.WatchUi.Menu2</a></span>, <span class='type'><a href="../../Toybox/WatchUi/Picker.html">Toybox.WatchUi.Picker</a></span>, <span class='type'><a href="../../Toybox/WatchUi/WatchFace.html">Toybox.WatchUi.WatchFace</a></span>
+  </p>
+
+
+
+
+
+
+<h2>
+   Instance Method Summary
+   <small><a href="#" class="summary_toggle">collapse</a></small>
+</h2>
+<ul class="summary">
+<li class="public">
+
+      <span class="summary_signature">
+      <a href="#addLayer-instance_function" title="addLayer (Instance Function)"><strong>addLayer</strong></a>(layer)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Add a <a href="../../Toybox/WatchUi/Layer.html">WatchUi.Layer</a> on the top of view's layer stack.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#clearLayers-instance_function" title="clearLayers (Instance Function)"><strong>clearLayers</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Clear all layers that are added to the view.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#findDrawableById-instance_function" title="findDrawableById (Instance Function)"><strong>findDrawableById</strong></a>(identifier)  &#x21d2; <span class='type'><a href="../../Toybox/WatchUi/Drawable.html">Toybox.WatchUi.Drawable</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Find a Drawable by its ID.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getLayerIndex-instance_function" title="getLayerIndex (Instance Function)"><strong>getLayerIndex</strong></a>(layer)  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Return the index of the layer from the bottom of the view layer stack.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getLayers-instance_function" title="getLayers (Instance Function)"><strong>getLayers</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get a copy of the layer stack currently added to the view, sorted by the drawing order, i.e.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#initialize-instance_function" title="initialize (Instance Function)"><strong>initialize</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Constructor.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#insertLayer-instance_function" title="insertLayer (Instance Function)"><strong>insertLayer</strong></a>(layer, idx)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Insert the layer at the given index in the layer stack, this will stop animation playback.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onHide-instance_function" title="onHide (Instance Function)"><strong>onHide</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Hide the View.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onLayout-instance_function" title="onLayout (Instance Function)"><strong>onLayout</strong></a>(dc)  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+The entry point for the View.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onShow-instance_function" title="onShow (Instance Function)"><strong>onShow</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Show the View.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#onUpdate-instance_function" title="onUpdate (Instance Function)"><strong>onUpdate</strong></a>(dc)  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Update the View.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#removeLayer-instance_function" title="removeLayer (Instance Function)"><strong>removeLayer</strong></a>(layer)  &#x21d2; <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Remove a layer from the view layer stack, this will stop animation playback.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#setKeyToSelectableInteraction-instance_function" title="setKeyToSelectableInteraction (Instance Function)"><strong>setKeyToSelectableInteraction</strong></a>(enable)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Enter Selectable interaction mode.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#setLayout-instance_function" title="setLayout (Instance Function)"><strong>setLayout</strong></a>(layout)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Set the layout for the View.
+</p>
+
+
+    </div>
+  </span>
+</li>
+</ul>
+
+
+ <div id="instance_method_details" class="method_details_list">
+  <h2>Instance Method Details</h2>
+<div class="method_details">
+  <h3 class="signature" id="addLayer-instance_function">
+    <strong>addLayer(layer)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Add a <a href="../../Toybox/WatchUi/Layer.html">WatchUi.Layer</a> on the top of view's layer stack.
+Users do not need to draw the layer on the screen manually, instead, once
+a layer is added to the view, the system will draw all layers during screen
+updates which include View update (e.g. onUpdate/onPartialUpdate) and anmation playback.
+</p><p>
+Disabled for DataFiled and Background Apps
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>layer</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/WatchUi/Layer.html">Toybox.WatchUi.Layer</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+a <a href="../../Toybox/WatchUi/Layer.html">WatchUi.Layer</a> object to add
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+
+
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/UnexpectedTypeException.html">Toybox.Lang.UnexpectedTypeException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Thrown if the <code>layer</code> is not a WatchUi.Layer
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="clearLayers-instance_function">
+    <strong>clearLayers()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Clear all layers that are added to the view
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="findDrawableById-instance_function">
+    <strong>findDrawableById(identifier)</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/WatchUi/Drawable.html">Toybox.WatchUi.Drawable</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Find a Drawable by its ID.
+</p><p>
+A common use for this method is to get layout information to format
+dynamic content, such as a string that updates at runtime.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>identifier</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/String.html">Toybox.Lang.String</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The identifier of the Drawable to find
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<p class="example_title"><div class='inline'>
+<p>Formatting the clock time as centered, blue text</p>
+</div></p>
+<pre class="example code">
+<code>// The layout.xml file contents:
+// &lt;layout id="WatchFace"&gt;
+//      &lt;label id="TimeLabel" x="center" y="center" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" /&gt;
+// &lt;/layout&gt;
+
+using Toybox.Graphics;
+using Toybox.Lang;
+using Toybox.System;
+using Toybox.WatchUi.View;
+
+var clockTime = System.getClockTime();
+var timeString = Lang.format(
+    "$1$:$2$",
+    [clockTime.hour, clockTime.min.format("%02d")]
+);
+var view = View.findDrawableById("TimeLabel");
+view.setText(timeString);</code>
+</pre>
+</div>
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/WatchUi/Drawable.html">Toybox.WatchUi.Drawable</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+A Drawable if found, otherwise <code>null</code>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/System.html#getClockTime-instance_function">System.getClockTime()</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getLayerIndex-instance_function">
+    <strong>getLayerIndex(layer)</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Return the index of the layer from the bottom of the view layer stack
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>layer</span>
+        &mdash;
+        <div class='inline'>
+<p>
+a <a href="../../Toybox/WatchUi/Layer.html">WatchUi.Layer</a> a layer ojbect
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+index of the layer from the bottom of the layer stack
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getLayers-instance_function">
+    <strong>getLayers()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get a copy of the layer stack currently added to the view, sorted by the drawing order,
+i.e. from the bottom to the top.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+an array of <a href="../../Toybox/WatchUi/Layer.html">WatchUi.Layer</a> or <code>null</code>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="initialize-instance_function">
+    <strong>initialize()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Constructor
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="insertLayer-instance_function">
+    <strong>insertLayer(layer, idx)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Insert the layer at the given index in the layer stack, this will stop animation playback.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>layer</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/WatchUi/Layer.html">Toybox.WatchUi.Layer</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+a layer to insert.
+</p>
+
+
+        </div>
+    </li><li>
+        <span class='name'>idx</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+position in the layer stack to insert layer.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+
+
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onHide-instance_function">
+    <strong>onHide()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Hide the View.
+</p><p>
+This is called before the View is removed from the foreground. This
+occurs when a new View object is pushed on top of the current one,
+when the current View is popped, or when the app is closed. Resources
+should be freed from memory at this point if the current View will be
+left on the page stack.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onLayout-instance_function">
+    <strong>onLayout(dc)</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+The entry point for the View.
+</p><p>
+onLayout() is called before the View is shown to load resources and
+set up the layout of the View.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>dc</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Graphics/Dc.html">Toybox.Graphics.Dc</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The device context
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+<code>true</code> if handled, otherwise <code>false</code>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onShow-instance_function">
+    <strong>onShow()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Show the View.
+</p><p>
+This is called when the View is brought into the foreground. Resources
+should be loaded into system memory for use in the View at this point.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+<code>true</code> if handled, otherwise <code>false</code>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="onUpdate-instance_function">
+    <strong>onUpdate(dc)</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Update the View.
+</p><p>
+This is called when a View is brought to the foreground, after the
+call to <a href="../../Toybox/WatchUi/View.html#onShow-instance_function">onShow()</a>. While a View is
+active, this method is generally used to update dynamic content in
+the View. There are also some special cases when it will be invoked:
+</p>
+
+<ul>
+<li>
+<p>
+On <a href="../../Toybox/WatchUi.html#requestUpdate-instance_function">WatchUi.requestUpdate()</a> calls within Widgets and Watch Apps
+</p>
+
+</li>
+<li>
+<p>
+Once per minute in Watch Faces when in low power mode
+</p>
+
+</li>
+<li>
+<p>
+Once per second in Watch Faces when in high power mode
+</p>
+
+</li>
+<li>
+<p>
+Once per second in Data Fields
+</p>
+
+</li>
+<li>
+<p>
+At an increased rate while an <a href="../../Toybox/WatchUi.html#animate-instance_function">animation</a> is active
+</p>
+
+</li>
+<li>
+<p>
+More than one call to onUpdate() may occur during View transitions
+</p>
+
+</li>
+</ul>
+<p>
+If a class that extends View does not implement this function then any
+Drawable objects contained in the View will automatically be drawn.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>dc</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Graphics/Dc.html">Toybox.Graphics.Dc</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+The device context
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+<code>true</code> if handled, otherwise <code>false</code>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi/WatchFace.html#onPartialUpdate-instance_function">WatchFace.onPartialUpdate()</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="removeLayer-instance_function">
+    <strong>removeLayer(layer)</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Remove a layer from the view layer stack, this will stop animation playback.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>layer</span>
+        &mdash;
+        <div class='inline'>
+<p>
+a <a href="../../Toybox/WatchUi/Layer.html">WatchUi.Layer</a> to remove from the layer stack.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+<code>true</code>, if layer is removed successfully, otherwise <code>false</code>
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="setKeyToSelectableInteraction-instance_function">
+    <strong>setKeyToSelectableInteraction(enable)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Enter Selectable interaction mode.
+</p><p>
+When enabled, physical buttons may be used to cycle through on-screen
+<a href="../../Toybox/WatchUi/Selectable.html">Selectable</a> objects. The first registered
+Selectable in the current layout will be highlighted initially.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>enable</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Set to <code>true</code> if the mode should be enabled, otherwise <code>false</code>
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<p class="example_title"><div class='inline'>
+<p>Toggle the Selectable interaction mode with the Menu button</p>
+</div></p>
+<pre class="example code">
+<code>var selectableMode = false;
+function onMenu() {
+    selectableMode = !selectableMode;
+    // currentView is a View containing Selectable objects
+    currentView.setKeyToSelectableInteraction(selectableMode);
+    return true;
+}</code>
+</pre>
+</div>
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+2.1.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/SymbolNotAllowedException.html">Toybox.Lang.SymbolNotAllowedException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Raised if called from a data field
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="setLayout-instance_function">
+    <strong>setLayout(layout)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Set the layout for the View.
+</p><p>
+Set the array of Drawable objects to be managed by this View. The
+specified Drawables will be:
+</p>
+
+<ul>
+<li>
+<p>
+Drawn automatically via calls to <a href="../../Toybox/WatchUi/View.html#onUpdate-instance_function">onUpdate()</a>
+</p>
+
+</li>
+<li>
+<p>
+Searched via calls to <a href="../../Toybox/WatchUi/View.html#findDrawableById-instance_function">findDrawableById()</a>
+</p>
+
+</li>
+</ul>
+
+    </div>
+  </div>
+
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>layout</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+An array of Drawables or <code>null</code>.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+<hr/>
+
+<p class="signature">
+Generated Feb 12, 2021 8:48:43 AM
+</p>
+
+</body>

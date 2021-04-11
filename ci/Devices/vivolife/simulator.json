@@ -1,0 +1,194 @@
+{
+    "display": {
+        "behaviors": [],
+        "isTouch": true,
+        "landscapeOrientation": 0,
+        "location": {
+            "height": 240,
+            "width": 240,
+            "x": 106,
+            "y": 153
+        },
+        "shape": "round"
+    },
+    "fonts": [
+        {
+            "fontSet": "ww",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_16PX",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_22PX",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_22PX",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_25PX",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_25PX",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_29PX",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_48PX",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_76PX",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_94PX",
+                    "name": "numberThaiHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_16PX",
+                    "name": "systemXtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_22PX",
+                    "name": "systemTiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_22PX",
+                    "name": "systemSmall"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_25PX",
+                    "name": "systemMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_25PX",
+                    "name": "systemLarge"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_29PX",
+                    "name": "systemNumberMild"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_48PX",
+                    "name": "systemNumberMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_76PX",
+                    "name": "systemNumberHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_94PX",
+                    "name": "systemNumberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_twn",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_REGULAR_CHN_22",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_REGULAR_CHN_30",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_REGULAR_CHN_30",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_MEDIUM_CHN_34",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_MEDIUM_CHN_34",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_29PX",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_48PX",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_76PX",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_94PX",
+                    "name": "numberThaiHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_REGULAR_CHN_22",
+                    "name": "systemXtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_REGULAR_CHN_30",
+                    "name": "systemTiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_REGULAR_CHN_30",
+                    "name": "systemSmall"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_MEDIUM_CHN_34",
+                    "name": "systemMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_MEDIUM_CHN_34",
+                    "name": "systemLarge"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_29PX",
+                    "name": "systemNumberMild"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_48PX",
+                    "name": "systemNumberMedium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_76PX",
+                    "name": "systemNumberHot"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_BOLD_NMBR_94PX",
+                    "name": "systemNumberThaiHot"
+                }
+            ]
+        }
+    ],
+    "image": "vivolife.png",
+    "sensorHistory": [
+        {
+            "interval": 120,
+            "size": 180,
+            "type": "heartrate"
+        },
+        {
+            "interval": 120,
+            "size": 180,
+            "type": "elevation"
+        },
+        {
+            "interval": 120,
+            "size": 180,
+            "type": "temperature"
+        },
+        {
+            "interval": 120,
+            "size": 180,
+            "type": "pressure"
+        }
+    ],
+    "watchdogCount": 120000
+}

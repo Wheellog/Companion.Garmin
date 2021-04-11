@@ -1,0 +1,554 @@
+{
+    "display": {
+        "behaviors": [],
+        "isTouch": false,
+        "landscapeOrientation": 0,
+        "location": {
+            "height": 148,
+            "width": 205,
+            "x": 81,
+            "y": 147
+        },
+        "shape": "rectangle"
+    },
+    "fonts": [
+        {
+            "fontSet": "ww",
+            "fonts": [
+                {
+                    "filename": "FNT_DIGI_12",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_DIGI_12",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_DIGI_12",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_DIGI_17",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_DIGI_20",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_DIGI_20N",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_DIGI_32",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_DIGI_38",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_DIGI_62",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_chn",
+            "fonts": [
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_BOLD_15",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_BOLD_15",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_BOLD_15",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_BOLD_21",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_BOLD_26",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_DIGI_20N",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_DIGI_32",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_DIGI_38",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_DIGI_62",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_twn",
+            "fonts": [
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_TWHK_BOLD_15",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_TWHK_BOLD_15",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_TWHK_BOLD_15",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_TWHK_BOLD_21",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_TWHK_BOLD_26",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_DIGI_20N",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_DIGI_32",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_DIGI_38",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_DIGI_62",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_jpn",
+            "fonts": [
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_BOLD_15",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_BOLD_15",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_BOLD_15",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_BOLD_21",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_BOLD_26",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_DIGI_20N",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_DIGI_32",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_DIGI_38",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_DIGI_62",
+                    "name": "numberThaiHot"
+                }
+            ]
+        }
+    ],
+    "image": "forerunner_920xt.png",
+    "keys": [
+        {
+            "behavior": "onMenu",
+            "id": "menu",
+            "isHold": true,
+            "location": {
+                "height": 76,
+                "width": 30,
+                "x": 8,
+                "y": 281
+            }
+        },
+        {
+            "behavior": "onSelect",
+            "id": "enter",
+            "location": {
+                "height": 27,
+                "width": 78,
+                "x": 207,
+                "y": 394
+            }
+        },
+        {
+            "behavior": "onBack",
+            "id": "esc",
+            "location": {
+                "height": 30,
+                "width": 79,
+                "x": 82,
+                "y": 394
+            }
+        },
+        {
+            "behavior": "previousPage",
+            "id": "up",
+            "location": {
+                "height": 72,
+                "width": 40,
+                "x": 319,
+                "y": 126
+            }
+        },
+        {
+            "behavior": "nextPage",
+            "id": "down",
+            "location": {
+                "height": 75,
+                "width": 33,
+                "x": 325,
+                "y": 280
+            }
+        },
+        {
+            "id": "mode",
+            "location": {
+                "height": 76,
+                "width": 30,
+                "x": 8,
+                "y": 281
+            }
+        }
+    ],
+    "layouts": [
+        {
+            "datafields": {
+                "datafields": [
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberThaiHot",
+                                    "justification": "center",
+                                    "width": 201,
+                                    "x": 102,
+                                    "y": 104
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 148,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "1 Field"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "center",
+                                    "width": 201,
+                                    "x": 102,
+                                    "y": 68
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 72,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "center",
+                                    "width": 201,
+                                    "x": 102,
+                                    "y": 68
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 71,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 77
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "2 Fields"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "center",
+                                    "width": 201,
+                                    "x": 102,
+                                    "y": 68
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 72,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 95,
+                                    "x": 51,
+                                    "y": 60
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 71,
+                                    "width": 100,
+                                    "x": 0,
+                                    "y": 77
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 95,
+                                    "x": 51,
+                                    "y": 60
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 71,
+                                    "width": 100,
+                                    "x": 105,
+                                    "y": 77
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "3 Fields"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 95,
+                                    "x": 51,
+                                    "y": 60
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 72,
+                                    "width": 100,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 95,
+                                    "x": 51,
+                                    "y": 60
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 72,
+                                    "width": 100,
+                                    "x": 105,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 95,
+                                    "x": 51,
+                                    "y": 60
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 71,
+                                    "width": 100,
+                                    "x": 0,
+                                    "y": 77
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "center",
+                                    "width": 95,
+                                    "x": 51,
+                                    "y": 60
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 2,
+                                    "y": 14
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 71,
+                                    "width": 100,
+                                    "x": 105,
+                                    "y": 77
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "4 Fields"
+                    }
+                ]
+            },
+            "orientation": "portrait",
+            "picker": {
+                "entries": [
+                    {
+                        "height": 72,
+                        "width": 51,
+                        "x": 12,
+                        "y": 50
+                    },
+                    {
+                        "height": 72,
+                        "width": 51,
+                        "x": 77,
+                        "y": 50
+                    },
+                    {
+                        "height": 72,
+                        "width": 51,
+                        "x": 142,
+                        "y": 50
+                    }
+                ],
+                "nextArrow": {
+                    "height": 24,
+                    "width": 55,
+                    "x": 75,
+                    "y": 24
+                },
+                "previousArrow": {
+                    "height": 24,
+                    "width": 55,
+                    "x": 75,
+                    "y": 124
+                },
+                "title": {
+                    "height": 17,
+                    "width": 205,
+                    "x": 0,
+                    "y": 5
+                }
+            }
+        }
+    ],
+    "sensorHistory": [
+        {
+            "interval": 67,
+            "size": 205,
+            "type": "heartrate"
+        }
+    ],
+    "watchdogCount": 80000
+}

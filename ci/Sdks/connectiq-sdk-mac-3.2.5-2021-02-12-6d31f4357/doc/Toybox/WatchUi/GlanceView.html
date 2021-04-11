@@ -1,0 +1,183 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toybox.WatchUi.GlanceView </title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      pathId = "Toybox.WatchUi.GlanceView";
+      relpath = '../../';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+ </head>
+
+ <body>
+<div class="nav_wrap">
+  <iframe id="nav" src="../../class_list.html"></iframe>
+  <div id="resizer"></div>
+</div>
+
+<div id="main" tabindex="-1">
+<iframe id="search_frame" src="../../class_list.html"></iframe>
+
+
+  <div id="content"><h1>Class: Toybox.WatchUi.GlanceView</h1>
+
+  <!-- Inherits -->
+  <div class="box_info">
+    <dl>
+  <dt>Inherits:</dt>
+  <dd>
+    <span class="inheritName">Toybox.WatchUi.View</span>
+    <ul class="fullTree">
+      <li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a>
+  </div>
+</li>
+<li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi/View.html">Toybox.WatchUi.View</a>
+  </div>
+</li>
+<li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/WatchUi/GlanceView.html">Toybox.WatchUi.GlanceView</a>
+  </div>
+</li>
+    </ul>
+    <a href="#" class="inheritanceTree">show all</a>
+  </dd>
+</dl>
+  </div>
+
+<h2>Overview</h2>
+<!-- Overview -->
+
+<!-- Description -->
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+The class that represents a glance view which can be used to display the widget preview content
+in a restricted drawing context (dc) among other widgets.
+</p><p>
+Glance view behaves mostly like a regular WatchUi.View, e.g. user can load layout and update view
+using <a href="../../Toybox/WatchUi/View.html#onLayout-instance_function">View.onLayout()</a> and <a href="../../Toybox/WatchUi/View.html#onUpdate-instance_function">View.onUpdate()</a>,
+however, the <code>dc</code> object passed in those calls will be bounded by glance area rather than a full screen <code>dc</code>.
+</p><p>
+GlanceView doesn't support <a href="../../Toybox/WatchUi/Layer.html">WatchUi.Layer</a> or other View APIs that
+are associated with layering system, such as
+<a href="../../Toybox/WatchUi/View.html#addLayer-instance_function">View.addLayer()</a>
+<a href="../../Toybox/WatchUi/View.html#removeLayer-instance_function">View.removeLayer()</a>,
+<a href="../../Toybox/WatchUi/View.html#insertLayer-instance_function">View.insertLayer()</a>,
+<a href="../../Toybox/WatchUi/View.html#clearLayers-instance_function">View.clearLayers()</a>
+</p><p>
+The widget that's running in the glance mode are prohibited from using page control functionality,
+as there is only one view allowed during said mode.
+</p>
+
+
+    </div>
+  </div>
+
+
+
+
+<div class="tags">
+
+<!-- Since -->
+<p class="tag_title">Since:</p>
+<div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Descent™ Mk2 / Descent™ Mk2i</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 745</li><li>Forerunner® 945</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li>
+  </ul>
+
+
+</div>
+
+
+
+
+
+
+
+<h2>
+   Instance Method Summary
+   <small><a href="#" class="summary_toggle">collapse</a></small>
+</h2>
+<ul class="summary">
+<li class="public">
+
+      <span class="summary_signature">
+      <a href="#initialize-instance_function" title="initialize (Instance Function)"><strong>initialize</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Constructor.
+</p>
+
+
+    </div>
+  </span>
+</li>
+</ul>
+
+
+ <div id="instance_method_details" class="method_details_list">
+  <h2>Instance Method Details</h2>
+<div class="method_details">
+  <h3 class="signature" id="initialize-instance_function">
+    <strong>initialize()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Constructor
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.1.0
+</p>
+
+</div>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+<hr/>
+
+<p class="signature">
+Generated Feb 12, 2021 8:48:44 AM
+</p>
+
+</body>

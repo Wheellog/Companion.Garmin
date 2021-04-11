@@ -1,8 +1,0 @@
-#!/bin/bash
-
-MB_HOME="$( cd "$( dirname "$0" )" && pwd )"
-if [ "$(uname)" == "Darwin" ]; then
-    open -a "$MB_HOME"/ConnectIQ.app
-else
-    "$MB_HOME"/simulator
-fi

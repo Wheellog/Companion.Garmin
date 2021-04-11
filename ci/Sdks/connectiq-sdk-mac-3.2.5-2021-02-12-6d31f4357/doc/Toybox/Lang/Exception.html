@@ -1,0 +1,303 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toybox.Lang.Exception </title>
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      pathId = "Toybox.Lang.Exception";
+      relpath = '../../';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+ </head>
+
+ <body>
+<div class="nav_wrap">
+  <iframe id="nav" src="../../class_list.html"></iframe>
+  <div id="resizer"></div>
+</div>
+
+<div id="main" tabindex="-1">
+<iframe id="search_frame" src="../../class_list.html"></iframe>
+
+
+  <div id="content"><h1>Class: Toybox.Lang.Exception</h1>
+
+  <!-- Inherits -->
+  <div class="box_info">
+    <dl>
+  <dt>Inherits:</dt>
+  <dd>
+    <span class="inheritName">Toybox.Lang.Object</span>
+    <ul class="fullTree">
+      <li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/Lang/Object.html">Toybox.Lang.Object</a>
+  </div>
+</li>
+<li class="next">
+  <div class='inline'>
+    <a href="../../Toybox/Lang/Exception.html">Toybox.Lang.Exception</a>
+  </div>
+</li>
+    </ul>
+    <a href="#" class="inheritanceTree">show all</a>
+  </dd>
+</dl>
+  </div>
+
+<h2>Overview</h2>
+<!-- Overview -->
+
+<!-- Description -->
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Exception is a class that represents a thrown Exception. Custom exceptions
+can be created by extending this class.
+</p>
+
+
+    </div>
+  </div>
+
+
+
+
+<div class="tags">
+<!-- Example -->
+<div class="examples">
+<p class="tag_title">Example:</p>
+<p class="example_title"><div class='inline'>
+<p>Creating and throwing a new Exception class</p>
+</div></p>
+<pre class="example code">
+<code>using Toybox.Lang;
+var myVar;
+
+class myException extends Lang.Exception {
+    function initialize() {
+        Exception.initialize();
+    }
+}
+
+if (myVar == false) {
+    throw new myException();
+}</code>
+</pre>
+</div><div class="examples">
+<p class="tag_title">Example:</p>
+<p class="example_title"><div class='inline'>
+<p>Handling an Exception in a try-catch block</p>
+</div></p>
+<pre class="example code">
+<code>using Toybox.Lang;
+using Toybox.System;
+try {
+    // Do something here
+} catch (e instanceof Lang.Exception) {
+    System.println(e.getErrorMessage());
+}</code>
+</pre>
+</div>
+
+<!-- Since -->
+<p class="tag_title">Since:</p>
+<div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+
+
+</div>
+
+  <h2>Direct Known Subclasses</h2>
+  <p class="sub_classes">
+    <span class='type'><a href="../../Toybox/Ant/EncryptionInvalidSettingsException.html">Toybox.Ant.EncryptionInvalidSettingsException</a></span>, <span class='type'><a href="../../Toybox/Ant/UnableToAcquireChannelException.html">Toybox.Ant.UnableToAcquireChannelException</a></span>, <span class='type'><a href="../../Toybox/Ant/UnableToAcquireEncryptedChannelException.html">Toybox.Ant.UnableToAcquireEncryptedChannelException</a></span>, <span class='type'><a href="../../Toybox/AntPlus/AntPlusNotAllowedException.html">Toybox.AntPlus.AntPlusNotAllowedException</a></span>, <span class='type'><a href="../../Toybox/Application/ObjectStoreAccessException.html">Toybox.Application.ObjectStoreAccessException</a></span>, <span class='type'><a href="../../Toybox/Application/Properties/InvalidKeyException.html">Toybox.Application.Properties.InvalidKeyException</a></span>, <span class='type'><a href="../../Toybox/Attention/BacklightOnTooLongException.html">Toybox.Attention.BacklightOnTooLongException</a></span>, <span class='type'><a href="../../Toybox/Background/ExitDataSizeLimitException.html">Toybox.Background.ExitDataSizeLimitException</a></span>, <span class='type'><a href="../../Toybox/Background/InvalidBackgroundTimeException.html">Toybox.Background.InvalidBackgroundTimeException</a></span>, <span class='type'><a href="../../Toybox/Background/MessageSizeLimitException.html">Toybox.Background.MessageSizeLimitException</a></span>, <span class='type'><a href="../../Toybox/BluetoothLowEnergy/DevicePairException.html">Toybox.BluetoothLowEnergy.DevicePairException</a></span>, <span class='type'><a href="../../Toybox/BluetoothLowEnergy/InvalidRequestException.html">Toybox.BluetoothLowEnergy.InvalidRequestException</a></span>, <span class='type'><a href="../../Toybox/BluetoothLowEnergy/ProfileRegistrationException.html">Toybox.BluetoothLowEnergy.ProfileRegistrationException</a></span>, <span class='type'><a href="../../Toybox/BluetoothLowEnergy/UuidFormatException.html">Toybox.BluetoothLowEnergy.UuidFormatException</a></span>, <span class='type'><a href="../../Toybox/Cryptography/InvalidBlockSizeException.html">Toybox.Cryptography.InvalidBlockSizeException</a></span>, <span class='type'><a href="../../Toybox/Graphics/InvalidBitmapResourceException.html">Toybox.Graphics.InvalidBitmapResourceException</a></span>, <span class='type'><a href="../../Toybox/Graphics/InvalidPaletteException.html">Toybox.Graphics.InvalidPaletteException</a></span>, <span class='type'><a href="../../Toybox/Lang/InvalidOptionsException.html">Toybox.Lang.InvalidOptionsException</a></span>, <span class='type'><a href="../../Toybox/Lang/InvalidValueException.html">Toybox.Lang.InvalidValueException</a></span>, <span class='type'><a href="../../Toybox/Lang/OperationNotAllowedException.html">Toybox.Lang.OperationNotAllowedException</a></span>, <span class='type'><a href="../../Toybox/Lang/SerializationException.html">Toybox.Lang.SerializationException</a></span>, <span class='type'><a href="../../Toybox/Lang/StorageFullException.html">Toybox.Lang.StorageFullException</a></span>, <span class='type'><a href="../../Toybox/Lang/SymbolNotAllowedException.html">Toybox.Lang.SymbolNotAllowedException</a></span>, <span class='type'><a href="../../Toybox/Lang/UnexpectedTypeException.html">Toybox.Lang.UnexpectedTypeException</a></span>, <span class='type'><a href="../../Toybox/Lang/ValueOutOfBoundsException.html">Toybox.Lang.ValueOutOfBoundsException</a></span>, <span class='type'><a href="../../Toybox/Sensor/TooManySensorDataListenersException.html">Toybox.Sensor.TooManySensorDataListenersException</a></span>, <span class='type'><a href="../../Toybox/StringUtil/InvalidHexStringException.html">Toybox.StringUtil.InvalidHexStringException</a></span>, <span class='type'><a href="../../Toybox/System/AppNotInstalledException.html">Toybox.System.AppNotInstalledException</a></span>, <span class='type'><a href="../../Toybox/System/PreviousOperationNotCompleteException.html">Toybox.System.PreviousOperationNotCompleteException</a></span>, <span class='type'><a href="../../Toybox/System/UnexpectedAppTypeException.html">Toybox.System.UnexpectedAppTypeException</a></span>, <span class='type'><a href="../../Toybox/Test/AssertException.html">Toybox.Test.AssertException</a></span>, <span class='type'><a href="../../Toybox/Time/RealTimeClockNotValidException.html">Toybox.Time.RealTimeClockNotValidException</a></span>, <span class='type'><a href="../../Toybox/WatchUi/InvalidMenuItemTypeException.html">Toybox.WatchUi.InvalidMenuItemTypeException</a></span>, <span class='type'><a href="../../Toybox/WatchUi/InvalidPointException.html">Toybox.WatchUi.InvalidPointException</a></span>, <span class='type'><a href="../../Toybox/WatchUi/InvalidSelectableStateException.html">Toybox.WatchUi.InvalidSelectableStateException</a></span>
+  </p>
+
+
+
+
+
+
+<h2>
+   Instance Method Summary
+   <small><a href="#" class="summary_toggle">collapse</a></small>
+</h2>
+<ul class="summary">
+<li class="public">
+
+      <span class="summary_signature">
+      <a href="#getErrorMessage-instance_function" title="getErrorMessage (Instance Function)"><strong>getErrorMessage</strong></a>()  &#x21d2; <span class='type'><a href="../../Toybox/Lang/String.html">Toybox.Lang.String</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get the error message for the Exception.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#initialize-instance_function" title="initialize (Instance Function)"><strong>initialize</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Constructor.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#printStackTrace-instance_function" title="printStackTrace (Instance Function)"><strong>printStackTrace</strong></a>()
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Print the stack trace of the thrown Exception.
+</p>
+
+
+    </div>
+  </span>
+</li>
+</ul>
+
+
+ <div id="instance_method_details" class="method_details_list">
+  <h2>Instance Method Details</h2>
+<div class="method_details">
+  <h3 class="signature" id="getErrorMessage-instance_function">
+    <strong>getErrorMessage()</strong> &#x21d2; <span class='type'><span class='type'><a href="../../Toybox/Lang/String.html">Toybox.Lang.String</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get the error message for the Exception.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../../Toybox/Lang/String.html">Toybox.Lang.String</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+The Exception's error message, or <code>null</code> if no message is given
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.2.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="initialize-instance_function">
+    <strong>initialize()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Constructor
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.1.2
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="printStackTrace-instance_function">
+    <strong>printStackTrace()</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Print the stack trace of the thrown Exception.
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.1.2
+</p>
+
+</div>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+<hr/>
+
+<p class="signature">
+Generated Feb 12, 2021 8:48:43 AM
+</p>
+
+</body>

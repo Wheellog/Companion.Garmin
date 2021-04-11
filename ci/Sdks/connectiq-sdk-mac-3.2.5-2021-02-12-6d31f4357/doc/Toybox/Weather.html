@@ -1,0 +1,1049 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toybox.Weather </title>
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      pathId = "Toybox.Weather";
+      relpath = '../';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+ </head>
+
+ <body>
+<div class="nav_wrap">
+  <iframe id="nav" src="../class_list.html"></iframe>
+  <div id="resizer"></div>
+</div>
+
+<div id="main" tabindex="-1">
+<iframe id="search_frame" src="../class_list.html"></iframe>
+
+
+  <div id="content"><h1>Module: Toybox.Weather</h1>
+
+
+<h2>Overview</h2>
+<!-- Overview -->
+
+<!-- Description -->
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+The Weather module provides functionality for accessing information
+related to the current weather.
+</p>
+
+
+    </div>
+  </div>
+
+
+
+
+<div class="tags">
+
+<!-- Since -->
+<p class="tag_title">Since:</p>
+<div class="since"><p>
+3.2.0
+</p>
+
+</div>
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Captain Marvel</li><li>D2™ Air</li><li>Darth Vader™</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1030</li><li>Edge® 1030 Plus</li><li>Edge® 530</li><li>Edge® 830</li><li>First Avenger</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 745</li><li>Forerunner® 945</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Rey™</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li>
+  </ul>
+
+
+</div>
+
+
+
+<!-- Child Classes -->
+<h2>Classes Under Namespace</h2>
+<p class="children">
+<strong class="classes">Classes:</strong> <span class='type'><a href="../Toybox/Weather/CurrentConditions.html">CurrentConditions</a></span>, <span class='type'><a href="../Toybox/Weather/DailyForecast.html">DailyForecast</a></span>, <span class='type'><a href="../Toybox/Weather/HourlyForecast.html">HourlyForecast</a></span>
+</p>
+
+
+<!-- Constants -->
+<h2>Constant Summary</h2>
+<dl class="constants">
+<h3>Enumerators</h3>
+<table class='enumTable'>
+  <tr>
+    <th class='enumTableHeader'>Name</th>
+    <th class='enumTableHeader'>Value</th>
+    <th class='enumTableHeader'>Since</th>
+    <th class='enumTableHeader'>Description</th>
+  </tr>
+  <tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_CLEAR</td>
+      <td class='enumTableCell'>0</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Clear
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_PARTLY_CLOUDY</td>
+      <td class='enumTableCell'>1</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Partly cloudy
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_MOSTLY_CLOUDY</td>
+      <td class='enumTableCell'>2</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Mostly cloudy
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_RAIN</td>
+      <td class='enumTableCell'>3</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Rain
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_SNOW</td>
+      <td class='enumTableCell'>4</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_WINDY</td>
+      <td class='enumTableCell'>5</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Windy
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_THUNDERSTORMS</td>
+      <td class='enumTableCell'>6</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Thunderstorms
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_WINTRY_MIX</td>
+      <td class='enumTableCell'>7</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Wintry mix
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_FOG</td>
+      <td class='enumTableCell'>8</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Fog
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_HAZY</td>
+      <td class='enumTableCell'>9</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Hazy
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_HAIL</td>
+      <td class='enumTableCell'>10</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Hail
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_SCATTERED_SHOWERS</td>
+      <td class='enumTableCell'>11</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Scattered showers
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_SCATTERED_THUNDERSTORMS</td>
+      <td class='enumTableCell'>12</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Scattered thunderstorms
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_UNKNOWN_PRECIPITATION</td>
+      <td class='enumTableCell'>13</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Unknown precipitation
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_LIGHT_RAIN</td>
+      <td class='enumTableCell'>14</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Light rain
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_HEAVY_RAIN</td>
+      <td class='enumTableCell'>15</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Heavy rain
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_LIGHT_SNOW</td>
+      <td class='enumTableCell'>16</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Light snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_HEAVY_SNOW</td>
+      <td class='enumTableCell'>17</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Heavy snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_LIGHT_RAIN_SNOW</td>
+      <td class='enumTableCell'>18</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Light rain snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_HEAVY_RAIN_SNOW</td>
+      <td class='enumTableCell'>19</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Heavy rain snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_CLOUDY</td>
+      <td class='enumTableCell'>20</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Cloudy
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_RAIN_SNOW</td>
+      <td class='enumTableCell'>21</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Rain snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_PARTLY_CLEAR</td>
+      <td class='enumTableCell'>22</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Partly clear
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_MOSTLY_CLEAR</td>
+      <td class='enumTableCell'>23</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Mostly clear
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_LIGHT_SHOWERS</td>
+      <td class='enumTableCell'>24</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Light showers
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_SHOWERS</td>
+      <td class='enumTableCell'>25</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Showers
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_HEAVY_SHOWERS</td>
+      <td class='enumTableCell'>26</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Heavy showers
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_CHANCE_OF_SHOWERS</td>
+      <td class='enumTableCell'>27</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Chance of showers
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_CHANCE_OF_THUNDERSTORMS</td>
+      <td class='enumTableCell'>28</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Chance of thunderstorms
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_MIST</td>
+      <td class='enumTableCell'>29</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Mist
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_DUST</td>
+      <td class='enumTableCell'>30</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Dust
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_DRIZZLE</td>
+      <td class='enumTableCell'>31</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Drizzle
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_TORNADO</td>
+      <td class='enumTableCell'>32</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Tornado
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_SMOKE</td>
+      <td class='enumTableCell'>33</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Smoke
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_ICE</td>
+      <td class='enumTableCell'>34</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Ice
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_SAND</td>
+      <td class='enumTableCell'>35</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Sand
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_SQUALL</td>
+      <td class='enumTableCell'>36</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Squall
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_SANDSTORM</td>
+      <td class='enumTableCell'>37</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Sandstorm
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_VOLCANIC_ASH</td>
+      <td class='enumTableCell'>38</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Volcanic ash
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_HAZE</td>
+      <td class='enumTableCell'>39</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Haze
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_FAIR</td>
+      <td class='enumTableCell'>40</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Fair
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_HURRICANE</td>
+      <td class='enumTableCell'>41</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Hurricane
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_TROPICAL_STORM</td>
+      <td class='enumTableCell'>42</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Tropical storm
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_CHANCE_OF_SNOW</td>
+      <td class='enumTableCell'>43</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Chance of snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_CHANCE_OF_RAIN_SNOW</td>
+      <td class='enumTableCell'>44</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Chance of rain snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_CLOUDY_CHANCE_OF_RAIN</td>
+      <td class='enumTableCell'>45</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Cloudy chance of rain
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_CLOUDY_CHANCE_OF_SNOW</td>
+      <td class='enumTableCell'>46</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Cloudy chance of snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_CLOUDY_CHANCE_OF_RAIN_SNOW</td>
+      <td class='enumTableCell'>47</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Cloudy chance of rain snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_FLURRIES</td>
+      <td class='enumTableCell'>48</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Flurries
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_FREEZING_RAIN</td>
+      <td class='enumTableCell'>49</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Freezing rain
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_SLEET</td>
+      <td class='enumTableCell'>50</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Sleet
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_ICE_SNOW</td>
+      <td class='enumTableCell'>51</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Ice snow
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>CONDITION_THIN_CLOUDS</td>
+      <td class='enumTableCell'>52</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Thin clouds
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>CONDITION_UNKNOWN</td>
+      <td class='enumTableCell'>53</td>
+      <td class='enumTableCell'><p>
+3.2.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Unknown
+</p>
+
+</td>
+    </td>
+</tr>
+</table>
+</dl>
+
+
+<h2>
+   Instance Method Summary
+   <small><a href="#" class="summary_toggle">collapse</a></small>
+</h2>
+<ul class="summary">
+<li class="public">
+
+      <span class="summary_signature">
+      <a href="#getCurrentConditions-instance_function" title="getCurrentConditions (Instance Function)"><strong>getCurrentConditions</strong></a>()  &#x21d2; <span class='type'><a href="../Toybox/Weather/CurrentConditions.html">Toybox.Weather.CurrentConditions</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get the most recently cached weather conditions.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getDailyForecast-instance_function" title="getDailyForecast (Instance Function)"><strong>getDailyForecast</strong></a>()  &#x21d2; <span class='type'><a href="../Toybox/Weather/DailyForecast.html">Toybox.Weather.DailyForecast</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get the daily forecast.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#getHourlyForecast-instance_function" title="getHourlyForecast (Instance Function)"><strong>getHourlyForecast</strong></a>()  &#x21d2; <span class='type'><a href="../Toybox/Weather/HourlyForecast.html">Toybox.Weather.HourlyForecast</a></span>
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Get the hourly forecast.
+</p>
+
+
+    </div>
+  </span>
+</li>
+</ul>
+
+
+ <div id="instance_method_details" class="method_details_list">
+  <h2>Instance Method Details</h2>
+<div class="method_details">
+  <h3 class="signature" id="getCurrentConditions-instance_function">
+    <strong>getCurrentConditions()</strong> &#x21d2; <span class='type'><span class='type'><a href="../Toybox/Weather/CurrentConditions.html">Toybox.Weather.CurrentConditions</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get the most recently cached weather conditions
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../Toybox/Weather/CurrentConditions.html">Toybox.Weather.CurrentConditions</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+or <code>null</code> if no data is available
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.2.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getDailyForecast-instance_function">
+    <strong>getDailyForecast()</strong> &#x21d2; <span class='type'><span class='type'><a href="../Toybox/Weather/DailyForecast.html">Toybox.Weather.DailyForecast</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get the daily forecast
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../Toybox/Weather/DailyForecast.html">Toybox.Weather.DailyForecast</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+An array of daily forecasts or <code>null</code> if no data is available
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.2.0
+</p>
+
+</div>
+
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="getHourlyForecast-instance_function">
+    <strong>getHourlyForecast()</strong> &#x21d2; <span class='type'><span class='type'><a href="../Toybox/Weather/HourlyForecast.html">Toybox.Weather.HourlyForecast</a></span></span>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Get the hourly forecast
+</p>
+
+
+    </div>
+  </div>
+
+  <div class="tags">
+
+
+
+    <p class="tag_title">Returns:</p>
+    <ul class="return">
+      <li>
+  <span class='type'><a href="../Toybox/Weather/HourlyForecast.html">Toybox.Weather.HourlyForecast</a></span>
+  &mdash;
+  <div class='inline'>
+    <p>
+An array of hourly forecasts or <code>null</code> if no data is available
+</p>
+
+
+  </div>
+</li>
+    </ul>
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+3.2.0
+</p>
+
+</div>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+<hr/>
+
+<p class="signature">
+Generated Feb 12, 2021 8:48:44 AM
+</p>
+
+</body>

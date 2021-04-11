@@ -1,0 +1,754 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toybox.Attention </title>
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      pathId = "Toybox.Attention";
+      relpath = '../';
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+ </head>
+
+ <body>
+<div class="nav_wrap">
+  <iframe id="nav" src="../class_list.html"></iframe>
+  <div id="resizer"></div>
+</div>
+
+<div id="main" tabindex="-1">
+<iframe id="search_frame" src="../class_list.html"></iframe>
+
+
+  <div id="content"><h1>Module: Toybox.Attention</h1>
+
+
+<h2>Overview</h2>
+<!-- Overview -->
+
+<!-- Description -->
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+The Attention module provides the ability to play pre-defined sounds,
+methods for managing vibration, and control of the back light.
+</p><p>
+Not all devices fully support this module, so <code>has</code> checks are recommended.
+For example, the vivoactive does not have a tone generator and will trigger
+an error if an app attempts to play sounds.
+</p>
+
+
+    </div>
+  </div>
+
+
+
+
+<div class="tags">
+
+<!-- Since -->
+<p class="tag_title">Since:</p>
+<div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+  <!-- App Types -->
+  <p class="tag_title">App Types:</p>
+  <ul class="app_types">
+      <li>
+    <div class="inline">
+      <p>Watch App</p>
+    </div>
+  </li><li>
+    <div class="inline">
+      <p>Audio Content Provider</p>
+    </div>
+  </li><li>
+    <div class="inline">
+      <p>Data Field</p>
+    </div>
+  </li><li>
+    <div class="inline">
+      <p>Widget</p>
+    </div>
+  </li>
+  </ul>
+
+
+
+</div>
+
+
+
+<!-- Child Classes -->
+<h2>Classes Under Namespace</h2>
+<p class="children">
+<strong class="classes">Classes:</strong> <span class='type'><a href="../Toybox/Attention/BacklightOnTooLongException.html">BacklightOnTooLongException</a></span>, <span class='type'><a href="../Toybox/Attention/ToneProfile.html">ToneProfile</a></span>, <span class='type'><a href="../Toybox/Attention/VibeProfile.html">VibeProfile</a></span>
+</p>
+
+
+<!-- Constants -->
+<h2>Constant Summary</h2>
+<dl class="constants">
+<h3>Enumerators</h3>
+<table class='enumTable'>
+  <tr>
+    <th class='enumTableHeader'>Name</th>
+    <th class='enumTableHeader'>Value</th>
+    <th class='enumTableHeader'>Since</th>
+    <th class='enumTableHeader'>Description</th>
+  </tr>
+  <tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_KEY</td>
+      <td class='enumTableCell'>0</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates that a key was pressed
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>TONE_START</td>
+      <td class='enumTableCell'>1</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates that an activity has started
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_STOP</td>
+      <td class='enumTableCell'>2</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates that an activity has stopped
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>TONE_MSG</td>
+      <td class='enumTableCell'>3</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates that a message is available
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_ALERT_HI</td>
+      <td class='enumTableCell'>4</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+An alert ending with a high note
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>TONE_ALERT_LO</td>
+      <td class='enumTableCell'>5</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+An alert ending with a low note
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_LOUD_BEEP</td>
+      <td class='enumTableCell'>6</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+A loud beep
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>TONE_INTERVAL_ALERT</td>
+      <td class='enumTableCell'>7</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates a change in interval
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_ALARM</td>
+      <td class='enumTableCell'>8</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates an alarm has triggered
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>TONE_RESET</td>
+      <td class='enumTableCell'>9</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates that the activity was reset
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_LAP</td>
+      <td class='enumTableCell'>10</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates that the user has completed a lap
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>TONE_CANARY</td>
+      <td class='enumTableCell'>11</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+An annoying sound to get the users attention
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_TIME_ALERT</td>
+      <td class='enumTableCell'>12</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+An alert that a time threshold has been met
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>TONE_DISTANCE_ALERT</td>
+      <td class='enumTableCell'>13</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+An alert that a distance threshold has been met
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_FAILURE</td>
+      <td class='enumTableCell'>14</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates that the activity was a failure
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>TONE_SUCCESS</td>
+      <td class='enumTableCell'>15</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates that the activity was a success
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_POWER</td>
+      <td class='enumTableCell'>16</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+The power on tone
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableEven'>
+    <td class='enumTableCell'>TONE_LOW_BATTERY</td>
+      <td class='enumTableCell'>17</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates that the device has low battery power
+</p>
+
+</td>
+    </td>
+</tr><tr class='enumTableOdd'>
+    <td class='enumTableCell'>TONE_ERROR</td>
+      <td class='enumTableCell'>18</td>
+      <td class='enumTableCell'><p>
+1.0.0
+</p>
+
+</td>
+      <td class='enumTableCell'><p>
+Indicates an error occurred
+</p>
+
+</td>
+    </td>
+</tr>
+</table>
+</dl>
+
+
+<h2>
+   Instance Method Summary
+   <small><a href="#" class="summary_toggle">collapse</a></small>
+</h2>
+<ul class="summary">
+<li class="public">
+
+      <span class="summary_signature">
+      <a href="#backlight-instance_function" title="backlight (Instance Function)"><strong>backlight</strong></a>(setting)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Control the display backlight.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#playTone-instance_function" title="playTone (Instance Function)"><strong>playTone</strong></a>(options)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Play a tone.
+</p>
+
+
+    </div>
+  </span>
+</li><li class="public">
+
+      <span class="summary_signature">
+      <a href="#vibrate-instance_function" title="vibrate (Instance Function)"><strong>vibrate</strong></a>(vibeProfiles)
+      </span>
+
+  <span class="summary_desc">
+    <div class="inline">
+<p>
+Engage the vibration motor.
+</p>
+
+
+    </div>
+  </span>
+</li>
+</ul>
+
+
+ <div id="instance_method_details" class="method_details_list">
+  <h2>Instance Method Details</h2>
+<div class="method_details">
+  <h3 class="signature" id="backlight-instance_function">
+    <strong>backlight(setting)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Control the display backlight.
+</p><p>
+The backlight will always respect the backlight timeout settings on the device.
+Behavior of this feature may also change depending on device settings. For example, if a device is set to activate the back light with key
+presses, the backlight will toggle on with key presses even if the app is written to turn off the back light with a key press.
+</p><p>
+On products that use a gesture enabled display, calling this API will suppress the gesture detection for the period that the backlight is
+on. Calling this repeatedly can hold the display on, but if the product has burn in protection an exception will be thrown if you attempt
+to keep the display enabled for too long (e.g. over 1 minute).
+</p>
+
+
+    </div>
+  </div>
+
+<div class="note">
+  <div class="inline">
+    <span class="noteTitle">Note:</span><p>
+Passing a <a href="../Toybox/Lang/Float.html">Float</a> is only supported with ConnectIQ 3.2.1 and later.
+</p>
+
+
+  </div>
+</div>
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>setting</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/Boolean.html">Toybox.Lang.Boolean</a></span>, <span class='type'><a href="../Toybox/Lang/Float.html">Toybox.Lang.Float</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<ul>
+<li>
+<p>
+If <code>setting</code> is a <a href="../Toybox/Lang/Boolean.html">Boolean</a>, <code>false</code> will disable the backlight and <code>true</code> will enable the backlight at the system backlight level.
+</p>
+
+</li>
+<li>
+<p>
+If <code>setting</code> is a <a href="../Toybox/Lang/Float.html">Float</a>, the value 0.0 will disable the backlight and values greater than 0.0 and less than or equal to 1.0 will enable the backlight at the specified brightness.
+</p>
+
+</li>
+</ul>
+
+        </div>
+    </li>
+    </ul>
+
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Bravo</li><li>D2™ Bravo Titanium</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1000 / Explore</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 520</li><li>Edge® 520 Plus</li><li>Edge® 530</li><li>Edge® 820 / Explore</li><li>Edge® 830</li><li>Edge® Explore</li><li>epix™</li><li>First Avenger</li><li>Forerunner® 230</li><li>Forerunner® 235</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 45</li><li>Forerunner® 630</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 920XT</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 3 / tactix® Bravo / quatix® 3</li><li>fēnix® 3 HR</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>Garmin Swim™ 2</li><li>GPSMAP® 66s / 66sr / 66st</li><li>GPSMAP® 86s / 86sc / 86i / 86sci</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Oregon® 7 Series</li><li>Rey™</li><li>Rino® 7 Series</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive®</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+
+
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <div class='inline'>
+<p>
+BacklightOnTooLongException On products with burn in protection, this exception is thrown if the backlight is held on for too long continuously
+</p>
+
+
+        </div>
+    </li><li>
+        <div class='inline'>
+<p>
+InvalidOptionsException If the Float value is outside the valid range.
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="playTone-instance_function">
+    <strong>playTone(options)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Play a tone.
+</p>
+
+
+    </div>
+  </div>
+
+<div class="note">
+  <div class="inline">
+    <span class="noteTitle">Note:</span><p>
+Passing an options <a href="../Toybox/Lang/Dictionary.html">Dictionary</a> is only supported with ConnectIQ 3.1.0 and later.
+</p>
+
+
+  </div>
+</div>
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>options</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+A TONE_* value or <a href="../Toybox/Lang/Dictionary.html">Dictionary</a> of options.
+</p>
+
+
+        </div>
+        <ul>
+        <li>
+        <span class='name'>:toneProfile</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Array containing at least one <a href="../Toybox/Attention/ToneProfile.html">ToneProfile</a> object to be played in sequence.
+</p>
+
+
+        </div>
+    </li><li>
+        <span class='name'>:repeatCount</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/Number.html">Toybox.Lang.Number</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Number of times to repeat the given tone sequence.
+</p>
+
+
+        </div>
+    </li>
+        </ul>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<pre class="example code">
+<code>using Toybox.Attention;
+
+// Play a predefined tone
+if (Attention has :playTone) {
+   Attention.playTone(Attention.TONE_LOUD_BEEP);
+}
+
+// Use an array of ToneProfile objects to build and play a custom tone
+if (Attention has :ToneProfile) {
+    var toneProfile =
+    [
+        new Attention.ToneProfile( 2500, 250),
+        new Attention.ToneProfile( 5000, 250),
+        new Attention.ToneProfile(10000, 250),
+        new Attention.ToneProfile( 5000, 250),
+        new Attention.ToneProfile( 2500, 250),
+    ];
+    Attention.playTone({:toneProfile=&gt;toneProfile});
+   }
+</code>
+</pre>
+</div>
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>D2™ Bravo</li><li>D2™ Bravo Titanium</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>Edge® 1000 / Explore</li><li>Edge® 1030</li><li>Edge® 1030 / Bontrager</li><li>Edge® 1030 Plus</li><li>Edge® 130</li><li>Edge® 130 Plus</li><li>Edge® 520</li><li>Edge® 520 Plus</li><li>Edge® 530</li><li>Edge® 820 / Explore</li><li>Edge® 830</li><li>Edge® Explore</li><li>epix™</li><li>Forerunner® 230</li><li>Forerunner® 235</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 45</li><li>Forerunner® 630</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 920XT</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 3 / tactix® Bravo / quatix® 3</li><li>fēnix® 3 HR</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>Garmin Swim™ 2</li><li>GPSMAP® 66s / 66sr / 66st</li><li>GPSMAP® 86s / 86sc / 86i / 86sci</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Montana® 7 Series</li><li>Oregon® 7 Series</li><li>Rino® 7 Series</li>
+  </ul>
+
+
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+    <p class="tag_title">Throws:</p>
+    <ul class="throws">
+      <li>
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/InvalidOptionsException.html">Toybox.Lang.InvalidOptionsException</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+Raised if passing an options hash with invalid values when using new ToneProfile objects
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+  </div>
+</div><div class="method_details">
+  <h3 class="signature" id="vibrate-instance_function">
+    <strong>vibrate(vibeProfiles)</strong>
+  </h3>
+
+  <div class="docstring">
+    <div class="discussion">
+      <p>
+Engage the vibration motor.
+</p><p>
+The vibrate method takes an Array containing at least one
+<a href="../Toybox/Attention/VibeProfile.html">VibeProfile</a> object, up to a maximum of 8,
+and runs them in sequence.
+</p>
+
+
+    </div>
+  </div>
+
+<div class="note">
+  <div class="inline">
+    <span class="noteTitle">Note:</span><p>
+Forerunner devices do not support vibration patterns. Vibration may still be used, but the vibration will always run at the same duty cycle.
+</p>
+
+
+  </div>
+</div>
+  <div class="tags">
+    <p class="tag_title">Parameters:</p>
+    <ul class="param">
+      <li>
+        <span class='name'>vibeProfiles</span>
+        &mdash;
+        <span class='type'>(<span class='type'><a href="../Toybox/Lang/Array.html">Toybox.Lang.Array</a></span>)</span>
+        &mdash;
+        <div class='inline'>
+<p>
+An Array of <a href="../Toybox/Attention/VibeProfile.html">VibeProfile</a> objects
+</p>
+
+
+        </div>
+    </li>
+    </ul>
+
+<div class="examples">
+<p class="tag_title">Example:</p>
+<p class="example_title"><div class='inline'>
+<p>Vibrate in an on/off pattern</p>
+</div></p>
+<pre class="example code">
+<code>if (Attention has :vibrate) {
+    vibeData =
+    [
+        new Attention.VibeProfile(50, 2000), // On for two seconds
+        new Attention.VibeProfile(0, 2000),  // Off for two seconds
+        new Attention.VibeProfile(50, 2000), // On for two seconds
+        new Attention.VibeProfile(0, 2000),  // Off for two seconds
+        new Attention.VibeProfile(50, 2000)  // on for two seconds
+    ];
+}
+Attention.vibrate(vibeData);</code>
+</pre>
+</div>
+
+  <p class="tag_title">Supported Devices:</p>
+  <ul class="supported_devices" style="display:none">
+      <li>Approach® S60</li><li>Approach® S62</li><li>Captain Marvel</li><li>D2™ Air</li><li>D2™ Bravo</li><li>D2™ Bravo Titanium</li><li>D2™ Charlie</li><li>D2™ Delta</li><li>D2™ Delta PX</li><li>D2™ Delta S</li><li>Darth Vader™</li><li>Descent™ Mk1</li><li>Descent™ Mk2 / Descent™ Mk2i</li><li>epix™</li><li>First Avenger</li><li>Forerunner® 230</li><li>Forerunner® 235</li><li>Forerunner® 245</li><li>Forerunner® 245 Music</li><li>Forerunner® 45</li><li>Forerunner® 630</li><li>Forerunner® 645</li><li>Forerunner® 645 Music</li><li>Forerunner® 735xt</li><li>Forerunner® 745</li><li>Forerunner® 920XT</li><li>Forerunner® 935</li><li>Forerunner® 945</li><li>fēnix® 3 / tactix® Bravo / quatix® 3</li><li>fēnix® 3 HR</li><li>fēnix® 5 / quatix® 5</li><li>fēnix® 5 Plus</li><li>fēnix® 5S</li><li>fēnix® 5S Plus</li><li>fēnix® 5X / tactix® Charlie</li><li>fēnix® 5X Plus</li><li>fēnix® 6 / 6 Solar / 6 Dual Power</li><li>fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6</li><li>fēnix® 6S / 6S Solar / 6S Dual Power</li><li>fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</li><li>fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix® 6X / 6X Solar / 6X Dual Power</li><li>fēnix® Chronos</li><li>Garmin Swim™ 2</li><li>MARQ™ Adventurer</li><li>MARQ™ Athlete</li><li>MARQ™ Aviator</li><li>MARQ® Captain / MARQ® Captain: American Magic Edition</li><li>MARQ™ Commander</li><li>MARQ™ Driver</li><li>MARQ™ Expedition</li><li>MARQ™ Golfer</li><li>Rey™</li><li>Venu™</li><li>Venu™ Mercedes-Benz® Collection</li><li>Venu® Sq</li><li>Venu® Sq. Music Edition</li><li>vívoactive®</li><li>vívoactive® 3</li><li>vívoactive® 3 Mercedes-Benz® Collection</li><li>vívoactive® 3 Music</li><li>vívoactive® 3 Music LTE</li><li>vívoactive® 4</li><li>vívoactive® 4S</li><li>vívoactive® HR</li>
+  </ul>
+
+
+    <p class="tag_title">See Also:</p>
+    <ul class="see">
+      <li>
+  <div class='inline'>
+    <a href="../Toybox/Attention/VibeProfile.html">Toybox.Attention.VibeProfile</a>
+  </div>
+  </li>
+    </ul>
+
+    <p class="tag_title">Since:</p>
+    <div class="since"><p>
+1.0.0
+</p>
+
+</div>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+<hr/>
+
+<p class="signature">
+Generated Feb 12, 2021 8:48:42 AM
+</p>
+
+</body>

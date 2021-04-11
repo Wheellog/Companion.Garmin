@@ -1,0 +1,507 @@
+{
+    "display": {
+        "behaviors": [
+            {
+                "gesture": "swipeRight",
+                "id": "previousPage"
+            },
+            {
+                "gesture": "swipeLeft",
+                "id": "nextPage"
+            },
+            {
+                "gesture": "swipeDown"
+            },
+            {
+                "gesture": "swipeUp"
+            },
+            {
+                "gesture": "hold"
+            },
+            {
+                "gesture": "release"
+            },
+            {
+                "gesture": "tap",
+                "id": "onSelect"
+            }
+        ],
+        "isTouch": true,
+        "landscapeOrientation": 0,
+        "location": {
+            "height": 205,
+            "width": 148,
+            "x": 81,
+            "y": 98
+        },
+        "shape": "rectangle"
+    },
+    "fonts": [
+        {
+            "fontSet": "ww",
+            "fonts": [
+                {
+                    "filename": "FNT_ROBOTO_12",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_ROBOTO_12",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_ROBOTO_14",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_ROBOTO_15_5",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_ROBOTO_18",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_20BT",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_32BT",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_36BT",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_48BT",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_chn",
+            "fonts": [
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_19",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_19",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_22",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_24",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_27",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_20BT",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_32BT",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_36BT",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_48BT",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_jpn",
+            "fonts": [
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_19",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_19",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_22",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_24",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_27",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_20BT",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_32BT",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_36BT",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_48BT",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_tha",
+            "fonts": [
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "small"
+                },
+                {
+                    "filename": "bitstreamVeraSans 21",
+                    "name": "medium"
+                },
+                {
+                    "filename": "bitstreamVeraSans 27",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_20BT",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_32BT",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_36BT",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_48BT",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_kor",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_THIN_19",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_THIN_19",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_REGULAR_22",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_REGULAR_25",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_KR_MEDIUM_28",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_20BT",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_32BT",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_36BT",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_BEBAS_NEUE_48BT",
+                    "name": "numberThaiHot"
+                }
+            ]
+        }
+    ],
+    "image": "vivoactive_hr.png",
+    "keys": [
+        {
+            "id": "enter",
+            "location": {
+                "height": 24,
+                "width": 74,
+                "x": 155,
+                "y": 374
+            }
+        },
+        {
+            "behavior": "onMenu",
+            "id": "menu",
+            "isHold": true,
+            "location": {
+                "height": 24,
+                "width": 74,
+                "x": 155,
+                "y": 374
+            }
+        },
+        {
+            "behavior": "onBack",
+            "id": "esc",
+            "location": {
+                "height": 24,
+                "width": 74,
+                "x": 82,
+                "y": 374
+            }
+        }
+    ],
+    "layouts": [
+        {
+            "datafields": {
+                "datafields": [
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "center",
+                                    "width": 148,
+                                    "x": 74,
+                                    "y": 58
+                                },
+                                "label": {
+                                    "font": "xtiny",
+                                    "justification": "center",
+                                    "x": 74,
+                                    "y": 15
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 67,
+                                    "width": 148,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "center",
+                                    "width": 148,
+                                    "x": 74,
+                                    "y": 58
+                                },
+                                "label": {
+                                    "font": "xtiny",
+                                    "justification": "center",
+                                    "x": 74,
+                                    "y": 15
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 67,
+                                    "width": 148,
+                                    "x": 0,
+                                    "y": 69
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "center",
+                                    "width": 148,
+                                    "x": 74,
+                                    "y": 58
+                                },
+                                "label": {
+                                    "font": "xtiny",
+                                    "justification": "center",
+                                    "x": 74,
+                                    "y": 15
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 67,
+                                    "width": 148,
+                                    "x": 0,
+                                    "y": 138
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "3 Fields"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberThaiHot",
+                                    "justification": "center",
+                                    "width": 148,
+                                    "x": 74,
+                                    "y": 86
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "center",
+                                    "x": 74,
+                                    "y": 16
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 102,
+                                    "width": 148,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberThaiHot",
+                                    "justification": "center",
+                                    "width": 148,
+                                    "x": 74,
+                                    "y": 86
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "center",
+                                    "x": 74,
+                                    "y": 16
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 101,
+                                    "width": 148,
+                                    "x": 0,
+                                    "y": 104
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "2 Fields"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberThaiHot",
+                                    "justification": "center",
+                                    "width": 148,
+                                    "x": 74,
+                                    "y": 136
+                                },
+                                "label": {
+                                    "font": "medium",
+                                    "justification": "center",
+                                    "x": 74,
+                                    "y": 20
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 205,
+                                    "width": 148,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "1 Field"
+                    }
+                ]
+            },
+            "orientation": "portrait",
+            "picker": {
+                "entries": [
+                    {
+                        "height": 55,
+                        "width": 74,
+                        "x": 37,
+                        "y": 31
+                    },
+                    {
+                        "height": 55,
+                        "width": 74,
+                        "x": 37,
+                        "y": 88
+                    },
+                    {
+                        "height": 55,
+                        "width": 74,
+                        "x": 37,
+                        "y": 145
+                    }
+                ],
+                "nextArrow": {
+                    "height": 40,
+                    "width": 30,
+                    "x": 116,
+                    "y": 91
+                },
+                "previousArrow": {
+                    "height": 40,
+                    "width": 30,
+                    "x": 2,
+                    "y": 91
+                },
+                "title": {
+                    "height": 24,
+                    "width": 148,
+                    "x": 0,
+                    "y": 5
+                }
+            }
+        }
+    ],
+    "sensorHistory": [
+        {
+            "interval": 67,
+            "size": 148,
+            "type": "heartrate"
+        },
+        {
+            "interval": 81,
+            "size": 178,
+            "type": "elevation"
+        },
+        {
+            "interval": 81,
+            "size": 178,
+            "type": "temperature"
+        },
+        {
+            "interval": 81,
+            "size": 178,
+            "type": "pressure"
+        }
+    ],
+    "watchdogCount": 120000
+}

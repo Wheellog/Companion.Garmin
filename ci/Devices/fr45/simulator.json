@@ -1,0 +1,312 @@
+{
+    "display": {
+        "behaviors": [],
+        "isTouch": false,
+        "landscapeOrientation": 0,
+        "location": {
+            "height": 208,
+            "width": 208,
+            "x": 68,
+            "y": 129
+        },
+        "shape": "round"
+    },
+    "fonts": [
+        {
+            "fontSet": "ww",
+            "fonts": [
+                {
+                    "filename": "FNT_FR45_CDPG_ROBOTO_13B",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_FR45_CDPG_ROBOTO_13B",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_FR45_CDPG_ROBOTO_13B",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_FR45_CDPG_ROBOTO_15B",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_FR45_CDPG_ROBOTO_20B",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_FR45_ROBOTO_BLACK_NUMBER_FONT_20",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_FR45_ROBOTO_BLACK_NUMBER_FONT_44",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_FR45_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_FR45_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_chn",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_CHN_19",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_CHN_19",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_CHN_19",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_CHN_27",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_CHN_34",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_20",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_44",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_twn",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_TWN_19",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_TWN_19",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_TWN_19",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_TWN_27",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_TWN_34",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_20",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_44",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_jpn",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_19",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_19",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_19",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_27",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_JP_BOLD_34",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_20",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_44",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_kor",
+            "fonts": [
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_KOR_19",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_KOR_19",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_KOR_19",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_KOR_27",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_NOTO_SANS_CJK_TC_BOLD_KOR_34",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_20",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_44",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_tha",
+            "fonts": [
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "small"
+                },
+                {
+                    "filename": "bitstreamVeraSans 21",
+                    "name": "medium"
+                },
+                {
+                    "filename": "bitstreamVeraSans 27",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_20",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_44",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_vie",
+            "fonts": [
+                {
+                    "filename": "FNT_ROBOTO_CONDENSED_BOLD_19",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_ROBOTO_CONDENSED_BOLD_19",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_ROBOTO_CONDENSED_BOLD_19",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_ROBOTO_CONDENSED_BOLD_27",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_ROBOTO_CONDENSED_BOLD_34",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_20",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_44",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_ROBOTO_BLACK_NUMBER_FONT_50",
+                    "name": "numberThaiHot"
+                }
+            ]
+        }
+    ],
+    "image": "fr45.png",
+    "sensorHistory": [
+        {
+            "interval": 67,
+            "size": 215,
+            "type": "heartrate"
+        }
+    ],
+    "watchdogCount": 80000
+}

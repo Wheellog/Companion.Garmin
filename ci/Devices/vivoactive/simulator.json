@@ -1,0 +1,444 @@
+{
+    "display": {
+        "behaviors": [
+            {
+                "gesture": "swipeRight",
+                "id": "previousPage"
+            },
+            {
+                "gesture": "swipeLeft",
+                "id": "nextPage"
+            },
+            {
+                "gesture": "hold"
+            },
+            {
+                "gesture": "release"
+            },
+            {
+                "gesture": "tap",
+                "id": "onSelect"
+            }
+        ],
+        "isTouch": true,
+        "landscapeOrientation": 0,
+        "location": {
+            "height": 148,
+            "width": 205,
+            "x": 52,
+            "y": 146
+        },
+        "shape": "rectangle"
+    },
+    "fonts": [
+        {
+            "fontSet": "ww",
+            "fonts": [
+                {
+                    "filename": "FNT_ROBOTO_12",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_ROBOTO_12",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_ROBOTO_12",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_ROBOTO_17",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_ROBOTO_20",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_PHELANT_20B",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_PHELANT_32B",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_PHELANT_38B",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_PHELANT_62B",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_chn",
+            "fonts": [
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_16",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_16",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_16",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_21",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_CN_LIGHT_27",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_PHELANT_20B",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_PHELANT_32B",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_PHELANT_38B",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_PHELANT_62B",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_jpn",
+            "fonts": [
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_16",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_16",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_16",
+                    "name": "small"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_21",
+                    "name": "medium"
+                },
+                {
+                    "filename": "FNT_SOURCE_HAN_SANS_JP_LIGHT_27",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_PHELANT_20B",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_PHELANT_32B",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_PHELANT_38B",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_PHELANT_62B",
+                    "name": "numberThaiHot"
+                }
+            ]
+        },
+        {
+            "fontSet": "apac_tha",
+            "fonts": [
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "xtiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "tiny"
+                },
+                {
+                    "filename": "bitstreamVeraSans 16",
+                    "name": "small"
+                },
+                {
+                    "filename": "bitstreamVeraSans 21",
+                    "name": "medium"
+                },
+                {
+                    "filename": "bitstreamVeraSans 27",
+                    "name": "large"
+                },
+                {
+                    "filename": "FNT_PHELANT_20B",
+                    "name": "numberMild"
+                },
+                {
+                    "filename": "FNT_PHELANT_32B",
+                    "name": "numberMedium"
+                },
+                {
+                    "filename": "FNT_PHELANT_38B",
+                    "name": "numberHot"
+                },
+                {
+                    "filename": "FNT_PHELANT_62B",
+                    "name": "numberThaiHot"
+                }
+            ]
+        }
+    ],
+    "image": "vivoactive.png",
+    "keys": [
+        {
+            "behavior": "onMenu",
+            "id": "menu",
+            "location": {
+                "height": 28,
+                "width": 41,
+                "x": 202,
+                "y": 312
+            }
+        },
+        {
+            "id": "enter",
+            "location": {
+                "height": 34,
+                "width": 20,
+                "x": 275,
+                "y": 169
+            }
+        },
+        {
+            "behavior": "onBack",
+            "id": "esc",
+            "location": {
+                "height": 28,
+                "width": 44,
+                "x": 61,
+                "y": 312
+            }
+        }
+    ],
+    "layouts": [
+        {
+            "datafields": {
+                "datafields": [
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberThaiHot",
+                                    "justification": "center",
+                                    "width": 200,
+                                    "x": 102,
+                                    "y": 110
+                                },
+                                "label": {
+                                    "font": "medium",
+                                    "justification": "center",
+                                    "x": 102,
+                                    "y": 20
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 148,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "1 Field"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "center",
+                                    "width": 200,
+                                    "x": 102,
+                                    "y": 60
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "center",
+                                    "x": 102,
+                                    "y": 15
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 73,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "center",
+                                    "width": 200,
+                                    "x": 102,
+                                    "y": 60
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "center",
+                                    "x": 102,
+                                    "y": 15
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 73,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 75
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "2 Fields"
+                    },
+                    {
+                        "drawBorders": true,
+                        "fields": [
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "right",
+                                    "width": 98,
+                                    "x": 193,
+                                    "y": 36
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 11,
+                                    "y": 25
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 43,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberHot",
+                                    "justification": "right",
+                                    "width": 98,
+                                    "x": 193,
+                                    "y": 45
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 11,
+                                    "y": 34
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 57,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 45
+                                },
+                                "obscurity": []
+                            },
+                            {
+                                "data": {
+                                    "font": "numberMedium",
+                                    "justification": "right",
+                                    "width": 98,
+                                    "x": 193,
+                                    "y": 36
+                                },
+                                "label": {
+                                    "font": "small",
+                                    "justification": "left",
+                                    "x": 11,
+                                    "y": 25
+                                },
+                                "labelDisabled": false,
+                                "location": {
+                                    "height": 44,
+                                    "width": 205,
+                                    "x": 0,
+                                    "y": 104
+                                },
+                                "obscurity": []
+                            }
+                        ],
+                        "name": "3 Fields"
+                    }
+                ]
+            },
+            "orientation": "portrait",
+            "picker": {
+                "entries": [
+                    {
+                        "height": 68,
+                        "width": 51,
+                        "x": 12,
+                        "y": 54
+                    },
+                    {
+                        "height": 68,
+                        "width": 51,
+                        "x": 77,
+                        "y": 54
+                    },
+                    {
+                        "height": 68,
+                        "width": 51,
+                        "x": 142,
+                        "y": 54
+                    }
+                ],
+                "nextArrow": {
+                    "height": 24,
+                    "width": 55,
+                    "x": 75,
+                    "y": 28
+                },
+                "previousArrow": {
+                    "height": 24,
+                    "width": 55,
+                    "x": 75,
+                    "y": 124
+                },
+                "title": {
+                    "height": 21,
+                    "width": 205,
+                    "x": 0,
+                    "y": 5
+                }
+            }
+        }
+    ],
+    "sensorHistory": [
+        {
+            "interval": 67,
+            "size": 205,
+            "type": "heartrate"
+        }
+    ],
+    "watchdogCount": 80000
+}
