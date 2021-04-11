@@ -52,7 +52,6 @@ ci-build:
 	@./ci/sdk/monkeyc \
 	--jungles ./monkey.jungle \
 	--device $(DEVICE) \
-	-u \
 	--output bin/$(appName).prg \
 	--private-key dev_key.der \
 	--warn \
