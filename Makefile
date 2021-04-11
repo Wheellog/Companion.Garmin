@@ -54,4 +54,5 @@ ci-build:
 	--device $(DEVICE) \
 	--output bin/$(appName).prg \
 	--private-key dev_key.der \
-	--warn
+	--warn \
+	-g
