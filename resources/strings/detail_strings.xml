@@ -9,5 +9,5 @@
     <string id="DetailView_SpeedData">$1$ km/h</string>
     <string id="DetailView_BatteryVoltageData">$1$ V</string>
     <string id="DetailView_BatteryPercentageData">$1$ %</string>
-    <string id="DetailView_RideDistanceData">$1$ km</string>
+    <string id="DetailView_RideDistanceData">$1$ m</string>
 </strings>
