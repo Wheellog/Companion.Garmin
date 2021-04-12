@@ -20,10 +20,16 @@ class HomeView extends WatchUi.View {
             WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp),
             null
         );
+        // Label drawables
         cDrawables[:TimeDate] = View.findDrawableById("TimeDate");
+        cDrawables[:SpeedNumber] = View.findDrawableById("SpeedNumber");
         cDrawables[:BatteryNumber] = View.findDrawableById("BatteryNumber");
         cDrawables[:TemperatureNumber] = View.findDrawableById("TemperatureNumber");
         cDrawables[:BottomSubtitle] = View.findDrawableById("BottomSubtitle");
+        // And arc drawables
+        cDrawables[:SpeedArc] = View.findDrawableById("SpeedArc");
+        cDrawables[:BatteryArc] = View.findDrawableById("BatteryArc");
+        cDrawables[:TemperatureArc] = View.findDrawableById("TemperatureArc");
 
         // WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP );
         isProgressBarShown = true;
