@@ -49,7 +49,7 @@ class HomeView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc) {
-        // First ubdate label drawables
+        // Update label drawables
         cDrawables[:TimeDate].setText( // Update time
             System.getClockTime().hour.format("%d") +
             ":" +
@@ -58,17 +58,13 @@ class HomeView extends WatchUi.View {
         cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.BatteryPercentage]));
         cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.Temperature]));
         cDrawables[:BottomSubtitle].setText(WheelData.BottomSubtitleText);
-        var currentSpeed;
+        var currentSpeed = 0;
         if (WheelData.CurrentSpeed < 10) {
             currentSpeed = WheelData.CurrentSpeed;
         } else {
             currentSpeed = WheelData.CurrentSpeed / 10;
         }
-        cDrawables[:SpeedNumber].setText(currentSpeed);
-        // And then arc drawables
-        cDrawables[:SpeedArc].setText(WheelData.CurrentSpeed);
-        cDrawables[:BatteryArc].setText(WheelData.BatteryPercentage);
-        cDrawables[:TemperatureArc].setText(WheelData.Temperature);
+        cDrawables[:SpeedNumber].setText(currentSpeed.toString());
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
