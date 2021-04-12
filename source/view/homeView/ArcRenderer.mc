@@ -95,14 +95,18 @@ class ArcRenderer extends WatchUi.Drawable {
                     var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
                     var preResult = degreeRange * percentage;
                     var result = mStartDegree - preResult;
-                    dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+                    if (result != mStartDegree) {
+                        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+                    }
                     break;
                 }
                 case :batteryArc: {
                     var degreeRange = mStartDegree - mEndDegree;
                     var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
                     var result = degreeRange - (degreeRange * percentage) + mEndDegree;
-                    dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+                    if (result != mStartDegree) {
+                        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+                    }
                     break;
                 }
                 case :temperatureArc: {
@@ -110,7 +114,9 @@ class ArcRenderer extends WatchUi.Drawable {
                     var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
                     var preResult = degreeRange * percentage;
                     var result = preResult + mEndDegree;
-                    dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mEndDegree, result);
+                    if (result != mEndDegree) {
+                        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mEndDegree, result);
+                    }
                     break;
                 }
             }
