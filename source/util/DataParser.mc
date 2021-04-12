@@ -15,7 +15,7 @@ function parseDataFromWheelLog(message) {
             
             WheelData.CurrentSpeed = data[keyStore.CURRENT_SPEED];
             WheelData.BatteryPercentage = data[keyStore.BATTERY_PERCENTAGE];
-            WheelData.BatteryVoltage = data[keyStore.BATTERY_VOLTAGE];
+            WheelData.BatteryVoltage = (data[keyStore.BATTERY_VOLTAGE] / 10).toFloat() / 10.toFloat();
             WheelData.Temperature = data[keyStore.TEMPERATURE];
             WheelData.Bluetooth = data[keyStore.BT_STATE];
             WheelData.RideTime = data[keyStore.RIDE_TIME];
