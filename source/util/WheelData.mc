@@ -1,8 +1,8 @@
 module WheelData {
-    var CurrentSpeed = 22,
-        BatteryPercentage = 85,
+    var CurrentSpeed = 0,
+        BatteryPercentage = 0,
         BatteryVoltage,
-        Temperature = 16,
+        Temperature = 0,
         Bluetooth,
         UseMph,
         MaxDialSpeed,
