@@ -20,8 +20,8 @@ function parseDataFromWheelLog(message) {
             WheelData.Bluetooth = data[keyStore.BT_STATE];
             WheelData.RideTime = data[keyStore.RIDE_TIME];
             WheelData.RideDistance = data[keyStore.RIDE_DISTANCE];
-            WheelData.AverageSpeed = data[keyStore.AVG_SPEED];
-            WheelData.TopSpeed = data[keyStore.TOP_SPEED];
+            WheelData.AverageSpeed = data[keyStore.AVG_SPEED] / 100000; // Here we convert the avg speed number from for e.g. 29.475000 to 29.5
+            WheelData.TopSpeed = (data[keyStore.TOP_SPEED] / 10).toFloat() / 10.toFloat();
             WheelData.Power = data[keyStore.POWER];
             WheelData.Pwm = data[keyStore.PWM];
             WheelData.AlarmType = data[keyStore.ALARM_TYPE];
