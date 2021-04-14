@@ -4,8 +4,6 @@ using Toybox.Application;
 
 class HomeView extends WatchUi.View {
 
-    private var progressBar, isProgressBarShown;
-
     private var cDrawables = {};
 
     function initialize() {
@@ -15,11 +13,6 @@ class HomeView extends WatchUi.View {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.HomeLayout(dc));
-
-        progressBar = new WatchUi.ProgressBar(
-            WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp),
-            null
-        );
         // Label drawables
         cDrawables[:TimeDate] = View.findDrawableById("TimeDate");
         cDrawables[:SpeedNumber] = View.findDrawableById("SpeedNumber");
@@ -30,9 +23,6 @@ class HomeView extends WatchUi.View {
         cDrawables[:SpeedArc] = View.findDrawableById("SpeedArc");
         cDrawables[:BatteryArc] = View.findDrawableById("BatteryArc");
         cDrawables[:TemperatureArc] = View.findDrawableById("TemperatureArc");
-
-        // WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP );
-        isProgressBarShown = true;
     }
 
     // Called when this View is brought to the foreground. Restore
