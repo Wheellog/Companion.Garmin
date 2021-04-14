@@ -16,6 +16,8 @@ module WheelData {
         AlarmType,
         BottomSubtitleText = "";
 
+    var webServerPort;
+
     var CurrentSpeedMaxValue = 40;
     module Constants {
         module MessageType {
