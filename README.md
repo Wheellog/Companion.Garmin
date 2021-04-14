@@ -1,4 +1,4 @@
-# WheelLog.Garmin
+# ⌚️ WheelLog.Garmin 
 
 A WheelLog companion for Garmin smartwatches
 
@@ -8,17 +8,13 @@ Btw here is the original app repository on [GitHub](https://github.com/marccardi
 
 Also here is my [fork of WheelLog](https://github.com/GGorAA/WheelLog.Android), which works with this companion.
 
-## Contributing
-
-To contribute, fork this repo, add changes you want, and create a pull request. I'll review it and merge it if possible :D
-
-## Screenshots
+## 🏞 Screenshots
 ![screenshot 1](https://raw.githubusercontent.com/GGorAA/WheelLog.Garmin/master/screenshots/screenshot%201.jpg)
 
-## Development/building
+## 🛠 Development/Building
 
 To build the app, go to properties.mk and set path to the developer key. After that, you can just run `make build` to build the app. To run it in a simulator, run `make run`. There is also a command called `make rerun`, which is not waiting for a simulator to start, but only runs the app in a simulator. You can also build for every device using `make buildall`, and you will have a binary for every device in `bin` folder. For publishing to the Connect IQ Store, use `make package`. And lastly, to clean, use `make clean`.
 
-## Translations
+## 🌍 Translations
 
 You can contribute to translations here: https://poeditor.com/join/project?hash=WUAV6h3bxB
