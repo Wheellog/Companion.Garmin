@@ -6,7 +6,6 @@ class WheelLogGarminApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
-        Application.getApp().setProperty("showVoltageInsteadOfPercentage", true);
     }
 
     // onStart() is called on application start up
