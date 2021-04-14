@@ -10,13 +10,11 @@ class WheelLogGarminApp extends Application.AppBase {
 
     // onStart() is called on application start up
     function onStart(state) {
-        System.println(state);
         Communications.setMailboxListener(method(:mailHandler));
     }
 
     // onStop() is called when your application is exiting
     function onStop(state) {
-        System.println(state);
     }
 
     // Return the initial view of your application here
