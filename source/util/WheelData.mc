@@ -39,37 +39,24 @@ module WheelData {
 
     var CurrentSpeedMaxValue = 40;
     module Constants {
-        module MessageType {
+        module Data {
             enum {
-                PLAY_HORN = 1,
-                EUC_DATA = 0
-            }
-            enum {
-                MSG_TYPE = -2,
-                MSG_DATA = -1
-            }
-        }
-
-        module MailKeys {
-            module Data {
-                enum {
-                    CURRENT_SPEED = 0,
-                    BATTERY_PERCENTAGE = 1,
-                    BATTERY_VOLTAGE = 2,
-                    TEMPERATURE = 3,
-                    BT_STATE = 4,
-                    POWER = 5,
-                    BOTTOM_SUBTITLE = 6,
-                    AVG_SPEED = 7,
-                    TOP_SPEED = 8,
-                    RIDE_DISTANCE = 9,
-                    RIDE_TIME = 10,
-                    PWM = 11,
-                    MAX_PWM = 12,
-                    ALARM_TYPE = 13,
-                    MAX_DIAL_SPEED = 14, // For anyone wondering what tf is dis. This key is for max speed that can be shown on the speed dial before it exeeds it's boundaries. I hope i explained it good
-                    USE_MPH = 15
-                }
+                CurrentSpeed = 0,
+                BatteryPercentage = 1,
+                BatteryVoltage = 2,
+                Temperature = 3,
+                BtState = 4,
+                Power = 5,
+                BottomSubtitle = 6,
+                AverageSpeed = 7,
+                TopSpeed = 8,
+                RideDistance = 9,
+                RideTime = 10,
+                Pwm = 11,
+                MaxPwm = 12,
+                AlarmType = 13,
+                MaxDialSpeed = 14, // For anyone wondering what tf is dis. This key is for max speed that can be shown on the speed dial before it exeeds it's boundaries. I hope i explained it good
+                UseMph = 15
             }
         }
     }
