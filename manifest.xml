@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
     <iq:application
         entry="WheelLogGarminApp"
@@ -5,7 +6,8 @@
         launcherIcon="@Drawables.LauncherIcon"
         name="@Strings.AppName"
         type="watch-app"
-        version="1.0.0">
+        version="1.0.0"
+        minSdkVersion="1.2.0">
         <iq:products>
             <iq:product id="fenix3"/>
             <iq:product id="fenix3_hr"/>
@@ -29,8 +31,8 @@
             <iq:product id="vivoactive4s"/>
         </iq:products>
         <iq:permissions>
-            <iq:uses-permission id="Communications"/> 
-    </iq:permissions>
+            <iq:uses-permission id="Communications"/>
+        </iq:permissions>
         <iq:languages>
             <iq:language>eng</iq:language>
             <iq:language>rus</iq:language>
