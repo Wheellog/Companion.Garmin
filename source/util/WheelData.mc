@@ -22,6 +22,8 @@ module WheelData {
     var webServerPort;
     var isWheelLogConnected = false;
 
+    var webServerApiInstance = null;
+
     var dataUpdateTimer = new Timer.Timer();
 
     function setIsWheelLogConnected(data) {
