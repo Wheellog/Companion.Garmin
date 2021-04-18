@@ -17,17 +17,17 @@ class WebServer {
 		};
         switch (dataType) {
             case :main: {
-                var requestPath = "http://127.0.0.1" + webServerPort + "/data?type=main";
+                var requestPath = "http://127.0.0.1:" + webServerPort + "/data?type=main";
                 System.println("Requesting main data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
             case :details: {
-                var requestPath = "http://127.0.0.1" + webServerPort + "/data?type=details";
+                var requestPath = "http://127.0.0.1:" + webServerPort + "/data?type=details";
                 System.println("Requesting details data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
             case :alarms: {
-                var requestPath = "http://127.0.0.1" + webServerPort + "/data?type=alarms";
+                var requestPath = "http://127.0.0.1:" + webServerPort + "/data?type=alarms";
                 System.println("Requesting details data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
@@ -42,7 +42,7 @@ class WebServer {
 		};
         switch (action) {
             case "triggerHorn": {
-                var requestPath = "http://127.0.0.1" + webServerPort + "/actions/triggerHorn";
+                var requestPath = "http://127.0.0.1:" + webServerPort + "/actions/triggerHorn";
                 System.println("Requesting action trigger, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, null);
             }
