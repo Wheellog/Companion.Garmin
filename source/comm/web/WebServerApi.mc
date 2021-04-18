@@ -35,7 +35,18 @@ class WebServer {
     }
 
     function executeAction(action) {
-        
+         var options = {
+			:method => Communications.HTTP_REQUEST_METHOD_POST,
+			:headers => {},
+			:responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
+		};
+        switch (action) {
+            case "triggerHorn": {
+                var requestPath = "http://127.0.0.1" + webServerPort + "/actions/triggerHorn";
+                System.println("Requesting action trigger, path: " + requestPath);
+                Communications.makeWebRequest(requestPath, null, options, null);
+            }
+        }
     }
 
     function setPort(port) {
@@ -63,7 +74,7 @@ class WebServer {
             case :main: {
                 WheelData.currentSpeed = message[keyStore.CurrentSpeed];
                 WheelData.batteryPercentage = message[keyStore.BatteryPercentage];
-                WHeelData.temperature = message[keyStore.Temperature];
+                WheelData.temperature = message[keyStore.Temperature];
                 break;
             }
             case :details: {
