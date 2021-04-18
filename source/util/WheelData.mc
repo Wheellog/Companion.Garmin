@@ -2,22 +2,22 @@ using Toybox.WatchUi;
 using Toybox.Timer;
 
 module WheelData {
-    var CurrentSpeed = 0,
-        BatteryPercentage = 0,
-        BatteryVoltage,
-        Temperature = 0,
-        Bluetooth,
-        UseMph,
-        MaxDialSpeed,
-        RideTime,
-        RideDistance,
-        AverageSpeed,
-        TopSpeed,
-        Power,
-        Pwm,
-        MaxPwm,
-        AlarmType,
-        BottomSubtitleText = "";
+    var currentSpeed = 0,
+        batteryPercentage = 0,
+        batteryVoltage,
+        temperature = 0,
+        bluetooth,
+        useMph,
+        maxDialSpeed,
+        rideTime,
+        rideDistance,
+        averageSpeed,
+        topSpeed,
+        power,
+        pwm,
+        maxPwm,
+        alarmType,
+        bottomSubtitleText = "";
 
     var webServerPort;
     var isWheelLogConnected = false;
