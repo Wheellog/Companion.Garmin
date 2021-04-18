@@ -22,7 +22,12 @@ class WebServer {
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
             case :details: {
-                var requestPath = "http://127.0.0.1" + webServerPort + "/data?type=main";
+                var requestPath = "http://127.0.0.1" + webServerPort + "/data?type=details";
+                System.println("Requesting details data, path: " + requestPath);
+                Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
+            }
+            case :alarms: {
+                var requestPath = "http://127.0.0.1" + webServerPort + "/data?type=alarms";
                 System.println("Requesting details data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
