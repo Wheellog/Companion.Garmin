@@ -17,41 +17,52 @@ class WebServer {
 		};
         switch (dataType) {
             case :main: {
-                Communications.makeWebRequest("http://127.0.0.1" + webServerPort + "/data?type=main", null, options, method(:detailsResponseCallback));
+                var requestPath = "http://127.0.0.1" + webServerPort + "/data?type=main";
+                System.println("Requesting main data, path: " + requestPath);
+                Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
             case :details: {
-                Communications.makeWebRequest("http://127.0.0.1" + webServerPort + "/data?type=details", null, options, method(:detailsResponseCallback));
+                var requestPath = "http://127.0.0.1" + webServerPort + "/data?type=main";
+                System.println("Requesting details data, path: " + requestPath);
+                Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
         }
     }
 
     function executeAction(action) {
-
+        
     }
 
     function setPort(port) {
         webServerPort = port;
     }
-    private function mainResponseCallback(responseCode, data) {
+
+    function mainResponseCallback(responseCode, data) {
+        System.println("Received data, response code: " + responseCode);
         if (responseCode == 200) {
             parseData(data, :main);
-        }
+        } 
     }
-    private function detailsResponseCallback(responseCode, data) {
+
+    function detailsResponseCallback(responseCode, data) {
+        System.println("Received data, response code: " + responseCode);
         if (responseCode == 200) {
             parseData(data, :details);
         }
     }
 
-    private function parseData(message, dataType) {
+    function parseData(message, dataType) {
         var keyStore = WheelData.Constants.Data;
 
         switch (dataType) {
             case :main: {
-                WheelData.CurrentSpeed = message[keyStore.CURRENT]
+                WheelData.currentSpeed = message[keyStore.CurrentSpeed];
+                WheelData.batteryPercentage = message[keyStore.BatteryPercentage];
+                WHeelData.temperature = message[keyStore.Temperature];
+                break;
             }
             case :details: {
-
+                break;
             }
         }
         

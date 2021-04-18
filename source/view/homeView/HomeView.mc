@@ -45,9 +45,9 @@ class HomeView extends WatchUi.View {
             ":" +
             System.getClockTime().min.format("%02d")
         );
-        cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.BatteryPercentage]));
-        cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.Temperature]));
-        cDrawables[:BottomSubtitle].setText(WheelData.BottomSubtitleText);
+        cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.batteryPercentage]));
+        cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.temperature]));
+        cDrawables[:BottomSubtitle].setText(WheelData.bottomSubtitleText);
         var currentSpeed = 0;
         if (WheelData.CurrentSpeed < 10) {
             currentSpeed = WheelData.CurrentSpeed;
