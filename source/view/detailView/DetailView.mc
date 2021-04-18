@@ -50,16 +50,16 @@ class DetailView extends WatchUi.View {
                 cDrawables[:FirstSectionLabel].setText(cStrings[:AverageSpeed]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:TopSpeed]);
                 // And values
-                cDrawables[:FirstSectionData].setText(Lang.format(cStrings[:SpeedData], [WheelData.AverageSpeed]));
-                cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:SpeedData], [WheelData.TopSpeed]));
+                cDrawables[:FirstSectionData].setText(Lang.format(cStrings[:SpeedData], [WheelData.averageSpeed]));
+                cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:SpeedData], [WheelData.topSpeed]));
                 break;
             case 1:
                 // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:Voltage]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:BatteryPercentage]);
 
-                cDrawables[:FirstSectionData].setText(Lang.format(cStrings[:BatteryVoltageData], [WheelData.BatteryVoltage]));
-                cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:BatteryPercentageData], [WheelData.BatteryPercentage]));
+                cDrawables[:FirstSectionData].setText(Lang.format(cStrings[:BatteryVoltageData], [WheelData.batteryVoltage]));
+                cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:BatteryPercentageData], [WheelData.batteryPercentage]));
                 break;
             case 2:
                 // Set names
@@ -67,7 +67,7 @@ class DetailView extends WatchUi.View {
                 cDrawables[:SecondSectionLabel].setText(cStrings[:Distance]);
 
                 cDrawables[:FirstSectionData].setText(WheelData.RideTime);
-                cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:RideDistanceData], [WheelData.RideDistance]));
+                cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:RideDistanceData], [WheelData.rideDistance]));
                 break;
         }
 

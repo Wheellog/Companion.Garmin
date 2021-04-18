@@ -49,10 +49,10 @@ class HomeView extends WatchUi.View {
         cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.temperature]));
         cDrawables[:BottomSubtitle].setText(WheelData.bottomSubtitleText);
         var currentSpeed = 0;
-        if (WheelData.CurrentSpeed < 10) {
-            currentSpeed = WheelData.CurrentSpeed;
+        if (WheelData.currentSpeed < 10) {
+            currentSpeed = WheelData.currentSpeed;
         } else {
-            currentSpeed = WheelData.CurrentSpeed / 10;
+            currentSpeed = WheelData.currentSpeed / 10;
         }
         cDrawables[:SpeedNumber].setText(currentSpeed.toString());
 
