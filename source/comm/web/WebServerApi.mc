@@ -18,17 +18,14 @@ class WebServer {
         switch (dataType) {
             case :main: {
                 var requestPath = "http://127.0.0.1:" + webServerPort + "/data?type=main";
-                Logger.debug("Requesting main data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
             case :details: {
                 var requestPath = "http://127.0.0.1:" + webServerPort + "/data?type=details";
-                Logger.debug("Requesting details data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
             case :alarms: {
                 var requestPath = "http://127.0.0.1:" + webServerPort + "/data?type=alarms";
-                Logger.debug("Requesting alarms data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
         }
@@ -43,7 +40,6 @@ class WebServer {
         switch (action) {
             case "triggerHorn": {
                 var requestPath = "http://127.0.0.1:" + webServerPort + "/actions/triggerHorn";
-                Logger.debug("Requesting action trigger, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, null);
             }
         }
@@ -54,15 +50,12 @@ class WebServer {
     }
 
     function mainResponseCallback(responseCode, data) {
-        Logger.debug("Received data, response code: " + responseCode);
         if (responseCode == 200) {
             parseData(data, :main);
         } 
     }
 
-    function detailsResponseCallback(responseCode, data) {
-        Logger.debug("Received data, response code: " + responseCode);
-        
+    function detailsResponseCallback(responseCode, data) {        
         if (responseCode == 200) {
             parseData(data, :details);
         }
