@@ -18,9 +18,9 @@ class ArcRenderer extends WatchUi.Drawable {
         mArcSize,
         mArcDirection,
         mArcType,
-        mDataDrawingDirection,
-        mDataSource,
-        mDataSourceMaxValue;
+        mDataDrawingDirection;
+
+    var currentValue = 0, maxValue = 40;
 
     private var screenCenterX = System.getDeviceSettings().screenWidth / 2;
     private var screenCenterY = System.getDeviceSettings().screenHeight / 2;
@@ -60,8 +60,6 @@ class ArcRenderer extends WatchUi.Drawable {
         mArcDirection = params[:arcDirection];
         mArcType = params[:arcType];
         mDataDrawingDirection = params.get(:dataDrawingDirection);
-        mDataSource = params.get(:dataSource);
-        mDataSourceMaxValue = params.get(:dataSourceMaxValue);
     }
     function draw(dc) {
         // Rendering background arc
@@ -77,7 +75,7 @@ class ArcRenderer extends WatchUi.Drawable {
         );
 
         // Rendering foreground arc
-        if(mDataSource >= mDataSourceMaxValue) {
+        if(currentValue >= maxValue) {
             dc.setColor(mIdleColor, 0x000000);
             dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
         } else {
@@ -92,7 +90,7 @@ class ArcRenderer extends WatchUi.Drawable {
             switch (mArcType) {
                 case :speedArc: {
                     var degreeRange = mStartDegree.abs() + mEndDegree.abs();
-                    var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+                    var percentage = currentValue.toFloat() / maxValue.toFloat();
                     var preResult = degreeRange * percentage;
                     var result = mStartDegree - preResult;
                     if (result != mStartDegree) {
@@ -102,7 +100,7 @@ class ArcRenderer extends WatchUi.Drawable {
                 }
                 case :batteryArc: {
                     var degreeRange = mStartDegree - mEndDegree;
-                    var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+                    var percentage = currentValue.toFloat() / maxValue.toFloat();
                     var result = degreeRange - (degreeRange * percentage) + mEndDegree;
                     if (result != mStartDegree) {
                         dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
@@ -111,7 +109,7 @@ class ArcRenderer extends WatchUi.Drawable {
                 }
                 case :temperatureArc: {
                     var degreeRange = mStartDegree.abs() + mEndDegree.abs();
-                    var percentage = mDataSource.toFloat() / mDataSourceMaxValue.toFloat();
+                    var percentage = currentValue.toFloat() / maxValue.toFloat();
                     var preResult = degreeRange * percentage;
                     var result = preResult + mEndDegree;
                     if (result != mEndDegree) {
@@ -121,5 +119,10 @@ class ArcRenderer extends WatchUi.Drawable {
                 }
             }
         }
+    }
+
+    function setValues(max, current) {
+        currentValue = current;
+        maxValue = max;
     }
 }

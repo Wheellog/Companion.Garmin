@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed:
 - Replaced mailbox communication with web server communication. See [#6](https://github.com/Wheellog/WheelLog.Garmin/issues/6)
-- Fixed [#5](https://github.com/Wheellog/WheelLog.Garmin/issues/6)
+- Fixed [#5](https://github.com/Wheellog/WheelLog.Garmin/issues/5)
+- Fixed [#7](https://github.com/Wheellog/WheelLog.Garmin/issues/7)
 
 ### Removed:
 - None
