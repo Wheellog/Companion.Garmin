@@ -17,7 +17,7 @@
         <param name="arcDirection">Gfx.ARC_CLOCKWISE</param>
         <param name="arcType">:speedArc</param>
         <!-- Data -->
-        <param name="dataSource">WheelData.CurrentSpeed</param>
+        <param name="dataSource">WheelData.currentSpeed</param>
         <param name="dataSourceMaxValue">WheelData.CurrentSpeedMaxValue</param>
     </drawable>
     <label id="SpeedNumber" text="22" x="50%" y="50%" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER" font="@Fonts.Tall" color="0x0085F8" />
@@ -39,7 +39,7 @@
         <param name="arcDirection">Gfx.ARC_CLOCKWISE</param>
         <param name="arcType">:batteryArc</param>
         <!-- Data -->
-        <param name="dataSource">WheelData.BatteryPercentage</param>
+        <param name="dataSource">WheelData.batteryPercentage</param>
         <param name="dataSourceMaxValue">100</param>
     </drawable>
 
@@ -60,7 +60,7 @@
         <param name="arcDirection">Gfx.ARC_COUNTER_CLOCKWISE</param>
         <param name="arcType">:temperatureArc</param>
         <!-- Data -->
-        <param name="dataSource">WheelData.Temperature</param>
+        <param name="dataSource">WheelData.temperature</param>
         <param name="dataSourceMaxValue">40</param>
     </drawable>
 

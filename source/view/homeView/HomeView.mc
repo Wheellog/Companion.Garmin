@@ -4,8 +4,6 @@ using Toybox.Application;
 
 class HomeView extends WatchUi.View {
 
-    private var progressBar, isProgressBarShown;
-
     private var cDrawables = {};
 
     function initialize() {
@@ -15,11 +13,6 @@ class HomeView extends WatchUi.View {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.HomeLayout(dc));
-
-        progressBar = new WatchUi.ProgressBar(
-            WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp),
-            null
-        );
         // Label drawables
         cDrawables[:TimeDate] = View.findDrawableById("TimeDate");
         cDrawables[:SpeedNumber] = View.findDrawableById("SpeedNumber");
@@ -31,8 +24,7 @@ class HomeView extends WatchUi.View {
         cDrawables[:BatteryArc] = View.findDrawableById("BatteryArc");
         cDrawables[:TemperatureArc] = View.findDrawableById("TemperatureArc");
 
-        // WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP );
-        isProgressBarShown = true;
+        WheelData.setIsWheelLogConnected(false);
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -55,14 +47,14 @@ class HomeView extends WatchUi.View {
             ":" +
             System.getClockTime().min.format("%02d")
         );
-        cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.BatteryPercentage]));
-        cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.Temperature]));
-        cDrawables[:BottomSubtitle].setText(WheelData.BottomSubtitleText);
+        cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.batteryPercentage]));
+        cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.temperature]));
+        cDrawables[:BottomSubtitle].setText(WheelData.bottomSubtitle);
         var currentSpeed = 0;
-        if (WheelData.CurrentSpeed < 10) {
-            currentSpeed = WheelData.CurrentSpeed;
+        if (WheelData.currentSpeed < 10) {
+            currentSpeed = WheelData.currentSpeed;
         } else {
-            currentSpeed = WheelData.CurrentSpeed / 10;
+            currentSpeed = WheelData.currentSpeed / 10;
         }
         cDrawables[:SpeedNumber].setText(currentSpeed.toString());
 

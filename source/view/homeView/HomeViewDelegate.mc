@@ -12,7 +12,6 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onNextPage() {
-        System.println("down");
         WatchUi.switchToView(new DetailView(), new DetailViewDelegate(new DetailView()), WatchUi.SLIDE_UP);
         return true;
     }
