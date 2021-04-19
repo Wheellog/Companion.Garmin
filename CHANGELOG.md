@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## 1.0.0 Beta 3 19.04.2021
+## 1.0.0 Beta 3 - 19.04.2021
 
 ### Changed:
 - Replaced mailbox communication with web server communication. See [#6](https://github.com/Wheellog/WheelLog.Garmin/issues/6)
