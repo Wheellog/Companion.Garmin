@@ -7,13 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added:
-- New communication method that uses web server communication
-
-### Changed:
 - None
 
+### Changed:
+- Replaced mailbox communication with web server communication. See [#6](https://github.com/Wheellog/WheelLog.Garmin/issues/6).
+
 ### Removed:
-- Old communication through mailbox
+- None
 
 ---
 
