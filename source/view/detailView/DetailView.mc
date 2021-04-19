@@ -66,7 +66,7 @@ class DetailView extends WatchUi.View {
                 cDrawables[:FirstSectionLabel].setText(cStrings[:RideTime]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:Distance]);
 
-                cDrawables[:FirstSectionData].setText(WheelData.RideTime);
+                cDrawables[:FirstSectionData].setText(WheelData.rideTime);
                 cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:RideDistanceData], [WheelData.rideDistance]));
                 break;
         }
