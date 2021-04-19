@@ -69,6 +69,7 @@ class WebServer {
                 WheelData.currentSpeed = message[keyStore.CurrentSpeed];
                 WheelData.batteryPercentage = message[keyStore.BatteryPercentage];
                 WheelData.temperature = message[keyStore.Temperature];
+                WheelData.bottomSubtitle = message[keyStore.BottomSubtitle];
                 break;
             }
             case :details: {
@@ -93,7 +94,7 @@ class WebServer {
         //         WheelData.Power = data[keyStore.POWER];
         //         WheelData.Pwm = data[keyStore.PWM];
         //         WheelData.AlarmType = data[keyStore.ALARM_TYPE];
-        //         WheelData.BottomSubtitleText = data[keyStore.BOTTOM_SUBTITLE];
+        //         WheelData.bottomSubtitle = data[keyStore.BOTTOM_SUBTITLE];
         //     }
         // }
     }

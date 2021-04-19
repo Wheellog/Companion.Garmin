@@ -17,7 +17,7 @@ module WheelData {
         pwm,
         maxPwm,
         alarmType,
-        bottomSubtitleText = "";
+        bottomSubtitle = "";
 
     var webServerPort;
     var isWheelLogConnected = false;
