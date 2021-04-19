@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added:
-- Finally added support for `vivoactive` 4 and 4s, bc of icon being too large for this devices([#9](https://github.com/Wheellog/WheelLog.Garmin/issues/9))
+- Finally added support for `vivoactive` 4 and 4s, it was not available before bc of icon being too large for this devices([#9](https://github.com/Wheellog/WheelLog.Garmin/issues/9))
 
 ---
 
