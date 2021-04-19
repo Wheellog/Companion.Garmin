@@ -13,9 +13,5 @@ function mailHandler(mailIter) {
             WheelData.setIsWheelLogConnected(true);
     }
 
-    if (WheelData.dataUpdateTimer == null) {
-        dataUpdateTimer.start(method(:WheelLog_getData), 200, true); // Start a timer routine for constantly getting data from the phone
-    }
-
     WatchUi.requestUpdate();
 }

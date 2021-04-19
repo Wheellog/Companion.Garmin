@@ -29,11 +29,18 @@ module WheelData {
     function setIsWheelLogConnected(data) {
         var previousState = isWheelLogConnected;
         isWheelLogConnected = data;
+
         if (isWheelLogConnected == true) {
             WatchUi.popView(WatchUi.SLIDE_DOWN);
+            if (WheelData.dataUpdateTimer == null) {
+                dataUpdateTimer.start(method(:WheelLog_getData), 200, true); // Start a timer routine for constantly getting data from the phone
+            }
         } else if (isWheelLogConnected == false) {
             var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp), null);
             WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP);
+            if (WheelData.dataUpdateTimer == null) {
+                dataUpdateTimer.stop(); // Shut down timer, bc it will malfunction if no server is up and running
+            }
         }
     }
 
