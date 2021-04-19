@@ -47,3 +47,6 @@ clean:
 rerun: build
 	connectiq
 	monkeydo bin/$(appName).prg $(DEVICE)
+
+clean-xml:
+	rm -rf bin/*.xml
