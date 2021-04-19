@@ -18,17 +18,17 @@ class WebServer {
         switch (dataType) {
             case :main: {
                 var requestPath = "http://127.0.0.1:" + webServerPort + "/data?type=main";
-                System.println("Requesting main data, path: " + requestPath);
+                ogger.debug("Requesting main data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
             case :details: {
                 var requestPath = "http://127.0.0.1:" + webServerPort + "/data?type=details";
-                System.println("Requesting details data, path: " + requestPath);
+                ogger.debug("Requesting details data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
             case :alarms: {
                 var requestPath = "http://127.0.0.1:" + webServerPort + "/data?type=alarms";
-                System.println("Requesting details data, path: " + requestPath);
+                ogger.debug("Requesting alarms data, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, method(:detailsResponseCallback));
             }
         }
@@ -43,7 +43,7 @@ class WebServer {
         switch (action) {
             case "triggerHorn": {
                 var requestPath = "http://127.0.0.1:" + webServerPort + "/actions/triggerHorn";
-                System.println("Requesting action trigger, path: " + requestPath);
+                ogger.debug("Requesting action trigger, path: " + requestPath);
                 Communications.makeWebRequest(requestPath, null, options, null);
             }
         }
@@ -54,14 +54,15 @@ class WebServer {
     }
 
     function mainResponseCallback(responseCode, data) {
-        System.println("Received data, response code: " + responseCode);
+        Logger.debug("Received data, response code: " + responseCode);
         if (responseCode == 200) {
             parseData(data, :main);
         } 
     }
 
     function detailsResponseCallback(responseCode, data) {
-        System.println("Received data, response code: " + responseCode);
+        Logger.debug("Received data, response code: " + responseCode);
+        
         if (responseCode == 200) {
             parseData(data, :details);
         }
