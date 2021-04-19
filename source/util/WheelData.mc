@@ -38,26 +38,4 @@ module WheelData {
     }
 
     var CurrentSpeedMaxValue = 40;
-    module Constants {
-        module Data {
-            enum {
-                CurrentSpeed = 0,
-                BatteryPercentage = 1,
-                BatteryVoltage = 2,
-                Temperature = 3,
-                BtState = 4,
-                Power = 5,
-                BottomSubtitle = 6,
-                AverageSpeed = 7,
-                TopSpeed = 8,
-                RideDistance = 9,
-                RideTime = 10,
-                Pwm = 11,
-                MaxPwm = 12,
-                AlarmType = 13,
-                MaxDialSpeed = 14, // For anyone wondering what tf is dis. This key is for max speed that can be shown on the speed dial before it exeeds it's boundaries. I hope i explained it good
-                UseMph = 15
-            }
-        }
-    }
 }
