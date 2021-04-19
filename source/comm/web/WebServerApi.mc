@@ -62,7 +62,6 @@ class WebServer {
     }
 
     function parseData(message, dataType) {
-
         switch (dataType) {
             case :main: {
                 WheelData.currentSpeed = message[0];
@@ -73,7 +72,17 @@ class WebServer {
                 break;
             }
             case :details: {
-                
+                WheelData.useMph = message[0];
+                WheelData.averageSpeed = message[1];
+                WheelData.topSpeed = message[2];
+                WheelData.batteryVoltage = message[3];
+                WheelData.batteryPercentage = message[4];
+                WheelData.rideTime = message[5];
+                WheelData.rideDistance = message[6];
+                break;
+            }
+            case :alarms: {
+                WheelData.alarmType = message;
                 break;
             }
         }
