@@ -13,7 +13,25 @@ Also here is my [fork of WheelLog](https://github.com/GGorAA/WheelLog.Android), 
 
 ## 🛠 Development/Building
 
-To build the app, go to properties.mk and set path to the developer key. After that, you can just run `make build` to build the app. To run it in a simulator, run `make run`. There is also a command called `make rerun`, which is not waiting for a simulator to start, but only runs the app in a simulator. You can also build for every device using `make buildall`, and you will have a binary for every device in `bin` folder. For publishing to the Connect IQ Store, use `make package`. And lastly, to clean, use `make clean`.
+Here is the list of every `make` target that you can use:
+
+`build` - I think you know what it does
+
+`buildall` - Builds for every device listed in manifest
+
+`run` - Builds, and then runs the app in a simulator
+
+`rerun` - Reruns the app in a simulator, when the former is already launched
+
+`deploy` - Builds, and dhen deploys the app to a physical device. For this you need to connect your watch to your computer using a USB cable, and set `USB Mode` (it is in Settings > System, and then scroll down to find it), to `Storage`
+
+`package` - Packages a `.iq` file ready to be uploaded to Garmin ConnectIQ Store
+
+`clean` - Also understandable, deleted `bin` directory
+
+`clean-xml` - This target removes all `.xml` files under a `bin` directory
+
+`generate-devkey` - Generates a developer key, that is pretty much used in every place of making a ConnectIQ app. You should also point to that key in `properties.mk`
 
 ## 🌍 Translations
 
