@@ -62,17 +62,18 @@ class WebServer {
     }
 
     function parseData(message, dataType) {
-        var keyStore = WheelData.Constants.Data;
 
         switch (dataType) {
             case :main: {
-                WheelData.currentSpeed = message[keyStore.CurrentSpeed];
-                WheelData.batteryPercentage = message[keyStore.BatteryPercentage];
-                WheelData.temperature = message[keyStore.Temperature];
-                WheelData.bottomSubtitle = message[keyStore.BottomSubtitle];
+                WheelData.currentSpeed = message[0];
+                WheelData.useMph = message[1];
+                WheelData.batteryPercentage = message[2];
+                WheelData.temperature = message[3];
+                WheelData.bottomSubtitle = message[4];
                 break;
             }
             case :details: {
+                
                 break;
             }
         }
