@@ -20,7 +20,7 @@ jobs:
       run: brew install --cask connectiq
 
     - name: Copy device profiles to ConnectIQ SDK devices folder
-      run: mkdir ~/Library/Application \Support/Garmin/ConnectIQ/Devices && mv -rf ci/fenix3 ~/Library/Application Support/Garmin/ConnectIQ/Devices
+      run: mkdir "~/Library/Application Support/Garmin/ConnectIQ/Devices" && mv -rf ci/fenix3 ~/Library/Application Support/Garmin/ConnectIQ/Devices
 
     - name: Generate dev key
       run: make generate-devkey
