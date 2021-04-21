@@ -20,7 +20,7 @@ jobs:
       run: brew install --cask connectiq
 
     - name: ls
-      run: ls
+      run: ls ~ -a
 
     - name: Copy device profiles to ConnectIQ SDK devices folder
       run: mkdir ~/Library/Application\ Support/Garmin/ConnectIQ/Devices && mv -rf ci/fenix3 ~/Library/Application Support/Garmin/ConnectIQ/Devices
