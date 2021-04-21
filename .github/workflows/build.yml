@@ -1,0 +1,23 @@
+name: Build CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  Build:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Homebrew
+      run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    - name: Download & Install ConnectIQ SDK
+      run: brew install --cask connectiq
+
+    - name: Build
+      run: make build
