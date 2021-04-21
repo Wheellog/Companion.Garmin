@@ -19,5 +19,8 @@ jobs:
     - name: Download & Install ConnectIQ SDK
       run: brew install --cask connectiq
 
+    - name: Generate dev key
+      run: make generate-devkey
+
     - name: Build
       run: make build
