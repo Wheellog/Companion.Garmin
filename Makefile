@@ -52,5 +52,5 @@ clean-xml:
 	rm -rf bin/*.xml
 
 generate-devkey:
-	openssl genrsa -out developer_key.pem 4096
-	openssl pkcs8 -topk8 -inform PEM -outform DER -in developer_key.pem -out developer_key.der -nocrypt
+	openssl genrsa -out id_rsa_garmin.pem 4096
+	openssl pkcs8 -topk8 -inform PEM -outform DER -in id_rsa_garmin.pem -out id_rsa_garmin.der -nocrypt
