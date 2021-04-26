@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
     <iq:application
-        entry="WheelLogGarminApp"
+        entry="WheelLogCompanionApp"
         id="487e6172-972c-4f93-a4db-26fd689f935a"
         launcherIcon="@Drawables.LauncherIcon"
         name="@Strings.AppName"
