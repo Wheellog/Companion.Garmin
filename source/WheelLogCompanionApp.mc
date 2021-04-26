@@ -2,7 +2,7 @@ using Toybox.Application;
 using Toybox.WatchUi;
 using Toybox.Application.Storage;
 
-class WheelLogGarminApp extends Application.AppBase {
+class WheelLogCompanionApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
