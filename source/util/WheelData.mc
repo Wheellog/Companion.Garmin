@@ -58,5 +58,5 @@ function WheelLog_getData() {
             webServerApiInstance.updateData(:details);
             break;
     }
-    
+    WatchUi.requestUpdate();
 }
