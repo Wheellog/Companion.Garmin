@@ -54,3 +54,7 @@ clean-xml:
 generate-devkey:
 	openssl genrsa -out id_rsa_garmin.pem 4096
 	openssl pkcs8 -topk8 -inform PEM -outform DER -in id_rsa_garmin.pem -out id_rsa_garmin.der -nocrypt
+
+check-deployment:
+	
+	@./makescripts/check-deployment.sh
