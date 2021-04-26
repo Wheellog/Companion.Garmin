@@ -16,7 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for fēnix 6 Chronos ([#15](https://github.com/Wheellog/WheelLog.Garmin/issues/15))
 
 ### Changed:
-- Changed the filter in mailHandler, so it now can handle messages that just consist of a port number
+- Filter in mailHandler, so it now can handle messages that just consist of a port number
+- Main app class, now it is called WheelLogCompanionApp
 
 ---
 
