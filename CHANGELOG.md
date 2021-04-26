@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+---
+
+## [[1.0.0 Beta 4] - 19.04.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0-beta4)
+
 ### Added:
 - Support for vívoactive 4 ([#9](https://github.com/Wheellog/WheelLog.Garmin/issues/9))
 - Support for vívoactive 4s ([#9](https://github.com/Wheellog/WheelLog.Garmin/issues/9))
@@ -16,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.0.0 Beta 3 - 19.04.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0-beta3)
+## [[1.0.0 Beta 3] - 19.04.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0-beta3)
 
 ### Changed:
 - Replaced mailbox communication with web server communication ([#6](https://github.com/Wheellog/WheelLog.Garmin/issues/6))
@@ -25,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.0.0 Beta 2 - 12.04.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0-beta2)
+## [[1.0.0 Beta 2] - 12.04.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0-beta2)
 
 ### Added: 
 - Support for devices `vivoactive 3`, `vivoactive 3 Mercedez-Benz Edition`,`vivoactive 3 Music`, `vivoactive 3 Music LTE`, and `fenix 5s`
