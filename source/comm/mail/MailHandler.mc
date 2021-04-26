@@ -11,7 +11,7 @@ function mailHandler(mailIter) {
 
     System.println("Got mail!");
 
-    if (mail != null && mail instanceof Lang.Dictionary) {
+    if (mail != null) {
             WheelData.webServerPort = mail;
             WheelData.setisAppConnected(true);
     }
