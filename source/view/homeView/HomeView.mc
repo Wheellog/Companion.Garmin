@@ -24,7 +24,9 @@ class HomeView extends WatchUi.View {
         cDrawables[:BatteryArc] = View.findDrawableById("BatteryArc");
         cDrawables[:TemperatureArc] = View.findDrawableById("TemperatureArc");
 
-        WheelData.setIsWheelLogConnected(false);
+        if (!WheelData.isAppConnected) {
+            WheelData.setisAppConnected(false);
+        }
     }
 
     // Called when this View is brought to the foreground. Restore
