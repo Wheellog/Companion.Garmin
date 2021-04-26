@@ -44,5 +44,11 @@ module WheelData {
         }
     }
 
+    
+
     var CurrentSpeedMaxValue = 40;
+}
+
+function WheelLog_getData() {
+    System.println("Getting data!");
 }
