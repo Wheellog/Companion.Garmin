@@ -19,23 +19,25 @@ module WheelData {
         alarmType,
         bottomSubtitle = "";
 
+    var CurrentSpeedMaxValue = 40;
+
     var webServerPort;
-    var isWheelLogConnected = false;
+    var isAppConnected = false;
 
     var webServerApiInstance = null;
 
     var dataUpdateTimer = new Timer.Timer();
 
-    function setIsWheelLogConnected(data) {
-        var previousState = isWheelLogConnected;
-        isWheelLogConnected = data;
+    function setisAppConnected(data) {
+        var previousState = isAppConnected;
+        isAppConnected = data;
 
-        if (isWheelLogConnected == true) {
+        if (isAppConnected == true) {
             WatchUi.popView(WatchUi.SLIDE_DOWN);
             if (WheelData.dataUpdateTimer == null) {
                 dataUpdateTimer.start(method(:WheelLog_getData), 200, true); // Start a timer routine for constantly getting data from the phone
             }
-        } else if (isWheelLogConnected == false) {
+        } else if (isAppConnected == false) {
             var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp), null);
             WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP);
             if (WheelData.dataUpdateTimer == null) {
@@ -43,10 +45,6 @@ module WheelData {
             }
         }
     }
-
-    
-
-    var CurrentSpeedMaxValue = 40;
 }
 
 function WheelLog_getData() {

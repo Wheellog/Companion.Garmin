@@ -13,7 +13,7 @@ function mailHandler(mailIter) {
 
     if (mail != null && mail instanceof Lang.Dictionary) {
             WheelData.webServerPort = mail;
-            WheelData.setIsWheelLogConnected(true);
+            WheelData.setisAppConnected(true);
     }
 
     WatchUi.requestUpdate();
