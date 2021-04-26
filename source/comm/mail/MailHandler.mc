@@ -11,8 +11,8 @@ function mailHandler(mailIter) {
 
     if (mail != null) {
             WheelData.webServerPort = mail;
-            WheeData.webDataSource = "home";
-            WheelData.webServerApiInstance = new WebServerApi(WheelData.webServerPort);
+            WheelData.webDataSource = "home";
+            WheelData.webServerApiInstance = new WebServer(WheelData.webServerPort);
             WheelData.setIsAppConnected(true);
     }
 
