@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added:
 - Support for vívoactive 4 ([#9](https://github.com/Wheellog/WheelLog.Garmin/issues/9))
 - Support for vívoactive 4s ([#9](https://github.com/Wheellog/WheelLog.Garmin/issues/9))
-- Support for fēnix 6 Chronos ([#15](https://github.com/Wheellog/WheelLog.Garmin/issues/15))
+- Support for fēnix chronos ([#15](https://github.com/Wheellog/WheelLog.Garmin/issues/15))
 
 ### Changed:
 - Filter in mailHandler, so it now can handle messages that just consist of a port number
