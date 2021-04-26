@@ -25,7 +25,7 @@ class HomeView extends WatchUi.View {
         cDrawables[:TemperatureArc] = View.findDrawableById("TemperatureArc");
 
         if (!WheelData.isAppConnected) {
-            WheelData.setisAppConnected(false);
+            WheelData.setIsAppConnected(false);
         }
     }
 
