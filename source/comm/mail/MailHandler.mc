@@ -9,11 +9,11 @@ function mailHandler(mailIter) {
     mail = mailIter.next();
     Communications.emptyMailbox();
 
-    System.println("Got mail!");
-
     if (mail != null) {
             WheelData.webServerPort = mail;
-            WheelData.setisAppConnected(true);
+            WheeData.webDataSource = "home";
+            WheelData.webServerApiInstance = new WebServerApi(WheelData.webServerPort);
+            WheelData.setIsAppConnected(true);
     }
 
     WatchUi.requestUpdate();
