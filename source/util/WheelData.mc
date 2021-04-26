@@ -25,10 +25,11 @@ module WheelData {
     var isAppConnected = false;
 
     var webServerApiInstance = null;
+    var webDataSource;
 
     var dataUpdateTimer = new Timer.Timer();
 
-    function setisAppConnected(data) {
+    function setIsAppConnected(data) {
         var previousState = isAppConnected;
         isAppConnected = data;
 
@@ -48,5 +49,14 @@ module WheelData {
 }
 
 function WheelLog_getData() {
-    System.println("Getting data!");
+    webServerApiInstance.updateData(:alarms);
+    switch (webDataSource) {
+        case "home":
+            webServerApiInstance.updateData(:main);
+            break;
+        case "details":
+            webServerApiInstance.updateData(:details);
+            break;
+    }
+    
 }
