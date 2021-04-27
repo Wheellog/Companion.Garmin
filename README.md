@@ -2,7 +2,7 @@
 
 A WheelLog companion for Garmin smartwatches
 
-This app is a rebuild from ground-up of an original Garmin app. I made this app to be with better UI, alarms working, and also settings sync from WheelLog app.
+This app is a rebuild from ground-up of an original Garmin app. I made this app to be with better UI, alarms working, and full support of new devices and their features.
 
 Btw here is the original app repository on [GitHub](https://github.com/marccardinal/WheelLog-Garmin-ConnectIQ).
 
@@ -12,6 +12,8 @@ Also here is my [fork of WheelLog](https://github.com/GGorAA/WheelLog.Android), 
 ![screenshot 1](https://raw.githubusercontent.com/GGorAA/WheelLog.Garmin/master/screenshots/screenshot%201.jpg)
 
 ## 🛠 Development/Building
+
+**Note:** Make commands are made to work with macOS, because that's where i develop 🤷 But it should work on other Unix systems like Linux. Sorry Windows users, something will not work here 🤷
 
 Here is the list of every `make` target that you can use:
 
