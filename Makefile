@@ -42,7 +42,7 @@ package:
 	--warn
 
 clean:
-	rm -rf bin
+	@rm -rf bin
 
 rerun: build
 	connectiq
