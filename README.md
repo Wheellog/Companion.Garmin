@@ -25,6 +25,8 @@ Here is the list of every `make` target that you can use:
 
 `deploy` - Builds, and dhen deploys the app to a physical device. For this you need to connect your watch to your computer using a USB cable, and set `USB Mode` (it is in Settings > System, and then scroll down to find it), to `Storage`
 
+`check-deployment` - Checks if the app is deployed to the end device. Basically calls `check-deployment.sh` under `makescripts` dir.
+
 `package` - Packages a `.iq` file ready to be uploaded to Garmin ConnectIQ Store
 
 `clean` - Also understandable, deleted `bin` directory
