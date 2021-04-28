@@ -7,8 +7,11 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() {
-        // WatchUi.pushView(new Rez.Menus.MainMenu(), new WheelLogGarminMenuDelegate(), WatchUi.SLIDE_UP);
         return true;
+    }
+
+    function onSelect() {
+        Actions.triggerHorn();
     }
 
     function onNextPage() {
