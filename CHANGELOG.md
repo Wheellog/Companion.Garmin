@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed issues in communication with WheelLog
 - Fixed [#7](https://github.com/Wheellog/WheelLog.Garmin/issues/7)
 
+--- 
+
 ## [[1.0.0 Beta 4] - 19.04.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0-beta4)
 
 ### Added:
