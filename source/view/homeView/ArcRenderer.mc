@@ -4,8 +4,6 @@ using Toybox.Application.Storage;
 using Toybox.System;
 
 class ArcRenderer extends WatchUi.Drawable {
-    var mCurrent, mMaxValue;
-
     private var mIdleColor,
         mNormalColor,
         mMediumColor,
