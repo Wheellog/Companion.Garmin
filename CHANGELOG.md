@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [[1.0.0 Beta 2] - 12.04.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0-beta2)
 
 ### Added: 
-- Support for devices `vivoactive 3`, `vivoactive 3 Mercedez-Benz Edition`,`vivoactive 3 Music`, `vivoactive 3 Music LTE`, and `fenix 5s`
+- Support for devices vívoactive 3, vívoactive 3 Mercedez-Benz Edition,vívoactive 3 Music, vívoactive 3 Music LTE, and fēnix 5s
 
 ### Changed:
 - Fixed bug with app crashing when connecting to WheelLog
