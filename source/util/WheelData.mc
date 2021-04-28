@@ -11,7 +11,7 @@ module WheelData {
         temperature = 0,
         bluetooth,
         useMph,
-        maxDialSpeed,
+        maxDialSpeed = 40,
         rideTime,
         rideDistance,
         averageSpeed,
@@ -21,8 +21,6 @@ module WheelData {
         maxPwm,
         alarmType,
         bottomSubtitle = "";
-
-    var CurrentSpeedMaxValue = 40;
 
     var webServerPort;
     var isAppConnected = false;
