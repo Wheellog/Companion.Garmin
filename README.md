@@ -6,7 +6,13 @@ This app is a rebuild from ground-up of an original Garmin app. I made this app 
 
 Btw here is the original app repository on [GitHub](https://github.com/marccardinal/WheelLog-Garmin-ConnectIQ).
 
-Also here is my [fork of WheelLog](https://github.com/GGorAA/WheelLog.Android), which works with this companion.
+Here is my [fork of WheelLog](https://github.com/GGorAA/WheelLog.Android), which works with this companion. I also opened a Pull Request, and it will be merged into original WheelLog at the same moment 1.0.0 Stable version of this companion comes out.
+
+## 🔤 Important
+
+License: **GPLv3**
+
+Changelog: [here](https://github.com/Wheellog/Companion.Garmin/blob/master/CHANGELOG.md)
 
 ## 🏞 Screenshots
 ![screenshot 1](https://raw.githubusercontent.com/GGorAA/WheelLog.Garmin/master/screenshots/screenshot%201.jpg)
