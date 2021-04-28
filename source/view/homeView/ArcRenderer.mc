@@ -18,7 +18,7 @@ class ArcRenderer extends WatchUi.Drawable {
         mArcType,
         mDataDrawingDirection;
 
-    var currentValue = 0, maxValue = 40;
+    var currentValue = 0, maxValue = 0;
 
     private var screenCenterX = System.getDeviceSettings().screenWidth / 2;
     private var screenCenterY = System.getDeviceSettings().screenHeight / 2;
@@ -119,7 +119,7 @@ class ArcRenderer extends WatchUi.Drawable {
         }
     }
 
-    function setValues(max, current) {
+    function setValues(current, max) {
         currentValue = current;
         maxValue = max;
     }
