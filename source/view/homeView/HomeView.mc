@@ -20,7 +20,7 @@ class HomeView extends WatchUi.View {
         cDrawables[:TemperatureNumber] = View.findDrawableById("TemperatureNumber");
         cDrawables[:BottomSubtitle] = View.findDrawableById("BottomSubtitle");
         // And arc drawables
-        cDrawables[:SpeedArc] = View.findDrawableById("SpeedArc");
+        cDrawables[:SpeedArc] = View.findDrawableById("SpeedDial");
         cDrawables[:BatteryArc] = View.findDrawableById("BatteryArc");
         cDrawables[:TemperatureArc] = View.findDrawableById("TemperatureArc");
 
