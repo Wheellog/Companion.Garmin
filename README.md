@@ -15,7 +15,8 @@ License: **GPLv3**
 Changelog: [here](https://github.com/Wheellog/Companion.Garmin/blob/master/CHANGELOG.md)
 
 ## 🏞 Screenshots
-![screenshot 1](https://raw.githubusercontent.com/GGorAA/WheelLog.Garmin/master/screenshots/screenshot%201.jpg)
+<img src="https://raw.githubusercontent.com/GGorAA/WheelLog.Garmin/master/screenshots/screenshot%201.png" height="150">
+<img src="https://raw.githubusercontent.com/GGorAA/WheelLog.Garmin/master/screenshots/screenshot%202.png" height="150">
 
 ## 🛠 Development/Building
 
