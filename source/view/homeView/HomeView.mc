@@ -54,7 +54,13 @@ class HomeView extends WatchUi.View {
         cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.batteryPercentage]));
         cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.temperature]));
         cDrawables[:BottomSubtitle].setText(WheelData.bottomSubtitle);
-        cDrawables[:SpeedNumber].setText(WheelData.currentSpeed.toString());
+        var speedNumber = 0;
+        if (WheelData.currentSpeed.toNumber() >= 10) {
+            speedNumber = WheelData.currentSpeed.toNumber();
+        } else {
+            speedNumber = WheelData.currentSpeed.toFloat();
+        }
+        cDrawables[:SpeedNumber].setText(speedNumber.toString());
 
         cDrawables[:SpeedArc].setValues(WheelData.currentSpeed.toFloat(), WheelData.maxDialSpeed);
         cDrawables[:BatteryArc].setValues(WheelData.batteryPercentage, 100);
