@@ -5,13 +5,13 @@ using Toybox.Communications;
 using Toybox.System;
 
 module WheelData {
-    var currentSpeed = 0,
-        batteryPercentage = 0,
+    var currentSpeed = 275,
+        batteryPercentage = 79,
         batteryVoltage,
-        temperature = 0,
+        temperature = 34,
         bluetooth,
         useMph,
-        maxDialSpeed = 40,
+        maxDialSpeed = 400,
         rideTime,
         rideDistance,
         averageSpeed,
@@ -20,7 +20,7 @@ module WheelData {
         pwm,
         maxPwm,
         alarmType,
-        bottomSubtitle = "";
+        bottomSubtitle = "InMotion V11";
 
     var webServerPort;
     var isAppConnected = false;
@@ -106,7 +106,7 @@ function WheelData_mainResponseCallback(responseCode, data) {
     if (responseCode == 200) {
         WheelData.parseServerData(data, :main);
     } else {
-        WheelData.bottomSubtitle = "Failed";
+        // WheelData.bottomSubtitle = "Failed";
     }
 }
 
@@ -114,7 +114,7 @@ function WheelData_detailsResponseCallback(responseCode, data) {
     if (responseCode == 200) {
         WheelData.WheelData.parseServerData(data, :details);
     } else {
-        WheelData.bottomSubtitle = "Failed";
+        // WheelData.bottomSubtitle = "Failed";
     }
 }
 
@@ -122,6 +122,6 @@ function WheelData_alarmsResponseCallback(responseCode, data) {
     if (responseCode == 200) {
         WheelData.parseServerData(data, :alarms);
     } else {
-        WheelData.bottomSubtitle = "Failed";
+        // WheelData.bottomSubtitle = "Failed";
     }
 }
