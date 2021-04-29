@@ -12,3 +12,4 @@ char id=54   x=38    y=0     width=36    height=49    xoffset=1     yoffset=0   
 char id=55   x=0     y=50    width=31    height=48    xoffset=3     yoffset=1     xadvance=38    page=0  chnl=15
 char id=56   x=75    y=0     width=36    height=49    xoffset=1     yoffset=0     xadvance=38    page=0  chnl=15
 char id=57   x=112   y=0     width=35    height=49    xoffset=1     yoffset=0     xadvance=38    page=0  chnl=15
+char id=46   x=100   y=50    width=35    height=49    xoffset=5     yoffset=1     xadvance=20    page=0  chnl=15
