@@ -56,7 +56,7 @@ class HomeView extends WatchUi.View {
         cDrawables[:BottomSubtitle].setText(WheelData.bottomSubtitle);
         cDrawables[:SpeedNumber].setText(WheelData.currentSpeed);
 
-        cDrawables[:SpeedArc].setValues(WheelData.currentSpeed, WheelData.maxDialSpeed);
+        cDrawables[:SpeedArc].setValues(WheelData.currentSpeed.toFloat(), WheelData.maxDialSpeed);
         cDrawables[:BatteryArc].setValues(WheelData.batteryPercentage, 100);
         cDrawables[:TemperatureArc].setValues(WheelData.temperature, 50);
 
