@@ -50,8 +50,8 @@ module WheelData {
                 break;
             }
             case :alarms: {
-                WheelData.alarmType = message;
-                // Alarms.alarmHandler();
+                WheelData.alarmType = message.toNumber();
+                Alarms.alarmHandler();
                 break;
             }
         }
