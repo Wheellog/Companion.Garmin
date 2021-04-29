@@ -12,9 +12,9 @@ module Alarms {
     }
 
     function alarmHandler() {
-        // if (WheelData.alarmType != 0) {
+        if (WheelData.alarmType != 0) {
             Attention.vibrate(alarmProfile);
-        // }
+        }
     }
 
     var alarmProfile = [
