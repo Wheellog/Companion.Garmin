@@ -11,18 +11,11 @@ class PageArcRenderer extends WatchUi.Drawable {
     function draw(dc) {
         dc.setColor(mArcColor, 0x000000);
         dc.setPenWidth(15);
-        var percentage = 1;
-        if (detailView_currentlyOnScreen != 0) {
-            percentage = detailView_maxScreens.toFloat() / detailView_currentlyOnScreen.toFloat();
-        } 
 
-        var startDegree, endDegree;
+        // Here we calculate start and end degree for arc renderer
 
-        var d = 180 * percentage;
-
-        startDegree = 90 + d;
-
-        endDegree = 270 - (d * detailView_maxScreens - 1);
+        var startDegree = ((180 / detailView_maxScreens) * (detailView_currentlyOnScreen - 1)) + 90;
+        var endDegree = startDegree + (180 / detailView_maxScreens);
 
         dc.drawArc(
             System.getDeviceSettings().screenWidth / 2,
