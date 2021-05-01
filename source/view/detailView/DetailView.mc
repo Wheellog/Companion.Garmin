@@ -4,8 +4,8 @@ using Toybox.Application;
 using Toybox.System;
 using Toybox.Graphics;
 
-var detailView_currentlyOnScreen = 0;
-var detailView_maxScreens = 2; // Start to count from 0
+var detailView_currentlyOnScreen = 1;
+var detailView_maxScreens = 3; // Start to count from 1
 
 class DetailView extends WatchUi.View {
     private var cDrawables = {}; // cached drawables
@@ -53,7 +53,7 @@ class DetailView extends WatchUi.View {
     // Update the view
     function onUpdate(dc) {
         switch (detailView_currentlyOnScreen) {
-            case 0:
+            case 1:
                 // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:AverageSpeed]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:TopSpeed]);
@@ -61,7 +61,7 @@ class DetailView extends WatchUi.View {
                 cDrawables[:FirstSectionData].setText(Lang.format(cStrings[:SpeedData], [WheelData.averageSpeed]));
                 cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:SpeedData], [WheelData.topSpeed]));
                 break;
-            case 1:
+            case 2:
                 // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:Voltage]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:BatteryPercentage]);
@@ -69,7 +69,7 @@ class DetailView extends WatchUi.View {
                 cDrawables[:FirstSectionData].setText(Lang.format(cStrings[:BatteryVoltageData], [WheelData.batteryVoltage]));
                 cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:BatteryPercentageData], [WheelData.batteryPercentage]));
                 break;
-            case 2:
+            case 3:
                 // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:RideTime]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:Distance]);
@@ -91,7 +91,7 @@ class DetailView extends WatchUi.View {
     }
 
     function moveUp() {
-        if (detailView_currentlyOnScreen == 0) {
+        if (detailView_currentlyOnScreen == 1) {
             WatchUi.switchToView(new HomeView(), new HomeViewDelegate(), WatchUi.SLIDE_DOWN);
         } else {
             detailView_currentlyOnScreen--;
