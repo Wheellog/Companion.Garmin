@@ -54,11 +54,11 @@ class HomeView extends WatchUi.View {
         cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.batteryPercentage]));
         cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.temperature]));
         cDrawables[:BottomSubtitle].setText(WheelData.bottomSubtitle);
-        var speedNumber = 0;
+        var speedNumber;
         if (WheelData.currentSpeed.toNumber() >= 10) {
             speedNumber = WheelData.currentSpeed.toNumber();
         } else {
-            speedNumber = WheelData.currentSpeed.toFloat();
+            speedNumber = WheelData.currentSpeed;
         }
         cDrawables[:SpeedNumber].setText(speedNumber.toString());
 
@@ -70,9 +70,6 @@ class HomeView extends WatchUi.View {
         View.onUpdate(dc);
     }
 
-    // Called when this View is removed from the screen. Save the
-    // state of this View here. This includes freeing resources from
-    // memory.
     function onHide() {
 
     }	
