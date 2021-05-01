@@ -1,6 +1,6 @@
 <layout id="DetailsLayout">
     <drawable id="PageIndicator" class="PageArcRenderer">
-        <param name="arcColor">Graphics.COLOR_BLUE</param>
+        <param name="arcColor">Graphics.COLOR_WHITE</param>
         <param name="arcWidth">10</param>
     </drawable>
 
