@@ -1,8 +1,9 @@
 <layout id="DetailsLayout">
-    <!-- <shape type="rectangle"
-        x="15%"
-        y="center"
-        width="" /> -->
+    <drawable id="PageIndicator" class="PageArcRenderer">
+        <param name="arcColor">Graphics.COLOR_BLUE</param>
+        <param name="arcWidth">10</param>
+    </drawable>
+
     <label id="FirstSectionLabel" text="First label" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
     <label id="FirstSectionData" text="0" x="50%" y="27%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
 
