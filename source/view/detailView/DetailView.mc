@@ -37,10 +37,6 @@ class DetailView extends WatchUi.View {
         cStrings[:RideDistanceData] = WatchUi.loadResource(Rez.Strings.DetailView_RideDistanceData);
 
         WheelData.webDataSource = "details";
-
-        dc.setColor(Graphics.COLOR_BLUE, 0x000000);
-        dc.setPenWidth(15);
-        dc.drawText(100, 100, Graphics.FONT_LARGE, "", Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // Called when this View is brought to the foreground. Restore
