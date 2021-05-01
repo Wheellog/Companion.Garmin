@@ -1,9 +1,11 @@
 using Toybox.WatchUi;
 using Toybox.Communications;
 using Toybox.Application;
+using Toybox.System;
+using Toybox.Graphics;
 
-var currentlyOnScreen = 0;
-var maxScreens = 2; // Start to count from 0
+var detailView_currentlyOnScreen = 1;
+var detailView_maxScreens = 3; // Start to count from 1
 
 class DetailView extends WatchUi.View {
     private var cDrawables = {}; // cached drawables
@@ -35,6 +37,10 @@ class DetailView extends WatchUi.View {
         cStrings[:RideDistanceData] = WatchUi.loadResource(Rez.Strings.DetailView_RideDistanceData);
 
         WheelData.webDataSource = "details";
+
+        dc.setColor(Graphics.COLOR_BLUE, 0x000000);
+        dc.setPenWidth(15);
+        dc.drawText(100, 100, Graphics.FONT_LARGE, "", Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -46,8 +52,8 @@ class DetailView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc) {
-        switch (currentlyOnScreen) {
-            case 0:
+        switch (detailView_currentlyOnScreen) {
+            case 1:
                 // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:AverageSpeed]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:TopSpeed]);
@@ -55,7 +61,7 @@ class DetailView extends WatchUi.View {
                 cDrawables[:FirstSectionData].setText(Lang.format(cStrings[:SpeedData], [WheelData.averageSpeed]));
                 cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:SpeedData], [WheelData.topSpeed]));
                 break;
-            case 1:
+            case 2:
                 // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:Voltage]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:BatteryPercentage]);
@@ -63,7 +69,7 @@ class DetailView extends WatchUi.View {
                 cDrawables[:FirstSectionData].setText(Lang.format(cStrings[:BatteryVoltageData], [WheelData.batteryVoltage]));
                 cDrawables[:SecondSectionData].setText(Lang.format(cStrings[:BatteryPercentageData], [WheelData.batteryPercentage]));
                 break;
-            case 2:
+            case 3:
                 // Set names
                 cDrawables[:FirstSectionLabel].setText(cStrings[:RideTime]);
                 cDrawables[:SecondSectionLabel].setText(cStrings[:Distance]);
@@ -85,17 +91,17 @@ class DetailView extends WatchUi.View {
     }
 
     function moveUp() {
-        if (currentlyOnScreen == 0) {
+        if (detailView_currentlyOnScreen == 1) {
             WatchUi.switchToView(new HomeView(), new HomeViewDelegate(), WatchUi.SLIDE_DOWN);
         } else {
-            currentlyOnScreen--;
+            detailView_currentlyOnScreen--;
         }
         WatchUi.requestUpdate();
     }
 
     function moveDown() {
-        if (currentlyOnScreen != maxScreens) {
-            currentlyOnScreen++;
+        if (detailView_currentlyOnScreen != detailView_maxScreens) {
+            detailView_currentlyOnScreen++;
         }
         WatchUi.requestUpdate();
     }
