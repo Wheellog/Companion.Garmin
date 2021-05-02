@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added:
 - Page indicator to details ([#24](https://github.com/Wheellog/WheelLog.Garmin/issues/24))
 
+### Changed:
+- Font to Prime, the one that was used in WheelLog.Android
+
 ---
 
 ## [[1.0.0 Beta 5] - 30.04.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0-beta5)
