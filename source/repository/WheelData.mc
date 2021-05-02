@@ -59,22 +59,22 @@ module WheelData {
 }
 
 function setIsAppConnected(data) {
-        var previousState = WheelData.isAppConnected;
-        WheelData.isAppConnected = data;
+    var previousState = WheelData.isAppConnected;
+    WheelData.isAppConnected = data;
 
-        if (WheelData.isAppConnected == true) {
-            WatchUi.popView(WatchUi.SLIDE_DOWN);
+    if (WheelData.isAppConnected == true && previousState == false) {
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
 
-            var method = new Lang.Method($, :WheelData_updateData);
-            WheelData.dataUpdateTimer.start(method, 400, true); // Start a timer routine for constantly getting data from the phone
-        } else if (WheelData.isAppConnected == false) {
-            var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp), null);
-            WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP);
-            if (WheelData.dataUpdateTimer == null) {
-                WheelData.dataUpdateTimer.stop(); // Shut down timer, bc it will malfunction if no server is up and running
-            }
+        var method = new Lang.Method($, :WheelData_updateData);
+        WheelData.dataUpdateTimer.start(method, 400, true); // Start a timer routine for constantly getting data from the phone
+    } else if (WheelData.isAppConnected == false) {
+        var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp), null);
+        WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP);
+        if (WheelData.dataUpdateTimer == null) {
+            WheelData.dataUpdateTimer.stop(); // Shut down timer, bc it will malfunction if no server is up and running
         }
     }
+}
 
 function WheelData_updateData() {
     var options = {
