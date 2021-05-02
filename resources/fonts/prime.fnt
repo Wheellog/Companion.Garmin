@@ -8,3 +8,4 @@ char id=50   x=88    y=1     width=38    height=55    xoffset=0     yoffset=0   
 char id=51   x=133   y=1     width=34    height=55    xoffset=0     yoffset=0     xadvance=34    page=0  chnl=15
 char id=52   x=174   y=1     width=38    height=55    xoffset=0     yoffset=0     xadvance=38    page=0  chnl=15
 char id=53   x=218   y=1     width=35    height=55    xoffset=0     yoffset=0     xadvance=35    page=0  chnl=15
+char id=54   x=262   y=1     width=37    height=55    xoffset=0     yoffset=0     xadvance=37    page=0  chnl=15
