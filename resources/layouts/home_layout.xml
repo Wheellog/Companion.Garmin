@@ -1,5 +1,5 @@
 <layout id="HomeLayout">
-    <label id="TimeDate" text="00:00" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="@Fonts.SmallSemiBold"></label>
+    <label id="TimeDate" text="00:00" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="@Fonts.PrimeTime"></label>
 
     <drawable id="SpeedDial" class="ArcRenderer">
         <!-- Colors -->
