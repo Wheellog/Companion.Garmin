@@ -2,15 +2,16 @@ using Toybox.WatchUi;
 using Toybox.System;
 
 class PageArcRenderer extends WatchUi.Drawable {
-    var mArcColor;
+    var mArcColor, mArcWidth;
     function initialize(params) {
         Drawable.initialize(params);
         mArcColor = params[:arcColor];
+        mArcWidth = params[:arcWidth];
     }
 
     function draw(dc) {
         dc.setColor(mArcColor, 0x000000);
-        dc.setPenWidth(15);
+        dc.setPenWidth(mArcWidth);
 
         // Here we calculate start and end degree for arc renderer
 
