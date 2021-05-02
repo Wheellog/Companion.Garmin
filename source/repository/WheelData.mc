@@ -12,7 +12,7 @@ module WheelData {
         bluetooth,
         useMph,
         maxDialSpeed = 40,
-        rideTime,
+        rideTime = "",
         rideDistance,
         averageSpeed,
         topSpeed,
