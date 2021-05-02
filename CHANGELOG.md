@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed:
 - Font to Prime, the one that was used in WheelLog.Android
+- Fixed [#34](https://github.com/Wheellog/WheelLog.Garmin/issues/34)
 
 ---
 
