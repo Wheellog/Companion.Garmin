@@ -5,7 +5,7 @@ using Toybox.Communications;
 using Toybox.System;
 
 module WheelData {
-    var currentSpeed = "26",
+    var currentSpeed = "0.0",
         batteryPercentage = 0,
         batteryVoltage,
         temperature = 0,
