@@ -7,6 +7,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() {
+        WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
         return true;
     }
 
