@@ -17,7 +17,7 @@ module WheelData {
         averageSpeed,
         topSpeed,
         power,
-        pwm,
+        pwm = 0,
         maxPwm,
         alarmType,
         bottomSubtitle = "";
