@@ -27,7 +27,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             );
             WatchUi.pushView(menu, new SettingsMenuTwoDelegate(), WatchUi.SLIDE_UP);
         } else {
-            WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
+            WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SettingsMenu2Delegate(), WatchUi.SLIDE_UP);
         }
         return true;
     }
