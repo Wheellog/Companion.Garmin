@@ -8,9 +8,9 @@ class SpeedArcPwmConfirmationController extends WatchUi.ConfirmationDelegate {
 
     function onResponse(response) {
         if (response == WatchUi.CONFIRM_NO) {
-            System.println("Cancel");
+            AppSettings.setValue(:showPwmInsteadOfSpeed, false);
         } else {
-            System.println("Confirm");
+            AppSettings.setValue(:showPwmInsteadOfSpeed, true);
         }
     }
 }
