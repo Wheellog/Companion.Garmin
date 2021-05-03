@@ -114,23 +114,17 @@ function WheelData_updateData(dataSource) {
 function WheelData_mainResponseCallback(responseCode, data) {
     if (responseCode == 200) {
         WheelData.parseServerData(data, :main);
-    } else {
-        WheelData.bottomSubtitle = "Failed";
     }
 }
 
 function WheelData_detailsResponseCallback(responseCode, data) {        
     if (responseCode == 200) {
         WheelData.WheelData.parseServerData(data, :details);
-    } else {
-        WheelData.bottomSubtitle = "Failed";
     }
 }
 
 function WheelData_alarmsResponseCallback(responseCode, data) {
     if (responseCode == 200) {
         WheelData.parseServerData(data, :alarms);
-    } else {
-        WheelData.bottomSubtitle = "Failed";
     }
 }
