@@ -69,8 +69,9 @@ function setIsAppConnected(data) {
     if (WheelData.isAppConnected == true && previousState == false) {
         WatchUi.popView(WatchUi.SLIDE_DOWN);
 
-        var method = new Lang.Method($, :WheelData_updateData);
+        var method = new Lang.Method($, :WheelData_updateData2);
         WheelData.dataUpdateTimer.start(method, 400, true); // Start a timer routine for constantly getting data from the phone
+        WheelData_updateData("details");
     } else if (WheelData.isAppConnected == false) {
         var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp), null);
         WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP);
@@ -80,7 +81,11 @@ function setIsAppConnected(data) {
     }
 }
 
-function WheelData_updateData() {
+function WheelData_updateData2() {
+    WheelData_updateData(WheelData.webDataSource);
+}
+
+function WheelData_updateData(dataSource) {
     var options = {
         :method => Communications.HTTP_REQUEST_METHOD_GET,
         :headers => {},
@@ -93,7 +98,7 @@ function WheelData_updateData() {
     Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/alarms", null, options, alarmMethod);
 
     // And get only data needed
-    switch (WheelData.webDataSource) {
+    switch (dataSource) {
         case "home":
             var mainMethod = new Lang.Method($, :WheelData_mainResponseCallback);
             Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/main", null, options, mainMethod);
