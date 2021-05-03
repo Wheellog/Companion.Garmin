@@ -2,7 +2,6 @@
     <string id="AppName">WheelLog</string>
 
     <string id="MainMenu_Title">Настройки</string>
-    <string id="MainMenu_ShowVoltageInsteadOfPercentage">Вольты вместо процентов</string>
     <string id="Enabled">Включено</string>
     <string id="Disabled">Выключено</string>
     <string id="Kmh">км/ч</string>

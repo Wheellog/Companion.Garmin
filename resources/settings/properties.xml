@@ -1,4 +1,3 @@
 <properties>
-    <property id="showVoltageInsteadOfPercentage" type="boolean">false</property>
-    <property id="timeWithSeconds" type="boolean">false</property>
+    <property id="showPwmInsteadOfSpeed" type="boolean">false</property>
 </properties>

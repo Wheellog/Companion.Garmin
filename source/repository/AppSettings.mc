@@ -1,5 +1,5 @@
 using Toybox.Application;
-using Toybox.Application.Storage;
+using Toybox.Application.Properties;
 using Toybox.System;
 
 module AppSettings {
@@ -12,7 +12,7 @@ module AppSettings {
                 System.println(value);
                 if (Toybox.Application has :Storage) {
                     System.println("Storage");
-                    Storage.setValue("showPwmInsteadOfSpeed", value);
+                    Properties.setValue("showPwmInsteadOfSpeed", value);
                 } else {
                     System.println("AppBase");
                     Application.getApp().setProperty("showPwmInsteadOfSpeed", value);
@@ -25,9 +25,11 @@ module AppSettings {
     function getValue(key) {
         switch (key) {
             case :showPwmInsteadOfSpeed: {
-                if (Toybox.Application has :Storage) {
-                    showPwmInsteadOfSpeed = Storage.getValue("showPwmInsteadOfSpeed");
+                if (Toybox.Application has :Properties) {
+                    System.println("Has properties");
+                    showPwmInsteadOfSpeed = Properties.getValue("showPwmInsteadOfSpeed");
                 } else {
+                    System.println("no properties");
                     showPwmInsteadOfSpeed = Application.getApp().getProperty("showPwmInsteadOfSpeed");
                 }
                 return showPwmInsteadOfSpeed;

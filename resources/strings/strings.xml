@@ -2,7 +2,7 @@
     <string id="AppName">WheelLog</string>
 
     <string id="MainMenu_Title">Settings</string>
-    <string id="MainMenu_ShowVoltageInsteadOfPercentage">Voltage instead of percents</string>
+    <string id="MainMenu_ShowPwmInsteadOfSpeed">Show PWM on speed arc</string>
     <string id="Enabled">Enabled</string>
     <string id="Disabled">Disabled</string>
     <string id="Kmh">km/h</string>
