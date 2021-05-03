@@ -17,6 +17,21 @@ module AppSettings {
                     System.println("AppBase");
                     Application.getApp().setProperty("showPwmInsteadOfSpeed", value);
                 }
+                break;
+            }
+        }
+    }
+
+    function getValue(key) {
+        switch (key) {
+            case :showPwmInsteadOfSpeed: {
+                if (Toybox.Application has :Storage) {
+                    showPwmInsteadOfSpeed = Storage.getValue("showPwmInsteadOfSpeed");
+                } else {
+                    showPwmInsteadOfSpeed = Application.getApp().getProperty("showPwmInsteadOfSpeed");
+                }
+                return showPwmInsteadOfSpeed;
+                break;
             }
         }
     }
