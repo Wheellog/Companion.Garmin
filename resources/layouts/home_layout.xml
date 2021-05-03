@@ -65,6 +65,6 @@
         x="50%"
         y="82%"
         justification="Gfx.TEXT_JUSTIFY_CENTER"
-        font="Graphics.FONT_SMALL"
+        font="@Fonts.PrimeSmall"
         color="0xA4A4A4" />
 </layout>
