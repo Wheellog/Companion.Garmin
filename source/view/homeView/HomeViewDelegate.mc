@@ -1,4 +1,5 @@
 using Toybox.WatchUi;
+using Toybox.System;
 
 class HomeViewDelegate extends WatchUi.BehaviorDelegate {
 
@@ -7,6 +8,27 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() {
+        if (Toybox.WatchUi has :Menu2) {
+            var menu = new WatchUi.Menu2({
+                :title => "Settings"
+            });
+
+            menu.addItem(
+                new ToggleMenuItem(
+                    "Show PWM on speed arc",
+                    {
+                        :enabled => "Enabled",
+                        :disabled => "Disabled"
+                    },
+                    "SpeedArcData",
+                    AppSettings.getValue(:showPwmInsteadOfSpeed),
+                    null
+                )
+            );
+            WatchUi.pushView(menu, new SettingsMenu2Delegate(), WatchUi.SLIDE_UP);
+        } else {
+            WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
+        }
         return true;
     }
 
