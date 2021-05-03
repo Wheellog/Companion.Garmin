@@ -62,11 +62,9 @@ class HomeView extends WatchUi.View {
         }
         cDrawables[:SpeedNumber].setText(speedNumber.toString());
 
-        if (AppSettings.showPwmInsteadOfSpeed == true) {
-            System.println("pwm arc");
+        if (AppSettings.getValue(:showPwmInsteadOfSpeed) == true) {
             cDrawables[:SpeedArc].setValues(WheelData.pwm, 100);
         } else {
-            System.println("speed arc");
             cDrawables[:SpeedArc].setValues(WheelData.currentSpeed.toFloat(), WheelData.maxDialSpeed);
         }
         cDrawables[:BatteryArc].setValues(WheelData.batteryPercentage, 100);
