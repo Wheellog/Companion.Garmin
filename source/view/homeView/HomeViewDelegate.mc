@@ -10,15 +10,15 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     function onMenu() {
         if (Toybox.WatchUi has :Menu2) {
             var menu = new WatchUi.Menu2({
-                :title => "Settings"
+                :title => Rez.Strings.MainMenu_Title
             });
 
             menu.addItem(
                 new ToggleMenuItem(
-                    "Show PWM on speed arc",
+                    Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed,
                     {
-                        :enabled => "Enabled",
-                        :disabled => "Disabled"
+                        :enabled => Rez.Strings.Enabled,
+                        :disabled => Rez.Strings.Disabled
                     },
                     "SpeedArcData",
                     AppSettings.getValue(:showPwmInsteadOfSpeed),
