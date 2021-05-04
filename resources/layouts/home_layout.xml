@@ -8,15 +8,14 @@
         <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
         <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
         <!-- Dial size n' position -->
-        <param name="startDegree">225</param>
-        <param name="endDegree">-45</param>
+        <param name="startDegree">220</param>
+        <param name="endDegree">-40</param>
         <param name="xCenterPosition">:center</param>
         <param name="yCenterPosition">:center</param>
         <param name="arcRadius">:max</param>
         <param name="arcSize">50</param>
         <param name="arcDirection">Gfx.ARC_CLOCKWISE</param>
         <param name="arcType">:speedArc</param>
-        <!-- Data -->
     </drawable>
     <label id="SpeedNumber" text="22" x="50%" y="50%" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER" font="@Fonts.Prime" color="Gfx.COLOR_WHITE" />
 
