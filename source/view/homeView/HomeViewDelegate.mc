@@ -25,6 +25,18 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                     null
                 )
             );
+            menu.addItem(
+                new ToggleMenuItem(
+                    Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed,
+                    {
+                        :enabled => Rez.Strings.MainMenu_AppTheme_Dark,
+                        :disabled => Rez.Strings.MainMenu_AppTheme_Light
+                    },
+                    "AppTheme",
+                    AppSettings.getValue(:showPwmInsteadOfSpeed),
+                    null
+                )
+            )
             WatchUi.pushView(menu, new SettingsMenu2Delegate(), WatchUi.SLIDE_UP);
         } else {
             WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
