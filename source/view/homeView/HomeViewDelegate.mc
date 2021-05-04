@@ -27,13 +27,13 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             );
             menu.addItem(
                 new ToggleMenuItem(
-                    Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed,
+                    Rez.Strings.MainMenu_AppTheme,
                     {
                         :enabled => Rez.Strings.MainMenu_AppTheme_Dark,
                         :disabled => Rez.Strings.MainMenu_AppTheme_Light
                     },
                     "AppTheme",
-                    AppSettings.getValue(:showPwmInsteadOfSpeed),
+                    AppSettings.getValue(:appTheme),
                     null
                 )
             )
