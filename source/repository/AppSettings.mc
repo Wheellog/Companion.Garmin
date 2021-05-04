@@ -10,9 +10,9 @@ module AppSettings {
             case :showPwmInsteadOfSpeed: {
                 showPwmInsteadOfSpeed = value;
                 if (Toybox.Application has :Storage) {
-                    Properties.setValue("showPwmInsteadOfSpeed", value);
+                    Properties.setValue("ShowPwmInsteadOfSpeed", value);
                 } else {
-                    Application.getApp().setProperty("showPwmInsteadOfSpeed", value);
+                    Application.getApp().setProperty("ShowPwmInsteadOfSpeed", value);
                 }
                 break;
             }
@@ -23,9 +23,9 @@ module AppSettings {
         switch (key) {
             case :showPwmInsteadOfSpeed: {
                 if (Toybox.Application has :Properties) {
-                    showPwmInsteadOfSpeed = Properties.getValue("showPwmInsteadOfSpeed");
+                    showPwmInsteadOfSpeed = Properties.getValue("ShowPwmInsteadOfSpeed");
                 } else {
-                    showPwmInsteadOfSpeed = Application.getApp().getProperty("showPwmInsteadOfSpeed");
+                    showPwmInsteadOfSpeed = Application.getApp().getProperty("ShowPwmInsteadOfSpeed");
                 }
                 return showPwmInsteadOfSpeed;
                 break;
