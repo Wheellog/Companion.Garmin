@@ -14,6 +14,14 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                 } else {
                     AppSettings.setValue(:showPwmInsteadOfSpeed, true);
                 }
+                break;
+            }
+            case "AppTheme": {
+                if (AppSettings.getValue(:appTheme) == 1) {
+                    AppSettings.setValue(:appTheme, false);
+                } else {
+                    AppSettings.setValue(:appTheme, true);
+                }
             }
         }
     }

@@ -27,9 +27,9 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             );
             var appThemeValue;
             if (AppSettings.getValue(:appTheme) == 1){
-                appThemeValue = true;
-            } else {
                 appThemeValue = false;
+            } else {
+                appThemeValue = true;
             }
             menu.addItem(
                 new ToggleMenuItem(
