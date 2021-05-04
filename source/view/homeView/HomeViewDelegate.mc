@@ -16,10 +16,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             menu.addItem(
                 new ToggleMenuItem(
                     Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed,
-                    {
-                        :enabled => Rez.Strings.Enabled,
-                        :disabled => Rez.Strings.Disabled
-                    },
+                    null,
                     "SpeedArcData",
                     AppSettings.getValue(:showPwmInsteadOfSpeed),
                     null
