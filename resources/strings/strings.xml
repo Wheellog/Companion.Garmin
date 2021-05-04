@@ -3,6 +3,9 @@
 
     <string id="MainMenu_Title">Settings</string>
     <string id="MainMenu_ShowPwmInsteadOfSpeed">Show PWM on speed arc</string>
+    <string id="MainMenu_AppTheme">App Theme</string>
+    <string id="MainMenu_AppTheme_Light">Light</string>
+    <string id="MainMenu_AppTheme_Dark">Light</string>
     <string id="Enabled">Enabled</string>
     <string id="Disabled">Disabled</string>
     <string id="Kmh">km/h</string>
