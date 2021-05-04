@@ -3,7 +3,7 @@ using Toybox.Application.Properties;
 using Toybox.System;
 
 module AppSettings {
-    var showPwmInsteadOfSpeed = false;
+    var showPwmInsteadOfSpeed;
 
     function setValue(key, value) {
         switch (key) {
@@ -13,6 +13,14 @@ module AppSettings {
                     Properties.setValue("ShowPwmInsteadOfSpeed", value);
                 } else {
                     Application.getApp().setProperty("ShowPwmInsteadOfSpeed", value);
+                }
+                break;
+            }
+            case :appTheme: {
+                if (Toybox.Application has :Storage) {
+                    Properties.setValue("AppTheme", value);
+                } else {
+                    Application.getApp().setProperty("AppTheme", value);
                 }
                 break;
             }
@@ -29,6 +37,13 @@ module AppSettings {
                 }
                 return showPwmInsteadOfSpeed;
                 break;
+            }
+            case :appTheme: {
+                if (Toybox.Application has :Storage) {
+                    Properties.getValue("AppTheme");
+                } else {
+                    Application.getApp().getProperty("AppTheme");
+                }
             }
         }
     }
