@@ -18,3 +18,4 @@ char id=37   x=143 y=0    width=13     height=17    xoffset=0     yoffset=0     
 char id=176  x=158 y=0    width=5      height=17    xoffset=0     yoffset=0     xadvance=5      page=0  chnl=15
 char id=47   x=164 y=0    width=11     height=17    xoffset=0     yoffset=0     xadvance=11     page=0  chnl=15
 char id=92   x=175 y=0    width=11     height=17    xoffset=0     yoffset=0     xadvance=11     page=0  chnl=15
+char id=32   x=0   y=0    width=1      height=1     xoffset=0     yoffset=0     xadvance=6      page=0  chnl=15
