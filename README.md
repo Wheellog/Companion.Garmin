@@ -18,6 +18,7 @@ Changelog: [here](https://github.com/Wheellog/Companion.Garmin/blob/master/CHANG
 ![screenshot 1](https://raw.githubusercontent.com/Wheellog/Companion.Garmin/master/.github/readme-images/1.png)
 ![screenshot 2](https://raw.githubusercontent.com/Wheellog/Companion.Garmin/master/.github/readme-images/2.png)
 ![screenshot 3](https://raw.githubusercontent.com/Wheellog/Companion.Garmin/master/.github/readme-images/3.png)
+![screenshot 4](https://raw.githubusercontent.com/Wheellog/Companion.Garmin/master/.github/readme-images/4.png)
 
 ## 🛠 Development/Building
 
