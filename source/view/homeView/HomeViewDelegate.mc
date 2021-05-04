@@ -33,7 +33,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onSelect() {
-        Actions.triggerHorn();
+        Actions.triggerHorn(:web);
     }
 
     function onNextPage() {
