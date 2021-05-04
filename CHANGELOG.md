@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [[1.0.0 Beta 5] - 30.04.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0-beta5)
 
 ### Added:
-- Horn support. You can click on Start button on button-controlled smartwatches, or tap on the screen on touch-controller smartwatches
+- Horn support. You can click on Start button on button-controlled smartwatches, or tap on the screen on touch-controller smartwatches, to trigger the horn. 
 - Alarm support. It will vibrate when any alarm is executed
 
 ### Changed:
