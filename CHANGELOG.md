@@ -8,10 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added:
 - Page indicator to details ([#24](https://github.com/Wheellog/WheelLog.Garmin/issues/24))
-- Settings, and;
+- Settings menu, and;
 - First option to settings, it will toggle the speed arc data source, whether it will show PWM or speed. Speed number will still show speed
 
 ### Changed:
+- Arc position, now the bottom parts are symmetrical, like in WheelLog.Android
 - Font in speed, battery, and temperature numbers, also bottom subtitle text to Prime font, used in WheelLog.Android
 - Fixed [#37](https://github.com/Wheellog/WheelLog.Garmin/issues/37)
 - Fixed [#34](https://github.com/Wheellog/WheelLog.Garmin/issues/34)
