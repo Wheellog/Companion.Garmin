@@ -4,10 +4,7 @@ A WheelLog companion for Garmin smartwatches
 
 This app is a rebuild from ground-up of an original Garmin app. I made this app to be with better UI, alarms working, and full support of new devices and their features.
 
-Btw here is the original app repository on [GitHub](https://github.com/marccardinal/WheelLog-Garmin-ConnectIQ).
-
-Here is my [fork of WheelLog](https://github.com/GGorAA/WheelLog.Android), which works with this companion. I also opened a Pull Request, and it will be merged into original WheelLog at the same moment 1.0.0 Stable version of this companion comes out.
-
+[Download from Garmin ConnectIQ Store](https://apps.garmin.com/en-US/apps/35719a02-8a5d-46bc-b474-f26c54c4e045)
 ## 🔤 Important
 
 License: **GPLv3**
