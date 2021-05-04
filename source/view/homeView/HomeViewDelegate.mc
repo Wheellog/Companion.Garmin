@@ -25,6 +25,12 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                     null
                 )
             );
+            var appThemeValue;
+            if (AppSettings.getValue(:appTheme) == 1){
+                appThemeValue = true;
+            } else {
+                appThemeValue = false;
+            }
             menu.addItem(
                 new ToggleMenuItem(
                     Rez.Strings.MainMenu_AppTheme,
@@ -33,10 +39,10 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                         :disabled => Rez.Strings.MainMenu_AppTheme_Light
                     },
                     "AppTheme",
-                    AppSettings.getValue(:appTheme),
+                    appThemeValue,
                     null
                 )
-            )
+            );
             WatchUi.pushView(menu, new SettingsMenu2Delegate(), WatchUi.SLIDE_UP);
         } else {
             WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
