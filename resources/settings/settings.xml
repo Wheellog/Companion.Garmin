@@ -4,8 +4,8 @@
     </setting>
     <setting propertyKey="@Properties.AppTheme" title="@Strings.MainMenu_AppTheme">
         <settingConfig type="list">
-            <listEntry value="true">@Strings.MainMenu_AppTheme_Light</listEntry>
-            <listEntry value="false">@Strings.MainMenu_AppTheme_Dark</listEntry>
+            <listEntry value="0">@Strings.MainMenu_AppTheme_Light</listEntry>
+            <listEntry value="1">@Strings.MainMenu_AppTheme_Dark</listEntry>
         </settingConfig>
     </setting>
 </settings>
