@@ -12,6 +12,9 @@ class SettingsMenuDelegate extends WatchUi.MenuInputDelegate {
             case :SpeedArcData: {
                 WatchUi.pushView(new WatchUi.Confirmation("Enabled"), new SpeedArcPwmConfirmationController(), WatchUi.SLIDE_UP);
             }
+            case :AppTheme: {
+                WatchUi.pushView(new Rez.Menus.AppThemeMenu(), new AppThemeMenuController(), WatchUi.SLIDE_UP);
+            }
         }
     }
 }
