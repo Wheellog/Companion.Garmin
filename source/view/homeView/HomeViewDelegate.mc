@@ -32,14 +32,10 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                 appThemeValue = true;
             }
             menu.addItem(
-                new ToggleMenuItem(
+                new MenuItem(
                     Rez.Strings.MainMenu_AppTheme,
-                    {
-                        :enabled => Rez.Strings.MainMenu_AppTheme_Dark,
-                        :disabled => Rez.Strings.MainMenu_AppTheme_Light
-                    },
+                    null,
                     "AppTheme",
-                    appThemeValue,
                     null
                 )
             );

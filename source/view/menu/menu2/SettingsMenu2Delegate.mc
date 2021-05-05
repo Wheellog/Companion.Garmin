@@ -17,11 +17,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                 break;
             }
             case "AppTheme": {
-                if (AppSettings.getValue(:appTheme) == 1) {
-                    AppSettings.setValue(:appTheme, false);
-                } else {
-                    AppSettings.setValue(:appTheme, true);
-                }
+                WatchUi.pushView(new Rez.Menus.AppThemeMenu(), new AppThemeMenuController(), WatchUi.SLIDE_LEFT);
             }
         }
     }
