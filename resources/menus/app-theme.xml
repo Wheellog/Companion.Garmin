@@ -1,0 +1,4 @@
+<menu id="AppThemeMenu" title="Choose theme">
+    <menu-item id="LightTheme" label="Light theme" />
+    <menu-item id="DarkTheme" label="Dark theme" />
+</menu>
