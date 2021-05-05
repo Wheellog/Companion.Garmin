@@ -26,7 +26,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                 )
             );
             var appThemeValue;
-            if (AppSettings.getValue(:appTheme) == 1){
+            if (AppSettings.getValue(:appTheme) == 0){
                 appThemeValue = false;
             } else {
                 appThemeValue = true;
