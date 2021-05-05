@@ -61,7 +61,11 @@ class ArcRenderer extends WatchUi.Drawable {
     }
     function draw(dc) {
         // Rendering background arc
-        dc.setColor(0x323232, 0x000000);
+        if (AppSettings.getValue(:appTheme) == 0) {
+            dc.setColor(Graphics.COLOR_LT_GRAY, 0x000000);
+        } else {
+            dc.setColor(0x323232, 0x000000);
+        }
         dc.setPenWidth(mArcSize);
         dc.drawArc(
             mXCenterPosition,
