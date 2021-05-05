@@ -3,13 +3,14 @@ using Toybox.Application.Properties;
 using Toybox.System;
 
 module AppSettings {
-    var showPwmInsteadOfSpeed;
+    var showPwmInsteadOfSpeed = null;
+    var appTheme = null;
 
     function setValue(key, value) {
         switch (key) {
             case :showPwmInsteadOfSpeed: {
                 showPwmInsteadOfSpeed = value;
-                if (Toybox.Application has :Storage) {
+                if (Toybox.Application has :Properties) {
                     Properties.setValue("ShowPwmInsteadOfSpeed", value);
                 } else {
                     Application.getApp().setProperty("ShowPwmInsteadOfSpeed", value);
@@ -17,7 +18,8 @@ module AppSettings {
                 break;
             }
             case :appTheme: {
-                if (Toybox.Application has :Storage) {
+                appTheme = value;
+                if (Toybox.Application has :Properties) {
                     Properties.setValue("AppTheme", value);
                 } else {
                     Application.getApp().setProperty("AppTheme", value);
@@ -31,19 +33,28 @@ module AppSettings {
         switch (key) {
             case :showPwmInsteadOfSpeed: {
                 if (Toybox.Application has :Properties) {
-                    showPwmInsteadOfSpeed = Properties.getValue("ShowPwmInsteadOfSpeed");
+                    if (showPwmInsteadOfSpeed == null) {
+                        showPwmInsteadOfSpeed = Properties.getValue("ShowPwmInsteadOfSpeed");
+                    }
                 } else {
-                    showPwmInsteadOfSpeed = Application.getApp().getProperty("ShowPwmInsteadOfSpeed");
+                    if (showPwmInsteadOfSpeed == null) {
+                        showPwmInsteadOfSpeed = Application.getApp().getProperty("ShowPwmInsteadOfSpeed");
+                    }
                 }
                 return showPwmInsteadOfSpeed;
                 break;
             }
             case :appTheme: {
-                if (Toybox.Application has :Storage) {
-                    Properties.getValue("AppTheme");
+                if (Toybox.Application has :Properties) {
+                    if (appTheme == null) {
+                        appTheme = Properties.getValue("AppTheme");
+                    }
                 } else {
-                    Application.getApp().getProperty("AppTheme");
+                    if (appTheme == null) {
+                        appTheme = Application.getApp().getProperty("AppTheme");
+                    }
                 }
+                return appTheme;
             }
         }
     }
