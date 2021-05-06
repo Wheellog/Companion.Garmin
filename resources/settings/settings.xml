@@ -1,5 +1,11 @@
 <settings>
-    <setting propertyKey="@Properties.showPwmInsteadOfSpeed" title="@Strings.MainMenu_ShowPwmInsteadOfSpeed">
+    <setting propertyKey="@Properties.ShowPwmInsteadOfSpeed" title="@Strings.MainMenu_ShowPwmInsteadOfSpeed">
         <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.AppTheme" title="@Strings.MainMenu_AppTheme">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.MainMenu_AppTheme_Light</listEntry>
+            <listEntry value="1">@Strings.MainMenu_AppTheme_Dark</listEntry>
+        </settingConfig>
     </setting>
 </settings>

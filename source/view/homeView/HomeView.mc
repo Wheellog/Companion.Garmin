@@ -41,6 +41,12 @@ class HomeView extends WatchUi.View {
             ":" +
             CurrentTime.min.format("%02d")
         );
+
+        if (AppSettings.getValue(:appTheme) == 0) {
+            cDrawables[:TimeDate].setColor(Graphics.COLOR_BLACK);
+        } else {
+            cDrawables[:TimeDate].setColor(Graphics.COLOR_WHITE);
+        }
     }
 
     // Update the view
@@ -69,6 +75,21 @@ class HomeView extends WatchUi.View {
         }
         cDrawables[:BatteryArc].setValues(WheelData.batteryPercentage, 100);
         cDrawables[:TemperatureArc].setValues(WheelData.temperature, 50);
+
+        // Theme coloring
+        if (AppSettings.getValue(:appTheme) == 0) {
+            cDrawables[:TimeDate].setColor(Graphics.COLOR_BLACK);
+            cDrawables[:SpeedNumber].setColor(Graphics.COLOR_BLACK);
+            cDrawables[:BatteryNumber].setColor(Graphics.COLOR_BLACK);
+            cDrawables[:TemperatureNumber].setColor(Graphics.COLOR_BLACK);
+            cDrawables[:BottomSubtitle].setColor(Graphics.COLOR_BLACK);
+        } else {
+            cDrawables[:TimeDate].setColor(Graphics.COLOR_WHITE);
+            cDrawables[:SpeedNumber].setColor(Graphics.COLOR_WHITE);
+            cDrawables[:BatteryNumber].setColor(Graphics.COLOR_WHITE);
+            cDrawables[:TemperatureNumber].setColor(Graphics.COLOR_WHITE);
+            cDrawables[:BottomSubtitle].setColor(Graphics.COLOR_WHITE);
+        }
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);

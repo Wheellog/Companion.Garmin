@@ -1,3 +1,4 @@
 <properties>
-    <property id="showPwmInsteadOfSpeed" type="boolean">false</property>
+    <property id="ShowPwmInsteadOfSpeed" type="boolean">false</property>
+    <property id="AppTheme" type="number">1</property><!-- If 1, it's dark, if 0, it's light-->
 </properties>
