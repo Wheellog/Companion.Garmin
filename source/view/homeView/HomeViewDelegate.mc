@@ -31,10 +31,16 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             } else {
                 appThemeValue = true;
             }
+            var appThemSubLabel;
+            if (AppSettings.getValue(:appTheme) == 0){
+                appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Light;
+            } else {
+                appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Dark;
+            }
             menu.addItem(
                 new MenuItem(
                     Rez.Strings.MainMenu_AppTheme,
-                    null,
+                    appThemSubLabel,
                     "AppTheme",
                     null
                 )
