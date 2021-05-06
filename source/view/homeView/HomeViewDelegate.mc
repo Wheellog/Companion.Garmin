@@ -22,6 +22,26 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                     null
                 )
             );
+            var appThemeValue;
+            if (AppSettings.getValue(:appTheme) == 0){
+                appThemeValue = false;
+            } else {
+                appThemeValue = true;
+            }
+            var appThemSubLabel;
+            if (AppSettings.getValue(:appTheme) == 0){
+                appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Light;
+            } else {
+                appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Dark;
+            }
+            menu.addItem(
+                new MenuItem(
+                    Rez.Strings.MainMenu_AppTheme,
+                    appThemSubLabel,
+                    "AppTheme",
+                    null
+                )
+            );
             WatchUi.pushView(menu, new SettingsMenu2Delegate(), WatchUi.SLIDE_UP);
         } else {
             WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
