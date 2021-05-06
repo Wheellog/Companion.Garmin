@@ -62,8 +62,8 @@
     <label id="BottomSubtitle"
         text="No data"
         x="50%"
-        y="82%"
+        y="80%"
         justification="Gfx.TEXT_JUSTIFY_CENTER"
-        font="@Fonts.PrimeSmall"
+        font="Gfx.FONT_MEDIUM"
         color="0xA4A4A4" />
 </layout>
