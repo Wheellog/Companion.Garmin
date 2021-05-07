@@ -10,7 +10,12 @@ class SettingsMenuDelegate extends WatchUi.MenuInputDelegate {
     function onMenuItem(item) {
         switch (item) {
             case :SpeedArcData: {
-                WatchUi.pushView(new WatchUi.Confirmation(WatchUi.loadResource(Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed_Title)), new SpeedArcPwmConfirmationController(), WatchUi.SLIDE_RIGHT);
+                WatchUi.pushView(
+                    new WatchUi.Confirmation(
+                        WatchUi.loadResource(Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed_Title)
+                    ),
+                    new SpeedArcPwmConfirmationController(),
+                    WatchUi.SLIDE_RIGHT);
                 break;
             }
             case :AppTheme: {
