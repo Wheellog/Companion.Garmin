@@ -5,6 +5,7 @@
     <string id="MainMenu_ShowPwmInsteadOfSpeed">Показывать ПВМ на арке скорости</string>
     <string id="MainMenu_ShowPwmInsteadOfSpeed_Title">Включено</string>
     <string id="MainMenu_AppTheme">Цветовая тема</string>
+    <string id="MainMenu_AppTheme_Title">Выберите тему</string>
     <string id="MainMenu_AppTheme_Light">Светлая</string>
     <string id="MainMenu_AppTheme_Dark">Темная</string>
 
