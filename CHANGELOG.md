@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [[1.0.0 Stable] - 4.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0)
+## [Unreleased]
+
+### Added:
+- White theme to the home view
+
+### Changed:
+- Fixed issues with some strings not being translated
+
+## [[1.0.0 Stable] - 04.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.0.0)
 
 ### Added:
 - Page indicator to details ([#24](https://github.com/Wheellog/WheelLog.Garmin/issues/24))
