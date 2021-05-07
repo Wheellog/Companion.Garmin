@@ -17,11 +17,10 @@ module WheelData {
         averageSpeed,
         topSpeed,
         power,
-        pwm = 0,
-        maxPwm,
-        alarmType,
-        bottomSubtitle = "";
-
+        pwm = "00",
+        maxPwm = "00",
+        alarmType;
+        
     var webServerPort;
     var isAppConnected = false;
 
@@ -32,25 +31,24 @@ module WheelData {
     function parseServerData(message, dataType) {
         switch (dataType) {
             case :main: {
-                currentSpeed = message["0"];
-                useMph = message["1"];
-                batteryPercentage = message["2"];
-                temperature = message["3"];
-                bottomSubtitle = message["4"];
-                pwm = message["5"];
-                maxPwm = message["6"];
+                currentSpeed = message["speed"];
+                useMph = message["useMph"];
+                batteryPercentage = message["battery"];
+                temperature = message["temp"];
+                pwm = message["pwm"];
+                maxPwm = message["maxPwm"];
                 break;
             }
             case :details: {
-                useMph = message["0"];
-                averageSpeed = message["1"];
-                topSpeed = message["2"];
-                batteryVoltage = message["3"];
-                batteryPercentage = message["4"];
-                rideTime = message["5"];
-                rideDistance = message["6"];
-                pwm = message["7"];
-                maxPwm = message["8"];
+                useMph = message["useMph"];
+                averageSpeed = message["avgSpeed"];
+                topSpeed = message["topSpeed"];
+                batteryVoltage = message["voltage"];
+                batteryPercentage = message["battery"];
+                rideTime = message["ridingTime"];
+                rideDistance = message["distance"];
+                pwm = message["pwm"];
+                maxPwm = message["maxPwm"];
                 break;
             }
             case :alarms: {
