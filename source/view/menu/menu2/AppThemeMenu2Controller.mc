@@ -10,10 +10,12 @@ class AppThemeMenu2Controller extends WatchUi.Menu2InputDelegate {
         switch (item.getId()) {
             case "LightTheme": {
                 AppSettings.setValue(:appTheme, 0);
+                WatchUi.popView(WatchUi.SLIDE_RIGHT);
                 break;
             }
             case "DarkTheme": {
                 AppSettings.setValue(:appTheme, 1);
+                WatchUi.popView(WatchUi.SLIDE_RIGHT);
                 break;
             }
         }

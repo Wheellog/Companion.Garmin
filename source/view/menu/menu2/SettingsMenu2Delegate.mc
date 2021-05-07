@@ -38,7 +38,6 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     )
                 );
                 WatchUi.pushView(menu, new AppThemeMenu2Controller(), WatchUi.SLIDE_LEFT);
-
                 break;
             }
         }
