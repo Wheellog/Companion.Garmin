@@ -19,7 +19,7 @@ class SettingsMenuDelegate extends WatchUi.MenuInputDelegate {
                 break;
             }
             case :AppTheme: {
-                WatchUi.pushView(new Rez.Menus.AppThemeMenu(), new AppThemeMenuController(), WatchUi.SLIDE_RIGHT);
+                WatchUi.pushView(new Rez.Menus.AppThemeMenu(), new AppThemeMenuController(), WatchUi.SLIDE_LEFT);
                 break;
             }
         }
