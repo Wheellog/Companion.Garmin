@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [[1.2.3 Stable] - 08.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.2.3)
 
 ### Changed:
-- Moved the page indicator to the right
+- Moved the page indicator to the right ([#46](https://github.com/Wheellog/WheelLog.Garmin/issues/46))
 - Optimized rendering
 
 ---
