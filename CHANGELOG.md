@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed:
+- Moved the page indicator to the right
+
 ---
 
 ## [[1.2.2 Stable] - 07.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.2.2)
