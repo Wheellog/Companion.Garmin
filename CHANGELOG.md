@@ -4,10 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+---
+
+## [[1.2.2 Stable] - 07.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.2.2)
+
+### Changed:
+- Fixed [#48](https://github.com/Wheellog/WheelLog.Garmin/issues/48)
+- Fixed some strings not being translated
+
+---
+
 ## [[1.2.1 Stable] - 07.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.2.1)
 
 ### Changed:
-- Fixed ([#43](https://github.com/Wheellog/WheelLog.Garmin/issues/43))
+- Fixed [#43](https://github.com/Wheellog/WheelLog.Garmin/issues/43)
+
+---
 
 ## [[1.2.0 Stable] - 07.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.2.0)
 
