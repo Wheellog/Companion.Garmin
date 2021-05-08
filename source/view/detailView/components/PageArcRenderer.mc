@@ -7,6 +7,10 @@ class PageArcRenderer extends WatchUi.Drawable {
         Drawable.initialize(params);
         mArcColor = params[:arcColor];
         mArcWidth = params[:arcWidth];
+
+        if (AppStorage.readFromRuntimeCache("detailView_indicatorSize") == null) {
+            AppStorage.writeToRuntimeCache("detailView_indicatorSize", 180 / detailView_maxScreens);
+        }
     }
 
     function draw(dc) {
@@ -14,15 +18,14 @@ class PageArcRenderer extends WatchUi.Drawable {
         dc.setPenWidth(mArcWidth);
 
         // Here we calculate start and end degree for arc renderer
-
-        var startDegree = ((180 / detailView_maxScreens) * (detailView_currentlyOnScreen - 1)) + 90;
-        var endDegree = startDegree + (180 / detailView_maxScreens);
+        var startDegree = (AppStorage.readFromRuntimeCache("detailView_indicatorSize") - AppStorage.readFromRuntimeCache("detailView_indicatorSize") * detailView_currentlyOnScreen) + 90;
+        var endDegree = startDegree - AppStorage.readFromRuntimeCache("detailView_indicatorSize");
 
         dc.drawArc(
             System.getDeviceSettings().screenWidth / 2,
             System.getDeviceSettings().screenHeight / 2,
             System.getDeviceSettings().screenWidth / 2,
-            Graphics.ARC_COUNTER_CLOCKWISE,
+            Graphics.ARC_CLOCKWISE,
             startDegree,
             endDegree
         );
