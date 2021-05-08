@@ -18,18 +18,18 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                     Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed,
                     null,
                     "SpeedArcData",
-                    AppSettings.getValue(:showPwmInsteadOfSpeed),
+                    AppStorage.getValue(:showPwmInsteadOfSpeed),
                     null
                 )
             );
             var appThemeValue;
-            if (AppSettings.getValue(:appTheme) == 0){
+            if (AppStorage.getValue(:appTheme) == 0){
                 appThemeValue = false;
             } else {
                 appThemeValue = true;
             }
             var appThemSubLabel;
-            if (AppSettings.getValue(:appTheme) == 0){
+            if (AppStorage.getValue(:appTheme) == 0){
                 appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Light;
             } else {
                 appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Dark;

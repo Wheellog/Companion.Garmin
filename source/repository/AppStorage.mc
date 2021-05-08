@@ -2,9 +2,11 @@ using Toybox.Application;
 using Toybox.Application.Properties;
 using Toybox.System;
 
-module AppSettings {
+module AppStorage {
     var showPwmInsteadOfSpeed = null;
     var appTheme = null;
+
+    var _runtimeCache = {};
 
     function setValue(key, value) {
         switch (key) {
@@ -18,7 +20,7 @@ module AppSettings {
                 break;
             }
             case :appTheme: {
-                appTheme = value;
+                _appTheme = value;
                 if (Toybox.Application has :Properties) {
                     Properties.setValue("AppTheme", value);
                 } else {
@@ -29,16 +31,24 @@ module AppSettings {
         }
     }
 
+    function writeToRuntimeCache(key, value) {
+        _runtimeCache[key] = value;
+    }
+
+    function readFromRuntimeCache(key) {
+        return _runtimeCacne[key];
+    }
+
     function getValue(key) {
         switch (key) {
             case :showPwmInsteadOfSpeed: {
                 if (Toybox.Application has :Properties) {
                     if (showPwmInsteadOfSpeed == null) {
-                        showPwmInsteadOfSpeed = Properties.getValue("ShowPwmInsteadOfSpeed");
+                        _showPwmInsteadOfSpeed = Properties.getValue("ShowPwmInsteadOfSpeed");
                     }
                 } else {
                     if (showPwmInsteadOfSpeed == null) {
-                        showPwmInsteadOfSpeed = Application.getApp().getProperty("ShowPwmInsteadOfSpeed");
+                        _showPwmInsteadOfSpeed = Application.getApp().getProperty("ShowPwmInsteadOfSpeed");
                     }
                 }
                 return showPwmInsteadOfSpeed;
@@ -47,11 +57,11 @@ module AppSettings {
             case :appTheme: {
                 if (Toybox.Application has :Properties) {
                     if (appTheme == null) {
-                        appTheme = Properties.getValue("AppTheme");
+                        _appTheme = Properties.getValue("AppTheme");
                     }
                 } else {
                     if (appTheme == null) {
-                        appTheme = Application.getApp().getProperty("AppTheme");
+                        _appTheme = Application.getApp().getProperty("AppTheme");
                     }
                 }
                 return appTheme;
