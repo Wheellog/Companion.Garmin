@@ -6,7 +6,7 @@ module AppStorage {
     var _showPwmInsteadOfSpeed = null;
     var _appTheme = null;
 
-    var _runtimeCache = {};
+    var runtimeCache = {};
 
     function setValue(key, value) {
         switch (key) {
@@ -32,11 +32,11 @@ module AppStorage {
     }
 
     function writeToRuntimeCache(key, value) {
-        _runtimeCache[key] = value;
+        runtimeCache[key] = value;
     }
 
     function readFromRuntimeCache(key) {
-        return _runtimeCache[key];
+        return runtimeCache[key];
     }
 
     function getValue(key) {
