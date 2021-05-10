@@ -33,7 +33,7 @@ module WheelData {
 
             var method = new Lang.Method(DataServer, :updateData_timer);
             WheelData.dataUpdateTimer.start(method, 400, true); // Start a timer routine for constantly getting data from the phone
-            WheelData_updateData("details");
+            DataServer.updateData("details");
         } else if (WheelData.isAppConnected == false) {
             var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp), null);
             WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP);

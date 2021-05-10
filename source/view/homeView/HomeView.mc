@@ -25,7 +25,7 @@ class HomeView extends WatchUi.View {
         cDrawables[:TemperatureArc] = View.findDrawableById("TemperatureArc");
 
         if (!WheelData.isAppConnected) {
-            setIsAppConnected(false);
+            WheelData.setIsAppConnected(false);
         }
 
         AppStorage.runtimeCache["comm_dataSource"] = "home";
