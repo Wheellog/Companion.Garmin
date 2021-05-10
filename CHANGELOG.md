@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A tone on connection/disconnection of the app
 
 ### Changed:
-- Page indicator in details, moved back to the left and changed the design
+- Page indicator in details, moved back to the left and;
+- Redesigned the page indicator, now it is smaller, and looks more like native one
 
 ---
 
