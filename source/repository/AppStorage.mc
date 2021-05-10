@@ -3,31 +3,16 @@ using Toybox.Application.Properties;
 using Toybox.System;
 
 module AppStorage {
-    var _showPwmInsteadOfSpeed = null;
-    var _appTheme = null;
+    var cachedValues = {};
 
     var runtimeCache = {};
 
     function setValue(key, value) {
-        switch (key) {
-            case :showPwmInsteadOfSpeed: {
-                _showPwmInsteadOfSpeed = value;
-                if (Toybox.Application has :Properties) {
-                    Properties.setValue("ShowPwmInsteadOfSpeed", value);
-                } else {
-                    Application.getApp().setProperty("ShowPwmInsteadOfSpeed", value);
-                }
-                break;
-            }
-            case :appTheme: {
-                _appTheme = value;
-                if (Toybox.Application has :Properties) {
-                    Properties.setValue("AppTheme", value);
-                } else {
-                    Application.getApp().setProperty("AppTheme", value);
-                }
-                break;
-            }
+        cachedValues[key] = value;
+        if (Toybox.Application has :Properties) {
+            Properties.setValue(key, value);
+        } else {
+            Application.getApp().setProperty(key, value);
         }
     }
 
@@ -40,32 +25,15 @@ module AppStorage {
     }
 
     function getValue(key) {
-        switch (key) {
-            case :showPwmInsteadOfSpeed: {
-                if (Toybox.Application has :Properties) {
-                    if (_showPwmInsteadOfSpeed == null) {
-                        _showPwmInsteadOfSpeed = Properties.getValue("ShowPwmInsteadOfSpeed");
-                    }
-                } else {
-                    if (_showPwmInsteadOfSpeed == null) {
-                        _showPwmInsteadOfSpeed = Application.getApp().getProperty("ShowPwmInsteadOfSpeed");
-                    }
-                }
-                return _showPwmInsteadOfSpeed;
-                break;
+        if (Toybox.Application has :Properties) {
+            if (cachedValues[key] == null) {
+                cachedValues[key] = Properties.getValue(key);
             }
-            case :appTheme: {
-                if (Toybox.Application has :Properties) {
-                    if (_appTheme == null) {
-                        _appTheme = Properties.getValue("AppTheme");
-                    }
-                } else {
-                    if (_appTheme == null) {
-                        _appTheme = Application.getApp().getProperty("AppTheme");
-                    }
-                }
-                return _appTheme;
+        } else {
+            if (cachedValues[key] == null) {
+                cachedValues[key] = Application.getApp().getProperty(key);
             }
         }
+        return cachedValues[key];
     }
 }
