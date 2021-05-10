@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed:
 - Page indicator in details, moved back to the left and;
 - Redesigned the page indicator, now it is smaller, and looks more like native one
+- Redesigned the details view, according to [this change in WheelLog.Android](https://github.com/Wheellog/Wheellog.Android/pull/193)
 
 ---
 
