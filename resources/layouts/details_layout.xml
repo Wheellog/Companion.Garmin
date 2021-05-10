@@ -1,7 +1,7 @@
 <layout id="DetailsLayout">
     <drawable id="PageIndicator" class="PageArcRenderer">
         <param name="arcColor">Graphics.COLOR_DK_GRAY</param>
-        <param name="arcWidth">15</param>
+        <param name="arcWidth">3</param>
     </drawable>
 
     <label id="FirstSectionData" text="0" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
