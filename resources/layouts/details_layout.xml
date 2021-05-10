@@ -4,9 +4,9 @@
         <param name="arcWidth">15</param>
     </drawable>
 
-    <label id="FirstSectionLabel" text="First label" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
-    <label id="FirstSectionData" text="0" x="50%" y="27%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
+    <label id="FirstSectionData" text="0" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
+    <label id="FirstSectionLabel" text="First label" x="50%" y="30%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
 
-    <label id="SecondSectionLabel" text="Second label" x="50%" y="55%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
-    <label id="SecondSectionData" text="0" x="50%" y="67%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
+    <label id="SecondSectionData" text="0" x="50%" y="55%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
+    <label id="SecondSectionLabel" text="Second label" x="50%" y="70%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
 </layout>
