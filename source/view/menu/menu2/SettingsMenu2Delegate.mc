@@ -9,10 +9,10 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
     function onSelect(item) {
         switch (item.getId()) {
             case "SpeedArcData": {
-                if (AppStorage.getValue(:showPwmInsteadOfSpeed)) {
-                    AppStorage.setValue(:showPwmInsteadOfSpeed, false);
+                if (AppStorage.getValue("showPwmInsteadOfSpeed")) {
+                    AppStorage.setValue("showPwmInsteadOfSpeed", false);
                 } else {
-                    AppStorage.setValue(:showPwmInsteadOfSpeed, true);
+                    AppStorage.setValue("showPwmInsteadOfSpeed", true);
                 }
                 break;
             }

@@ -7,7 +7,7 @@ class BackgroundRenderer extends WatchUi.Drawable {
     }
 
     function draw(dc) {
-        if (AppStorage.getValue(:appTheme) == 0) {
+        if (AppStorage.getValue("appTheme") == 0) {
             dc.setColor(0xFFFFFF, 0x000000);
         } else {
             dc.setColor(0x000000, 0x000000);
