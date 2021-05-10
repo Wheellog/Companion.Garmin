@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- A tone on connection/disconnection of the app
+
+### Changed:
+- Page indicator in details, moved back to the left and changed the design
+
 ---
 
 ## [[1.2.3 Stable] - 08.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/1.2.3)
