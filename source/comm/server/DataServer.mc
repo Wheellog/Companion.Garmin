@@ -35,44 +35,53 @@ module DataServer {
 
     function _mainResponseCallback(responseCode, data) {
         if (responseCode == 200) {
-            WheelData.parseServerData(data, :main);
+            parseServerData(data, :main);
+            AppStorage.runtimeCache["comm_disconnectionCountdown"] = 8;
+        } else {
+            AppStorage.runtimeCache["comm_disconnectionCountdown"]--;
         }
     }
 
 
     function _detailsResponseCallback(responseCode, data) {        
         if (responseCode == 200) {
-            WheelData.WheelData.parseServerData(data, :details);
+            parseServerData(data, :details);
+            AppStorage.runtimeCache["comm_disconnectionCountdown"] = 8;
+        } else {
+            AppStorage.runtimeCache["comm_disconnectionCountdown"]--;
         }
     }
 
     function _alarmsResponseCallback(responseCode, data) {
         if (responseCode == 200) {
-            WheelData.parseServerData(data, :alarms);
+            parseServerData(data, :alarms);
+            AppStorage.runtimeCache["comm_disconnectionCountdown"] = 8;
+        } else {
+            AppStorage.runtimeCache["comm_disconnectionCountdown"]--;
         }
     }
 
     function parseServerData(message, dataType) {
         switch (dataType) {
             case :main: {
-                currentSpeed = message["speed"];
-                useMph = message["useMph"];
-                batteryPercentage = message["battery"];
-                temperature = message["temp"];
-                pwm = message["pwm"];
-                maxPwm = message["maxPwm"];
+                WheelData.currentSpeed = message["speed"];
+                WheelData.useMph = message["useMph"];
+                WheelData.batteryPercentage = message["battery"];
+                WheelData.temperature = message["temp"];
+                WheelData.pwm = message["pwm"];
+                WheelData.maxPwm = message["maxPwm"];
                 break;
             }
             case :details: {
-                useMph = message["useMph"];
-                averageSpeed = message["avgSpeed"];
-                topSpeed = message["topSpeed"];
-                batteryVoltage = message["voltage"];
-                batteryPercentage = message["battery"];
-                rideTime = message["ridingTime"];
-                rideDistance = message["distance"];
-                pwm = message["pwm"];
-                maxPwm = message["maxPwm"];
+                WheelData.useMph = message["useMph"];
+                WheelData.averageSpeed = message["avgSpeed"];
+                WheelData.topSpeed = message["topSpeed"];
+                WheelData.batteryVoltage = message["voltage"];
+                WheelData.batteryPercentage = message["battery"];
+                WheelData.rideTime = message["ridingTime"];
+                WheelData.rideDistance = message["distance"];
+                WheelData.pwm = message["pwm"];
+                WheelData.maxPwm = message["maxPwm"];
                 break;
             }
             case :alarms: {
