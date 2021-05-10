@@ -25,5 +25,4 @@
     <string id="DetailView_RideDistanceData">$1$ m</string>
 
     <string id="Message_AppСonnected">Connected!</string>
-    <string id="Message_AppReconnected">Reconnected!</string>
 </strings>
