@@ -1,3 +1,7 @@
+using Toybox.Communications;
+using Toybox.WatchUi;
+using Toybox.Lang;
+
 module DataServer {
     function updateData_timer() {
         updateData(AppStorage.runtimeCache["comm_dataSource"]);
