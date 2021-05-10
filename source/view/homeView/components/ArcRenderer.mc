@@ -61,7 +61,7 @@ class ArcRenderer extends WatchUi.Drawable {
     }
     function draw(dc) {
         // Rendering background arc
-        if (AppStorage.getValue("appTheme") == 0) {
+        if (AppStorage.getValue("AppTheme") == 0) {
             dc.setColor(Graphics.COLOR_LT_GRAY, 0x000000);
         } else {
             dc.setColor(0x323232, 0x000000);
