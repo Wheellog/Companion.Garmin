@@ -28,7 +28,7 @@ class HomeView extends WatchUi.View {
             setIsAppConnected(false);
         }
 
-        WheelData.webDataSource = "home";
+        AppStorage.runtimeCache["comm_dataSource"] = "home";
     }
 
     // Called when this View is brought to the foreground. Restore
