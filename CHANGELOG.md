@@ -10,11 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tone on connection/disconnection of the app
 - Tone on connection/disconnection of the wheel, and;
 - Tone on low battery of the wheel, exactly when it is lower 20%
+- Functionality, that brings the connection waiting view back on the screen if the app failed to get new data in span of 2 seconds
 
 ### Changed:
 - Page indicator in details, moved back to the left and;
 - Redesigned the page indicator, now it is smaller, and looks more like native one
 - Redesigned the details view, according to [this change in WheelLog.Android](https://github.com/Wheellog/Wheellog.Android/pull/193)
+- Updated communication
 
 ---
 
