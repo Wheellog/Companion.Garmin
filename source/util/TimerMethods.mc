@@ -22,7 +22,7 @@ function appUpdateTimerMethod() {
         Attention.playTone(ToneProfiles.appDisconnectionTone);
     }
 
-    if (WheelData.batteryPercentage < 15 && WheelData.isWheelConnected) {
+    if (WheelData.batteryPercentage < 20 && WheelData.isWheelConnected) {
         AppStorage.runtimeCache["wheel_batteryLowToneCountdown"] == 30;
     }
 
