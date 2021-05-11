@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- A tone on connection/disconnection of the app
+- Tone on connection/disconnection of the app
+- Tone on connection/disconnection of the wheel, and;
+- Tone on low battery of the wheel, exactly when it is lower 20%
 
 ### Changed:
 - Page indicator in details, moved back to the left and;
