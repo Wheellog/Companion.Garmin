@@ -13,7 +13,7 @@ function mailHandler(mailIter) {
         AppStorage.runtimeCache["ui_messageText"] = Rez.Strings.Message_AppСonnected;
 
         // Play connection tone
-        Attention.playTone(ToneProfiles.connectionTone);
+        Attention.playTone(ToneProfiles.appConnectionTone);
 
         // Assign the server port
         WheelData.webServerPort = mail;

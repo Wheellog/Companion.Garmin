@@ -1,7 +1,11 @@
 using Toybox.Attention;
 
 module ToneProfiles {
-    var connectionTone = Attention.TONE_ALERT_HI;
-    var disconnectionTone = Attention.TONE_ALERT_LO;
-    var wheelBatteryLowTone = Attention.TONE_LOW_BATTERY;
+    const appConnectionTone = Attention.TONE_ALERT_HI;
+    const appDisconnectionTone = Attention.TONE_ALERT_LO;
+    
+    const wheelConnnectionTone = Attention.TONE_START;
+    const wheelDisconnectionTone = Attention.TONE_STOP;
+
+    const wheelBatteryLowTone = Attention.TONE_LOW_BATTERY;
 }
