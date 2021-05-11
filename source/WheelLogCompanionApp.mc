@@ -11,7 +11,11 @@ class WheelLogCompanionApp extends Application.AppBase {
     // onStart() is called on application start up
     function onStart(state) {
         Communications.setMailboxListener(method(:mailHandler));
-        AppStorage.runtimeCache["comm_disconnectionCountdown"] = 8;
+
+        // Initiating some runtime cache variables
+        AppStorage.runtimeCache["comm_disconnectionCountdown"] = 4;
+        AppStorage.runtimeCache["comm_lastResponseCode"] = 200;
+        WheelData.appUpdateTimer.start(method(:appUpdateTimerMethod), 500, true);
     }
 
     // onStop() is called when your application is exiting

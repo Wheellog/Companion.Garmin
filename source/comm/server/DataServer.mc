@@ -36,9 +36,9 @@ module DataServer {
     function _mainResponseCallback(responseCode, data) {
         if (responseCode == 200) {
             parseServerData(data, :main);
-            AppStorage.runtimeCache["comm_disconnectionCountdown"] = 8;
+            AppStorage.runtimeCache["comm_lastResponseCode"] = 200;
         } else {
-            AppStorage.runtimeCache["comm_disconnectionCountdown"]--;
+            AppStorage.runtimeCache["comm_lastResponseCode"] = responseCode;
         }
     }
 
@@ -46,18 +46,18 @@ module DataServer {
     function _detailsResponseCallback(responseCode, data) {        
         if (responseCode == 200) {
             parseServerData(data, :details);
-            AppStorage.runtimeCache["comm_disconnectionCountdown"] = 8;
+            AppStorage.runtimeCache["comm_lastResponseCode"] = 200;
         } else {
-            AppStorage.runtimeCache["comm_disconnectionCountdown"]--;
+            AppStorage.runtimeCache["comm_lastResponseCode"] = responseCode;
         }
     }
 
     function _alarmsResponseCallback(responseCode, data) {
         if (responseCode == 200) {
             parseServerData(data, :alarms);
-            AppStorage.runtimeCache["comm_disconnectionCountdown"] = 8;
+            AppStorage.runtimeCache["comm_lastResponseCode"] = 200;
         } else {
-            AppStorage.runtimeCache["comm_disconnectionCountdown"]--;
+            AppStorage.runtimeCache["comm_lastResponseCode"] = responseCode;
         }
     }
 
