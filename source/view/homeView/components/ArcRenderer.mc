@@ -86,10 +86,12 @@ class ArcRenderer extends WatchUi.Drawable {
         } else {
             _valuePercentage = maxValue / currentValue;
         }
-        if (_valuePercentage < 0.7) {
-            foregroundColor = mIdleColor;
-        } else {
+        if (_valuePercentage >= 0.7 && _valuePercentage < 0.9) {
+            foregroundColor = mMediumColor;
+        } else if (_valuePercentage >= 0.9) {
             foregroundColor = mDangerousColor;
+        } else {
+            foregroundColor = mIdleColor;
         }
         dc.setColor(foregroundColor, 0x000000);
         if(currentValue >= maxValue) {
