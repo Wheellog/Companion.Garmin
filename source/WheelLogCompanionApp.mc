@@ -15,6 +15,7 @@ class WheelLogCompanionApp extends Application.AppBase {
         // Initiating some runtime cache variables
         AppStorage.runtimeCache["comm_disconnectionCountdown"] = 4;
         AppStorage.runtimeCache["comm_lastResponseCode"] = 200;
+        AppStorage.runtimeCache["wheel_lastConnectionState"] = false;
         WheelData.appUpdateTimer.start(method(:appUpdateTimerMethod), 500, true);
     }
 
