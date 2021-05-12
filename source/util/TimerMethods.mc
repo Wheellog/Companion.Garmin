@@ -23,10 +23,15 @@ function appUpdateTimerMethod() {
     }
 
     if (WheelData.batteryPercentage < 20 && WheelData.isWheelConnected) {
-        AppStorage.runtimeCache["wheel_batteryLowToneCountdown"] == 30;
+        AppStorage.runtimeCache["wheel_batteryLowToneCountdown"] = 30;
     }
 
     if (AppStorage.runtimeCache["wheel_batteryLowToneCountdown"] == 0) {
         Attention.playTone(ToneProfiles.wheelBatteryLowTone);
     }
+
+    // if (WheelData.isWheelConnected && AppStorage.runtimeCache["wheel_lastConnectionState"] == false && WheelData.isAppConnected) {
+    //     Attention.playTone(ToneProfiles.wheelConnectionTone);
+    //     AppStorage.runtimeCache["wheel_lastConnectionState"] == WheelData.isWheelConnected;
+    // }
 }
