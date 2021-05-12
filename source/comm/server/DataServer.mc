@@ -65,11 +65,15 @@ module DataServer {
         switch (dataType) {
             case :main: {
                 WheelData.currentSpeed = message["speed"];
+                WheelData.topSpeed = message["topSpeed"];
+                WheelData.speedLimit = message["speedLimit"];
                 WheelData.useMph = message["useMph"];
                 WheelData.batteryPercentage = message["battery"];
                 WheelData.temperature = message["temp"];
                 WheelData.pwm = message["pwm"];
                 WheelData.maxPwm = message["maxPwm"];
+                WheelData.isWheelConnected = message["connectedToWheel"];
+                WheelData.wheelModel = message["wheelModel"];
                 break;
             }
             case :details: {
