@@ -15,5 +15,5 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'This issue had no activity in a while. Please check it!'
         stale-pr-message: 'This pull request had no activity in a while. Please check it!'
-        stale-issue-label: 'no-issue-activity'
-        stale-pr-label: 'no-pr-activity'
+        stale-issue-label: 'no activity'
+        stale-pr-label: 'no activity'
