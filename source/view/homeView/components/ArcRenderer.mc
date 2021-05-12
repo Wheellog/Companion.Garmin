@@ -77,11 +77,24 @@ class ArcRenderer extends WatchUi.Drawable {
         );
 
         // Rendering foreground arc
+        var foregroundColor;
+        System.println(maxValue);
+        System.println(currentValue);
+        var _valuePercentage;
+        if (currentValue == 0) {
+            _valuePercentage = maxValue / 0.0000001;
+        } else {
+            _valuePercentage = maxValue / currentValue;
+        }
+        if (_valuePercentage < 0.7) {
+            foregroundColor = mIdleColor;
+        } else {
+            foregroundColor = mDangerousColor;
+        }
+        dc.setColor(foregroundColor, 0x000000);
         if(currentValue >= maxValue) {
-            dc.setColor(mIdleColor, 0x000000);
             dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
         } else {
-            dc.setColor(mIdleColor, 0x000000);
 
             // Calculating position of the foreground 
             // About this part... Oh boy, don't even try to understand what is here,
