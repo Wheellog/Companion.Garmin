@@ -6,7 +6,7 @@
         launcherIcon="@Drawables.LauncherIcon"
         name="@Strings.AppName"
         type="watch-app"
-        version="2.0.2"
+        version="2.0.3"
         minSdkVersion="1.2.0">
         <iq:products>
             <iq:product id="fr945" />
