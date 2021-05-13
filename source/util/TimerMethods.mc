@@ -30,8 +30,13 @@ function appUpdateTimerMethod() {
         Attention.playTone(ToneProfiles.wheelBatteryLowTone);
     }
 
-    // if (WheelData.isWheelConnected && AppStorage.runtimeCache["wheel_lastConnectionState"] == false && WheelData.isAppConnected) {
-    //     Attention.playTone(ToneProfiles.wheelConnectionTone);
-    //     AppStorage.runtimeCache["wheel_lastConnectionState"] == WheelData.isWheelConnected;
-    // }
+    if (WheelData.isWheelConnected && AppStorage.runtimeCache["wheel_lastConnectionState"] == false && WheelData.isWheelConnected) {
+        Attention.playTone(ToneProfiles.wheelConnectionTone);
+        AppStorage.runtimeCache["wheel_lastConnectionState"] = WheelData.isWheelConnected;
+    }
+
+    if (WheelData.isWheelConnected && AppStorage.runtimeCache["wheel_lastConnectionState"] && WheelData.isWheelConnected == false) {
+        Attention.playTone(ToneProfiles.wheelDisconnectionTone);
+        AppStorage.runtimeCache["wheel_lastConnectionState"] = WheelData.isWheelConnected;
+    }
 }
