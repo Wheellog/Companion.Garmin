@@ -7,10 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Support for Forerunner 945
 - Tone on connection/disconnection of the app
 - Tone on low battery of the wheel, exactly when it is lower 20%
 - Functionality, that brings the connection waiting view back on the screen if the app failed to get new data in span of 2 seconds
-- Support for Forerunner 945
 - Speed dial color change on 70 and 90 PWM(or an output of `max speed` / `current speed` * `100`, if you show speed on speed dial)
 
 ### Changed:
