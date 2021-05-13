@@ -32,7 +32,13 @@ module WheelData {
         WheelData.isAppConnected = data;
 
         if (WheelData.isAppConnected == true && previousState == false) {
-            WatchUi.popView(WatchUi.SLIDE_DOWN);
+            var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_ConnectionSuccessful), 100.0);
+            WatchUi.switchToView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_IMMEDIATE);
+            var hideMethod = new Lang.Method($, :_hideConnectionScreenMethod);
+            var timer = new Timer.Timer().start(hideMethod, 1000, false);
+            if (WheelData.dataUpdateTimer == null) {
+                WheelData.dataUpdateTimer.stop(); // Shut down timer
+            }
 
             var method = new Lang.Method($, :dataUpdateTimerMethod);
             WheelData.dataUpdateTimer.start(method, 400, true); // Start a timer routine for constantly getting data from the phone
@@ -48,4 +54,8 @@ module WheelData {
 
     var dataUpdateTimer = new Timer.Timer();
     var appUpdateTimer = new Timer.Timer();
+}
+
+function _hideConnectionScreenMethod() {
+    WatchUi.popView(WatchUi.SLIDE_DOWN);
 }
