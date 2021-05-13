@@ -21,7 +21,7 @@ module WheelData {
         pwm = "00",
         maxPwm = "00",
         alarmType,
-        isWheelConnected = true,
+        isWheelConnected = false,
         wheelModel = "";
         
     var webServerPort;
