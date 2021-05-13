@@ -5,7 +5,6 @@ using Toybox.System;
 
 class ArcRenderer extends WatchUi.Drawable {
     private var mIdleColor,
-        mNormalColor,
         mMediumColor,
         mDangerousColor,
         mStartDegree,
@@ -32,7 +31,6 @@ class ArcRenderer extends WatchUi.Drawable {
         Drawable.initialize(params);
         // Here we just get parameters from the layout.xml file
         mIdleColor = params.get(:idleColor);
-        mNormalColor = params.get(:normalColor);
         mMediumColor = params.get(:mediumColor);
         mDangerousColor = params.get(:dangerousColor);
         mStartDegree = params.get(:startDegree);
@@ -78,21 +76,19 @@ class ArcRenderer extends WatchUi.Drawable {
 
         // Rendering foreground arc
         var foregroundColor;
-        System.println(maxValue);
-        System.println(currentValue);
-        var _valuePercentage;
-        if (currentValue == 0) {
-            _valuePercentage = maxValue / 0.0000001;
-        } else {
-            _valuePercentage = maxValue / currentValue;
-        }
-        if (_valuePercentage >= 0.7 && _valuePercentage < 0.9) {
-            foregroundColor = mMediumColor;
-        } else if (_valuePercentage >= 0.9) {
-            foregroundColor = mDangerousColor;
+        if (currentValue != 0.0) {
+            var _valuePercentage = maxValue / currentValue;
+            if (_valuePercentage >= 0.7 && _valuePercentage < 0.9) {
+                foregroundColor = mMediumColor;
+            } else if (_valuePercentage >= 0.9) {
+                foregroundColor = mDangerousColor;
+            } else {
+                foregroundColor = mIdleColor;
+            }
         } else {
             foregroundColor = mIdleColor;
         }
+        
         dc.setColor(foregroundColor, 0x000000);
         if(currentValue >= maxValue) {
             dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
