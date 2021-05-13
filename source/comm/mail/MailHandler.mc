@@ -8,10 +8,6 @@ function mailHandler(mailIter) {
     Communications.emptyMailbox();
 
     if (mail != null) {
-        // Write values to runtime cache
-        AppStorage.runtimeCache["ui_messageDisplayCountdown"] = 5;
-        AppStorage.runtimeCache["ui_messageText"] = Rez.Strings.Message_AppСonnected;
-
         // Play connection tone
         Attention.playTone(ToneProfiles.appConnectionTone);
 
