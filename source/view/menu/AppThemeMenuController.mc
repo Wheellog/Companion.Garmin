@@ -10,11 +10,11 @@ class AppThemeMenuController extends WatchUi.MenuInputDelegate {
     function onMenuItem(item) {
         switch (item) {
             case :LightTheme: {
-                AppStorage.setValue(:appTheme, 0);
+                AppStorage.setValue("AppTheme", 0);
                 break;
             }
             case :DarkTheme: {
-                AppStorage.setValue(:appTheme, 1);
+                AppStorage.setValue("AppTheme", 1);
                 break;
             }
         }
