@@ -76,11 +76,10 @@ class ArcRenderer extends WatchUi.Drawable {
 
         // Rendering foreground arc
         var foregroundColor;
-        if (currentValue != 0.0) {
-            var _valuePercentage = maxValue / currentValue;
-            if (_valuePercentage >= 0.7 && _valuePercentage < 0.9) {
+        if (currentValue != 0.0 && mArcType == :speedArc) {
+            if (WheelData.pwm.toNumber() >= 70 && WheelData.pwm.toNumber() < 90) {
                 foregroundColor = mMediumColor;
-            } else if (_valuePercentage >= 0.9) {
+            } else if (WheelData.pwm.toNumber() >= 90) {
                 foregroundColor = mDangerousColor;
             } else {
                 foregroundColor = mIdleColor;
