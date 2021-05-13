@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [[2.0 Stable] - 13.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.0)
 
 ### Added
 - Support for Forerunner 945
@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tone on connection/disconnection of the wheel
 - Tone on low battery of the wheel, exactly when it is lower 20%
 - Functionality, that brings the connection waiting view back on the screen if the app failed to get new data in span of 2 seconds
-- Speed dial color change on 70 and 90 PWM(or an output of `max speed` / `current speed` * `100`, if you show speed on speed dial)
+- Speed dial color will change to orange on 70 to 90 PWM, and to red after 90 PWM
 - A Connection successful! screen, which will be shown after connection with the app
 
 ### Changed:
