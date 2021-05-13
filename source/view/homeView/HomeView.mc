@@ -59,7 +59,11 @@ class HomeView extends WatchUi.View {
         );
         cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.batteryPercentage]));
         cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.temperature]));
-        cDrawables[:BottomSubtitle].setText(Lang.format("$1$% / $2$%", [WheelData.pwm, WheelData.maxPwm]));
+        if (WheelData.isWheelConnected == false) {
+            cDrawables[:BottomSubtitle].setText(Rez.Strings.Message_WheelDisconnected);
+        } else {
+            cDrawables[:BottomSubtitle].setText(Lang.format("$1$% / $2$%", [WheelData.pwm, WheelData.maxPwm]));
+        }
         var speedNumber;
         if (WheelData.currentSpeed.toNumber() >= 10) {
             speedNumber = WheelData.currentSpeed.toNumber();
