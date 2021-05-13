@@ -19,24 +19,27 @@ function appUpdateTimerMethod() {
      */
     if (AppStorage.runtimeCache["comm_disconnectionCountdown"] == 0) {
         WheelData.setIsAppConnected(false);
-        Attention.playTone(ToneProfiles.appDisconnectionTone);
+        if (Attention has :playTone) {
+            Attention.playTone(ToneProfiles.appDisconnectionTone);
+        }
     }
+    if (Attention has :playTone) {
+        if (WheelData.batteryPercentage < 20 && WheelData.isWheelConnected) {
+            AppStorage.runtimeCache["wheel_batteryLowToneCountdown"] = 30;
+        }
 
-    if (WheelData.batteryPercentage < 20 && WheelData.isWheelConnected) {
-        AppStorage.runtimeCache["wheel_batteryLowToneCountdown"] = 30;
-    }
+        if (AppStorage.runtimeCache["wheel_batteryLowToneCountdown"] == 0) {
+            Attention.playTone(ToneProfiles.wheelBatteryLowTone);
+        }
 
-    if (AppStorage.runtimeCache["wheel_batteryLowToneCountdown"] == 0) {
-        Attention.playTone(ToneProfiles.wheelBatteryLowTone);
-    }
+        if (WheelData.isWheelConnected && AppStorage.runtimeCache["wheel_lastConnectionState"] == false && WheelData.isWheelConnected) {
+            Attention.playTone(ToneProfiles.wheelConnectionTone);
+            AppStorage.runtimeCache["wheel_lastConnectionState"] = WheelData.isWheelConnected;
+        }
 
-    if (WheelData.isWheelConnected && AppStorage.runtimeCache["wheel_lastConnectionState"] == false && WheelData.isWheelConnected) {
-        Attention.playTone(ToneProfiles.wheelConnectionTone);
-        AppStorage.runtimeCache["wheel_lastConnectionState"] = WheelData.isWheelConnected;
-    }
-
-    if (WheelData.isWheelConnected && AppStorage.runtimeCache["wheel_lastConnectionState"] && WheelData.isWheelConnected == false) {
-        Attention.playTone(ToneProfiles.wheelDisconnectionTone);
-        AppStorage.runtimeCache["wheel_lastConnectionState"] = WheelData.isWheelConnected;
+        if (WheelData.isWheelConnected && AppStorage.runtimeCache["wheel_lastConnectionState"] && WheelData.isWheelConnected == false) {
+            Attention.playTone(ToneProfiles.wheelDisconnectionTone);
+            AppStorage.runtimeCache["wheel_lastConnectionState"] = WheelData.isWheelConnected;
+        }
     }
 }

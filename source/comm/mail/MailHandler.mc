@@ -9,7 +9,9 @@ function mailHandler(mailIter) {
 
     if (mail != null) {
         // Play connection tone
-        Attention.playTone(ToneProfiles.appConnectionTone);
+        if (Attention has :playTone) {
+            Attention.playTone(ToneProfiles.appConnectionTone);
+        }
 
         // Assign the server port
         WheelData.webServerPort = mail;
