@@ -10,7 +10,9 @@
     <string id="MainMenu_AppTheme_Dark">Темная</string>
 
     <string id="Kmh">км/ч</string>
+
     <string id="LoadingScreen_WaitingConnectionWithApp">Ожидаем подключения WheelLog'а...</string>
+    <string id="LoadingScreen_ConnectionSuccessful">Успешно подключен!</string>
 
     <string id="DetailView_AverageSpeed">Сред. Скорость</string>
     <string id="DetailView_TopSpeed">Макс. Скорость</string>

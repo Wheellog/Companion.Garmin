@@ -10,7 +10,9 @@
     <string id="MainMenu_AppTheme_Dark">Dark theme</string>
     
     <string id="Kmh">km/h</string>
+
     <string id="LoadingScreen_WaitingConnectionWithApp">Waiting for WheelLog to connect...</string>
+    <string id="LoadingScreen_ConnectionSuccessful">Successfully connected!</string>
 
     <string id="DetailView_AverageSpeed">Average Speed</string>
     <string id="DetailView_TopSpeed">Top Speed</string>
