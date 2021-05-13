@@ -86,6 +86,7 @@ module DataServer {
                 WheelData.rideDistance = message["distance"];
                 WheelData.pwm = message["pwm"];
                 WheelData.maxPwm = message["maxPwm"];
+                WheelData.isWheelConnected = message["connectedToWheel"];
                 break;
             }
             case :alarms: {
