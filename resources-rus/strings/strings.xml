@@ -26,5 +26,5 @@
     <string id="DetailView_BatteryPercentageData">$1$%</string>
     <string id="DetailView_RideDistanceData">$1$ м</string>
 
-    <string id="Message_AppСonnected">Подключен!</string>
+    <string id="Message_WheelDisconnected">Колесо откл.</string>
 </strings>
