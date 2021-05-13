@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [[2.0.1 Stable] - 13.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.0.1)
+
+### Changed:
+- Fixed issues with coloring of speed arc
+
+---
+
 ## [[2.0 Stable] - 13.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.0)
 
 ### Added
