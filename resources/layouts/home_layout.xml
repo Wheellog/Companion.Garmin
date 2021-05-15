@@ -6,8 +6,8 @@
     <drawable id="SpeedDial" class="ArcRenderer">
         <!-- Colors -->
         <param name="idleColor">0x0085F8</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
-        <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
-        <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
+        <param name="mediumColor">Gfx.COLOR_ORANGE</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
+        <param name="dangerousColor">Gfx.COLOR_RED</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
         <!-- Dial size n' position -->
         <param name="startDegree">220</param>
         <param name="endDegree">-40</param>
@@ -24,8 +24,8 @@
     <drawable id="BatteryArc" class="ArcRenderer">
         <!-- Colors -->
         <param name="idleColor">0x0085F8</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
-        <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
-        <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
+        <param name="mediumColor">Gfx.COLOR_ORANGE</param>
+        <param name="dangerousColor">Gfx.COLOR_RED</param>
         <!-- Arc size n' position -->
         <param name="startDegree">220</param>
         <param name="endDegree">140</param>
@@ -43,8 +43,8 @@
     <drawable id="TemperatureArc" class="ArcRenderer">
         <!-- Colors -->
         <param name="idleColor">0x05A5E5</param> <!-- This color is for idle state of the dial, basically first 20% of the speed dial-->
-        <param name="mediumColor">0xE1A03D</param> <!-- This color is for "not so safe" speed, 60 to 80 percent of the dial-->
-        <param name="dangerousColor">0xFF4646</param><!-- This color is for pretty dangeroud speed, from 80% %to 100%-->
+        <param name="mediumColor">Gfx.COLOR_ORANGE</param>
+        <param name="dangerousColor">Gfx.COLOR_RED</param>
         <!-- Arc size n' position -->
         <param name="startDegree">40</param>
         <param name="endDegree">-40</param>
