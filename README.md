@@ -2,7 +2,7 @@
 
 A WheelLog companion for Garmin smartwatches
 
-This app is a rebuild from ground-up of an original Garmin app. I made this app to be with better UI, alarms working, and full support of new devices and their features.
+This app is a rebuild from ground-up of an original Garmin app. I made this app to be with better UI, alarms working, and full support of new watches and their features.
 
 [Download from Garmin ConnectIQ Store](https://apps.garmin.com/en-US/apps/35719a02-8a5d-46bc-b474-f26c54c4e045)
 ## 🔤 Important
