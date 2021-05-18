@@ -2,19 +2,18 @@ using Toybox.Communications;
 using Toybox.WatchUi;
 using Toybox.Attention;
 
-function mailHandler(mailIter) {
-    var mail;
-    mail = mailIter.next();
+function phoneAppMessageHandler(message) {
+    var data = message.data;
     Communications.emptyMailbox();
 
-    if (mail != null) {
+    if (data != null) {
         // Play connection tone
         if (Attention has :playTone) {
             Attention.playTone(ToneProfiles.appConnectionTone);
         }
 
         // Assign the server port
-        WheelData.webServerPort = mail;
+        WheelData.webServerPort = data;
         
         // And set connection state
         WheelData.setIsAppConnected(true);
