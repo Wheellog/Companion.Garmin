@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [[2.0.5 Stable] - 18.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.0.4)
+## [[2.0.6 Stable] - 21.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.0.6)
+
+### Added:
+- Support for Enduro;
+- Forerunner 645;
+- Forerunner 645 Music;
+- Forerunner 935
+
+## [[2.0.5 Stable] - 18.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.0.5)
 
 ### Changes:
 - Fixed issues on devices powered by CIQ 4.0.0
