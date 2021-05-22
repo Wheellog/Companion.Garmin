@@ -1,0 +1,30 @@
+<strings>
+    <string id="AppName">WheelLog</string>
+
+    <string id="MainMenu_Title">Settings</string>
+    <string id="MainMenu_ShowPwmInsteadOfSpeed">Show PWM on speed arc</string>
+    <string id="MainMenu_ShowPwmInsteadOfSpeed_Title">Enabled</string>
+    <string id="MainMenu_AppTheme">App Theme</string>
+    <string id="MainMenu_AppTheme_Title">Choose theme</string>
+    <string id="MainMenu_AppTheme_Light">Light theme</string>
+    <string id="MainMenu_AppTheme_Dark">Dark theme</string>
+    
+    <string id="Kmh">km/h</string>
+
+    <string id="LoadingScreen_WaitingConnectionWithApp">Waiting for WheelLog to connect...</string>
+    <string id="LoadingScreen_ConnectionSuccessful">Successfully connected!</string>
+
+    <string id="DetailView_AverageSpeed">Average Speed</string>
+    <string id="DetailView_TopSpeed">Top Speed</string>
+    <string id="DetailView_Voltage">Voltage</string>
+    <string id="DetailView_BatteryPercentage">Battery Percentage</string>
+    <string id="DetailView_RideTime">Ride Time</string>
+    <string id="DetailView_Distance">Distance</string>
+
+    <string id="DetailView_SpeedData">$1$ km/h</string>
+    <string id="DetailView_BatteryVoltageData">$1$ V</string>
+    <string id="DetailView_BatteryPercentageData">$1$ %</string>
+    <string id="DetailView_RideDistanceData">$1$ m</string>
+
+    <string id="Message_WheelDisconnected">Wheel discon.</string>
+</strings>

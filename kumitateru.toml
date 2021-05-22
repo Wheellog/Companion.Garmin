@@ -1,0 +1,44 @@
+[package]
+name = "WheelLog"
+name_res = "@Strings.AppName"
+main_class = "WheelLogCompanionApp"
+app_type = "watch-app"
+min_sdk = "1.2.0"
+
+[package_meta]
+id = "487e6172-972c-4f93-a4db-26fd689f935a"
+devices = [
+    "fr945",
+    "fenix3",
+    "fenix3_hr",
+    "fenix5",
+    "fenix5plus",
+    "fenix5s",
+    "fenix5splus",
+    "fenix6",
+    "fenix6pro",
+    "fenix6s",
+    "fenix6spro",
+    "fenix6xpro",
+    "fenixchronos",
+    "vivoactive3",
+    "vivoactive3d",
+    "vivoactive3m",
+    "vivoactive3mlte",
+    "vivoactive4",
+    "vivoactive4s",
+]
+permissions = [
+    "Communications"
+]
+languages = [
+    "eng",
+    "rus",
+]
+
+[build]
+version = "2.0.0"
+icon_resource = "@Drawables.LauncherIcon"
+signing_key = "id_rsa_garmin.der"
+
+[dependencies]
