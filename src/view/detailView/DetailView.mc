@@ -11,8 +11,9 @@ class DetailView extends WatchUi.View {
     private var cDrawables = {}; // cached drawables
     private var cStrings = {}; // and also cached strings
 
-    function initialize() {
+    function initialize(screen) {
         View.initialize();
+        detailView_currentlyOnScreen = screen;
     }
 
     // Load your resources here
@@ -98,6 +99,8 @@ class DetailView extends WatchUi.View {
     function moveDown() {
         if (detailView_currentlyOnScreen != detailView_maxScreens) {
             detailView_currentlyOnScreen++;
+        } else {
+            WatchUi.switchToView(new HomeView(), new HomeViewDelegate(), WatchUi.SLIDE_UP);
         }
         WatchUi.requestUpdate();
     }
