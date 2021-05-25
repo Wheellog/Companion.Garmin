@@ -1,4 +1,6 @@
 using Toybox.Attention;
+using Toybox.Communications;
+using Toybox.Lang;
 
 function dataUpdateTimerMethod() {
     DataServer.updateData_timer();
@@ -11,7 +13,7 @@ function appUpdateTimerMethod() {
     if(AppStorage.runtimeCache["comm_lastResponseCode"] != 200) {
         AppStorage.runtimeCache["comm_disconnectionCountdown"]--;
     } else {
-        AppStorage.runtimeCache["comm_disconnectionCountdown"] = 4;
+        AppStorage.runtimeCache["comm_disconnectionCountdown"] = 10;
     }
 
     /*
@@ -23,6 +25,20 @@ function appUpdateTimerMethod() {
             Attention.playTone(ToneProfiles.appDisconnectionTone);
         }
     }
+
+    if (WheelData.isAppConnected == false) {
+        Communications.makeWebRequest(
+            "http://127.0.0.1:" + WheelData.webServerPort + "/data/alarms",
+            null,
+            {
+                :method => Communications.HTTP_REQUEST_METHOD_GET,
+                :headers => {},
+                :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
+            },
+            new Lang.Method($, :timerMethods_reconnectionAttemptResponse)
+        );
+    }
+
     if (Attention has :playTone) {
         if (WheelData.batteryPercentage < 20 && WheelData.isWheelConnected) {
             AppStorage.runtimeCache["wheel_batteryLowToneCountdown"] = 30;
@@ -41,5 +57,11 @@ function appUpdateTimerMethod() {
             Attention.playTone(ToneProfiles.wheelDisconnectionTone);
             AppStorage.runtimeCache["wheel_lastConnectionState"] = WheelData.isWheelConnected;
         }
+    }
+}
+
+function timerMethods_reconnectionAttemptResponse(responseCode, data) {
+    if (responseCode == 200) {
+        WheelData.setIsAppConnected(true);
     }
 }
