@@ -20,8 +20,11 @@ Changelog: [here](https://github.com/Wheellog/Companion.Garmin/blob/master/CHANG
 ## 🛠 Development/Building
 
 I use a build system called kumitateru, and here is a list of commands you can use:
+
 `./kumitateru build` - assembles a release .iq file
+
 `./kumitateru build --target <device>` - builds for a specific device
+
 `./kumitateru run --target <device>` - runs the app in a simulator
 
 ## 🌍 Translations
