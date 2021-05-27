@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added:
+- An option to change communication speed. Will be very useful in cases when there are a ton of
+devices connected to bt at the same time
+
+### Changed:
+- Scrolling, now it wraps around, like is menus
+- Failed attempts in a row before disconnection from 4 to 10. In English, it means that it will
+take longer to disconnect, and the app will try more times to connect back
+
+---
+
 ## [[2.0.6 Stable] - 21.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.0.6)
 
 ### Added:
@@ -11,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Forerunner 645;
 - Forerunner 645 Music;
 - Forerunner 935
+
+---
 
 ## [[2.0.5 Stable] - 18.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.0.5)
 

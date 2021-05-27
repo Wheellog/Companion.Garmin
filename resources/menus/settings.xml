@@ -1,4 +1,5 @@
 <menu id="SettingsMenu" title="@Strings.MainMenu_Title">
     <menu-item id="SpeedArcData" label="@Strings.MainMenu_ShowPwmInsteadOfSpeed" />
     <menu-item id="AppTheme" label="@Strings.MainMenu_AppTheme" />
+    <menu-item id="DataUpdateSpeed" label="@Strings.MainMenu_DataUpdateSpeed" />
 </menu>

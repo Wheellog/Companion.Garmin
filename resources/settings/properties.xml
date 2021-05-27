@@ -1,4 +1,5 @@
 <properties>
     <property id="ShowPwmInsteadOfSpeed" type="boolean">false</property>
     <property id="AppTheme" type="number">1</property><!-- If 1, it's dark, if 0, it's light-->
+    <property id="DataUpdateSpeed" type="number">400</property>
 </properties>

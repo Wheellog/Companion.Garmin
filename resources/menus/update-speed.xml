@@ -1,0 +1,6 @@
+<menu id="UpdateSpeed" title="@Strings.MainMenu_DataUpdateSpeed">
+    <menu-item id="Fast" label="@Strings.MainMenu_DataUpdateSpeed_Fast" />
+    <menu-item id="Medium" label="@Strings.MainMenu_DataUpdateSpeed_Medium" />
+    <menu-item id="Slow" label="@Strings.MainMenu_DataUpdateSpeed_Slow" />
+    <menu-item id="SuperSlow" label="@Strings.MainMenu_DataUpdateSpeed_SuperSlow" />
+</menu>
