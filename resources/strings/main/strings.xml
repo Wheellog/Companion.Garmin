@@ -8,7 +8,12 @@
     <string id="MainMenu_AppTheme_Title">Choose theme</string>
     <string id="MainMenu_AppTheme_Light">Light theme</string>
     <string id="MainMenu_AppTheme_Dark">Dark theme</string>
-    
+    <string id="MainMenu_DataUpdateSpeed">Update speed</string>
+    <string id="MainMenu_DataUpdateSpeed_Fast">Fast</string>
+    <string id="MainMenu_DataUpdateSpeed_Medium">Medium</string>
+    <string id="MainMenu_DataUpdateSpeed_Slow">Slow</string>
+    <string id="MainMenu_DataUpdateSpeed_SuperSlow">Super slow</string>
+
     <string id="Kmh">km/h</string>
 
     <string id="LoadingScreen_WaitingConnectionWithApp">Waiting for WheelLog to connect...</string>
