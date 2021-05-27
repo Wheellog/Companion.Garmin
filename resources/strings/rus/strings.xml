@@ -8,7 +8,8 @@
     <!-- <string id="MainMenu_AppTheme_Title">Выберите тему</string> -->
     <string id="MainMenu_AppTheme_Light">Светлая</string>
     <string id="MainMenu_AppTheme_Dark">Темная</string>
-    <string id="MainMenu_DataUpdateSpeed">Скор. обновл.</string>
+    <string id="MainMenu_DataUpdateSpeed">Скорость обновл.</string>
+    <string id="MainMenu_DataUpdateSpeed_CIQSettings">Скорость обновл.</string>
     <string id="MainMenu_DataUpdateSpeed_Fast">Быстро</string>
     <string id="MainMenu_DataUpdateSpeed_Medium">Средне</string>
     <string id="MainMenu_DataUpdateSpeed_Slow">Медленно</string>

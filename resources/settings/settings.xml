@@ -8,4 +8,12 @@
             <listEntry value="1">@Strings.MainMenu_AppTheme_Dark</listEntry>
         </settingConfig>
     </setting>
+    <setting propertyKey="@Properties.DataUpdateSpeed" title="@Strings.MainMenu_DataUpdateSpeed_CIQSettings">
+        <settingConfig type="list">
+            <listEntry value="400">@Strings.MainMenu_DataUpdateSpeed_Fast</listEntry>
+            <listEntry value="1000">@Strings.MainMenu_DataUpdateSpeed_Medium</listEntry>
+            <listEntry value="1500">@Strings.MainMenu_DataUpdateSpeed_Slow</listEntry>
+            <listEntry value="2000">@Strings.MainMenu_DataUpdateSpeed_SuperSlow</listEntry>
+        </settingConfig>
+    </setting>
 </settings>
