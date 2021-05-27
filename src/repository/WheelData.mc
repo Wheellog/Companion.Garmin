@@ -41,7 +41,7 @@ module WheelData {
             }
 
             var method = new Lang.Method($, :dataUpdateTimerMethod);
-            WheelData.dataUpdateTimer.start(method, 400, true); // Start a timer routine for constantly getting data from the phone
+            WheelData.dataUpdateTimer.start(method, AppStorage.getValue("DataUpdateSpeed"), true); // Start a timer routine for constantly getting data from the phone
             DataServer.updateData("details"); // This is for filling base data, so there will be no "null"'s
         } else if (WheelData.isAppConnected == false) {
             var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp), null);

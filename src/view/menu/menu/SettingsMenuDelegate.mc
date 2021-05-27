@@ -22,6 +22,10 @@ class SettingsMenuDelegate extends WatchUi.MenuInputDelegate {
                 WatchUi.pushView(new Rez.Menus.AppThemeMenu(), new AppThemeMenuController(), WatchUi.SLIDE_LEFT);
                 break;
             }
+            case :DataUpdateSpeed: {
+                WatchUi.pushView(new Rez.Menus.UpdateSpeed(), new DataUpdateSpeedMenuController(), WatchUi.SLIDE_LEFT)
+                break;
+            }
         }
     }
 }
