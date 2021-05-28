@@ -32,6 +32,15 @@ devices = [
     "vivoactive3mlte",
     "vivoactive4",
     "vivoactive4s",
+    "approachs60",
+    "approachs62",
+    "marqadventurer",
+    "marqathlete",
+    "marqaviator",
+    "marqcommander",
+    "marqdriver",
+    "marqexpedition",
+    "marqgolfer",  
 ]
 permissions = [
     "Communications"
