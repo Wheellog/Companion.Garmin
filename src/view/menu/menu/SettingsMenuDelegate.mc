@@ -23,7 +23,7 @@ class SettingsMenuDelegate extends WatchUi.MenuInputDelegate {
                 break;
             }
             case :DataUpdateSpeed: {
-                WatchUi.pushView(new Rez.Menus.UpdateSpeed(), new DataUpdateSpeedMenuController(), WatchUi.SLIDE_LEFT)
+                WatchUi.pushView(new Rez.Menus.UpdateSpeed(), new DataUpdateSpeedMenuController(), WatchUi.SLIDE_LEFT);
                 break;
             }
         }
