@@ -3,17 +3,19 @@
 
     <string id="MainMenu_Title">Settings</string>
     <string id="MainMenu_ShowPwmInsteadOfSpeed">Show PWM on speed arc</string>
+    <string id="MainMenu_ShowPwmInsteadOfSpeed_Full">Show PWM on speed arc</string>
     <string id="MainMenu_ShowPwmInsteadOfSpeed_Title">Enabled</string>
     <string id="MainMenu_AppTheme">App Theme</string>
     <string id="MainMenu_AppTheme_Title">Choose theme</string>
     <string id="MainMenu_AppTheme_Light">Light theme</string>
     <string id="MainMenu_AppTheme_Dark">Dark theme</string>
     <string id="MainMenu_DataUpdateSpeed">Update speed</string>
-    <string id="MainMenu_DataUpdateSpeed_CIQSettings">Data update speed</string>
+    <string id="MainMenu_DataUpdateSpeed_Full">Data update speed</string>
     <string id="MainMenu_DataUpdateSpeed_Fast">Fast</string>
     <string id="MainMenu_DataUpdateSpeed_Medium">Medium</string>
     <string id="MainMenu_DataUpdateSpeed_Slow">Slow</string>
     <string id="MainMenu_DataUpdateSpeed_SuperSlow">Super slow</string>
+    <string id="MainMenu_DataUpdateSpeed_SuperSlow_Full">Super slow</string>
 
     <string id="Kmh">km/h</string>
 

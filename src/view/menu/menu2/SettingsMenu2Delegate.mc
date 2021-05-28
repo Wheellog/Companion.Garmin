@@ -40,6 +40,45 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                 WatchUi.pushView(menu, new AppThemeMenu2Controller(), WatchUi.SLIDE_LEFT);
                 break;
             }
+            case "DataUpdateSpeed": {
+                var menu = new WatchUi.Menu2({
+                    :title => Rez.Strings.MainMenu_DataUpdateSpeed
+                });
+
+                menu.addItem(
+                    new MenuItem(
+                        Rez.Strings.MainMenu_DataUpdateSpeed_Fast,
+                        null,
+                        "Fast",
+                        null
+                    )
+                );
+                menu.addItem(
+                    new MenuItem(
+                        Rez.Strings.MainMenu_DataUpdateSpeed_Medium,
+                        null,
+                        "Medium",
+                        null
+                    )
+                );
+                menu.addItem(
+                    new MenuItem(
+                        Rez.Strings.MainMenu_DataUpdateSpeed_Slow,
+                        null,
+                        "Slow",
+                        null
+                    )
+                );
+                menu.addItem(
+                    new MenuItem(
+                        Rez.Strings.MainMenu_DataUpdateSpeed_SuperSlow,
+                        null,
+                        "SuperSlow",
+                        null
+                    )
+                );
+                WatchUi.pushView(menu, new DataUpdateSpeedMenu2Controller(), WatchUi.SLIDE_LEFT);
+            }
         }
     }
 }

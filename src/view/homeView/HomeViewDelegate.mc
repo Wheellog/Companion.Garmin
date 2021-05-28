@@ -13,15 +13,13 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                 :title => Rez.Strings.MainMenu_Title
             });
 
-            menu.addItem(
-                new ToggleMenuItem(
-                    Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed,
-                    null,
-                    "SpeedArcData",
-                    AppStorage.getValue("ShowPwmInsteadOfSpeed"),
-                    null
-                )
-            );
+            menu.addItem(new ToggleMenuItem(
+                Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed,
+                null,
+                "SpeedArcData",
+                AppStorage.getValue("ShowPwmInsteadOfSpeed"),
+                null
+            ));
             var appThemeValue;
             if (AppStorage.getValue("AppTheme") == 0){
                 appThemeValue = false;
@@ -34,14 +32,25 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             } else {
                 appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Dark;
             }
-            menu.addItem(
-                new MenuItem(
-                    Rez.Strings.MainMenu_AppTheme,
-                    appThemSubLabel,
-                    "AppTheme",
-                    null
-                )
-            );
+            menu.addItem(new MenuItem(
+                Rez.Strings.MainMenu_AppTheme,
+                appThemSubLabel,
+                "AppTheme",
+                null
+            ));
+            var dataUpdateSpeedSublabel;
+            switch (AppStorage.getValue("DataUpdateSpeed")) {
+                case 400: dataUpdateSpeedSublabel = WatchUi.loadResource(Rez.Strings.MainMenu_DataUpdateSpeed_Fast); break;
+                case 1000: dataUpdateSpeedSublabel = WatchUi.loadResource(Rez.Strings.MainMenu_DataUpdateSpeed_Medium); break;
+                case 1500: dataUpdateSpeedSublabel = WatchUi.loadResource(Rez.Strings.MainMenu_DataUpdateSpeed_Slow); break;
+                case 2000: dataUpdateSpeedSublabel = WatchUi.loadResource(Rez.Strings.MainMenu_DataUpdateSpeed_SuperSlow); break;
+            }
+            menu.addItem(new MenuItem(
+                Rez.Strings.MainMenu_DataUpdateSpeed,
+                dataUpdateSpeedSublabel,
+                "DataUpdateSpeed",
+                null
+            ));
             WatchUi.pushView(menu, new SettingsMenu2Delegate(), WatchUi.SLIDE_UP);
         } else {
             WatchUi.pushView(new Rez.Menus.SettingsMenu(), new SettingsMenuDelegate(), WatchUi.SLIDE_UP);

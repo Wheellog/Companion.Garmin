@@ -1,5 +1,5 @@
 <settings>
-    <setting propertyKey="@Properties.ShowPwmInsteadOfSpeed" title="@Strings.MainMenu_ShowPwmInsteadOfSpeed">
+    <setting propertyKey="@Properties.ShowPwmInsteadOfSpeed" title="@Strings.MainMenu_ShowPwmInsteadOfSpeed_Full">
         <settingConfig type="boolean" />
     </setting>
     <setting propertyKey="@Properties.AppTheme" title="@Strings.MainMenu_AppTheme">
@@ -8,7 +8,7 @@
             <listEntry value="1">@Strings.MainMenu_AppTheme_Dark</listEntry>
         </settingConfig>
     </setting>
-    <setting propertyKey="@Properties.DataUpdateSpeed" title="@Strings.MainMenu_DataUpdateSpeed_CIQSettings">
+    <setting propertyKey="@Properties.DataUpdateSpeed" title="@Strings.MainMenu_DataUpdateSpeed_Full">
         <settingConfig type="list">
             <listEntry value="400">@Strings.MainMenu_DataUpdateSpeed_Fast</listEntry>
             <listEntry value="1000">@Strings.MainMenu_DataUpdateSpeed_Medium</listEntry>
