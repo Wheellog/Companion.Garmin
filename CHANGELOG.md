@@ -19,6 +19,7 @@ devices connected to Bluetooth at the same time
     - MARQ Driver
     - MARQ Expedition
     - MARQ Golfer
+- Autoreconnect. When the app disconnects from WheelLog, it will try to connect back with last know connection credentials.
 
 ### Changed:
 - Scrolling, now it wraps around, like is menus
