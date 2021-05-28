@@ -4,7 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [[2.1.1 Stable] - 28.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.1.1)
+
+### Changed:
+- Fixed data update speed menu item not showing up on devices powered by CIQ 3.0+, like fenix 6 and forerunner 945.
+
+---
+
+## [[2.1 Stable] - 28.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.1)
 
 ### Added:
 - An option to change communication speed. Will be very useful in cases when there are a ton of
