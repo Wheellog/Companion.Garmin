@@ -8,7 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added:
 - An option to change communication speed. Will be very useful in cases when there are a ton of
-devices connected to bt at the same time
+devices connected to Bluetooth at the same time
+- Support for:
+    - Approach S60
+    - Approach S62
+    - MARQ Adventurer
+    - MARQ Athlete
+    - MARQ Aviator
+    - MARQ Commander
+    - MARQ Driver
+    - MARQ Expedition
+    - MARQ Golfer
 
 ### Changed:
 - Scrolling, now it wraps around, like is menus
@@ -20,10 +30,11 @@ take longer to disconnect, and the app will try more times to connect back
 ## [[2.0.6 Stable] - 21.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.0.6)
 
 ### Added:
-- Support for Enduro;
-- Forerunner 645;
-- Forerunner 645 Music;
-- Forerunner 935
+- Support for:
+    - Enduro
+    - Forerunner 645
+    - Forerunner 645 Music
+    - Forerunner 935
 
 ---
 
