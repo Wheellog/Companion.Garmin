@@ -48,10 +48,11 @@ permissions = [
 languages = [
     "eng",
     "rus",
+    "ukr",
 ]
 
 [build]
-version = "2.1.1"
+version = "2.2.0"
 icon_resource = "@Drawables.LauncherIcon"
 signing_key = "id_rsa_garmin.der"
 
