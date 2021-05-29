@@ -1,0 +1,38 @@
+<strings>
+    <string id="AppName">WheelLog</string>
+
+    <string id="MainMenu_Title">Налаштув.</string>
+    <string id="MainMenu_ShowPwmInsteadOfSpeed">Вивод. ПВМ на арці швидк.</string>
+    <string id="MainMenu_ShowPwmInsteadOfSpeed_Full">Виводити ПВМ на арці швидкості</string>
+    <string id="MainMenu_ShowPwmInsteadOfSpeed_Title">Увімкнено</string>
+    <string id="MainMenu_AppTheme">Тема</string>
+    <string id="MainMenu_AppTheme_Title">Выберіть тему</string>
+    <string id="MainMenu_AppTheme_Light">Світла</string>
+    <string id="MainMenu_AppTheme_Dark">Темна</string>
+    <string id="MainMenu_DataUpdateSpeed">Швидк. оновлення</string>
+    <string id="MainMenu_DataUpdateSpeed_Full">Швидкість оновлення данних</string>
+    <string id="MainMenu_DataUpdateSpeed_Fast">Швидко</string>
+    <string id="MainMenu_DataUpdateSpeed_Medium">Середнє</string>
+    <string id="MainMenu_DataUpdateSpeed_Slow">Повільно</string>
+    <string id="MainMenu_DataUpdateSpeed_SuperSlow">Супер пов.</string>
+    <string id="MainMenu_DataUpdateSpeed_SuperSlow_Full">Супер повільно</string>
+
+    <string id="Kmh">км/г</string>
+
+    <string id="LoadingScreen_WaitingConnectionWithApp">Очікуємо підключення WheelLog'у...</string>
+    <string id="LoadingScreen_ConnectionSuccessful">Успішно підключено!</string>
+
+    <string id="DetailView_AverageSpeed">Сер. Швидкість</string>
+    <string id="DetailView_TopSpeed">Макс. Швидкість</string>
+    <string id="DetailView_Voltage">Напруга</string>
+    <string id="DetailView_BatteryPercentage">Заряд Батареї</string>
+    <string id="DetailView_RideTime">Час у дорозі</string>
+    <string id="DetailView_Distance">Дистанція</string>
+
+    <string id="DetailView_SpeedData">$1$ км/г</string>
+    <string id="DetailView_BatteryVoltageData">$1$ V</string>
+    <string id="DetailView_BatteryPercentageData">$1$ %</string>
+    <string id="DetailView_RideDistanceData">$1$ м</string>
+
+    <string id="Message_WheelDisconnected">Колесо відкл.</string>
+</strings>
