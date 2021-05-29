@@ -37,7 +37,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                         null
                     )
                 );
-                WatchUi.pushView(menu, new AppThemeMenu2Controller(), WatchUi.SLIDE_LEFT);
+                WatchUi.pushView(menu, new AppThemeMenuController(), WatchUi.SLIDE_LEFT);
                 break;
             }
             case "DataUpdateSpeed": {
@@ -77,7 +77,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                         null
                     )
                 );
-                WatchUi.pushView(menu, new DataUpdateSpeedMenu2Controller(), WatchUi.SLIDE_LEFT);
+                WatchUi.pushView(menu, new DataUpdateSpeedMenuController(), WatchUi.SLIDE_LEFT);
             }
         }
     }
