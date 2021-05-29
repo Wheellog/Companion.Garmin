@@ -9,8 +9,8 @@
     <string id="MainMenu_AppTheme_Title">Выберіть тему</string>
     <string id="MainMenu_AppTheme_Light">Світла</string>
     <string id="MainMenu_AppTheme_Dark">Темна</string>
-    <string id="MainMenu_DataUpdateSpeed">Швидк. оновлення</string>
-    <string id="MainMenu_DataUpdateSpeed_Full">Швидкість оновлення данних</string>
+    <string id="MainMenu_DataUpdateSpeed">Швидкість оновлення</string>
+    <string id="MainMenu_DataUpdateSpeed_Full">Швидкість оновлення даних</string>
     <string id="MainMenu_DataUpdateSpeed_Fast">Швидко</string>
     <string id="MainMenu_DataUpdateSpeed_Medium">Середнє</string>
     <string id="MainMenu_DataUpdateSpeed_Slow">Повільно</string>
@@ -22,7 +22,7 @@
     <string id="LoadingScreen_WaitingConnectionWithApp">Очікуємо підключення WheelLog'у...</string>
     <string id="LoadingScreen_ConnectionSuccessful">Успішно підключено!</string>
 
-    <string id="DetailView_AverageSpeed">Сер. Швидкість</string>
+    <string id="DetailView_AverageSpeed">Середня Швидкість</string>
     <string id="DetailView_TopSpeed">Макс. Швидкість</string>
     <string id="DetailView_Voltage">Напруга</string>
     <string id="DetailView_BatteryPercentage">Заряд Батареї</string>
@@ -34,5 +34,5 @@
     <string id="DetailView_BatteryPercentageData">$1$ %</string>
     <string id="DetailView_RideDistanceData">$1$ м</string>
 
-    <string id="Message_WheelDisconnected">Колесо відкл.</string>
+    <string id="Message_WheelDisconnected">Колесо відк.</string>
 </strings>
