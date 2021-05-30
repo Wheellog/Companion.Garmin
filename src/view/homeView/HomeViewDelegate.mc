@@ -12,14 +12,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             var menu = new WatchUi.Menu2({
                 :title => Rez.Strings.MainMenu_Title
             });
-
-            menu.addItem(new ToggleMenuItem(
-                Rez.Strings.MainMenu_ShowPwmInsteadOfSpeed,
-                null,
-                "SpeedArcData",
-                AppStorage.getValue("ShowPwmInsteadOfSpeed"),
-                null
-            ));
+            
             var appThemeValue;
             if (AppStorage.getValue("AppTheme") == 0){
                 appThemeValue = false;
