@@ -24,12 +24,19 @@
         <settingConfig type="list">
             <listEntry value="0">@Strings.CIQ_LeftArcData_Battery</listEntry>
             <listEntry value="1">@Strings.CIQ_LeftArcData_Voltage</listEntry>
-            <listEntry value="2">@Strings.CIQ_LeftArcData_</listEntry>
+            <listEntry value="2">@Strings.CIQ_LeftArcData_Power</listEntry>
         </settingConfig>
     </setting>
 
     <setting propertyKey="@Properties.IsRightArcEnabled" title="@Strings.CIQ_IsRightArcEnabled">
         <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.RightArcData" title="@Strings.CIQ_RightArcData">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.CIQ_RightArcData_Temperature</listEntry>
+            <listEntry value="1">@Strings.CIQ_RightArcData_PWM</listEntry>
+            <listEntry value="2">@Strings.CIQ_RightArcData_Power</listEntry>
+        </settingConfig>
     </setting>
 
     <setting
