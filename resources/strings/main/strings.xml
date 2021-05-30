@@ -54,4 +54,9 @@
     <string id="CIQ_LeftArcData_Battery">Battery</string>
     <string id="CIQ_LeftArcData_Voltage">Voltage</string>
     <string id="CIQ_LeftArcData_Power">Speed</string>
+
+    <string id="CIQ_RightArcData">Data to be shown on right arc</string>
+    <string id="CIQ_RightArcData_Temperature">Temperature</string>
+    <string id="CIQ_RightArcData_PWM">PWM</string>
+    <string id="CIQ_RightArcData_Power">Speed</string>
 </strings>
