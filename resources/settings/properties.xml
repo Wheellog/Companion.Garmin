@@ -1,5 +1,16 @@
 <properties>
-    <property id="ShowPwmInsteadOfSpeed" type="boolean">false</property>
+    <property id="IsMainArcEnabled" type="boolean">true</property>
+    <property id="IsLeftArcEnabled" type="boolean">true</property>
+    <property id="IsRightArcEnabled" type="boolean">true</property>
+
+    <property id="MainArcData" type="number">0</property><!-- 0 is speed, 1 is voltage, 2 is PWM-->
+    <property id="LeftArcData" type="number">0</property><!-- 0 is battery, 1 is voltage, 2 is power-->
+    <property id="RightArcData" type="number">0</property><!-- 0 is temperature, 1 is PWM, 2 is power-->
+
+    <property id="OrangeColoringThreshold">70</property><!-- % of PWM when main arc will be orange-->
+    <property id="RedColoringThreshold">90</property><!-- % of PWM when main arc will be red-->
+
     <property id="AppTheme" type="number">1</property><!-- If 1, it's dark, if 0, it's light-->
+
     <property id="DataUpdateSpeed" type="number">400</property>
 </properties>
