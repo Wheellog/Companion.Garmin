@@ -42,12 +42,12 @@
     <setting
         propertyKey="@Properties.OrangeColoringThreshold"
         title="@Strings.CIQ_OrangeColoringThreshold">
-        <settingConfig type="numeric" min="0" max="100" />
+        <settingConfig type="numeric" min="0" max="100" errorMessage="@Strings.CIQ_ColoringThreshold_ErrorMessage" />
     </setting>
     <setting
         propertyKey="@Properties.RedColoringThreshold"
         title="@Strings.CIQ_RedColoringThreshold">
-        <settingConfig type="numeric" min="0" max="100" />
+        <settingConfig type="numeric" min="0" max="100" errorMessage="@Strings.CIQ_ColoringThreshold_ErrorMessage" />
     </setting>
 
     <setting propertyKey="@Properties.DataUpdateSpeed" title="@Strings.CIQ_DataUpdateSpeed">

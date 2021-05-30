@@ -43,6 +43,7 @@
     <string id="CIQ_IsRightArcEnabled">Show right arc</string>
 
     <string id="CIQ_OrangeColoringThreshold">PWM percentage threshold of coloring main arc in orange</string>
+    <string id="CIQ_ColoringThreshold_ErrorMessage">You can't set PWM threshold larger than PWM range itself!</string>
     <string id="CIQ_RedColoringThreshold">PWM percentage threshold of coloring main arc in red</string>
 
     <string id="CIQ_MainArcData">Data to be shown on main arc</string>
