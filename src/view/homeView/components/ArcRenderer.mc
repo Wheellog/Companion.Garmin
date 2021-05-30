@@ -58,28 +58,19 @@ class ArcRenderer extends WatchUi.Drawable {
         mDataDrawingDirection = params.get(:dataDrawingDirection);
     }
     function draw(dc) {
-        // Rendering background arc
+        var backgroundColor;
         if (AppStorage.getValue("AppTheme") == 0) {
-            dc.setColor(Graphics.COLOR_LT_GRAY, 0x000000);
+            backgroundColor = Graphics.COLOR_LT_GRAY;
         } else {
-            dc.setColor(0x323232, 0x000000);
+            backgroundColor = Graphics.COLOR_DK_GRAY;
         }
         dc.setPenWidth(mArcSize);
-        dc.drawArc(
-            mXCenterPosition,
-            mYCenterPosition,
-            mArcRadius,
-            Graphics.ARC_CLOCKWISE,
-            mStartDegree,
-            mEndDegree
-        );
 
-        // Rendering foreground arc
         var foregroundColor;
         if (currentValue != 0.0 && mArcType == :speedArc) {
-            if (WheelData.pwm.toNumber() >= 70 && WheelData.pwm.toNumber() < 90) {
+            if (WheelData.pwm.toNumber() >= AppStorage.getValue("OrangeColoringThreshold") && WheelData.pwm.toNumber() < AppStorage.getValue("RedColoringThreshold")) {
                 foregroundColor = mMediumColor;
-            } else if (WheelData.pwm.toNumber() >= 90) {
+            } else if (WheelData.pwm.toNumber() >= AppStorage.getValue("RedColoringThreshold")) {
                 foregroundColor = mDangerousColor;
             } else {
                 foregroundColor = mIdleColor;
@@ -87,48 +78,73 @@ class ArcRenderer extends WatchUi.Drawable {
         } else {
             foregroundColor = mIdleColor;
         }
-        
-        dc.setColor(foregroundColor, 0x000000);
-        if(currentValue >= maxValue) {
-            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
-        } else {
 
-            // Calculating position of the foreground 
-            // About this part... Oh boy, don't even try to understand what is here,
-            // because I just don't care about readability here, bc if it works - don't
-            // touch it, and i have a spent a lot of nerves while trying to code this 
-            // crap
+        // Calculating position of the foreground 
+        // About this part... Oh boy, don't even try to understand what is here,
+        // because I just don't care about readability here, bc if it works - don't
+        // touch it, and i have a spent a lot of nerves while trying to code this 
+        // crap
 
-            switch (mArcType) {
-                case :speedArc: {
-                    var degreeRange = mStartDegree.abs() + mEndDegree.abs();
-                    var percentage = currentValue.toFloat() / maxValue.toFloat();
-                    var preResult = degreeRange * percentage;
-                    var result = mStartDegree - preResult;
-                    if (result != mStartDegree) {
-                        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+        System.println(AppStorage.getValue("IsMainArcEnabled"));
+        System.println(AppStorage.getValue("IsLeftArcEnabled"));
+        System.println(AppStorage.getValue("IsRightArcEnabled"));
+
+        switch (mArcType) {
+            case :speedArc: {
+                if (AppStorage.getValue("IsMainArcEnabled")) {
+                    dc.setColor(backgroundColor, 0x000000);
+                    dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
+                    dc.setColor(foregroundColor, 0x000000);
+                    if(currentValue >= maxValue) {
+                        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
+                    } else {
+                        var degreeRange = mStartDegree.abs() + mEndDegree.abs();
+                        var percentage = currentValue.toFloat() / maxValue.toFloat();
+                        var preResult = degreeRange * percentage;
+                        var result = mStartDegree - preResult;
+                        if (result != mStartDegree) {
+                            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+                        }
                     }
-                    break;
                 }
-                case :batteryArc: {
-                    var degreeRange = mStartDegree - mEndDegree;
-                    var percentage = currentValue.toFloat() / maxValue.toFloat();
-                    var result = degreeRange - (degreeRange * percentage) + mEndDegree;
-                    if (result != mStartDegree) {
-                        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+                break;
+            }
+            case :batteryArc: {
+                if (AppStorage.getValue("IsLeftArcEnabled")) {
+                    dc.setColor(backgroundColor, 0x000000);
+                    dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
+                    dc.setColor(foregroundColor, 0x000000);
+                    if(currentValue >= maxValue) {
+                        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
+                    } else {
+                        var degreeRange = mStartDegree - mEndDegree;
+                        var percentage = currentValue.toFloat() / maxValue.toFloat();
+                        var result = degreeRange - (degreeRange * percentage) + mEndDegree;
+                        if (result != mStartDegree) {
+                            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
+                        }
                     }
-                    break;
                 }
-                case :temperatureArc: {
-                    var degreeRange = mStartDegree.abs() + mEndDegree.abs();
-                    var percentage = currentValue.toFloat() / maxValue.toFloat();
-                    var preResult = degreeRange * percentage;
-                    var result = preResult + mEndDegree;
-                    if (result != mEndDegree) {
-                        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mEndDegree, result);
+                break;
+            }
+            case :temperatureArc: {
+                if (AppStorage.getValue("IsRightArcEnabled")) {
+                    dc.setColor(backgroundColor, 0x000000);
+                    dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
+                    dc.setColor(foregroundColor, 0x000000);
+                    if(currentValue >= maxValue) {
+                        dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, Graphics.ARC_CLOCKWISE, mStartDegree, mEndDegree);
+                    } else {
+                        var degreeRange = mStartDegree.abs() + mEndDegree.abs();
+                        var percentage = currentValue.toFloat() / maxValue.toFloat();
+                        var preResult = degreeRange * percentage;
+                        var result = preResult + mEndDegree;
+                        if (result != mEndDegree) {
+                            dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mEndDegree, result);
+                        }
                     }
-                    break;
                 }
+                break;
             }
         }
     }
