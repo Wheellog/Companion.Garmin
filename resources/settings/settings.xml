@@ -1,19 +1,54 @@
 <settings>
-    <setting propertyKey="@Properties.ShowPwmInsteadOfSpeed" title="@Strings.MainMenu_ShowPwmInsteadOfSpeed_Full">
-        <settingConfig type="boolean" />
-    </setting>
     <setting propertyKey="@Properties.AppTheme" title="@Strings.MainMenu_AppTheme">
         <settingConfig type="list">
             <listEntry value="0">@Strings.MainMenu_AppTheme_Light</listEntry>
             <listEntry value="1">@Strings.MainMenu_AppTheme_Dark</listEntry>
         </settingConfig>
     </setting>
-    <setting propertyKey="@Properties.DataUpdateSpeed" title="@Strings.MainMenu_DataUpdateSpeed_Full">
+    
+    <setting propertyKey="@Properties.IsMainArcEnabled" title="@Strings.CIQ_IsMainArcEnabled">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.MainArcData" title="@Strings.CIQ_MainArcData">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.CIQ_MainArcData_Speed</listEntry>
+            <listEntry value="1">@Strings.CIQ_MainArcData_Voltage</listEntry>
+            <listEntry value="2">@Strings.CIQ_MainArcData_PWM</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.IsLeftArcEnabled" title="@Strings.CIQ_IsLeftArcEnabled">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.LeftArcData" title="@Strings.CIQ_LeftArcData">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.CIQ_LeftArcData_Battery</listEntry>
+            <listEntry value="1">@Strings.CIQ_LeftArcData_Voltage</listEntry>
+            <listEntry value="2">@Strings.CIQ_LeftArcData_</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.IsRightArcEnabled" title="@Strings.CIQ_IsRightArcEnabled">
+        <settingConfig type="boolean" />
+    </setting>
+
+    <setting
+        propertyKey="@Properties.OrangeColoringThreshold"
+        title="@Strings.CIQ_OrangeColoringThreshold">
+        <settingConfig type="numeric" min="0" max="100" />
+    </setting>
+    <setting
+        propertyKey="@Properties.RedColoringThreshold"
+        title="@Strings.CIQ_RedColoringThreshold">
+        <settingConfig type="numeric" min="0" max="100" />
+    </setting>
+
+    <setting propertyKey="@Properties.DataUpdateSpeed" title="@Strings.CIQ_DataUpdateSpeed">
         <settingConfig type="list">
             <listEntry value="400">@Strings.MainMenu_DataUpdateSpeed_Fast</listEntry>
             <listEntry value="1000">@Strings.MainMenu_DataUpdateSpeed_Medium</listEntry>
             <listEntry value="1500">@Strings.MainMenu_DataUpdateSpeed_Slow</listEntry>
-            <listEntry value="2000">@Strings.MainMenu_DataUpdateSpeed_SuperSlow</listEntry>
+            <listEntry value="2000">@Strings.CIQ_DataUpdateSpeed_SuperSlow</listEntry>
         </settingConfig>
     </setting>
 </settings>
