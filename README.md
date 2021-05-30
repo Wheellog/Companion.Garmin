@@ -1,4 +1,4 @@
-# ⌚️ Companion.Garmin 
+# ⌚️ WheelLog.Companion.Garmin 
 
 A WheelLog companion for Garmin smartwatches
 
