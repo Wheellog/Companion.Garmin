@@ -10,12 +10,12 @@
     <string id="MainMenu_AppTheme_Light">Світла</string>
     <string id="MainMenu_AppTheme_Dark">Темна</string>
     <string id="MainMenu_DataUpdateSpeed">Швидкість оновлення</string>
-    <string id="MainMenu_DataUpdateSpeed_Full">Швидкість оновлення даних</string>
+    <string id="CIQ_DataUpdateSpeed">Швидкість оновлення даних</string>
     <string id="MainMenu_DataUpdateSpeed_Fast">Швидко</string>
     <string id="MainMenu_DataUpdateSpeed_Medium">Середнє</string>
     <string id="MainMenu_DataUpdateSpeed_Slow">Повільно</string>
     <string id="MainMenu_DataUpdateSpeed_SuperSlow">Супер пов.</string>
-    <string id="MainMenu_DataUpdateSpeed_SuperSlow_Full">Супер повільно</string>
+    <string id="CIQ_DataUpdateSpeed_SuperSlow">Супер повільно</string>
 
     <string id="Kmh">км/г</string>
 

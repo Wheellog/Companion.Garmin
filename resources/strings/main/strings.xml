@@ -1,21 +1,17 @@
 <strings>
     <string id="AppName">WheelLog</string>
 
+    <!-- In-app used strings-->
     <string id="MainMenu_Title">Settings</string>
-    <string id="MainMenu_ShowPwmInsteadOfSpeed">Show PWM on speed arc</string>
-    <string id="MainMenu_ShowPwmInsteadOfSpeed_Full">Show PWM on speed arc</string>
-    <string id="MainMenu_ShowPwmInsteadOfSpeed_Title">Enabled</string>
     <string id="MainMenu_AppTheme">App Theme</string>
     <string id="MainMenu_AppTheme_Title">Choose theme</string>
     <string id="MainMenu_AppTheme_Light">Light theme</string>
     <string id="MainMenu_AppTheme_Dark">Dark theme</string>
     <string id="MainMenu_DataUpdateSpeed">Update speed</string>
-    <string id="MainMenu_DataUpdateSpeed_Full">Data update speed</string>
     <string id="MainMenu_DataUpdateSpeed_Fast">Fast</string>
     <string id="MainMenu_DataUpdateSpeed_Medium">Medium</string>
     <string id="MainMenu_DataUpdateSpeed_Slow">Slow</string>
     <string id="MainMenu_DataUpdateSpeed_SuperSlow">Super slow</string>
-    <string id="MainMenu_DataUpdateSpeed_SuperSlow_Full">Super slow</string>
 
     <string id="Kmh">km/h</string>
 
@@ -35,4 +31,27 @@
     <string id="DetailView_RideDistanceData">$1$ m</string>
 
     <string id="Message_WheelDisconnected">Wheel discon.</string>
+
+    <!-- Strings, that are used in Connect IQ Settings menu, like 
+        one you see in Garmin Express or Garmin Connect Mobile -->
+    
+    <string id="CIQ_DataUpdateSpeed">Data update speed</string>
+    <string id="CIQ_DataUpdateSpeed_SuperSlow">Super slow</string>
+
+    <string id="CIQ_IsMainArcEnabled">Show main arc</string>
+    <string id="CIQ_IsLeftArcEnabled">Show left arc</string>
+    <string id="CIQ_IsRightArcEnabled">Show right arc</string>
+
+    <string id="CIQ_OrangeColoringThreshold">PWM percentage threshold of coloring main arc in orange</string>
+    <string id="CIQ_RedColoringThreshold">PWM percentage threshold of coloring main arc in red</string>
+
+    <string id="CIQ_MainArcData">Data to be shown on main arc</string>
+    <string id="CIQ_MainArcData_Speed">Speed</string>
+    <string id="CIQ_MainArcData_Voltage">Voltage</string>
+    <string id="CIQ_MainArcData_PWM">PWM</string>
+
+    <string id="CIQ_LeftArcData">Data to be shown on left arc</string>
+    <string id="CIQ_LeftArcData_Battery">Battery</string>
+    <string id="CIQ_LeftArcData_Voltage">Voltage</string>
+    <string id="CIQ_LeftArcData_Power">Speed</string>
 </strings>
