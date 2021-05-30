@@ -2,9 +2,6 @@
     <string id="AppName">WheelLog</string>
 
     <!-- <string id="MainMenu_Title">Настройки</string> -->
-    <string id="MainMenu_ShowPwmInsteadOfSpeed">Выводить ПВМ на арке скор.</string>
-    <string id="MainMenu_ShowPwmInsteadOfSpeed_Full">Выводить ПВМ на арке скорости</string>
-    <string id="MainMenu_ShowPwmInsteadOfSpeed_Title">Включено</string>
     <string id="MainMenu_AppTheme">Тема</string>
     <!-- <string id="MainMenu_AppTheme_Title">Выберите тему</string> -->
     <string id="MainMenu_AppTheme_Light">Светлая</string>
