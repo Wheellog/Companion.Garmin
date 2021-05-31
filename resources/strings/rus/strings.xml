@@ -37,7 +37,7 @@
     <string id="CIQ_DataUpdateSpeed_SuperSlow">Супер медленно</string>
 
     <string id="CIQ_OrangeColoringThreshold">Порог окраски оранжевым цветом по PWM</string>
-    <string id="CIQ_ColoringThreshold_ErrorMessage">Вы не можете установить порог, выходящий за границы!</string>
+    <string id="CIQ_ColoringThreshold_ErrorMessage">Вы не можете установить порог, выходящий за границы PWM!</string>
     <string id="CIQ_RedColoringThreshold">Порог окраски красным цветом по PWM</string>
 
     <string id="CIQ_BottomSubtitleData">Нижний текст</string>
