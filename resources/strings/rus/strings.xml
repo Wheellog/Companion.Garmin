@@ -7,12 +7,10 @@
     <string id="MainMenu_AppTheme_Light">Светлая</string>
     <string id="MainMenu_AppTheme_Dark">Темная</string>
     <string id="MainMenu_DataUpdateSpeed">Скорость обновл.</string>
-    <string id="CIQ_DataUpdateSpeed">Скорость обновления</string>
     <string id="MainMenu_DataUpdateSpeed_Fast">Быстро</string>
     <string id="MainMenu_DataUpdateSpeed_Medium">Средне</string>
     <string id="MainMenu_DataUpdateSpeed_Slow">Медленно</string>
     <string id="MainMenu_DataUpdateSpeed_SuperSlow">Супер медл.</string>
-    <string id="CIQ_DataUpdateSpeed_SuperSlow">Супер медленно</string>
 
     <string id="LoadingScreen_WaitingConnectionWithApp">Ожидаем подключения WheelLog'а...</string>
     <string id="LoadingScreen_ConnectionSuccessful">Успешно подключен!</string>
@@ -30,4 +28,22 @@
     <string id="DetailView_RideDistanceData">$1$ м</string>
 
     <string id="Message_WheelDisconnected">Колесо откл.</string>
+
+
+    <!-- Strings, that are used in Connect IQ Settings menu, like 
+        one you see in Garmin Express or Garmin Connect Mobile -->
+
+    <string id="CIQ_DataUpdateSpeed">Скорость обновления</string>
+    <string id="CIQ_DataUpdateSpeed_SuperSlow">Супер медленно</string>
+
+    <string id="CIQ_OrangeColoringThreshold">Порог окраски оранжевым цветом по PWM</string>
+    <string id="CIQ_ColoringThreshold_ErrorMessage">Вы не можете установить порог, выходящий за границы!</string>
+    <string id="CIQ_RedColoringThreshold">Порог окраски красным цветом по PWM</string>
+
+    <string id="CIQ_BottomSubtitleData">Нижний текст</string>
+    <string id="CIQ_BottomSubtitleData_WheelModel">Модель устройства</string>
+    <string id="CIQ_BottomSubtitleData_PWM">ПВМ / Макс ПВМ</string>
+    <string id="CIQ_BottomSubtitleData_Speed">Средняя Скорость / Максимальная Скорость</string>
+    <string id="CIQ_BottomSubtitleData_RideTime">Время в пути</string>
+    <string id="CIQ_BottomSubtitleData_Distance">Расстояние</string>
 </strings>

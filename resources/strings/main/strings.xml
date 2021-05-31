@@ -36,14 +36,14 @@
     <string id="CIQ_DataUpdateSpeed">Data update speed</string>
     <string id="CIQ_DataUpdateSpeed_SuperSlow">Super slow</string>
 
-    <string id="CIQ_OrangeColoringThreshold">PWM percentage threshold of coloring main arc in orange</string>
+    <string id="CIQ_OrangeColoringThreshold">Orange PWM coloring threshold</string>
     <string id="CIQ_ColoringThreshold_ErrorMessage">You can't set PWM threshold larger than PWM range itself!</string>
     <string id="CIQ_RedColoringThreshold">PWM percentage threshold of coloring main arc in red</string>
 
     <string id="CIQ_BottomSubtitleData">Bottom subtitle</string>
     <string id="CIQ_BottomSubtitleData_WheelModel">Wheel model</string>
     <string id="CIQ_BottomSubtitleData_PWM">PWM / Max PWM</string>
-    <string id="CIQ_BottomSubtitleData_Speed">Avg. Speed / Max Speed</string>
+    <string id="CIQ_BottomSubtitleData_Speed">Average Speed / Max Speed</string>
     <string id="CIQ_BottomSubtitleData_RideTime">Ride time</string>
-    <string id="CIQ_BottomSubtitleData_Distance">Ride time</string>
+    <string id="CIQ_BottomSubtitleData_Distance">Distance</string>
 </strings>
