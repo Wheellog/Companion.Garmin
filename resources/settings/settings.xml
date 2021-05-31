@@ -5,49 +5,36 @@
             <listEntry value="1">@Strings.MainMenu_AppTheme_Dark</listEntry>
         </settingConfig>
     </setting>
-    
-    <setting propertyKey="@Properties.IsMainArcEnabled" title="@Strings.CIQ_IsMainArcEnabled">
-        <settingConfig type="boolean" />
-    </setting>
-    <setting propertyKey="@Properties.MainArcData" title="@Strings.CIQ_MainArcData">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.CIQ_MainArcData_Speed</listEntry>
-            <listEntry value="1">@Strings.CIQ_MainArcData_Voltage</listEntry>
-            <listEntry value="2">@Strings.CIQ_MainArcData_PWM</listEntry>
-        </settingConfig>
-    </setting>
-
-    <setting propertyKey="@Properties.IsLeftArcEnabled" title="@Strings.CIQ_IsLeftArcEnabled">
-        <settingConfig type="boolean" />
-    </setting>
-    <setting propertyKey="@Properties.LeftArcData" title="@Strings.CIQ_LeftArcData">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.CIQ_LeftArcData_Battery</listEntry>
-            <listEntry value="1">@Strings.CIQ_LeftArcData_Voltage</listEntry>
-            <listEntry value="2">@Strings.CIQ_LeftArcData_Power</listEntry>
-        </settingConfig>
-    </setting>
-
-    <setting propertyKey="@Properties.IsRightArcEnabled" title="@Strings.CIQ_IsRightArcEnabled">
-        <settingConfig type="boolean" />
-    </setting>
-    <setting propertyKey="@Properties.RightArcData" title="@Strings.CIQ_RightArcData">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.CIQ_RightArcData_Temperature</listEntry>
-            <listEntry value="1">@Strings.CIQ_RightArcData_PWM</listEntry>
-            <listEntry value="2">@Strings.CIQ_RightArcData_Power</listEntry>
-        </settingConfig>
-    </setting>
 
     <setting
         propertyKey="@Properties.OrangeColoringThreshold"
         title="@Strings.CIQ_OrangeColoringThreshold">
-        <settingConfig type="numeric" min="0" max="100" errorMessage="@Strings.CIQ_ColoringThreshold_ErrorMessage" />
+        <settingConfig
+            type="numeric"
+            min="0"
+            max="100"
+            errorMessage="@Strings.CIQ_ColoringThreshold_ErrorMessage" />
     </setting>
     <setting
         propertyKey="@Properties.RedColoringThreshold"
         title="@Strings.CIQ_RedColoringThreshold">
-        <settingConfig type="numeric" min="0" max="100" errorMessage="@Strings.CIQ_ColoringThreshold_ErrorMessage" />
+        <settingConfig
+            type="numeric"
+            min="0"
+            max="100"
+            errorMessage="@Strings.CIQ_ColoringThreshold_ErrorMessage" />
+    </setting>
+
+    <setting
+        propertyKey="@Properties.BottomSubtitleData"
+        title="@Strings.CIQ_BottomSubtitleData">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.CIQ_BottomSubtitleData_WheelModel</listEntry>
+            <listEntry value="1">@Strings.CIQ_BottomSubtitleData_PWM</listEntry>
+            <listEntry value="2">@Strings.CIQ_BottomSubtitleData_Speed</listEntry>
+            <listEntry value="4">@Strings.CIQ_BottomSubtitleData_RideTime</listEntry>
+            <listEntry value="3">@Strings.CIQ_BottomSubtitleData_Distance</listEntry>
+        </settingConfig>
     </setting>
 
     <setting propertyKey="@Properties.DataUpdateSpeed" title="@Strings.CIQ_DataUpdateSpeed">
