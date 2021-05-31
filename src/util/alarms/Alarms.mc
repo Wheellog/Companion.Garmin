@@ -18,9 +18,9 @@ module Alarms {
     }
 
     var alarmProfile = [
-        new Attention.VibeProfile(100, 2000),
-        new Attention.VibeProfile(0, 2000),
-        new Attention.VibeProfile(100, 2000),
-        new Attention.VibeProfile(0, 2000)
+        new Attention.VibeProfile(2000, 100),
+        new Attention.VibeProfile(2000, 100),
+        new Attention.VibeProfile(2000, 100),
+        new Attention.VibeProfile(2000, 100)
     ];
 }
