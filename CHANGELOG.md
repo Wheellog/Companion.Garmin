@@ -7,7 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [[2.3.1 Stable] - 31.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.1)
 
 ### Changed:
+- Fixed crashes when enabling to show Distance on bottom subtitle
+
+---
+
+## [[2.3.1 Stable] - 31.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.1)
+
+### Changed:
 - Fixed default bottom subtitle value
+
+---
 
 ## [[2.3 Stable] - 31.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3)
 
