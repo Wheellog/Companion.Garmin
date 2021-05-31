@@ -7,7 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added:
+- Continous beeps and vibrations(exactly every 7,5 seconds) if wheel or/and app were disconnected.
 - Settings to change PWM coloring thresholds(when main arcs turns orange or red)
+
+### Changed:
+- Increased drastically vibration power for alarms
 
 ## [[2.2 Stable] - 29.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.2)
 
