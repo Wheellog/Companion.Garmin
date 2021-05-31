@@ -1,7 +1,7 @@
 <properties>
     <property id="OrangeColoringThreshold" type="number">70</property>
     <property id="RedColoringThreshold" type="number">90</property>
-    <property id="BottomSubtitleData" type="number">0</property><!-- 0 is wheel model, 1 is pwm / max pwm, 2 is average speed / max speed, 3 is ride time, 4 is distance-->
+    <property id="BottomSubtitleData" type="number">2</property><!-- 0 is wheel model, 1 is pwm / max pwm, 2 is average speed / max speed, 3 is ride time, 4 is distance-->
     <property id="ShowPwmInsteadOfSpeed" type="boolean">false</property>
     <property id="AppTheme" type="number">1</property><!-- If 1, it's dark, if 0, it's light-->
     <property id="DataUpdateSpeed" type="number">400</property>

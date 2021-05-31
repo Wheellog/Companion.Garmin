@@ -14,8 +14,6 @@
     <string id="MainMenu_DataUpdateSpeed_SuperSlow">Супер пов.</string>
     <string id="CIQ_DataUpdateSpeed_SuperSlow">Супер повільно</string>
 
-    <string id="Kmh">км/г</string>
-
     <string id="LoadingScreen_WaitingConnectionWithApp">Очікуємо підключення WheelLog'у...</string>
     <string id="LoadingScreen_ConnectionSuccessful">Успішно підключено!</string>
 

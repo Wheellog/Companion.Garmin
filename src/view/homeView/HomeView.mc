@@ -62,7 +62,13 @@ class HomeView extends WatchUi.View {
         if (WheelData.isWheelConnected == false) {
             cDrawables[:BottomSubtitle].setText(Rez.Strings.Message_WheelDisconnected);
         } else {
-            cDrawables[:BottomSubtitle].setText(Lang.format("$1$% / $2$%", [WheelData.pwm, WheelData.maxPwm]));
+            switch (AppStorage.getValue("BottomSubtitleData")) {
+                case 0: cDrawables[:BottomSubtitle].setText(WheelData.wheelModel); break;
+                case 1: cDrawables[:BottomSubtitle].setText(Lang.format("$1$% / $2$%", [WheelData.pwm, WheelData.maxPwm])); break;
+                case 2: cDrawables[:BottomSubtitle].setText(Lang.format("$1$ / $2$", [WheelData.averageSpeed, WheelData.topSpeed])); break;
+                case 3: cDrawables[:BottomSubtitle].setText(WheelData.rideTime); break;
+                case 4: cDrawables[:BottomSubtitle].setText(WheelData.rideDistance); break;
+            }
         }
         var speedNumber;
         if (WheelData.currentSpeed.toNumber() >= 10) {
