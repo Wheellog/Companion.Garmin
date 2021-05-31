@@ -38,26 +38,14 @@
     <string id="CIQ_DataUpdateSpeed">Data update speed</string>
     <string id="CIQ_DataUpdateSpeed_SuperSlow">Super slow</string>
 
-    <string id="CIQ_IsMainArcEnabled">Show main arc</string>
-    <string id="CIQ_IsLeftArcEnabled">Show left arc</string>
-    <string id="CIQ_IsRightArcEnabled">Show right arc</string>
-
     <string id="CIQ_OrangeColoringThreshold">PWM percentage threshold of coloring main arc in orange</string>
     <string id="CIQ_ColoringThreshold_ErrorMessage">You can't set PWM threshold larger than PWM range itself!</string>
     <string id="CIQ_RedColoringThreshold">PWM percentage threshold of coloring main arc in red</string>
 
-    <string id="CIQ_MainArcData">Data to be shown on main arc</string>
-    <string id="CIQ_MainArcData_Speed">Speed</string>
-    <string id="CIQ_MainArcData_Voltage">Voltage</string>
-    <string id="CIQ_MainArcData_PWM">PWM</string>
-
-    <string id="CIQ_LeftArcData">Data to be shown on left arc</string>
-    <string id="CIQ_LeftArcData_Battery">Battery</string>
-    <string id="CIQ_LeftArcData_Voltage">Voltage</string>
-    <string id="CIQ_LeftArcData_Power">Speed</string>
-
-    <string id="CIQ_RightArcData">Data to be shown on right arc</string>
-    <string id="CIQ_RightArcData_Temperature">Temperature</string>
-    <string id="CIQ_RightArcData_PWM">PWM</string>
-    <string id="CIQ_RightArcData_Power">Speed</string>
+    <string id="CIQ_BottomSubtitleData">Bottom subtitle</string>
+    <string id="CIQ_BottomSubtitleData_WheelModel">Wheel model</string>
+    <string id="CIQ_BottomSubtitleData_PWM">PWM / Max PWM</string>
+    <string id="CIQ_BottomSubtitleData_Speed">Avg. Speed / Max Speed</string>
+    <string id="CIQ_BottomSubtitleData_RideTime">Ride time</string>
+    <string id="CIQ_BottomSubtitleData_Distance">Ride time</string>
 </strings>
