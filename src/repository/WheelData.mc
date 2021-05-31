@@ -8,20 +8,20 @@ using Toybox.Attention;
 module WheelData {
     var currentSpeed = "0.0",
         batteryPercentage = 0,
-        batteryVoltage,
+        batteryVoltage = 0,
         temperature = 0,
-        bluetooth,
-        useMph,
+        bluetooth = 0,
+        useMph = 0,
         speedLimit = 40,
         rideTime = "00:00:00",
-        rideDistance,
-        averageSpeed,
-        topSpeed,
-        power,
+        rideDistance = 0,
+        averageSpeed = 0,
+        topSpeed = 0,
+        power = 0,
         pwm = "00",
         maxPwm = "00",
-        alarmType,
-        isWheelConnected = false,
+        alarmType = 0,
+        isWheelConnected = true,
         wheelModel = "";
         
     var webServerPort;
@@ -33,7 +33,7 @@ module WheelData {
 
         if (WheelData.isAppConnected == true && previousState == false) {
             var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_ConnectionSuccessful), 100.0);
-            WatchUi.switchToView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_IMMEDIATE);
             var hideMethod = new Lang.Method($, :_hideConnectionScreenMethod);
             var timer = new Timer.Timer().start(hideMethod, 1000, false);
             if (WheelData.dataUpdateTimer == null) {
