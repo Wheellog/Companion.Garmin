@@ -58,6 +58,26 @@ function appUpdateTimerMethod() {
             AppStorage.runtimeCache["wheel_lastConnectionState"] = WheelData.isWheelConnected;
         }
     }
+
+    if (AppStorage.runtimeCache["comm_wheelDisconnectionNoticeCountdown"] != 0 && WheelData.isWheelConnected == false) {
+        AppStorage.runtimeCache["comm_wheelDisconnectionNoticeCountdown"]--;
+    }
+
+    if (AppStorage.runtimeCache["comm_wheelDisconnectionNoticeCountdown"] == 0 && WheelData.isWheelConnected == false) {
+        AppStorage.runtimeCache["comm_wheelDisconnectionNoticeCountdown"] = 15;
+        if (Attention has :playTone) { Attention.playTone(Attention.TONE_LOUD_BEEP); }
+        if (Attention has :vibrate) { Attention.vibrate([ new Attention.VibeProfile(2000, 2000)]); }
+    }
+
+    if (AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"] != 0 && WheelData.isWheelConnected == false) {
+        AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"]--;
+    }
+
+    if (AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"] == 0 && WheelData.isWheelConnected == false) {
+        AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"] = 15;
+        if (Attention has :playTone) { Attention.playTone(Attention.TONE_LOUD_BEEP); }
+        if (Attention has :vibrate) { Attention.vibrate([ new Attention.VibeProfile(2000, 2000)]); }
+    }
 }
 
 function timerMethods_reconnectionAttemptResponse(responseCode, data) {
