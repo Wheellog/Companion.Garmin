@@ -33,7 +33,7 @@ module WheelData {
 
         if (WheelData.isAppConnected == true && previousState == false) {
             var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_ConnectionSuccessful), 100.0);
-            WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.switchToView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_IMMEDIATE);
             var hideMethod = new Lang.Method($, :_hideConnectionScreenMethod);
             var timer = new Timer.Timer().start(hideMethod, 1000, false);
             if (WheelData.dataUpdateTimer == null) {
