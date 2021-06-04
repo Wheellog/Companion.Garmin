@@ -13,7 +13,7 @@ Changelog: [here](https://github.com/Wheellog/Companion.Garmin/blob/master/CHANG
 
 ## ❤️ Support
 
-If you feel like you want to support me, and buy me a coffee, there is a place for that! buymeacoffee.com/ggoraao
+If you feel like you want to support me, and buy me a coffee, there is [a place for that](buymeacoffee.com/ggoraao)!
 
 ## 🏞 Screenshots
 ![screenshot 1](https://raw.githubusercontent.com/Wheellog/Companion.Garmin/master/.github/readme-images/1.png)
