@@ -64,9 +64,9 @@ function appUpdateTimerMethod() {
     }
 
     if (AppStorage.runtimeCache["comm_wheelDisconnectionNoticeCountdown"] == 0 && WheelData.isWheelConnected == false) {
-        AppStorage.runtimeCache["comm_wheelDisconnectionNoticeCountdown"] = 15;
+        AppStorage.runtimeCache["comm_wheelDisconnectionNoticeCountdown"] = 30;
         if (Attention has :playTone) { Attention.playTone(Attention.TONE_LOUD_BEEP); }
-        if (Attention has :vibrate) { Attention.vibrate([ new Attention.VibeProfile(2000, 2000)]); }
+        if (Attention has :vibrate) { Attention.vibrate([ new Attention.VibeProfile(2000, 100), new Attention.VibeProfile(0, 100), new Attention.VibeProfile(2000, 1000) ]); }
     }
 
     if (AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"] != 0 && WheelData.isWheelConnected == false) {
@@ -74,9 +74,9 @@ function appUpdateTimerMethod() {
     }
 
     if (AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"] == 0 && WheelData.isWheelConnected == false) {
-        AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"] = 15;
+        AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"] = 30;
         if (Attention has :playTone) { Attention.playTone(Attention.TONE_LOUD_BEEP); }
-        if (Attention has :vibrate) { Attention.vibrate([ new Attention.VibeProfile(2000, 2000)]); }
+        if (Attention has :vibrate) { Attention.vibrate([ new Attention.VibeProfile(2000, 100), new Attention.VibeProfile(0, 100), new Attention.VibeProfile(2000, 1000) ]); }
     }
 }
 
