@@ -4,7 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [[2.3.4 Stable] - 04.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.4)
+## [[2.3.5 Stable] - 04.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.5)
+
+### Added:
+- Support for fenix 5x
+
+---
+
+## [[2.3.4 Stable] - 04.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3)
 
 ### Changed:
 - Vibration pattern of alerting the user that the companion is disconnected
@@ -12,21 +19,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [[2.3.3 Stable] - 01.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.3)
+## [[2.3.3 Stable] - 01.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3)
 
 ### Changed:
 - Fixed issues with not being able to pass the connection screen
 
 ---
 
-## [[2.3.2 Stable] - 31.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.2)
+## [[2.3.2 Stable] - 31.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3)
 
 ### Changed:
 - Fixed crashes when enabling to show Distance on bottom subtitle
 
 ---
 
-## [[2.3.1 Stable] - 31.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.1)
+## [[2.3.1 Stable] - 31.05.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3)
 
 ### Changed:
 - Fixed default bottom subtitle value

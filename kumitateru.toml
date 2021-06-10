@@ -18,6 +18,7 @@ devices = [
     "fenix3_hr",
     "fenix5",
     "fenix5plus",
+    "fenix5x",
     "fenix5s",
     "fenix5splus",
     "fenix6",
@@ -52,7 +53,7 @@ languages = [
 ]
 
 [build]
-version = "2.3.4"
+version = "2.3.5"
 icon_resource = "@Drawables.LauncherIcon"
 signing_key = "id_rsa_garmin.der"
 
