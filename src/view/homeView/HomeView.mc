@@ -60,7 +60,11 @@ class HomeView extends WatchUi.View {
         cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.batteryPercentage]));
         cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.temperature]));
         if (WheelData.isWheelConnected == false) {
-            cDrawables[:BottomSubtitle].setText(Rez.Strings.Message_WheelDisconnected);
+            if (AppStorage.runtimeCache["ui_showDonationNotice"] == true) {
+                cDrawables[:BottomSubtitle].setText("Like? Donate!");
+            } else {
+                cDrawables[:BottomSubtitle].setText(Rez.Strings.Message_WheelDisconnected);
+            }
         } else {
             switch (AppStorage.getValue("BottomSubtitleData")) {
                 case 0: cDrawables[:BottomSubtitle].setText(WheelData.wheelModel); break;

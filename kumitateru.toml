@@ -53,7 +53,7 @@ languages = [
 ]
 
 [build]
-version = "2.3.5"
+version = "2.3.6"
 icon_resource = "@Drawables.LauncherIcon"
 signing_key = "id_rsa_garmin.der"
 
