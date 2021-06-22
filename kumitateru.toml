@@ -14,6 +14,8 @@ devices = [
     "fr745",
     "fr935",
     "fr945",
+    "fr55",
+    "fr945lte",
     "fenix3",
     "fenix3_hr",
     "fenix5",
@@ -41,7 +43,10 @@ devices = [
     "marqcommander",
     "marqdriver",
     "marqexpedition",
-    "marqgolfer",  
+    "marqgolfer",
+    "descentmk1",
+    "descentmk2",
+    "descentmk2s",
 ]
 permissions = [
     "Communications"
@@ -53,7 +58,7 @@ languages = [
 ]
 
 [build]
-version = "2.3.6"
+version = "2.3.7"
 icon_resource = "@Drawables.LauncherIcon"
 signing_key = "id_rsa_garmin.der"
 
