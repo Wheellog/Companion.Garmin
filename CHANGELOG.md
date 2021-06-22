@@ -4,7 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [[2.3.5 Stable] - 04.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.5)
+## [[2.3.7 Stable] - 23.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.7)
+
+### Added:
+- Support for:
+    - Forerunner 55
+    - Forerunner 945 LTE
+    - Descent MK1
+    - Descent MK2/MK2i
+    - Descent MK2s
+
+---
+
+## [[2.3.6 Stable] - 20.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3)
+Some stability improvements.
+
+---
+
+## [[2.3.5 Stable] - 04.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3)
 
 ### Added:
 - Support for fenix 5x
