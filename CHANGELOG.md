@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added:
 - Support for:
-    - Forerunner 55
     - Forerunner 945 LTE
     - Descent MK1
     - Descent MK2/MK2i
