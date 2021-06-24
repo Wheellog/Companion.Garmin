@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [[2.3.8 Stable] - 23.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.7)
+## [[2.3.8 Stable] - 24.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.8)
 
 ### Added:
 - Support for:
@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added:
 - Support for:
-    - Forerunner 945 LTE
+    - forerunner 945 LTE
     - Descent MK1
     - Descent MK2/MK2i
     - Descent MK2s
