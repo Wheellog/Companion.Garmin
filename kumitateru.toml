@@ -9,6 +9,11 @@ min_sdk = "1.2.0"
 id = "487e6172-972c-4f93-a4db-26fd689f935a"
 devices = [
     "enduro",
+    "fr230",
+    "fr235",
+    "fr245",
+    "fr245m",
+    "fr630",
     "fr645",
     "fr645m",
     "fr745",
