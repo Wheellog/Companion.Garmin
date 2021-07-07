@@ -17,7 +17,6 @@ module WheelData {
         rideDistance = 0,
         averageSpeed,
         topSpeed,
-        power = 0, // idk wat is dis
         pwm = "00",
         maxPwm = "00",
         alarmType = 0,
