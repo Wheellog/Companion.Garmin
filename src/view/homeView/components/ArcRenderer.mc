@@ -121,7 +121,7 @@ class ArcRenderer extends WatchUi.Drawable {
                     }
                     dc.setColor(mMainColor, 0x000000);
                     // Render green arc
-                    var secondPercentage = WheelData.batteryPercentageDrop.toFloat() / maxValue.toFloat();
+                    var secondPercentage = WheelData.batteryPercentageLoadDrop.toFloat() / maxValue.toFloat();
                     var secondResult = degreeRange - (degreeRange * secondPercentage) + mEndDegree;
                     if (secondResult != mStartDegree) {
                         dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, secondResult);

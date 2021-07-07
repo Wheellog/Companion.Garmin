@@ -9,7 +9,7 @@ module WheelData {
     var currentSpeed = "0.0",
         batteryPercentage = 0,
         batteryVoltage = 0,
-        batteryPercentageDrop = 0, // This is the yellow arc value
+        batteryPercentageLoadDrop = 0, // This is the yellow arc value
         temperature = 0,
         bluetooth = 0,
         useMph = 0,
