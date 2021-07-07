@@ -5,7 +5,7 @@ using Toybox.System;
 using Toybox.Math;
 
 function dataUpdateTimerMethod() {
-    DataServer.updateData_timer();
+    DataServer.updateData();
 }
 
 function appUpdateTimerMethod() {
