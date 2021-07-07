@@ -30,14 +30,14 @@ module DataServer {
                 );
             } else {
                 Communications.makeWebRequest(
-                    "http://127.0.0.1:" + WheelData.webServerPort + "/data",
+                    "http://127.0.0.1:" + WheelData.webServerPort + "/data/main",
                     null,
                     {
                         :method => Communications.HTTP_REQUEST_METHOD_GET,
                         :headers => {},
                         :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
                     },
-                    new Lang.Method(DataServer, :updateUsingOldProtocol);
+                    new Lang.Method(DataServer, :updateUsingOldProtocol_main);
                 );
             }
         }
@@ -54,10 +54,25 @@ module DataServer {
     }
 
     function updateUsingNewProtocol(responseCode, data) {
+        switch (data["protocolVersion"]) {
+            case 3: {
+                AppStorage.runtimeCache["comm_unsupportedProtocolDetected"] == false;
+            }
+            default: {
+                AppStorage.runtimeCache["comm_unsupportedProtocolDetected"] == true;
+            }
+        }
+    }
+
+    function updateUsingOldProtocol_main(responseCode, data) {
 
     }
 
-    function updateUsingOldProtocol(responseCode, data) {
+    function updateUsingOldProtocol_details(responseCode, data) {
 
-    } 
+    }
+
+    function updateUsingOldProtocol_alarms(responseCode, data) {
+        
+    }
 }
