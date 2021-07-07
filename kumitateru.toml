@@ -51,6 +51,9 @@ devices = [
     "descentmk1",
     "descentmk2",
     "descentmk2s",
+    "venu2",
+    "venu2s",
+    "venud"
 ]
 permissions = [
     "Communications"
