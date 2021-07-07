@@ -69,20 +69,20 @@ module DataServer {
                 
                 WheelData.batteryPercentageLoadDrop = data["percentageLoadDrop"];
                 WheelData.currentSpeed = data["speed"];
-                WheelData.topSpeed = data["topSpeed"];
                 WheelData.speedLimit = data["speedLimit"];
                 WheelData.useMph = data["useMph"];
                 WheelData.batteryPercentage = data["battery"];
                 WheelData.temperature = data["temp"];
                 WheelData.pwm = data["pwm"];
                 WheelData.maxPwm = data["maxPwm"];
-                WheelData.isWheelConnected = data["connectedToWheel"];
+                WheelData.isWheelConnected = data["isConnectedToWheel"];
                 WheelData.wheelModel = data["wheelModel"];
                 WheelData.averageSpeed = data["avgSpeed"];
+                WheelData.topSpeed = data["topSpeed"];
                 WheelData.batteryVoltage = data["voltage"];
                 WheelData.rideTime = data["ridingTime"];
                 WheelData.rideDistance = data["distance"];
-                WheelData.alarmType = data["alarmType"];
+                WheelData.alarmType = data["additional"]["alarmType"];
             }
             default: {
                 AppStorage.runtimeCache["comm_unsupportedProtocolDetected"] = true;
