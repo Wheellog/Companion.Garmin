@@ -47,9 +47,9 @@ module DataServer {
                         Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/details", null, options, new Lang.Method(DataServer, :_detailsResponseCallback));
                         break;
                 }
-                WatchUi.requestUpdate();
             }
         }
+        WatchUi.requestUpdate();
     }
     
     function _protocolTypeCheckCallback(responseCode, data) {
@@ -63,9 +63,25 @@ module DataServer {
     }
 
     function updateUsingNewProtocol(responseCode, data) {
-        switch (data["protocolVersion"]) {
+        switch (data["headers"]["protocolVersion"]) {
             case 3: {
                 AppStorage.runtimeCache["comm_unsupportedProtocolDetected"] = false;
+                
+                WheelData.currentSpeed = data["speed"];
+                WheelData.topSpeed = data["topSpeed"];
+                WheelData.speedLimit = data["speedLimit"];
+                WheelData.useMph = data["useMph"];
+                WheelData.batteryPercentage = data["battery"];
+                WheelData.temperature = data["temp"];
+                WheelData.pwm = data["pwm"];
+                WheelData.maxPwm = data["maxPwm"];
+                WheelData.isWheelConnected = data["connectedToWheel"];
+                WheelData.wheelModel = data["wheelModel"];
+                WheelData.averageSpeed = data["avgSpeed"];
+                WheelData.batteryVoltage = data["voltage"];
+                WheelData.rideTime = data["ridingTime"];
+                WheelData.rideDistance = data["distance"];
+                WheelData.alarmType = data["alarmType"];
             }
             default: {
                 AppStorage.runtimeCache["comm_unsupportedProtocolDetected"] = true;
