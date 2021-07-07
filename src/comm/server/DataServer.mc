@@ -57,7 +57,7 @@ module DataServer {
             AppStorage.runtimeCache["comm_isNewProtocolAvailable"] = true;
             AppStorage.runtimeCache["comm_protocolVersion"] = data;
         } else {
-            AppStorage.runtimeCache["comm_isNewProtocolAvailable"] = true;
+            AppStorage.runtimeCache["comm_isNewProtocolAvailable"] = false;
             AppStorage.runtimeCache["comm_protocolVersion"] = 2;
         }
     }
