@@ -77,7 +77,7 @@ function appUpdateTimerMethod() {
 
     if (AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"] == 0 && WheelData.isWheelConnected == false) {
         AppStorage.runtimeCache["comm_appDisconnectionNoticeCountdown"] = 30;
-        if (Math.rand() % 5 == 3 && AppStorage.runtimeCache["ui_donationNoticeCountdown"] != 0) { // Just randomly picking whether to display the donation message or not
+        if (Math.rand() % 4 == 2 && AppStorage.runtimeCache["ui_donationNoticeCountdown"] != 0) { // Just randomly picking whether to display the donation message or not
             AppStorage.runtimeCache["ui_showDonationNotice"] = true;
         } else {
             AppStorage.runtimeCache["ui_showDonationNotice"] = false;
