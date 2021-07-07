@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Added:
+- New v3 communication protocol for communicating with WheelLog. Fixes issues such as mileage and avg speed / top speed entries for bottom text not updating properly, and much more! Compatibility with old protocol is still left there
+- Percentage drop under load shown on battery arc, as a yellow part at the top
+
+### Changed:
+- Coloring for battery arc, now it is green when used with pre-v3 protocol, and green with yellow part at the top (percentage drop under load) for v3
+
+--
+
 ## [[2.3.8 Stable] - 24.06.2021](https://github.com/Wheellog/WheelLog.Garmin/releases/tag/2.3.8)
 
 ### Added:
