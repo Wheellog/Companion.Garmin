@@ -4,9 +4,9 @@ using Toybox.Application.Storage;
 using Toybox.System;
 
 class ArcRenderer extends WatchUi.Drawable {
-    private var mIdleColor,
-        mMediumColor,
-        mDangerousColor,
+    private var mMainColor,
+        mSecondColor,
+        mThirdColor,
         mStartDegree,
         mEndDegree,
         mXCenterPosition,
@@ -29,10 +29,13 @@ class ArcRenderer extends WatchUi.Drawable {
 
     function initialize(params) {
         Drawable.initialize(params);
-        // Here we just get parameters from the layout.xml file
-        mIdleColor = params.get(:idleColor);
-        mMediumColor = params.get(:mediumColor);
-        mDangerousColor = params.get(:dangerousColor);
+        
+        mArcType = params[:arcType];
+        mMainColor = params.get(:mainColor);
+        mSecondColor = params.get(:secondColor);
+        if (mArcType != :batteryArc) {
+            mThirdColor = params[:thirdColor];
+        }
         mStartDegree = params.get(:startDegree);
         mEndDegree = params.get(:endDegree);
         if (params.get(:xCenterPosition) == :center) {
@@ -54,9 +57,9 @@ class ArcRenderer extends WatchUi.Drawable {
         }
         mArcSize = params.get(:arcSize);
         mArcDirection = params[:arcDirection];
-        mArcType = params[:arcType];
         mDataDrawingDirection = params.get(:dataDrawingDirection);
     }
+    
     function draw(dc) {
         var backgroundColor;
         if (AppStorage.getValue("AppTheme") == 0) {
@@ -69,14 +72,14 @@ class ArcRenderer extends WatchUi.Drawable {
         var foregroundColor;
         if (currentValue != 0.0 && mArcType == :speedArc) {
             if (WheelData.pwm.toNumber() >= AppStorage.getValue("OrangeColoringThreshold") && WheelData.pwm.toNumber() < AppStorage.getValue("RedColoringThreshold")) {
-                foregroundColor = mMediumColor;
+                foregroundColor = mSecondColor;
             } else if (WheelData.pwm.toNumber() >= AppStorage.getValue("RedColoringThreshold")) {
-                foregroundColor = mDangerousColor;
+                foregroundColor = mThirdColor;
             } else {
-                foregroundColor = mIdleColor;
+                foregroundColor = mMainColor;
             }
         } else {
-            foregroundColor = mIdleColor;
+            foregroundColor = mMainColor;
         }
 
         // Calculating position of the foreground 
