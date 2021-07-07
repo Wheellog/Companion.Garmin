@@ -1,7 +1,6 @@
 using Toybox.Attention;
 using Toybox.Communications;
 using Toybox.Lang;
-using Toybox.System;
 using Toybox.Math;
 
 function dataUpdateTimerMethod() {
