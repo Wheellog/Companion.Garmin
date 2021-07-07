@@ -67,6 +67,7 @@ module DataServer {
             case 3: {
                 AppStorage.runtimeCache["comm_unsupportedProtocolDetected"] = false;
                 
+                WheelData.batteryPercentageLoadDrop = data["percentageLoadDrop"];
                 WheelData.currentSpeed = data["speed"];
                 WheelData.topSpeed = data["topSpeed"];
                 WheelData.speedLimit = data["speedLimit"];
