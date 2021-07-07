@@ -27,34 +27,30 @@ module WheelData {
     var webServerPort;
     var isAppConnected = false;
 
+    var dataUpdateTimer = new Timer.Timer();
+    var appUpdateTimer = new Timer.Timer();
+
     function setIsAppConnected(data) {
         var previousState = WheelData.isAppConnected;
-        WheelData.isAppConnected = data;
+        isAppConnected = data;
 
-        if (WheelData.isAppConnected == true && previousState == false) {
+        if (isAppConnected == true && previousState == false) {
             var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_ConnectionSuccessful), 100.0);
             WatchUi.switchToView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_IMMEDIATE);
-            var hideMethod = new Lang.Method($, :_hideConnectionScreenMethod);
-            var timer = new Timer.Timer().start(hideMethod, 1000, false);
-            if (WheelData.dataUpdateTimer == null) {
-                WheelData.dataUpdateTimer.stop(); // Shut down timer
-            }
+            var timer = new Timer.Timer();
+            timer.start(new Lang.Method(WheelData, :_hideConnectionScreenMethod), 1000, false);
 
-            var method = new Lang.Method($, :dataUpdateTimerMethod);
-            WheelData.dataUpdateTimer.start(method, AppStorage.getValue("DataUpdateSpeed"), true); // Start a timer routine for constantly getting data from the phone
-        } else if (WheelData.isAppConnected == false) {
+            dataUpdateTimer.start(new Lang.Method($, :dataUpdateTimerMethod), AppStorage.getValue("DataUpdateSpeed"), true); // Start a timer routine for constantly getting data from the phone
+        } else if (isAppConnected == false) {
             var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp), null);
             WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP);
-            if (WheelData.dataUpdateTimer == null) {
-                WheelData.dataUpdateTimer.stop(); // Shut down timer
+            if (dataUpdateTimer != null) {
+                dataUpdateTimer.stop(); // Shut down timer
             }
         }
     }
 
-    var dataUpdateTimer = new Timer.Timer();
-    var appUpdateTimer = new Timer.Timer();
-}
-
-function _hideConnectionScreenMethod() {
-    WatchUi.popView(WatchUi.SLIDE_DOWN);
+    function _hideConnectionScreenMethod() {
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
+    }
 }
