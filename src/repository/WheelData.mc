@@ -8,17 +8,16 @@ using Toybox.Attention;
 module WheelData {
     var currentSpeed = "0.0",
         batteryPercentage = 0,
-        batteryVoltage = 0,
+        batteryVoltage,
         batteryPercentageLoadDrop = 0, // This is the yellow arc value
         temperature = 0,
-        bluetooth = 0,
         useMph = 0,
         speedLimit = 40,
         rideTime = "00:00:00",
         rideDistance = 0,
-        averageSpeed = 0,
-        topSpeed = 0,
-        power = 0,
+        averageSpeed,
+        topSpeed,
+        power = 0, // idk wat is dis
         pwm = "00",
         maxPwm = "00",
         alarmType = 0,
