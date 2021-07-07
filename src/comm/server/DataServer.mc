@@ -36,15 +36,15 @@ module DataServer {
                 };
 
                 // Update data about alarms
-                Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/alarms", null, options, new Lang.Method(DataServer, :_alarmsResponseCallback));
+                Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/alarms", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_alarms));
 
                 // Update other data
                 switch (AppStorage.runtimeCache["comm_dataSource"]) {
                     case "home":
-                        Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/main", null, options, new Lang.Method(DataServer, :_mainResponseCallback));
+                        Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/main", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_main));
                         break;
                     case "details":
-                        Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/details", null, options, new Lang.Method(DataServer, :_detailsResponseCallback));
+                        Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/details", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_details));
                         break;
                 }
             }
