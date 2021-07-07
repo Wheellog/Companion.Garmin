@@ -63,7 +63,11 @@ class HomeView extends WatchUi.View {
             if (AppStorage.runtimeCache["ui_showDonationNotice"] == true) {
                 cDrawables[:BottomSubtitle].setText("Like? Donate!");
             } else {
-                cDrawables[:BottomSubtitle].setText(Rez.Strings.Message_WheelDisconnected);
+                if (AppStorage.runtimeCache["comm_unsupportedProtocolDetected"]) {
+                    cDrawables[:BottomSubtitle].setText("err: -95"); // This will notify the user that the protocol version that WheelLog returned is lower or higher than the expected ones
+                } else {
+                    cDrawables[:BottomSubtitle].setText(Rez.Strings.Message_WheelDisconnected);
+                }
             }
         } else {
             switch (AppStorage.getValue("BottomSubtitleData")) {
