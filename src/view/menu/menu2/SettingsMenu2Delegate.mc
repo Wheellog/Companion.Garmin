@@ -70,6 +70,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     )
                 );
                 WatchUi.pushView(menu, new DataUpdateSpeedMenu2Controller(), WatchUi.SLIDE_LEFT);
+                break;
             }
             case "StartButtonAction": {
                 var menu = new WatchUi.Menu2({
@@ -91,6 +92,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                 ));
 
                 WatchUi.pushView(menu, new StartButtonActionMenu2Delegate(), WatchUi.SLIDE_LEFT);
+                break;
             }
         }
     }
