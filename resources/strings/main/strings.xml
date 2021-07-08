@@ -12,6 +12,9 @@
     <string id="MainMenu_DataUpdateSpeed_Medium">Medium</string>
     <string id="MainMenu_DataUpdateSpeed_Slow">Slow</string>
     <string id="MainMenu_DataUpdateSpeed_SuperSlow">Super slow</string>
+    <string id="MainMenu_StartButtonAction">Click action</string>
+    <string id="MainMenu_StartButtonAction_HornTrigger">Horn trigger</string>
+    <string id="MainMenu_StartButtonAction_FrontLightToggle">Front light toggle</string>
 
     <string id="LoadingScreen_WaitingConnectionWithApp">Waiting for WheelLog to connect...</string>
     <string id="LoadingScreen_ConnectionSuccessful">Successfully connected!</string>
@@ -48,6 +51,6 @@
     <string id="CIQ_BottomSubtitleData_Distance">Distance</string>
     
     <string id="CIQ_StartButtonAction">Action on START button press / screen tap</string>
-    <string id="CIQ_StartButtonAction_HornTrigger">Trigger horn</string>
-    <string id="CIQ_StartButtonAction_FrontLightToggle">Toggle front light</string>
+    <string id="CIQ_StartButtonAction_HornTrigger">Horn trigger</string>
+    <string id="CIQ_StartButtonAction_FrontLightToggle">Front light toggle</string>
 </strings>
