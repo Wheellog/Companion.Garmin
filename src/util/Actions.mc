@@ -18,11 +18,7 @@ module Actions {
         switch (method) {
             case :ble: Communications.transmit("toggleFrontLight", null, null); break;
             case :web: {
-                if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"]) {
-                    Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/actions/toggleFrontLight", null, options, null);
-                } else {
-                    Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/actions/toggleFrontLight", null, options, null);
-                }
+                Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/actions/toggleFrontLight", null, options, null);
                 break;
             }
         }
