@@ -5,7 +5,7 @@ using Toybox.Lang;
 module DataServer {
     function updateData() {
         // Checking protocol type
-        if (AppStorage.runtimeCache["comm_isNewProtocolAvailable"] == null) { // Checks whether it was checked if new communication protocol is available in WheelLog
+        if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"] == null) { // Checks whether it was checked if new communication protocol is available in WheelLog
             Communications.makeWebRequest(
                 "http://127.0.0.1:" + WheelData.webServerPort + "/newProtocolAvailable",
                 null,
@@ -17,7 +17,7 @@ module DataServer {
                 new Lang.Method(DataServer, :_protocolTypeCheckCallback)
             );
         } else {
-            if (AppStorage.runtimeCache["comm_isNewProtocolAvailable"] == true) {
+            if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"] == true) {
                 Communications.makeWebRequest(
                     "http://127.0.0.1:" + WheelData.webServerPort + "/data",
                     null,
@@ -39,7 +39,7 @@ module DataServer {
                 Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/alarms", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_alarms));
 
                 // Update other data
-                switch (AppStorage.runtimeCache["comm_dataSource"]) {
+                switch (AppStorage.runtimeDb["comm_dataSource"]) {
                     case "home":
                         Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/main", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_main));
                         break;
@@ -54,18 +54,18 @@ module DataServer {
     
     function _protocolTypeCheckCallback(responseCode, data) {
         if (responseCode == 200) {
-            AppStorage.runtimeCache["comm_isNewProtocolAvailable"] = true;
-            AppStorage.runtimeCache["comm_protocolVersion"] = data;
+            AppStorage.runtimeDb["comm_isNewProtocolAvailable"] = true;
+            AppStorage.runtimeDb["comm_protocolVersion"] = data;
         } else {
-            AppStorage.runtimeCache["comm_isNewProtocolAvailable"] = false;
-            AppStorage.runtimeCache["comm_protocolVersion"] = 2;
+            AppStorage.runtimeDb["comm_isNewProtocolAvailable"] = false;
+            AppStorage.runtimeDb["comm_protocolVersion"] = 2;
         }
     }
 
     function updateUsingNewProtocol(responseCode, data) {
         switch (data["headers"]["protocolVersion"]) {
             case 3: {
-                AppStorage.runtimeCache["comm_unsupportedProtocolDetected"] = false;
+                AppStorage.runtimeDb["comm_unsupportedProtocolDetected"] = false;
                 
                 WheelData.batteryPercentageLoadDrop = data["percentageLoadDrop"];
                 WheelData.currentSpeed = data["speed"];
@@ -85,7 +85,7 @@ module DataServer {
                 WheelData.alarmType = data["additional"]["alarmType"];
             }
             default: {
-                AppStorage.runtimeCache["comm_unsupportedProtocolDetected"] = true;
+                AppStorage.runtimeDb["comm_unsupportedProtocolDetected"] = true;
             }
         }
     }
@@ -93,27 +93,27 @@ module DataServer {
     function updateUsingOldProtocol_main(responseCode, data) {
         if (responseCode == 200) {
             parseOldProtocolData(:main, data);
-            AppStorage.runtimeCache["comm_lastResponseCode"] = 200;
+            AppStorage.runtimeDb["comm_lastResponseCode"] = 200;
         } else {
-            AppStorage.runtimeCache["comm_lastResponseCode"] = responseCode;
+            AppStorage.runtimeDb["comm_lastResponseCode"] = responseCode;
         }
     }
 
     function updateUsingOldProtocol_details(responseCode, data) {
         if (responseCode == 200) {
             parseOldProtocolData(:details, data);
-            AppStorage.runtimeCache["comm_lastResponseCode"] = 200;
+            AppStorage.runtimeDb["comm_lastResponseCode"] = 200;
         } else {
-            AppStorage.runtimeCache["comm_lastResponseCode"] = responseCode;
+            AppStorage.runtimeDb["comm_lastResponseCode"] = responseCode;
         }
     }
 
     function updateUsingOldProtocol_alarms(responseCode, data) {
         if (responseCode == 200) {
             parseOldProtocolData(:alarms, data);
-            AppStorage.runtimeCache["comm_lastResponseCode"] = 200;
+            AppStorage.runtimeDb["comm_lastResponseCode"] = 200;
         } else {
-            AppStorage.runtimeCache["comm_lastResponseCode"] = responseCode;
+            AppStorage.runtimeDb["comm_lastResponseCode"] = responseCode;
         }
     }
 
