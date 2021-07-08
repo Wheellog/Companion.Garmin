@@ -1,4 +1,5 @@
 using Toybox.Communications;
+using Toybox.WatchUi;
 
 module Actions {
     var options = {
@@ -12,15 +13,18 @@ module Actions {
             case :ble: Communications.transmit("triggerHorn", null, null); break;
             case :web: Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/actions/triggerHorn", null, options, null); break;
         }
+        WatchUi.requestUpdate();
     }
 
     function toggleFrontLight(method) {
         switch (method) {
             case :ble: Communications.transmit("toggleFrontLight", null, null); break;
             case :web: {
+                WheelData.areLightsOn = !WheelData.areLightsOn;
                 Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/actions/toggleFrontLight", null, options, null);
                 break;
             }
         }
+        WatchUi.requestUpdate();
     }
 }
