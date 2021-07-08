@@ -52,7 +52,10 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onSelect() {
-        Actions.triggerHorn(:web);
+        switch (AppStorage.getValue("StartButtonAction")) {
+            case 0: Actions.triggerHorn(:web); break;
+            case 1: break;
+        }
     }
 
     function onNextPage() {
