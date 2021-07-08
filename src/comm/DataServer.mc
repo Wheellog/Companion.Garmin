@@ -88,6 +88,7 @@ module DataServer {
                 AppStorage.runtimeDb["comm_unsupportedProtocolDetected"] = true;
             }
         }
+        AppStorage.runtimeDb["comm_protocolVersion"] = data["headers"]["protocolVersion"];
     }
 
     function updateUsingOldProtocol_main(responseCode, data) {
