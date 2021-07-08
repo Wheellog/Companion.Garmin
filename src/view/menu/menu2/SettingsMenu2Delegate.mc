@@ -41,7 +41,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     new MenuItem(
                         Rez.Strings.MainMenu_DataUpdateSpeed_Fast,
                         null,
-                        "Fast",
+                        "400",
                         null
                     )
                 );
@@ -49,7 +49,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     new MenuItem(
                         Rez.Strings.MainMenu_DataUpdateSpeed_Medium,
                         null,
-                        "Medium",
+                        "1000",
                         null
                     )
                 );
@@ -57,7 +57,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     new MenuItem(
                         Rez.Strings.MainMenu_DataUpdateSpeed_Slow,
                         null,
-                        "Slow",
+                        "1500",
                         null
                     )
                 );
@@ -65,7 +65,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     new MenuItem(
                         Rez.Strings.MainMenu_DataUpdateSpeed_SuperSlow,
                         null,
-                        "SuperSlow",
+                        "2000",
                         null
                     )
                 );
