@@ -90,7 +90,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     null
                 ));
 
-                WatchUi.pushView(menu, delegate, WatchUi.SLIDE_LEFT);
+                WatchUi.pushView(menu, StartButtonActionMenu2Delegate(), WatchUi.SLIDE_LEFT);
             }
         }
     }
