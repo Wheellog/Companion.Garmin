@@ -105,6 +105,18 @@ class ArcRenderer extends WatchUi.Drawable {
                         dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
                     }
                 }
+                switch (AppStorage.getValue("StartButtonAction")) {
+                    case 0: var dist; if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.Horn)); break;
+                    case 1: {
+                        var dist; if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } 
+                        if (WheelData.areLightsOn) {
+                            dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.LightOn));
+                        } else {
+                            dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.LightOff));
+                        }
+                        break;
+                    }
+                }
                 break;
             }
             case :batteryArc: {
