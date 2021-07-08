@@ -65,7 +65,7 @@ module DataServer {
     function updateUsingNewProtocol(responseCode, data) {
         switch (data["headers"]["protocolVersion"]) {
             case 3: {
-                AppStorage.runtimeDb["comm_unsupportedProtocolDetected"] = false;
+                AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = false;
                 
                 WheelData.batteryPercentageLoadDrop = data["percentageLoadDrop"];
                 WheelData.currentSpeed = data["speed"];
@@ -86,7 +86,7 @@ module DataServer {
                 WheelData.areLightsOn = data["additional"]["areLightsOn"];
             }
             default: {
-                AppStorage.runtimeDb["comm_unsupportedProtocolDetected"] = true;
+                AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = true;
             }
         }
     }

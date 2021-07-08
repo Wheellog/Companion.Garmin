@@ -75,7 +75,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() {
         switch (AppStorage.getValue("StartButtonAction")) {
             case 0: Actions.triggerHorn(:web); break;
-            case 1: break;
+            case 1: Actions.toggleFrontLight(:web); break;
         }
     }
 
