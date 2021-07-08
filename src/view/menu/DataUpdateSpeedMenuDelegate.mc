@@ -1,7 +1,7 @@
 using Toybox.WatchUi;
 using Toybox.System;
 
-class AppThemeMenuDelegate extends WatchUi.MenuInputDelegate {
+class DataUpdateSpeedMenuDelegate extends WatchUi.MenuInputDelegate {
 
     function initialize() {
         MenuInputDelegate.initialize();
@@ -10,6 +10,6 @@ class AppThemeMenuDelegate extends WatchUi.MenuInputDelegate {
     function onMenuItem(item) {
         var number;
         if (item instanceof String) { number = item.toNumber(); } else { number = item.getId().toNumber(); }
-        AppStorage.setValue("AppTheme", number);
+        AppStorage.setValue("DataUpdateSpeed", number);
     }
 }

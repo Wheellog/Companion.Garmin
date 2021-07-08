@@ -1,4 +1,0 @@
-<menu id="AppThemeMenu" title="@Strings.MainMenu_AppTheme_Title">
-    <menu-item id="DarkTheme" label="@Strings.MainMenu_AppTheme_Dark" />
-    <menu-item id="LightTheme" label="@Strings.MainMenu_AppTheme_Light" />
-</menu>

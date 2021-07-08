@@ -17,7 +17,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     new MenuItem(
                         Rez.Strings.MainMenu_AppTheme_Dark,
                         null,
-                        "DarkTheme",
+                        "1",
                         null
                     )
                 );
@@ -25,11 +25,11 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     new MenuItem(
                         Rez.Strings.MainMenu_AppTheme_Light,
                         null,
-                        "LightTheme",
+                        "0",
                         null
                     )
                 );
-                WatchUi.pushView(menu, new AppThemeMenu2Controller(), WatchUi.SLIDE_LEFT);
+                WatchUi.pushView(menu, new AppThemeMenuDelegate(), WatchUi.SLIDE_LEFT);
                 break;
             }
             case "DataUpdateSpeed": {
@@ -69,7 +69,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                         null
                     )
                 );
-                WatchUi.pushView(menu, new DataUpdateSpeedMenu2Controller(), WatchUi.SLIDE_LEFT);
+                WatchUi.pushView(menu, new DataUpdateSpeedMenuDelegate(), WatchUi.SLIDE_LEFT);
                 break;
             }
             case "StartButtonAction": {
@@ -91,7 +91,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     null
                 ));
 
-                WatchUi.pushView(menu, new StartButtonActionMenu2Delegate(), WatchUi.SLIDE_LEFT);
+                WatchUi.pushView(menu, new StartButtonActionMenuDelegate(), WatchUi.SLIDE_LEFT);
                 break;
             }
         }
