@@ -3,7 +3,7 @@ using Toybox.System;
 
 class PageArcRenderer extends WatchUi.Drawable {
     private var mArcColor, mArcWidth;
-    private var indicatorSize
+    private var indicatorSize;
     function initialize(params) {
         Drawable.initialize(params);
         mArcColor = params[:arcColor];
