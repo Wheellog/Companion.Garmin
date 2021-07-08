@@ -5,7 +5,7 @@ using Toybox.System;
 module AppStorage {
     var cachedValues = {};
 
-    var runtimeCache = {};
+    var runtimeDb = {};
 
     function setValue(key, value) {
         cachedValues[key] = value;
@@ -14,14 +14,6 @@ module AppStorage {
         } else {
             Application.getApp().setProperty(key, value);
         }
-    }
-
-    function writeToRuntimeCache(key, value) {
-        runtimeCache[key] = value;
-    }
-
-    function readFromRuntimeCache(key) {
-        return runtimeCache[key];
     }
 
     function getValue(key) {
