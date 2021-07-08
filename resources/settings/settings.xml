@@ -45,4 +45,11 @@
             <listEntry value="2000">@Strings.CIQ_DataUpdateSpeed_SuperSlow</listEntry>
         </settingConfig>
     </setting>
+
+    <setting propertyKey="@Properties.StartButtonAction" title="@Strings.CIQ_StartButtonAction">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.CIQ_StartButtonAction_HornTrigger</listEntry>
+            <listEntry value="1">@Strings.CIQ_StartButtonAction_FrontLightToggle</listEntry>
+        </settingConfig>
+    </setting>
 </settings>

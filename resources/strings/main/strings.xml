@@ -46,4 +46,8 @@
     <string id="CIQ_BottomSubtitleData_Speed">Average Speed / Max Speed</string>
     <string id="CIQ_BottomSubtitleData_RideTime">Ride time</string>
     <string id="CIQ_BottomSubtitleData_Distance">Distance</string>
+    
+    <string id="CIQ_StartButtonAction">Action on START button press / screen tap</string>
+    <string id="CIQ_StartButtonAction_HornTrigger">Trigger horn</string>
+    <string id="CIQ_StartButtonAction_FrontLightToggle">Toggle front light</string>
 </strings>
