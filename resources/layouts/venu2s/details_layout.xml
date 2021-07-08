@@ -1,0 +1,12 @@
+<layout id="DetailsLayout">
+    <drawable id="PageIndicator" class="PageArcRenderer">
+        <param name="arcColor">Graphics.COLOR_DK_GRAY</param>
+        <param name="arcWidth">3</param>
+    </drawable>
+
+    <label id="FirstSectionData" text="0" x="50%" y="15%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
+    <label id="FirstSectionLabel" text="First label" x="50%" y="30%" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_LT_GRAY" font="Graphics.FONT_TINY" />
+
+    <label id="SecondSectionData" text="0" x="50%" y="55%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_LARGE" />
+    <label id="SecondSectionLabel" text="Second label" x="50%" y="70%" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_LT_GRAY" font="Graphics.FONT_TINY" />
+</layout>
