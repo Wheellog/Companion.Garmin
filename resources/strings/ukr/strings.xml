@@ -3,7 +3,7 @@
 
     <string id="MainMenu_Title">Налаштув.</string>
     <string id="MainMenu_AppTheme">Тема</string>
-    <string id="MainMenu_AppTheme_Title">Выберіть тему</string>
+    <string id="MainMenu_AppTheme">Выберіть тему</string>
     <string id="MainMenu_AppTheme_Light">Світла</string>
     <string id="MainMenu_AppTheme_Dark">Темна</string>
     <string id="MainMenu_DataUpdateSpeed">Швидкість оновлення</string>

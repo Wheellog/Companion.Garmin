@@ -4,7 +4,6 @@
     <!-- In-app used strings-->
     <string id="MainMenu_Title">Settings</string>
     <string id="MainMenu_AppTheme">App Theme</string>
-    <string id="MainMenu_AppTheme_Title">Choose theme</string>
     <string id="MainMenu_AppTheme_Light">Light theme</string>
     <string id="MainMenu_AppTheme_Dark">Dark theme</string>
     <string id="MainMenu_DataUpdateSpeed">Update speed</string>
