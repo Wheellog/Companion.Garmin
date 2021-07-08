@@ -79,6 +79,27 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                 );
                 WatchUi.pushView(menu, new DataUpdateSpeedMenu2Controller(), WatchUi.SLIDE_LEFT);
             }
+            case "StartButtonAction": {
+                var menu = new WatchUi.Menu2({
+                    :title => Rez.Strings.MainMenu_StartButtonAction
+                });
+
+                menu.addItem(new MenuItem(
+                    Rez.Strings.MainMenu_StartButtonAction_HornTrigger,
+                    null,
+                    "0",
+                    null
+                ));
+
+                menu.addItem(new MenuItem(
+                    Rez.Strings.MainMenu_StartButtonAction_FrontLightToggle,
+                    null,
+                    "1",
+                    null
+                ));
+
+                WatchUi.pushView(menu, delegate, WatchUi.SLIDE_LEFT);
+            }
         }
     }
 }
