@@ -37,7 +37,7 @@ class DetailView extends WatchUi.View {
         cStrings[:BatteryPercentageData] = WatchUi.loadResource(Rez.Strings.DetailView_BatteryPercentageData);
         cStrings[:RideDistanceData] = WatchUi.loadResource(Rez.Strings.DetailView_RideDistanceData);
 
-        AppStorage.runtimeCache["comm_dataSource"] = "details";
+        AppStorage.runtimeDb["comm_dataSource"] = "details";
     }
 
     // Called when this View is brought to the foreground. Restore

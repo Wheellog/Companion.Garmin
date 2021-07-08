@@ -28,7 +28,7 @@ class HomeView extends WatchUi.View {
             WheelData.setIsAppConnected(false);
         }
 
-        AppStorage.runtimeCache["comm_dataSource"] = "home";
+        AppStorage.runtimeDb["comm_dataSource"] = "home";
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -60,10 +60,10 @@ class HomeView extends WatchUi.View {
         cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.batteryPercentage]));
         cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.temperature]));
         if (WheelData.isWheelConnected == false) {
-            if (AppStorage.runtimeCache["ui_showDonationNotice"] == true) {
+            if (AppStorage.runtimeDb["ui_showDonationNotice"] == true) {
                 cDrawables[:BottomSubtitle].setText("Like? Donate!");
             } else {
-                if (AppStorage.runtimeCache["comm_unsupportedProtocolDetected"]) {
+                if (AppStorage.runtimeDb["comm_unsupportedProtocolDetected"]) {
                     cDrawables[:BottomSubtitle].setText("err: -95"); // This will notify the user that the protocol version that WheelLog returned is lower or higher than the expected ones
                 } else {
                     cDrawables[:BottomSubtitle].setText(Rez.Strings.Message_WheelDisconnected);
