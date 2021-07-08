@@ -1,3 +1,6 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    <bitmap id="Horn" filename="horn.png" />
+    <bitmap id="LightOff" filename="light-off.png" />
+    <bitmap id="LightOn" filename="light-on.png" />
 </drawables>
