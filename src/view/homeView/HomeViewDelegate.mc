@@ -49,21 +49,23 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                 case 0: startButtonActionSubLabel = WatchUi.loadResource(Rez.Strings.MainMenu_StartButtonAction_HornTrigger); break;
                 case 1: startButtonActionSubLabel = WatchUi.loadResource(Rez.Strings.MainMenu_StartButtonAction_FrontLightToggle); break;
             }
-            // if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"]) {
+            if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"]) {
                 menu.addItem(new MenuItem(
                     Rez.Strings.MainMenu_StartButtonAction,
                     startButtonActionSubLabel,
                     "StartButtonAction",
                     null
                 ));
-            // }
+            }
             WatchUi.pushView(menu, new SettingsMenu2Delegate(), WatchUi.SLIDE_UP);
         } else {
             var menu = new WatchUi.Menu();
             menu.setTitle(Rez.Strings.MainMenu_Title);
             menu.addItem(Rez.Strings.MainMenu_AppTheme, "AppTheme");
             menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed, "DataUpdateSpeed");
-            menu.addItem(Rez.Strings.MainMenu_StartButtonAction, "StartButtonAction");
+            if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"]) {
+                menu.addItem(Rez.Strings.MainMenu_StartButtonAction, "StartButtonAction");
+            }
 
             WatchUi.pushView(menu, new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
         }
