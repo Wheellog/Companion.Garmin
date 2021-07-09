@@ -8,8 +8,14 @@ class AppThemeMenuDelegate extends WatchUi.MenuInputDelegate {
     }
 
     function onMenuItem(item) {
-        var number;
-        if (item instanceof String) { number = item.toNumber(); } else { number = item.getId().toNumber(); }
-        AppStorage.setValue("AppTheme", number);
+        System.println(item);
+        switch (item) {
+            case :Dark: {
+                AppStorage.setValue("AppTheme", 1);
+            }
+            case :Light: {
+                AppStorage.setValue("AppTheme", 0);
+            }
+        }
     }
 }

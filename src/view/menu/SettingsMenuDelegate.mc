@@ -12,8 +12,8 @@ class SettingsMenuDelegate extends WatchUi.MenuInputDelegate {
             case "AppTheme": {
                 var menu = new WatchUi.Menu();
                 menu.setTitle(Rez.Strings.MainMenu_AppTheme);
-                menu.addItem(Rez.Strings.MainMenu_AppTheme_Light, "0");
-                menu.addItem(Rez.Strings.MainMenu_AppTheme_Dark, "1");
+                menu.addItem(Rez.Strings.MainMenu_AppTheme_Light, "Light");
+                menu.addItem(Rez.Strings.MainMenu_AppTheme_Dark, "Dark");
 
                 WatchUi.pushView(menu, new AppThemeMenuDelegate(), WatchUi.SLIDE_LEFT);
                 break;
@@ -21,10 +21,10 @@ class SettingsMenuDelegate extends WatchUi.MenuInputDelegate {
             case "DataUpdateSpeed": {
                 var menu = new WatchUi.Menu();
                 menu.setTitle(Rez.Strings.MainMenu_DataUpdateSpeed);
-                menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed_Fast, "400");
-                menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed_Medium, "1000");
-                menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed_Slow, "1500");
-                menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed_SuperSlow, "2000");
+                menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed_Fast, "Fast");
+                menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed_Medium, "Medium");
+                menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed_Slow, "Slow");
+                menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed_SuperSlow, "SuperSLow");
 
                 WatchUi.pushView(menu, new DataUpdateSpeedMenuDelegate(), WatchUi.SLIDE_LEFT);
                 break;
@@ -32,8 +32,8 @@ class SettingsMenuDelegate extends WatchUi.MenuInputDelegate {
             case "StartButtonAction": {
                 var menu = new WatchUi.Menu();
                 menu.setTitle(Rez.Strings.MainMenu_StartButtonAction);
-                menu.addItem(Rez.Strings.MainMenu_StartButtonAction_HornTrigger, "0");
-                menu.addItem(Rez.Strings.MainMenu_StartButtonAction_FrontLightToggle, "1");
+                menu.addItem(Rez.Strings.MainMenu_StartButtonAction_HornTrigger, "Horn");
+                menu.addItem(Rez.Strings.MainMenu_StartButtonAction_FrontLightToggle, "Lights");
 
                 WatchUi.pushView(menu, new StartButtonActionMenuDelegate(), WatchUi.SLIDE_LEFT);
                 break;

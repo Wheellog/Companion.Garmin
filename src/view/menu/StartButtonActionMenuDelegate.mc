@@ -7,9 +7,13 @@ class StartButtonActionMenuDelegate extends WatchUi.MenuInputDelegate {
     }
 
     function onSelect(item) {
-        var number;
-        if (item instanceof String) { number = item.toNumber(); } else { number = item.getId().toNumber(); }
-        AppStorage.setValue("StartButtonAction", number);
-        WatchUi.popView(WatchUi.SLIDE_RIGHT);
+        switch (item) {
+            case :Horn: {
+                AppStorage.setValue("StartButtonAction", 0);
+            }
+            case :Lights: {
+                AppStorage.setValue("StartButtonAction", 1);
+            }
+        }
     }
 }

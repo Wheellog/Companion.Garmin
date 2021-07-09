@@ -17,7 +17,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     new MenuItem(
                         Rez.Strings.MainMenu_AppTheme_Dark,
                         null,
-                        "1",
+                        "dark",
                         null
                     )
                 );
@@ -25,7 +25,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     new MenuItem(
                         Rez.Strings.MainMenu_AppTheme_Light,
                         null,
-                        "0",
+                        "light",
                         null
                     )
                 );
@@ -73,23 +73,18 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                 break;
             }
             case "StartButtonAction": {
-                var menu = new WatchUi.Menu2({
-                    :title => Rez.Strings.MainMenu_StartButtonAction
-                });
+                var menu = new WatchUi.Menu();
+                menu.setTitle(Rez.Strings.MainMenu_StartButtonAction);
 
-                menu.addItem(new MenuItem(
+                menu.addItem(
                     Rez.Strings.MainMenu_StartButtonAction_HornTrigger,
-                    null,
-                    "0",
-                    null
-                ));
+                    "0"
+                );
 
-                menu.addItem(new MenuItem(
+                menu.addItem(
                     Rez.Strings.MainMenu_StartButtonAction_FrontLightToggle,
-                    null,
-                    "1",
-                    null
-                ));
+                    "1"
+                );
 
                 WatchUi.pushView(menu, new StartButtonActionMenuDelegate(), WatchUi.SLIDE_LEFT);
                 break;
