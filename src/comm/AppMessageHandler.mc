@@ -7,16 +7,32 @@ function phoneAppMessageHandler(message) {
     Communications.emptyMailbox();
 
     if (data != null) {
-        // Play connection tone
-        if (Attention has :playTone) {
-            Attention.playTone(ToneProfiles.appConnectionTone);
-        }
+        if (data instanceof Number) { // If connection message is in v2 protocol
+            // Play connection tone
+            if (Attention has :playTone) {
+                Attention.playTone(ToneProfiles.appConnectionTone);
+            }
+            AppStorage.runtimeDb["comm_protocolVersion"] = 2
 
-        // Assign the server port
-        WheelData.webServerPort = data;
-        
-        // And set connection state
-        WheelData.setIsAppConnected(true);
+            // Assign the server port
+            WheelData.webServerPort = data;
+            
+            // And set connection state
+            WheelData.setIsAppConnected(true);
+        } else if (data instanceof Dictionary) { // If connection message in v3+ protocol
+            // Play connection tone
+            if (Attention has :playTone) {
+                Attention.playTone(ToneProfiles.appConnectionTone);
+            }
+            AppStorage.runtimeDb["comm_protocolVersion"] = data["protocolVersion"];
+            AppStorage.runtimeDb["misc_wheelLogVersion"] = data["wheelLogVersion"];
+
+            // Assign the server port
+            WheelData.webServerPort = data["serverPort"];
+            
+            // And set connection state
+            WheelData.setIsAppConnected(true);
+        }
     }
 
     WatchUi.requestUpdate();

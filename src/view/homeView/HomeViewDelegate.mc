@@ -49,7 +49,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                 case 0: startButtonActionSubLabel = WatchUi.loadResource(Rez.Strings.MainMenu_StartButtonAction_HornTrigger); break;
                 case 1: startButtonActionSubLabel = WatchUi.loadResource(Rez.Strings.MainMenu_StartButtonAction_FrontLightToggle); break;
             }
-            if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"]) {
+            if (AppStorage.runtimeDb["comm_protocolVersion"] > 2) {
                 menu.addItem(new MenuItem(
                     Rez.Strings.MainMenu_StartButtonAction,
                     startButtonActionSubLabel,
@@ -63,7 +63,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             menu.setTitle(Rez.Strings.MainMenu_Title);
             menu.addItem(Rez.Strings.MainMenu_AppTheme, "AppTheme");
             menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed, "DataUpdateSpeed");
-            if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"]) {
+            if (AppStorage.runtimeDb["comm_protocolVersion"] > 2) {
                 menu.addItem(Rez.Strings.MainMenu_StartButtonAction, "StartButtonAction");
             }
 

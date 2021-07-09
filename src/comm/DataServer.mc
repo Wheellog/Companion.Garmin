@@ -4,66 +4,42 @@ using Toybox.Lang;
 
 module DataServer {
     function updateData() {
-        // Checking protocol type
-        if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"] == null) { // Checks whether it was checked if new communication protocol is available in WheelLog
+        if (AppStorage.runtimeDb["comm_protocolVersion"] > 2) {
             Communications.makeWebRequest(
-                "http://127.0.0.1:" + WheelData.webServerPort + "/newProtocolAvailable",
+                "http://127.0.0.1:" + WheelData.webServerPort + "/data",
                 null,
                 {
                     :method => Communications.HTTP_REQUEST_METHOD_GET,
                     :headers => {},
                     :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
                 },
-                new Lang.Method(DataServer, :_protocolTypeCheckCallback)
+                new Lang.Method(DataServer, :updateUsingNewProtocol)
             );
         } else {
-            if (AppStorage.runtimeDb["comm_isNewProtocolAvailable"] == true) {
-                Communications.makeWebRequest(
-                    "http://127.0.0.1:" + WheelData.webServerPort + "/data",
-                    null,
-                    {
-                        :method => Communications.HTTP_REQUEST_METHOD_GET,
-                        :headers => {},
-                        :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
-                    },
-                    new Lang.Method(DataServer, :updateUsingNewProtocol)
-                );
-            } else {
-                var options = {
-                    :method => Communications.HTTP_REQUEST_METHOD_GET,
-                    :headers => {},
-                    :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
-                };
+            var options = {
+                :method => Communications.HTTP_REQUEST_METHOD_GET,
+                :headers => {},
+                :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
+            };
 
-                // Update data about alarms
-                Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/alarms", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_alarms));
+            // Update data about alarms
+            Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/alarms", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_alarms));
 
-                // Update other data
-                switch (AppStorage.runtimeDb["comm_dataSource"]) {
-                    case "home":
-                        Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/main", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_main));
-                        break;
-                    case "details":
-                        Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/details", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_details));
-                        break;
-                }
+            // Update other data
+            switch (AppStorage.runtimeDb["comm_dataSource"]) {
+                case "home":
+                    Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/main", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_main));
+                    break;
+                case "details":
+                    Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/details", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_details));
+                    break;
             }
         }
         WatchUi.requestUpdate();
     }
-    
-    function _protocolTypeCheckCallback(responseCode, data) {
-        if (responseCode == 200) {
-            AppStorage.runtimeDb["comm_isNewProtocolAvailable"] = true;
-            AppStorage.runtimeDb["comm_protocolVersion"] = data;
-        } else {
-            AppStorage.runtimeDb["comm_isNewProtocolAvailable"] = false;
-            AppStorage.runtimeDb["comm_protocolVersion"] = 2;
-        }
-    }
 
     function updateUsingNewProtocol(responseCode, data) {
-        switch (data["headers"]["protocolVersion"]) {
+        switch (AppStorage.runtimeDb["comm_protocolVersion"]) {
             case 3: {
                 AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = false;
                 
