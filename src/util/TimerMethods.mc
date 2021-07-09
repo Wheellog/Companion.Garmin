@@ -8,6 +8,8 @@ function dataUpdateTimerMethod() {
 }
 
 function appUpdateTimerMethod() {
+    Alarms.alarmHandler();
+    
     /*
      * Updating comm_disconnectionCountdown runtime variable
      */
