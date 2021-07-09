@@ -7,7 +7,7 @@ function phoneAppMessageHandler(message) {
     Communications.emptyMailbox();
 
     if (data != null) {
-        if (data instanceof Number) { // If connection message is in v2 protocol
+        if (data instanceof Number) { // If the message is in v2 protocol
             // Play connection tone
             if (Attention has :playTone) {
                 Attention.playTone(ToneProfiles.appConnectionTone);
@@ -19,8 +19,8 @@ function phoneAppMessageHandler(message) {
             
             // And set connection state
             WheelData.setIsAppConnected(true);
-        } else if (data instanceof Dictionary) { // If connection message in v3+ protocol
-            if (data["dataType"] == "connect") {
+        } else if (data instanceof Dictionary) { // If the message is in v3+ protocol
+            if (data["dataType"] == "connect") { // When WheelLog sends a connection message
                 // Play connection tone
                 if (Attention has :playTone) {
                     Attention.playTone(ToneProfiles.appConnectionTone);
