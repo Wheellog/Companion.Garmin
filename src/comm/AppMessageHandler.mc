@@ -21,22 +21,29 @@ function phoneAppMessageHandler(message) {
             // And set connection state
             WheelData.setIsAppConnected(true);
         } else if (data instanceof Lang.Dictionary) { // If the message is in v3+ protocol
-            if (data["dataType"] == "connect") { // When WheelLog sends a connection message
-                // Play connection tone
-                if (Attention has :playTone) {
-                    Attention.playTone(ToneProfiles.appConnectionTone);
-                }
-                AppStorage.runtimeDb["comm_protocolVersion"] = data["protocolVersion"];
-                AppStorage.runtimeDb["misc_wheelLogVersion"] = data["wheelLogVersion"];
+            switch (data["protocolVersion"]) {
+                case 3: {
+                    // AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = false;
+                    if (data["dataType"] == "connect") { // When WheelLog sends a connection message
+                        // Play connection tone
+                        if (Attention has :playTone) {
+                            Attention.playTone(ToneProfiles.appConnectionTone);
+                        }
+                        AppStorage.runtimeDb["comm_protocolVersion"] = data["protocolVersion"];
+                        AppStorage.runtimeDb["misc_wheelLogVersion"] = data["wheelLogVersion"];
 
-                // Assign the server port
-                WheelData.webServerPort = data["serverPort"];
-                
-                // And set connection state
-                WheelData.setIsAppConnected(true);
-            } else if (data["dataType"] == "alarmUpdate") {
-                WheelData.alarmType = data["alarmType"];
-                Alarms.alarmHandler();
+                        // Assign the server port
+                        WheelData.webServerPort = data["serverPort"];
+                        
+                        // And set connection state
+                        WheelData.setIsAppConnected(true);
+                    } else if (data["dataType"] == "alarmUpdate") {
+                        Alarms.alarmHandler(data["alarmType"]);
+                    }
+                }    
+                default: {
+
+                }
             }
         }
     }

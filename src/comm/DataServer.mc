@@ -41,10 +41,8 @@ module DataServer {
     function updateUsingNewProtocol(responseCode, data) {
         if (responseCode == 200) {
             switch (AppStorage.runtimeDb["comm_protocolVersion"]) {
-                case 3: {
-                    AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = false;
-                    
-                    WheelData.batteryPercentageLoadDrop = data["percentageLoadDrop"];
+                case 3: {                    
+                    WheelData.batteryPercentageLoadDrop = data["percentageDropUnderLoad"];
                     WheelData.currentSpeed = data["speed"];
                     WheelData.speedLimit = data["speedLimit"];
                     WheelData.useMph = data["useMph"];
@@ -59,9 +57,6 @@ module DataServer {
                     WheelData.batteryVoltage = data["voltage"];
                     WheelData.rideTime = data["ridingTime"];
                     WheelData.rideDistance = data["distance"];
-                }
-                default: {
-                    AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = true;
                 }
             }
             AppStorage.runtimeDb["comm_lastResponseCode"] = 200;
@@ -127,7 +122,7 @@ module DataServer {
             }
             case :alarms: {
                 WheelData.alarmType = message.toNumber();
-                Alarms.alarmHandler();
+                Alarms.alarmHandler(WheelData.alarmType);
                 break;
             }
         }

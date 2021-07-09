@@ -7,9 +7,7 @@ function dataUpdateTimerMethod() {
     DataServer.updateData();
 }
 
-function appUpdateTimerMethod() {
-    Alarms.alarmHandler();
-    
+function appUpdateTimerMethod() {    
     /*
      * Updating comm_disconnectionCountdown runtime variable
      */
