@@ -39,31 +39,35 @@ module DataServer {
     }
 
     function updateUsingNewProtocol(responseCode, data) {
-        switch (AppStorage.runtimeDb["comm_protocolVersion"]) {
-            case 3: {
-                AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = false;
-                
-                WheelData.batteryPercentageLoadDrop = data["percentageLoadDrop"];
-                WheelData.currentSpeed = data["speed"];
-                WheelData.speedLimit = data["speedLimit"];
-                WheelData.useMph = data["useMph"];
-                WheelData.batteryPercentage = data["battery"];
-                WheelData.temperature = data["temp"];
-                WheelData.pwm = data["pwm"];
-                WheelData.maxPwm = data["maxPwm"];
-                WheelData.isWheelConnected = data["isConnectedToWheel"];
-                WheelData.wheelModel = data["wheelModel"];
-                WheelData.averageSpeed = data["avgSpeed"];
-                WheelData.topSpeed = data["topSpeed"];
-                WheelData.batteryVoltage = data["voltage"];
-                WheelData.rideTime = data["ridingTime"];
-                WheelData.rideDistance = data["distance"];
-                WheelData.alarmType = data["additional"]["alarmType"];
-                WheelData.areLightsOn = data["additional"]["areLightsOn"];
+        if (responseCode == 200) {
+            switch (AppStorage.runtimeDb["comm_protocolVersion"]) {
+                case 3: {
+                    AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = false;
+                    
+                    WheelData.batteryPercentageLoadDrop = data["percentageLoadDrop"];
+                    WheelData.currentSpeed = data["speed"];
+                    WheelData.speedLimit = data["speedLimit"];
+                    WheelData.useMph = data["useMph"];
+                    WheelData.batteryPercentage = data["battery"];
+                    WheelData.temperature = data["temp"];
+                    WheelData.pwm = data["pwm"];
+                    WheelData.maxPwm = data["maxPwm"];
+                    WheelData.isWheelConnected = data["isConnectedToWheel"];
+                    WheelData.wheelModel = data["wheelModel"];
+                    WheelData.averageSpeed = data["avgSpeed"];
+                    WheelData.topSpeed = data["topSpeed"];
+                    WheelData.batteryVoltage = data["voltage"];
+                    WheelData.rideTime = data["ridingTime"];
+                    WheelData.rideDistance = data["distance"];
+                    WheelData.areLightsOn = data["additional"]["areLightsOn"];
+                }
+                default: {
+                    AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = true;
+                }
             }
-            default: {
-                AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = true;
-            }
+            AppStorage.runtimeDb["comm_lastResponseCode"] = 200;
+        } else {
+            AppStorage.runtimeDb["comm_lastResponseCode"] = responseCode;
         }
     }
 
