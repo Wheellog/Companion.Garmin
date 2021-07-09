@@ -59,7 +59,6 @@ module DataServer {
                     WheelData.batteryVoltage = data["voltage"];
                     WheelData.rideTime = data["ridingTime"];
                     WheelData.rideDistance = data["distance"];
-                    WheelData.areLightsOn = data["additional"]["areLightsOn"];
                 }
                 default: {
                     AppStorage.runtimeDb["comm_unsupportedProtocolVersionDetected"] = true;
