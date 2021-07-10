@@ -61,10 +61,10 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
         } else {
             var menu = new WatchUi.Menu();
             menu.setTitle(Rez.Strings.MainMenu_Title);
-            menu.addItem(Rez.Strings.MainMenu_AppTheme, "AppTheme");
-            menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed, "DataUpdateSpeed");
+            menu.addItem(Rez.Strings.MainMenu_AppTheme, :AppTheme);
+            menu.addItem(Rez.Strings.MainMenu_DataUpdateSpeed, :DataUpdateSpeed);
             if (AppStorage.runtimeDb["comm_protocolVersion"] > 2) {
-                menu.addItem(Rez.Strings.MainMenu_StartButtonAction, "StartButtonAction");
+                menu.addItem(Rez.Strings.MainMenu_StartButtonAction, :StartButtonAction);
             }
 
             WatchUi.pushView(menu, new SettingsMenuDelegate(), WatchUi.SLIDE_UP);
