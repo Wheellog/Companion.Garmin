@@ -109,7 +109,11 @@ class ArcRenderer extends WatchUi.Drawable {
                     case 0: var dist; if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.Horn)); break;
                     case 1: {
                         var dist; if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } 
-                        dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.Light));
+                        if (AppStorage.runtimeDb["comm_protocolVersion"] > 2) {
+                            dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.Light));
+                        } else {
+                            dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.Horn));
+                        }
                         break;
                     }
                 }
