@@ -1,12 +1,14 @@
 [package]
-name = "WheelLog"
 name_res = "@Strings.AppName"
+icon_resource = "@Drawables.LauncherIcon"
 main_class = "WheelLogCompanionApp"
 app_type = "watch-app"
 min_sdk = "1.2.0"
 
 [package_meta]
 id = "487e6172-972c-4f93-a4db-26fd689f935a"
+name = "WheelLog"
+version = "3.0.0"
 devices = [
     "enduro",
     "fr230",
@@ -66,8 +68,6 @@ languages = [
 ]
 
 [build]
-version = "3.0.0"
-icon_resource = "@Drawables.LauncherIcon"
 signing_key = "id_rsa_garmin.der"
 
 [dependencies]
