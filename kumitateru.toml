@@ -1,5 +1,6 @@
 [package]
 name_res = "@Strings.AppName"
+package_type = "app"
 icon_resource = "@Drawables.LauncherIcon"
 main_class = "WheelLogCompanionApp"
 app_type = "watch-app"
@@ -68,6 +69,10 @@ languages = [
 ]
 
 [build]
+enable_code_analysis_on_build = false
+connect_iq_version = "4.0.3"
 signing_key = "id_rsa_garmin.der"
+compiler_args = ""
 
 [dependencies]
+"BGFX" = ["0.1.0", "BGFX-0.1.0.barrel"]
