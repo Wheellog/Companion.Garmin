@@ -58,7 +58,7 @@ class HomeView extends WatchUi.View {
             System.getClockTime().min.format("%02d")
         );
         cDrawables[:BatteryNumber].setText(Lang.format("$1$%", [WheelData.batteryPercentage]));
-        cDrawables[:TemperatureNumber].setText(Lang.format("$1$°", [WheelData.temperature]));
+        cDrawables[:TemperatureNumber].setText(WheelData.temperature.toString());
         if (WheelData.isWheelConnected == false) {
             if (AppStorage.runtimeDb["ui_showDonationNotice"] == true) {
                 cDrawables[:BottomSubtitle].setText("Like? Donate!");
