@@ -1,6 +1,6 @@
-using Toybox.Application;
-using Toybox.WatchUi;
-using Toybox.Application.Storage;
+import Toybox.Application;
+import Toybox.WatchUi;
+import Toybox.Application.Storage;
 
 class WheelLogCompanionApp extends Application.AppBase {
 

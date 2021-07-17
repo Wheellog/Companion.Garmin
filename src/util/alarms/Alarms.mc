@@ -1,5 +1,5 @@
-using Toybox.Attention;
-using Toybox.Timer;
+import Toybox.Attention;
+import Toybox.Timer;
 
 module Alarms {
     function alarmHandler(alarmType) {

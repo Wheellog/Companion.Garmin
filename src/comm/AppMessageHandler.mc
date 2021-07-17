@@ -1,11 +1,11 @@
-using Toybox.Communications;
-using Toybox.WatchUi;
-using Toybox.Attention;
-using Toybox.Lang;
-using Toybox.System;
+import Toybox.Communications;
+import Toybox.WatchUi;
+import Toybox.Attention;
+import Toybox.Lang;
+import Toybox.System;
 
-function phoneAppMessageHandler(message) {
-    var data = message.data;
+function phoneAppMessageHandler(msg as Communications.Message) {
+    var data = msg.data;
     Communications.emptyMailbox();
 
     if (data != null) {
@@ -21,33 +21,58 @@ function phoneAppMessageHandler(message) {
             
             // And set connection state
             WheelData.setIsAppConnected(true);
-        } else if (data instanceof Lang.Dictionary) { // If the message is in v3+ protocol
-            switch (data["protocolVersion"]) {
-                case 3: {
-                    switch (data["dataType"]) {
-                        case "connect": {
-                            // Play connection tone
-                            if (Attention has :playTone) {
-                                Attention.playTone(ToneProfiles.appConnectionTone);
-                            }
-                            AppStorage.runtimeDb["comm_protocolVersion"] = data["protocolVersion"];
-                            AppStorage.runtimeDb["misc_wheelLogVersion"] = data["wheelLogVersion"];
+        // } else if (data instanceof Lang.Dictionary) { // If the message is in v3+ protocol
+        //     switch (data["protocolVersion"]) {
+        //         case 3: {
+        //             switch (data["dataType"]) {
+        //                 case "connect": {
+        //                     // Play connection tone
+        //                     if (Attention has :playTone) {
+        //                         Attention.playTone(ToneProfiles.appConnectionTone);
+        //                     }
+        //                     AppStorage.runtimeDb["comm_protocolVersion"] = data["protocolVersion"];
+        //                     AppStorage.runtimeDb["misc_wheelLogVersion"] = data["wheelLogVersion"];
 
-                            // Assign the server port
-                            WheelData.webServerPort = data["serverPort"];
+        //                     // Assign the server port
+        //                     WheelData.webServerPort = data["serverPort"];
                             
-                            // And set connection state
-                            WheelData.setIsAppConnected(true);
-                            break;
-                        }
-                        case "alarmUpdate": {
-                            Alarms.alarmHandler(data["alarmType"]);
-                            break;
-                        }
-                    }
-                }    
-                default: {
+        //                     // And set connection state
+        //                     WheelData.setIsAppConnected(true);
+        //                     break;
+        //                 }
+        //                 case "alarmUpdate": {
+        //                     Alarms.alarmHandler(data["alarmType"]);
+        //                     break;
+        //                 }
+        //             }
+        //         }    
+        //         default: {
 
+        //         }
+        //     }
+        // }
+        } else if (data instanceof Lang.String) { // v3+ protocol
+            switch (data[0]) {
+                case "c": {
+                    // Play connection tone
+                    if (Attention has :playTone) {
+                        Attention.playTone(ToneProfiles.appConnectionTone);
+                    }
+                    AppStorage.runtimeDb["comm_protocolVersion"] = data[1];
+
+                    var serverPort = "".toCharArray();
+                    for(var i = 0; i == data.length() - 2; i += 1)  { // parse the server port out of the message
+                        serverPort.add(data[i + 2]);
+                    }
+                    WheelData.webServerPort = serverPort; // Assign the server port
+                    
+                    // And set connection state
+                    WheelData.setIsAppConnected(true);
+                    break;
+                }
+                case "a": {
+                    Alarms.alarmHandler(data[1].toNumber());
+                    break;
                 }
             }
         }

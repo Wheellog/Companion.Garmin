@@ -1,8 +1,8 @@
-using Toybox.WatchUi;
-using Toybox.Communications;
-using Toybox.Application;
-using Toybox.System;
-using Toybox.Graphics;
+import Toybox.WatchUi;
+import Toybox.Communications;
+import Toybox.Application;
+import Toybox.System;
+import Toybox.Graphics;
 
 var detailView_currentlyOnScreen = 1;
 var detailView_maxScreens = 3; // Start to count from 1

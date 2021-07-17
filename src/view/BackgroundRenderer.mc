@@ -1,5 +1,5 @@
-using Toybox.WatchUi;
-using Toybox.System;
+import Toybox.WatchUi;
+import Toybox.System;
 
 class BackgroundRenderer extends WatchUi.Drawable {
     function initialize(params) {

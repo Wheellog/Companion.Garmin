@@ -1,5 +1,5 @@
-using Toybox.Communications;
-using Toybox.WatchUi;
+import Toybox.Communications;
+import Toybox.WatchUi;
 
 module Actions {
     var options = {

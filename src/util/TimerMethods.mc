@@ -1,7 +1,7 @@
-using Toybox.Attention;
-using Toybox.Communications;
-using Toybox.Lang;
-using Toybox.Math;
+import Toybox.Attention;
+import Toybox.Communications;
+import Toybox.Lang;
+import Toybox.Math;
 
 function dataUpdateTimerMethod() {
     DataServer.updateData();

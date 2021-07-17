@@ -1,5 +1,5 @@
-using Toybox.WatchUi;
-using Toybox.System;
+import Toybox.WatchUi;
+import Toybox.System;
 
 class PageArcRenderer extends WatchUi.Drawable {
     private var mArcColor, mArcWidth;

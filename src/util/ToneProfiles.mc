@@ -1,4 +1,4 @@
-using Toybox.Attention;
+import Toybox.Attention;
 
 module ToneProfiles {
     const appConnectionTone = Attention.TONE_ALERT_HI;

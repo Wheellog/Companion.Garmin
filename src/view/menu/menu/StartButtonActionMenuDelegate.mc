@@ -1,5 +1,5 @@
-using Toybox.WatchUi;
-using Toybox.System;
+import Toybox.WatchUi;
+import Toybox.System;
 
 class StartButtonActionMenuDelegate extends WatchUi.MenuInputDelegate {
 

@@ -1,6 +1,6 @@
-using Toybox.Application;
-using Toybox.Application.Properties;
-using Toybox.System;
+import Toybox.Application;
+import Toybox.Application.Properties;
+import Toybox.System;
 
 module AppStorage {
     var cachedValues = {};

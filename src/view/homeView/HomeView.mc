@@ -1,6 +1,6 @@
-using Toybox.WatchUi;
-using Toybox.Communications;
-using Toybox.Application;
+import Toybox.WatchUi;
+import Toybox.Communications;
+import Toybox.Application;
 
 class HomeView extends WatchUi.View {
 

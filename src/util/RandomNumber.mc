@@ -1,4 +1,4 @@
-using Toybox.Math;
+import Toybox.Math;
 
 // return a random value on the range [n, m] 
 function random(n, m) { 

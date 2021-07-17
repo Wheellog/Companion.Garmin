@@ -1,5 +1,5 @@
-using Toybox.WatchUi;
-using Toybox.System;
+import Toybox.WatchUi;
+import Toybox.System;
 
 class HomeViewDelegate extends WatchUi.BehaviorDelegate {
 
@@ -77,6 +77,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             case 0: Actions.triggerHorn(:web); break;
             case 1: if (AppStorage.runtimeDb["comm_protocolVersion"] > 2) { Actions.toggleFrontLight(:web); } else { Actions.triggerHorn(:web); } break;
         }
+        return true;
     }
 
     function onNextPage() {

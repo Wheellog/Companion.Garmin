@@ -1,9 +1,9 @@
-using Toybox.WatchUi;
-using Toybox.Timer;
-using Toybox.Lang;
-using Toybox.Communications;
-using Toybox.System;
-using Toybox.Attention;
+import Toybox.WatchUi;
+import Toybox.Timer;
+import Toybox.Lang;
+import Toybox.Communications;
+import Toybox.System;
+import Toybox.Attention;
 
 module WheelData {
     var currentSpeed = "0.0",
@@ -50,7 +50,7 @@ module WheelData {
         }
     }
 
-    function _hideConnectionScreenMethod() {
+    function _hideConnectionScreenMethod() as Void {
         WatchUi.popView(WatchUi.SLIDE_DOWN);
     }
 }

@@ -1,4 +1,4 @@
-using Toybox.WatchUi;
+import Toybox.WatchUi;
 
 class WaitingForConnectionViewDelegate extends WatchUi.BehaviorDelegate {
     function initialize() {

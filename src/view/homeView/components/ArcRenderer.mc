@@ -1,7 +1,7 @@
-using Toybox.WatchUi;
-using Toybox.Application.Properties;
-using Toybox.Application.Storage;
-using Toybox.System;
+import Toybox.WatchUi;
+import Toybox.Application.Properties;
+import Toybox.Application.Storage;
+import Toybox.System;
 
 class ArcRenderer extends WatchUi.Drawable {
     private var mMainColor,
@@ -105,10 +105,11 @@ class ArcRenderer extends WatchUi.Drawable {
                         dc.drawArc(mXCenterPosition, mYCenterPosition, mArcRadius, mArcDirection, mStartDegree, result);
                     }
                 }
+                var dist;
                 switch (AppStorage.getValue("StartButtonAction")) {
-                    case 0: var dist; if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.Horn)); break;
+                    case 0: if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.Horn)); break;
                     case 1: {
-                        var dist; if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } 
+                        if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } 
                         if (AppStorage.runtimeDb["comm_protocolVersion"] > 2) {
                             dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.Light));
                         } else {
