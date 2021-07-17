@@ -14,7 +14,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                 });
 
                 menu.addItem(
-                    new MenuItem(
+                    new WatchUi.MenuItem(
                         Rez.Strings.MainMenu_AppTheme_Dark,
                         null,
                         "DarkTheme",
@@ -22,7 +22,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     )
                 );
                 menu.addItem(
-                    new MenuItem(
+                    new WatchUi.MenuItem(
                         Rez.Strings.MainMenu_AppTheme_Light,
                         null,
                         "LightTheme",
@@ -38,7 +38,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                 });
 
                 menu.addItem(
-                    new MenuItem(
+                    new WatchUi.MenuItem(
                         Rez.Strings.MainMenu_DataUpdateSpeed_Fast,
                         null,
                         "Fast",
@@ -46,7 +46,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     )
                 );
                 menu.addItem(
-                    new MenuItem(
+                    new WatchUi.MenuItem(
                         Rez.Strings.MainMenu_DataUpdateSpeed_Medium,
                         null,
                         "Medium",
@@ -54,7 +54,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     )
                 );
                 menu.addItem(
-                    new MenuItem(
+                    new WatchUi.MenuItem(
                         Rez.Strings.MainMenu_DataUpdateSpeed_Slow,
                         null,
                         "Slow",
@@ -62,7 +62,7 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
                     )
                 );
                 menu.addItem(
-                    new MenuItem(
+                    new WatchUi.MenuItem(
                         Rez.Strings.MainMenu_DataUpdateSpeed_SuperSlow,
                         null,
                         "SuperSlow",
@@ -75,13 +75,13 @@ class SettingsMenu2Delegate extends WatchUi.Menu2InputDelegate {
             }
             case "StartButtonAction": {
                 var menu = new WatchUi.Menu2({:title => Rez.Strings.MainMenu_StartButtonAction});
-                menu.addItem(new MenuItem(
+                menu.addItem(new WatchUi.MenuItem(
                     Rez.Strings.MainMenu_StartButtonAction_HornTrigger,
                     null,
                     "TriggerHorn",
                     null
                 ));
-                menu.addItem(new MenuItem(
+                menu.addItem(new WatchUi.MenuItem(
                     Rez.Strings.MainMenu_StartButtonAction_FrontLightToggle,
                     null,
                     "ToggleFrontLights",

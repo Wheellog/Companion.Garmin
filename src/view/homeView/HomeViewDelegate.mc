@@ -25,7 +25,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             } else {
                 appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Dark;
             }
-            menu.addItem(new MenuItem(
+            menu.addItem(new WatchUi.MenuItem(
                 Rez.Strings.MainMenu_AppTheme,
                 appThemSubLabel,
                 "AppTheme",
@@ -38,7 +38,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                 case 1500: dataUpdateSpeedSublabel = WatchUi.loadResource(Rez.Strings.MainMenu_DataUpdateSpeed_Slow); break;
                 case 2000: dataUpdateSpeedSublabel = WatchUi.loadResource(Rez.Strings.MainMenu_DataUpdateSpeed_SuperSlow); break;
             }
-            menu.addItem(new MenuItem(
+            menu.addItem(new WatchUi.MenuItem(
                 Rez.Strings.MainMenu_DataUpdateSpeed,
                 dataUpdateSpeedSublabel,
                 "DataUpdateSpeed",
@@ -50,7 +50,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                 case 1: startButtonActionSubLabel = WatchUi.loadResource(Rez.Strings.MainMenu_StartButtonAction_FrontLightToggle); break;
             }
             if (AppStorage.runtimeDb["comm_protocolVersion"] > 2) {
-                menu.addItem(new MenuItem(
+                menu.addItem(new WatchUi.MenuItem(
                     Rez.Strings.MainMenu_StartButtonAction,
                     startButtonActionSubLabel,
                     "StartButtonAction",
