@@ -5,6 +5,7 @@ icon_resource = "@Drawables.LauncherIcon"
 main_class = "WheelLogCompanionApp"
 app_type = "watch-app"
 min_sdk = "1.2.0"
+target_sdk = "4.0.4"
 
 [package_meta]
 id = "487e6172-972c-4f93-a4db-26fd689f935a"
@@ -69,8 +70,8 @@ languages = [
 ]
 
 [build]
-enable_code_analysis_on_build = false
-connect_iq_version = "4.0.3"
+code_analysis_on_build = false
+type_check_level = 0 # 0: disable, 1: gradual, 2: informative, 3: strict
 signing_key = "id_rsa_garmin.der"
 compiler_args = ""
 
