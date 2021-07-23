@@ -21,50 +21,18 @@ function phoneAppMessageHandler(msg as Communications.Message) {
             
             // And set connection state
             WheelData.setIsAppConnected(true);
-        // } else if (data instanceof Lang.Dictionary) { // If the message is in v3+ protocol
-        //     switch (data["protocolVersion"]) {
-        //         case 3: {
-        //             switch (data["dataType"]) {
-        //                 case "connect": {
-        //                     // Play connection tone
-        //                     if (Attention has :playTone) {
-        //                         Attention.playTone(ToneProfiles.appConnectionTone);
-        //                     }
-        //                     AppStorage.runtimeDb["comm_protocolVersion"] = data["protocolVersion"];
-        //                     AppStorage.runtimeDb["misc_wheelLogVersion"] = data["wheelLogVersion"];
-
-        //                     // Assign the server port
-        //                     WheelData.webServerPort = data["serverPort"];
-                            
-        //                     // And set connection state
-        //                     WheelData.setIsAppConnected(true);
-        //                     break;
-        //                 }
-        //                 case "alarmUpdate": {
-        //                     Alarms.alarmHandler(data["alarmType"]);
-        //                     break;
-        //                 }
-        //             }
-        //         }    
-        //         default: {
-
-        //         }
-        //     }
-        // }
-        } else if (data instanceof Lang.String) { // v3+ protocol
+        } else if (data instanceof Lang.Array) { // v3+ protocol
+            System.println("V3");
             switch (data[0]) {
                 case "c": {
+                    System.println("Connection");
                     // Play connection tone
                     if (Attention has :playTone) {
                         Attention.playTone(ToneProfiles.appConnectionTone);
                     }
                     AppStorage.runtimeDb["comm_protocolVersion"] = data[1];
-
-                    var serverPort = "".toCharArray();
-                    for(var i = 0; i == data.length() - 2; i += 1)  { // parse the server port out of the message
-                        serverPort.add(data[i + 2]);
-                    }
-                    WheelData.webServerPort = serverPort; // Assign the server port
+                    System.println(Lang.format("Protocol version: $1$", [data[1]]));
+                    WheelData.webServerPort = data[2]; // Assign the server port
                     
                     // And set connection state
                     WheelData.setIsAppConnected(true);
