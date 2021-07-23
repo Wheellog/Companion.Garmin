@@ -76,4 +76,5 @@ signing_key = "id_rsa_garmin.der"
 compiler_args = ""
 
 [dependencies]
-# "BetterGFX" = ["0.1.0", "BetterGFX-0.1.0.barrel"]
+"BetterGFX" = ["0.1.0", "BetterGFX-0.1.0.barrel"]
+"CIQVec" = ["1.0.0", "CIQVec-1.0.0.barrel"]
