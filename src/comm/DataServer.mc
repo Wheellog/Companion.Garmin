@@ -44,7 +44,7 @@ module DataServer {
                 case 3: {
                     WheelData.batteryPercentageLoadDrop = data[0];
                     WheelData.currentSpeed = data[1];
-                    WheelData.speedLimit = data[2;
+                    WheelData.speedLimit = data[2];
                     WheelData.useMph = data[3];
                     WheelData.batteryPercentage = data[4];
                     WheelData.temperature = data[5];
