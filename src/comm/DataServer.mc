@@ -38,31 +38,29 @@ module DataServer {
         WatchUi.requestUpdate();
     }
 
-    function updateimportNewProtocol(responseCode as Lang.Number, data as Lang.Dictionary?) as Void {
+    function updateimportNewProtocol(responseCode as Lang.Number, data as Lang.Array?) as Void {
         if (responseCode == 200) {
             switch (AppStorage.runtimeDb["comm_protocolVersion"]) {
-                case 3: {                    
-                    WheelData.batteryPercentageLoadDrop = data["percentageDropUnderLoad"];
-                    WheelData.currentSpeed = data["speed"];
-                    WheelData.speedLimit = data["speedLimit"];
-                    WheelData.useMph = data["useMph"];
-                    WheelData.batteryPercentage = data["battery"];
-                    WheelData.temperature = data["temp"];
-                    WheelData.pwm = data["pwm"];
-                    WheelData.maxPwm = data["maxPwm"];
-                    WheelData.isWheelConnected = data["isConnectedToWheel"];
-                    WheelData.wheelModel = data["wheelModel"];
-                    WheelData.averageSpeed = data["avgSpeed"];
-                    WheelData.topSpeed = data["topSpeed"];
-                    WheelData.batteryVoltage = data["voltage"];
-                    WheelData.rideTime = data["ridingTime"];
-                    WheelData.rideDistance = data["distance"];
+                case 3: {
+                    WheelData.batteryPercentageLoadDrop = data[0];
+                    WheelData.currentSpeed = data[1];
+                    WheelData.speedLimit = data[2;
+                    WheelData.useMph = data[3];
+                    WheelData.batteryPercentage = data[4];
+                    WheelData.temperature = data[5];
+                    WheelData.pwm = data[6];
+                    WheelData.maxPwm = data[7];
+                    WheelData.isWheelConnected = data[8];
+                    WheelData.wheelModel = data[9];
+                    WheelData.averageSpeed = data[10];
+                    WheelData.topSpeed = data[11];
+                    WheelData.batteryVoltage = data[12];
+                    WheelData.rideTime = data[13];
+                    WheelData.rideDistance = data[14];
                 }
             }
-            AppStorage.runtimeDb["comm_lastResponseCode"] = 200;
-        } else {
-            AppStorage.runtimeDb["comm_lastResponseCode"] = responseCode;
         }
+        AppStorage.runtimeDb["comm_lastResponseCode"] = responseCode;
     }
 
     function updateimportOldProtocol_main(responseCode as Lang.Number, data as Null or Lang.Dictionary) as Void {
