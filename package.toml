@@ -4,7 +4,7 @@ package_type = "app"
 icon_resource = "@Drawables.LauncherIcon"
 main_class = "WheelLogCompanionApp"
 app_type = "watch-app"
-min_sdk = "1.2.0"
+min_sdk = "1.4.0"
 target_sdk = "4.0.4"
 
 [package_meta]
