@@ -22,24 +22,24 @@ function phoneAppMessageHandler(msg as Communications.Message) {
             // And set connection state
             WheelData.setIsAppConnected(true);
         } else if (data instanceof Lang.Array) { // v3+ protocol
-            System.println("V3");
             switch (data[0]) {
-                case "c": {
-                    System.println("Connection");
+                case "c": { // Connection
                     // Play connection tone
                     if (Attention has :playTone) {
                         Attention.playTone(ToneProfiles.appConnectionTone);
                     }
                     AppStorage.runtimeDb["comm_protocolVersion"] = data[1];
-                    System.println(Lang.format("Protocol version: $1$", [data[1]]));
                     WheelData.webServerPort = data[2]; // Assign the server port
                     
                     // And set connection state
                     WheelData.setIsAppConnected(true);
                     break;
                 }
-                case "a": {
+                case "a": { // Alarm update
                     Alarms.alarmHandler(data[1].toNumber());
+                    break;
+                }
+                case "s": { // Settings sync (e.g. info blocks)
                     break;
                 }
             }
