@@ -25,7 +25,6 @@ devices = [
     "fr945",
     "fr945lte",
     "fenix3",
-    "fenix3_hr",
     "fenix5",
     "fenix5plus",
     "fenix5x",
