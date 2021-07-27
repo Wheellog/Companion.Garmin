@@ -6,7 +6,6 @@ import Toybox.System;
 
 function phoneAppMessageHandler(msg as Communications.Message) {
     var data = msg.data;
-    Communications.emptyMailbox();
 
     if (data != null) {
         if (data instanceof Lang.Number) { // If the message is in v2 protocol
