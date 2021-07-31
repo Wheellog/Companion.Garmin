@@ -3,12 +3,9 @@ import Toybox.Application.Properties;
 import Toybox.System;
 
 module AppStorage {
-    var cachedValues = {};
-
     var runtimeDb = {};
 
     function setValue(key, value) {
-        cachedValues[key] = value;
         if (Toybox.Application has :Properties) {
             Properties.setValue(key, value);
         } else {
@@ -18,14 +15,9 @@ module AppStorage {
 
     function getValue(key) {
         if (Toybox.Application has :Properties) {
-            if (cachedValues[key] == null) {
-                cachedValues[key] = Properties.getValue(key);
-            }
+            return Properties.getValue(key);
         } else {
-            if (cachedValues[key] == null) {
-                cachedValues[key] = Application.getApp().getProperty(key);
-            }
+            return Application.getApp().getProperty(key);
         }
-        return cachedValues[key];
     }
 }
