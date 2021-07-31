@@ -10,11 +10,11 @@ class StartButtonActionMenuDelegate extends WatchUi.MenuInputDelegate {
     function onMenuItem(item) {
         switch (item) {
             case :Horn: {
-                AppStorage.setValue("StartButtonAction", 0);
+                AppStorage.setSetting("StartButtonAction", 0);
                 break;
             }
             case :Lights: {
-                AppStorage.setValue("StartButtonAction", 1);
+                AppStorage.setSetting("StartButtonAction", 1);
                 break;
             }
         }

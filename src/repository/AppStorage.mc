@@ -5,7 +5,7 @@ import Toybox.System;
 module AppStorage {
     var runtimeDb = {};
 
-    function setValue(key, value) {
+    function setSetting(key, value) {
         if (Toybox.Application has :Properties) {
             Properties.setValue(key, value);
         } else {
@@ -13,7 +13,7 @@ module AppStorage {
         }
     }
 
-    function getValue(key) {
+    function getSetting(key) {
         if (Toybox.Application has :Properties) {
             return Properties.getValue(key);
         } else {

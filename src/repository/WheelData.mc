@@ -39,7 +39,7 @@ module WheelData {
             var timer = new Timer.Timer();
             timer.start(new Lang.Method(WheelData, :_hideConnectionScreenMethod), 1000, false);
 
-            dataUpdateTimer.start(new Lang.Method($, :dataUpdateTimerMethod), AppStorage.getValue("DataUpdateSpeed"), true); // Start a timer routine for constantly getting data from the phone
+            dataUpdateTimer.start(new Lang.Method($, :dataUpdateTimerMethod), AppStorage.getSetting("DataUpdateSpeed"), true); // Start a timer routine for constantly getting data from the phone
         } else if (isAppConnected == false) {
             var progressBar = new WatchUi.ProgressBar(WatchUi.loadResource(Rez.Strings.LoadingScreen_WaitingConnectionWithApp), null);
             WatchUi.pushView(progressBar, new WaitingForConnectionViewDelegate(), WatchUi.SLIDE_UP);

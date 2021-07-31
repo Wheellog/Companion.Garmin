@@ -10,11 +10,11 @@ class StartButtonActionMenu2Delegate extends WatchUi.Menu2InputDelegate {
     function onSelect(item) {
         switch (item.getId()) {
             case "TriggerHorn": {
-                AppStorage.setValue("StartButtonAction", 0);
+                AppStorage.setSetting("StartButtonAction", 0);
                 break;
             }
             case "ToggleFrontLights": {
-                AppStorage.setValue("StartButtonAction", 1);
+                AppStorage.setSetting("StartButtonAction", 1);
                 break;
             }
         }

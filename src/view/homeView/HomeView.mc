@@ -42,7 +42,7 @@ class HomeView extends WatchUi.View {
             CurrentTime.min.format("%02d")
         );
 
-        if (AppStorage.getValue("AppTheme") == 0) {
+        if (AppStorage.getSetting("AppTheme") == 0) {
             cDrawables[:TimeDate].setColor(Graphics.COLOR_BLACK);
         } else {
             cDrawables[:TimeDate].setColor(Graphics.COLOR_WHITE);
@@ -70,7 +70,7 @@ class HomeView extends WatchUi.View {
                 }
             }
         } else {
-            switch (AppStorage.getValue("BottomSubtitleData")) {
+            switch (AppStorage.getSetting("BottomSubtitleData")) {
                 case 0: cDrawables[:BottomSubtitle].setText(WheelData.wheelModel); break;
                 case 1: cDrawables[:BottomSubtitle].setText(Lang.format("$1$% / $2$%", [WheelData.pwm, WheelData.maxPwm])); break;
                 case 2: cDrawables[:BottomSubtitle].setText(Lang.format("$1$ / $2$", [WheelData.averageSpeed, WheelData.topSpeed])); break;
@@ -91,7 +91,7 @@ class HomeView extends WatchUi.View {
         cDrawables[:TemperatureArc].setValues(WheelData.temperature, 50);
 
         // Theme coloring
-        if (AppStorage.getValue("AppTheme") == 0) {
+        if (AppStorage.getSetting("AppTheme") == 0) {
             cDrawables[:TimeDate].setColor(Graphics.COLOR_BLACK);
             cDrawables[:SpeedNumber].setColor(Graphics.COLOR_BLACK);
             cDrawables[:BatteryNumber].setColor(Graphics.COLOR_BLACK);
