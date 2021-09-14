@@ -1,11 +1,12 @@
-import Toybox.Application;
-import Toybox.Application.Properties;
-import Toybox.System;
+using Toybox.Application;
+using Toybox.Application.Properties;
+using Toybox.System;
+import Toybox.Lang;
 
 module AppStorage {
     var runtimeDb = {};
 
-    function setSetting(key, value) {
+    function setSetting(key as String, value) as Void {
         if (Toybox.Application has :Properties) {
             Properties.setValue(key, value);
         } else {
@@ -13,7 +14,7 @@ module AppStorage {
         }
     }
 
-    function getSetting(key) {
+    function getSetting(key as String) as Application.PropertyValueType {
         if (Toybox.Application has :Properties) {
             return Properties.getValue(key);
         } else {
