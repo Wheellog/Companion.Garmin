@@ -3,6 +3,7 @@ import Toybox.WatchUi;
 import Toybox.Attention;
 import Toybox.Lang;
 import Toybox.System;
+import CIQVec;
 
 function phoneAppMessageHandler(msg as Communications.Message) {
     var data = msg.data;
@@ -30,8 +31,21 @@ function phoneAppMessageHandler(msg as Communications.Message) {
                     AppStorage.runtimeDb["comm_protocolVersion"] = data[1];
                     WheelData.webServerPort = data[2]; // Assign the server port
                     
+                    var indexManifest = new CIQVec.Vector();
+                    indexManifest.push("speed");
+                    indexManifest.push("battery%");
+                    indexManifest.push("battery%LoadDrop");
+                    indexManifest.push("temperature");
+                    indexManifest.push("isMph");
+                    indexManifest.push("pwm");
+                    indexManifest.push("maxPwm");
+
                     // And set connection state
                     WheelData.setIsAppConnected(true);
+                    switch (AppStorage.getSetting("BottomSubtitleData")) {
+                        case 0:
+                    }
+                    Communications.transmit(indexManifest.toArray(), {}, listener);
                     break;
                 }
                 case "a": { // Alarm update
