@@ -69,7 +69,7 @@ function generateIndexManifest(manifestFor as Symbol or Null) {
             indexManifest.push("isMph");
             indexManifest.push("pwm");
             indexManifest.push("maxPwm");
-            indexManifest.push("maxSpeed")
+            indexManifest.push("maxSpeed");
 
             switch (AppStorage.getSetting("BottomSubtitleData")) {
                 case 0: indexManifest.push("wheelModel"); break;
@@ -81,12 +81,12 @@ function generateIndexManifest(manifestFor as Symbol or Null) {
         }
         case :detailScreenData: {
             indexManifest.push("avgSpeed");
-            indexmanifest.push("topSpeed");
+            indexManifest.push("topSpeed");
             indexManifest.push("voltage");
             indexManifest.push("battery%");
             indexManifest.push("rideTime");
             indexManifest.push("distance");
         }
     }
-    return indexManifest
+    return indexManifest;
 }
