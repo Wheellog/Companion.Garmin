@@ -61,3 +61,35 @@ function phoneAppMessageHandler(msg as Communications.Message) {
 
     WatchUi.requestUpdate();
 }
+function generateIndexManifest(manifestFor as Symbol or Null) {
+    var indexManifest = new CIQVec.Vector();
+    switch (manifestFor) {
+        case :mainScreenData: {
+            indexManifest.push("speed");
+            indexManifest.push("battery%");
+            indexManifest.push("battery%LoadDrop");
+            indexManifest.push("temperature");
+            indexManifest.push("isMph");
+            indexManifest.push("pwm");
+            indexManifest.push("maxPwm");
+            indexManifest.push("maxSpeed")
+
+            switch (AppStorage.getSetting("BottomSubtitleData")) {
+                case 0: indexManifest.push("wheelModel"); break;
+                case 2: indexManifest.push("avgSpeed"); indexManifest.push("topSpeed"); break;
+                case 3: indexManifest.push("rideTime"); break;
+                case 4: indexManifest.push("distance");
+                default: break;
+            }
+        }
+        case :detailScreenData: {
+            indexManifest.push("avgSpeed");
+            indexmanifest.push("topSpeed");
+            indexManifest.push("voltage");
+            indexManifest.push("battery%");
+            indexManifest.push("rideTime");
+            indexManifest.push("distance");
+        }
+    }
+    return indexManifest
+}
