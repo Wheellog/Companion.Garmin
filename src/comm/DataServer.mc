@@ -13,7 +13,7 @@ module DataServer {
                     :headers => {},
                     :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
                 },
-                new Lang.Method($.DataServer, :updateimportNewProtocol)
+                new Lang.Method($.DataServer, :updateUsingNewProtocol)
             );
         } else {
             var options = {
@@ -23,22 +23,22 @@ module DataServer {
             };
 
             // Update data about alarms
-            Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/alarms", null, options, new Lang.Method(DataServer, :updateimportOldProtocol_alarms));
+            Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/alarms", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_alarms));
 
             // Update other data
             switch (AppStorage.runtimeDb["comm_dataSource"]) {
                 case "home":
-                    Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/main", null, options, new Lang.Method(DataServer, :updateimportOldProtocol_main));
+                    Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/main", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_main));
                     break;
                 case "details":
-                    Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/details", null, options, new Lang.Method(DataServer, :updateimportOldProtocol_details));
+                    Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/data/details", null, options, new Lang.Method(DataServer, :updateUsingOldProtocol_details));
                     break;
             }
         }
         WatchUi.requestUpdate();
     }
 
-    function updateimportNewProtocol(responseCode as Lang.Number, data as Lang.Array?) as Void {
+    function updateUsingNewProtocol(responseCode as Lang.Number, data as Lang.Array?) as Void {
         if (responseCode == 200) {
             switch (AppStorage.runtimeDb["comm_protocolVersion"]) {
                 case 3: {
@@ -63,7 +63,7 @@ module DataServer {
         AppStorage.runtimeDb["comm_lastResponseCode"] = responseCode;
     }
 
-    function updateimportOldProtocol_main(responseCode as Lang.Number, data as Null or Lang.Dictionary) as Void {
+    function updateUsingOldProtocol_main(responseCode as Lang.Number, data as Null or Lang.Dictionary) as Void {
         if (responseCode == 200) {
             parseOldProtocolData(:main, data);
             AppStorage.runtimeDb["comm_lastResponseCode"] = 200;
@@ -72,7 +72,7 @@ module DataServer {
         }
     }
 
-    function updateimportOldProtocol_details(responseCode, data) {
+    function updateUsingOldProtocol_details(responseCode, data) {
         if (responseCode == 200) {
             parseOldProtocolData(:details, data);
             AppStorage.runtimeDb["comm_lastResponseCode"] = 200;
@@ -81,7 +81,7 @@ module DataServer {
         }
     }
 
-    function updateimportOldProtocol_alarms(responseCode, data) {
+    function updateUsingOldProtocol_alarms(responseCode, data) {
         if (responseCode == 200) {
             parseOldProtocolData(:alarms, data);
             AppStorage.runtimeDb["comm_lastResponseCode"] = 200;

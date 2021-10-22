@@ -14,13 +14,13 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
             });
             
             var appThemeValue;
-            if (AppStorage.getValue("AppTheme") == 0){
+            if (AppStorage.getSetting("AppTheme") == 0){
                 appThemeValue = false;
             } else {
                 appThemeValue = true;
             }
             var appThemSubLabel;
-            if (AppStorage.getValue("AppTheme") == 0){
+            if (AppStorage.getSetting("AppTheme") == 0){
                 appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Light;
             } else {
                 appThemSubLabel = Rez.Strings.MainMenu_AppTheme_Dark;
@@ -32,7 +32,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                 null
             ));
             var dataUpdateSpeedSublabel;
-            switch (AppStorage.getValue("DataUpdateSpeed")) {
+            switch (AppStorage.getSetting("DataUpdateSpeed")) {
                 case 400: dataUpdateSpeedSublabel = WatchUi.loadResource(Rez.Strings.MainMenu_DataUpdateSpeed_Fast); break;
                 case 1000: dataUpdateSpeedSublabel = WatchUi.loadResource(Rez.Strings.MainMenu_DataUpdateSpeed_Medium); break;
                 case 1500: dataUpdateSpeedSublabel = WatchUi.loadResource(Rez.Strings.MainMenu_DataUpdateSpeed_Slow); break;
@@ -45,7 +45,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
                 null
             ));
             var startButtonActionSubLabel;
-            switch (AppStorage.getValue("StartButtonAction")) {
+            switch (AppStorage.getSetting("StartButtonAction")) {
                 case 0: startButtonActionSubLabel = WatchUi.loadResource(Rez.Strings.MainMenu_StartButtonAction_HornTrigger); break;
                 case 1: startButtonActionSubLabel = WatchUi.loadResource(Rez.Strings.MainMenu_StartButtonAction_FrontLightToggle); break;
             }
@@ -73,7 +73,7 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onSelect() {
-        switch (AppStorage.getValue("StartButtonAction")) {
+        switch (AppStorage.getSetting("StartButtonAction")) {
             case 0: Actions.triggerHorn(); break;
             case 1: if (AppStorage.runtimeDb["comm_protocolVersion"] > 2) { Actions.toggleFrontLight(); } else { Actions.triggerHorn(); } break;
         }
@@ -81,14 +81,9 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onNextPage() {
-        var view = new DetailView(1);
-        WatchUi.switchToView(view, new DetailViewDelegate(view), WatchUi.SLIDE_UP);
-        return true;
-    }
-
-    function onPreviousPage() {
-        var view = new DetailView(3);
-        WatchUi.switchToView(view, new DetailViewDelegate(view), WatchUi.SLIDE_DOWN);
+        updateIndexManifest(generateIndexManifest(:detailScreenData)); // Update manifest
+        var view = new DetailView();
+        WatchUi.switchToView(view, new DetailViewDelegate(view), WatchUi.SLIDE_UP); // Switch to DetailView
         return true;
     }
 }

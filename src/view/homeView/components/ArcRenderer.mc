@@ -62,7 +62,7 @@ class ArcRenderer extends WatchUi.Drawable {
     
     function draw(dc) {
         var backgroundColor;
-        if (AppStorage.getValue("AppTheme") == 0) {
+        if (AppStorage.getSetting("AppTheme") == 0) {
             backgroundColor = Graphics.COLOR_LT_GRAY;
         } else {
             backgroundColor = Graphics.COLOR_DK_GRAY;
@@ -71,9 +71,9 @@ class ArcRenderer extends WatchUi.Drawable {
 
         var foregroundColor;
         if (currentValue != 0.0 && mArcType == :speedArc) {
-            if (WheelData.pwm.toNumber() >= AppStorage.getValue("OrangeColoringThreshold") && WheelData.pwm.toNumber() < AppStorage.getValue("RedColoringThreshold")) {
+            if (WheelData.pwm.toNumber() >= AppStorage.getSetting("OrangeColoringThreshold") && WheelData.pwm.toNumber() < AppStorage.getSetting("RedColoringThreshold")) {
                 foregroundColor = mSecondColor;
-            } else if (WheelData.pwm.toNumber() >= AppStorage.getValue("RedColoringThreshold")) {
+            } else if (WheelData.pwm.toNumber() >= AppStorage.getSetting("RedColoringThreshold")) {
                 foregroundColor = mThirdColor;
             } else {
                 foregroundColor = mMainColor;
@@ -106,7 +106,7 @@ class ArcRenderer extends WatchUi.Drawable {
                     }
                 }
                 var dist;
-                switch (AppStorage.getValue("StartButtonAction")) {
+                switch (AppStorage.getSetting("StartButtonAction")) {
                     case 0: if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } dc.drawBitmap(screenWidth * dist, screenHeight * 0.25, WatchUi.loadResource(Rez.Drawables.Horn)); break;
                     case 1: {
                         if (screenWidth <= 220) { dist = 0.85; } else { dist = 0.86; } 

@@ -1,14 +1,12 @@
-import Toybox.Application;
-import Toybox.Application.Properties;
-import Toybox.System;
+using Toybox.Application;
+using Toybox.Application.Properties;
+using Toybox.System;
+import Toybox.Lang;
 
 module AppStorage {
-    var cachedValues = {};
-
     var runtimeDb = {};
 
-    function setValue(key, value) {
-        cachedValues[key] = value;
+    function setSetting(key as String, value) as Void {
         if (Toybox.Application has :Properties) {
             Properties.setValue(key, value);
         } else {
@@ -16,16 +14,11 @@ module AppStorage {
         }
     }
 
-    function getValue(key) {
+    function getSetting(key as String) as Application.PropertyValueType {
         if (Toybox.Application has :Properties) {
-            if (cachedValues[key] == null) {
-                cachedValues[key] = Properties.getValue(key);
-            }
+            return Properties.getValue(key);
         } else {
-            if (cachedValues[key] == null) {
-                cachedValues[key] = Application.getApp().getProperty(key);
-            }
+            return Application.getApp().getProperty(key);
         }
-        return cachedValues[key];
     }
 }

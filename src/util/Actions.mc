@@ -20,7 +20,7 @@ module Actions {
 
     function toggleFrontLight() {
         if (AppStorage.runtimeDb["comm_protocolVersion"] >= 3) {
-            Communications.transmit("toggleFrontLight", null, new ActionConnectionListener())
+            Communications.transmit("toggleFrontLight", null, new ActionConnectionListener());
         } else {
             Communications.makeWebRequest("http://127.0.0.1:" + WheelData.webServerPort + "/actions/toggleFrontLight", null, options, null);
         }
