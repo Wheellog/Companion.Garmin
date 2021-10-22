@@ -61,6 +61,11 @@ function phoneAppMessageHandler(msg as Communications.Message) {
 
     WatchUi.requestUpdate();
 }
+
+function updateIndexManifest(manifest as CIQVec.Vector) {
+    Communications.transmit(manifest.toArray(), {}, new IndexManifestConnectionListener());
+}
+
 function generateIndexManifest(manifestFor as Symbol or Null) {
     var indexManifest = new CIQVec.Vector();
     switch (manifestFor) {
