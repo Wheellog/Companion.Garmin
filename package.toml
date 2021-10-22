@@ -5,7 +5,7 @@ icon_resource = "@Drawables.LauncherIcon"
 main_class = "WheelLogCompanionApp"
 app_type = "watch-app"
 min_sdk = "1.4.0"
-target_sdk = "4.0.4"
+target_sdk = "4.0.6"
 
 [package_meta]
 # Stable: 487e6172-972c-4f93-a4db-26fd689f935a
@@ -60,7 +60,7 @@ devices = [
     "venu",
     "venu2",
     "venu2s",
-    "venud"
+    "venud",
 ]
 permissions = [
     "Communications"
