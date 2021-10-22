@@ -82,7 +82,8 @@ class HomeViewDelegate extends WatchUi.BehaviorDelegate {
 
     function onNextPage() {
         updateIndexManifest(generateIndexManifest(:detailScreenData)); // Update manifest
-        WatchUi.switchToView(new DetailView(), new DetailViewDelegate(view), WatchUi.SLIDE_UP); // Switch to DetailView
+        var view = new DetailView();
+        WatchUi.switchToView(view, new DetailViewDelegate(view), WatchUi.SLIDE_UP); // Switch to DetailView
         return true;
     }
 }
