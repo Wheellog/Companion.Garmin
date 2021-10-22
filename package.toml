@@ -8,7 +8,9 @@ min_sdk = "1.4.0"
 target_sdk = "4.0.4"
 
 [package_meta]
-id = "487e6172-972c-4f93-a4db-26fd689f935a"
+# Stable: 487e6172-972c-4f93-a4db-26fd689f935a
+# Beta: 90443537-281c-4b3c-a796-39040a4b4605
+id = "90443537-281c-4b3c-a796-39040a4b4605"
 name = "WheelLog"
 version = "3.0.0"
 devices = [
