@@ -20,6 +20,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed:
 - Coloring for battery arc, now it is green when used with pre-v3 protocol, and green with yellow part at the top (percentage drop under load) for v3 protocol
 - Some memory optimisations by removing unused garbage
+- And also performance optimisations
+
+### Removed:
+- Ability to scroll through pages in a loop (so by scrolling further down when already hit the bottom of the list you not don't get "cycled" back to the top of the list)
 
 **Some new updates require latest WheelLog version to work.**
 
