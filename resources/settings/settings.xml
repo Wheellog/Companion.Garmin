@@ -1,4 +1,9 @@
 <settings>
+
+    <setting propertyKey="@Properties.LeaveBacklightOn" title="@Strings.CIQ_LeaveBacklightOn">
+        <settingConfig type="boolean"></settingConfig>
+    </setting>
+
     <setting propertyKey="@Properties.AppTheme" title="@Strings.MainMenu_AppTheme">
         <settingConfig type="list">
             <listEntry value="0">@Strings.MainMenu_AppTheme_Light</listEntry>

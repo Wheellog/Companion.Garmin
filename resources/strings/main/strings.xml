@@ -1,8 +1,9 @@
 <strings>
-    <string id="AppName">WheelLog</string>
+    <string id="AppName">WheelLog Beta</string>
 
     <!-- In-app used strings-->
     <string id="MainMenu_Title">Settings</string>
+    <string id="MainMenu_LeaveBacklightOn">Leave backlight on</string>
     <string id="MainMenu_AppTheme">App Theme</string>
     <string id="MainMenu_AppTheme_Light">Light theme</string>
     <string id="MainMenu_AppTheme_Dark">Dark theme</string>
@@ -34,6 +35,8 @@
 
     <!-- Strings, that are used in Connect IQ Settings menu, like 
         one you see in Garmin Express or Garmin Connect Mobile -->
+
+    <string id="CIQ_LeaveBacklightOn">Leave backlight on</string>
     
     <string id="CIQ_DataUpdateSpeed">Data update speed</string>
     <string id="CIQ_DataUpdateSpeed_SuperSlow">Super slow</string>

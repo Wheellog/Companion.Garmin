@@ -1,8 +1,9 @@
 <strings>
-    <string id="AppName">WheelLog</string>
+    <string id="AppName">WheelLog Бета</string>
 
     <!-- <string id="MainMenu_Title">Настройки</string> -->
     <!-- <string id="MainMenu_AppTheme">Тема</string> -->
+    <string id="MainMenu_LeaveBacklightOn">Оставл. подсв. включ.</string>
     <string id="MainMenu_AppTheme_Light">Светлая</string>
     <string id="MainMenu_AppTheme_Dark">Темная</string>
     <!-- <string id="MainMenu_DataUpdateSpeed">Скорость обновл.</string> -->
@@ -31,6 +32,8 @@
 
     <!-- Strings, that are used in Connect IQ Settings menu, like 
         one you see in Garmin Express or Garmin Connect Mobile -->
+
+    <string id="CIQ_LeaveBacklightOn">Оставлять подсветку включенной</string>
 
     <string id="CIQ_DataUpdateSpeed">Скорость обновления</string>
     <string id="CIQ_DataUpdateSpeed_SuperSlow">Супер медленно</string>

@@ -1,4 +1,5 @@
 <properties>
+    <property id="LeaveBacklightOn" type="boolean">true</property>
     <property id="OrangeColoringThreshold" type="number">70</property>
     <property id="RedColoringThreshold" type="number">90</property>
     <property id="BottomSubtitleData" type="number">0</property><!-- 0 is wheel model, 1 is pwm / max pwm, 2 is average speed / top speed, 3 is ride time, 4 is distance-->
