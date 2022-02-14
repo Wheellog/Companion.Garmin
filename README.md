@@ -1,5 +1,7 @@
 # ⌚️ Companion.Garmin 
 
+# This app has reached a stale point. Now it will not be updated by the dev. If you want to continue development - contact me on [Telegram](https://t.me/ggoraa).
+
 A WheelLog companion for Garmin smartwatches
 
 This app is a rebuild from ground-up of an original Garmin app. I made this app to be with better UI, alarms working, and full support of new watches and their features.
